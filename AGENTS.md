@@ -2,20 +2,21 @@
 
 ## Memory Recording
 
-You are required to log your interactions.
+You are required to log your interactions in a single session file.
 
-1.  **Initialize Log File**:
-    -   At the beginning of processing a prompt, generate a timestamp in the format `DDMonYYTHHmm` (e.g., `26Dec28T1559`).
-    -   Create a new file in the `agents-memory/` directory named `<timestamp>.md`.
+1.  **Identify Session File**:
+    -   Check for an existing file in `agents-memory/` named `session-<JULES_SESSION_ID>.md`.
+    -   If it does not exist, create it.
 
-2.  **Record Prompt**:
-    -   Write the user's prompt to this file.
+2.  **Session Summary**:
+    -   The top of the file must contain a section `# Session Summary`.
+    -   Update this summary briefly after each interaction to reflect the current state or goal of the session.
 
-3.  **Execute Task**:
-    -   Perform the task requested by the user as usual.
-
-4.  **Record Response**:
-    -   Upon completion of the task, append the full detailed response provided to the user to the same log file. Ensure the file is well-formatted using Markdown.
+3.  **Record Interaction**:
+    -   Append a new section for the current turn.
+    -   Use `## Turn <Timestamp>` or `## User Prompt` as a header.
+    -   Log the full **User Prompt**.
+    -   After executing the task, append the **Agent Response**.
 
 ## Memory Retrieval
 
