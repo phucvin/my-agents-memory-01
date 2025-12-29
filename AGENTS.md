@@ -14,5 +14,5 @@ You are required to log your interactions.
 3.  **Execute Task**:
     -   Perform the task requested by the user as usual.
 
-4.  **Record Summary**:
-    -   Upon completion of the task, append a brief summary of the actions taken and the result to the same log file.
+4.  **Record Response**:
+    -   Upon completion of the task, append the full detailed response provided to the user to the same log file. Ensure the file is well-formatted using Markdown.
