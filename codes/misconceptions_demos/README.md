@@ -71,3 +71,76 @@ make
 cd 04_separate_compilation
 ./run_comparison.sh
 ```
+
+## Demo Outputs
+
+### 1. Data Locality
+
+Ran with `g++ -O3 -fno-inline -fno-inline-functions -fno-inline-small-functions` to isolate data locality effects from aggressive inlining/vectorization:
+
+```
+Benchmarking with 1000000 particles over 100 iterations.
+AoS Time: 1140 ms
+SoA Time: 346 ms
+
+Analysis: If the compiler automatically optimized for data locality,
+it would transform AoS into SoA internally or reorder fields to avoid loading
+unused data (like 'id' and 'padding') into the cache.
+Since it cannot safely do that (due to memory layout rules), SoA is manually faster.
+```
+
+### 2. Inlining Enables Optimizations
+
+Generated LLVM IR (`example.ll`). The `foo_const` function (which calls `sat_div(a, 3)`) has optimized away the check and the generic division:
+
+```llvm
+define dso_local noundef i32 @_Z9foo_consti(i32 noundef %0) local_unnamed_addr #0 {
+  %2 = sdiv i32 %0, 3
+  ret i32 %2
+}
+```
+
+In contrast, `foo_var` retains the check:
+
+```llvm
+define dso_local noundef i32 @_Z7foo_varii(i32 noundef %0, i32 noundef %1) local_unnamed_addr #0 {
+  %3 = icmp eq i32 %1, 0
+  br i1 %3, label %4, label %7
+  ...
+```
+
+### 3. Branch Prediction Hints
+
+Generated assembly (`main.s`).
+For `test_branch` (likely `x==0`), the compiler places the `critical_function` call on the fall-through/direct path:
+
+```asm
+_Z11test_branchi:
+    ...
+	testl	%edi, %edi
+	jne	.L5                 ; Jump to rare path if x != 0
+	jmp	_Z17critical_functionv ; Fall through to critical (likely)
+.L5:
+	jmp	_Z13rare_functionv
+```
+
+For `test_branch_unlikely` (unlikely `x==0`), it prioritizes `rare_function`:
+
+```asm
+_Z20test_branch_unlikelyi:
+    ...
+	testl	%edi, %edi
+	je	.L8                 ; Jump to critical path if x == 0 (unlikely)
+	jmp	_Z13rare_functionv  ; Fall through to rare (likely)
+.L8:
+	jmp	_Z17critical_functionv
+```
+
+### 4. Separate vs. Unity Compilation
+
+Comparison of compiling 50 files separately vs as a unity build:
+
+```
+Separate Compilation Time: 10289 ms
+Unity Build Time: 586 ms
+```
