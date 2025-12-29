@@ -225,3 +225,39 @@ cd 07_inline_keyword
 make
 # Open example.ll to see the IR attributes
 ```
+
+### 6. -O3 vs -O2
+
+Ran `run_comparison.sh` which compares traversing a large linked list (random memory access) compiled with `-O2` vs `-O3`.
+
+```
+Compiling with -O2...
+Compiling with -O3...
+---------------------------------------------------
+Binary Size Comparison:
+main_O2: 18072 bytes
+main_O3: 17984 bytes
+---------------------------------------------------
+Running -O2...
+Traversal Time: 1355.91 ms
+Sum (verification): 49999995000000
+Running -O3...
+Traversal Time: 1371.1 ms
+Sum (verification): 49999995000000
+---------------------------------------------------
+```
+
+**Analysis:**
+The execution times are almost identical (or noisy), and binary sizes are very close. This demonstrates that for code bound by memory latency (like pointer chasing), `-O3`'s aggressive loop optimizations provide no benefit over `-O2`.
+
+### 7. The Role of the Inline Keyword
+
+Generated LLVM IR (`example.ll`). The `sum_inline` function (declared `inline`) is marked with `linkonce_odr` and `comdat`, which is the linking semantic of `inline`.
+
+```llvm
+define linkonce_odr dso_local noundef i32 @_Z10sum_inlineii(i32 noundef %0, i32 noundef %1) #0 comdat {
+  ...
+}
+```
+
+However, at `-O0` (and effectively handled by the frontend), the presence of the `inline` keyword does not force inlining. At higher optimization levels (e.g., `-O2`), both `sum_inline` and `sum_no_inline` would likely be inlined if they are small enough, or not if they are too large, regardless of the keyword. The keyword primarily ensures the function can be defined in a header file without "multiple definition" errors.
