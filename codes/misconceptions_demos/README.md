@@ -189,3 +189,39 @@ In `manual_hoist_trap`, where the programmer manually moved `b / c` up, the `idi
     jle .L16
 ```
 This illustrates that the compiler is restricted from performing this optimization automatically because it must avoid introducing UB on the `n <= 0` path.
+
+## 6. -O3 vs -O2 (`06_O3_vs_O2`)
+
+**Misconception:** "-O3 produces much faster code than -O2."
+
+**Reality:** For most general-purpose code, `-O3` often produces code that is performance-equivalent to `-O2`. Sometimes `-O3` can even be slower or larger due to aggressive unrolling or vectorization that misses the mark or trashes the instruction cache. The specific optimizations added in `-O3` (like aggressive loop vectorization) only help specific types of compute-bound loops.
+
+**The Demo:**
+- Compiles a Linked List traversal benchmark with `-O2` and `-O3`.
+- This workload is dominated by memory latency (pointer chasing), so auto-vectorization (the main benefit of -O3) cannot help.
+- Compares execution time and binary size.
+- You will often see they are nearly identical, showing that `-O3` is not a "magic speedup" button for all code.
+
+**Run:**
+```bash
+cd 06_O3_vs_O2
+./run_comparison.sh
+```
+
+## 7. The Role of the Inline Keyword (`07_inline_keyword`)
+
+**Misconception:** "The `inline` keyword forces the compiler to inline the function."
+
+**Reality:** The `inline` keyword acts as a *hint* to the compiler. In LLVM IR, it might add the `inlinehint` attribute, which slightly lowers the threshold for inlining, but the compiler is free to ignore it if the function is too large. Conversely, the compiler will happily inline small functions *without* the `inline` keyword.
+
+**The Demo:**
+- `example.cpp` defines `sum_inline` (with keyword) and `sum_no_inline` (without).
+- Generating LLVM IR (`make`) shows that `sum_inline` is marked `linkonce_odr` (allowing multiple definitions for linking purposes), which is the primary semantic meaning of `inline` in C++.
+- At optimization levels like `-O2`, both are likely inlined or not based on the cost model, regardless of the keyword.
+
+**Run:**
+```bash
+cd 07_inline_keyword
+make
+# Open example.ll to see the IR attributes
+```
