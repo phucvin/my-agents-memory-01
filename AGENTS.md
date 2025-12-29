@@ -2,21 +2,23 @@
 
 ## Memory Recording
 
-You are required to log your interactions in a single session file.
+You are required to log your interactions.
 
 1.  **Identify Session File**:
-    -   Check for an existing file in `agents-memory/` named `session-<JULES_SESSION_ID>.md`.
-    -   If it does not exist, create it.
+    -   A session is defined as a chat session with an agent.
+    -   The session file is named using the timestamp of the first interaction in the session (e.g., `26Dec28T1559.md`).
+    -   Scan `agents-memory/` to find the existing file for the current session. If no such file exists (i.e., this is the start of a new session), generate a timestamp and create a new file.
 
-2.  **Session Summary**:
-    -   The top of the file must contain a section `# Session Summary`.
-    -   Update this summary briefly after each interaction to reflect the current state or goal of the session.
+2.  **Record Interaction**:
+    -   Append the user's prompt and the agent's response to the session file.
+    -   Use the format:
+        ```markdown
+        # User Prompt
+        <content>
 
-3.  **Record Interaction**:
-    -   Append a new section for the current turn.
-    -   Use `## Turn <Timestamp>` or `## User Prompt` as a header.
-    -   Log the full **User Prompt**.
-    -   After executing the task, append the **Agent Response**.
+        # Agent Response
+        <content>
+        ```
 
 ## Memory Retrieval
 
