@@ -1,0 +1,9 @@
+# Ignore build artifacts
+*.o
+*.s
+*.ll
+main
+main_separate
+main_unity
+src/
+__pycache__/
