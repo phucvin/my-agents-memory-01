@@ -16,3 +16,7 @@ You are required to log your interactions.
 
 4.  **Record Response**:
     -   Upon completion of the task, append the full detailed response provided to the user to the same log file. Ensure the file is well-formatted using Markdown.
+
+## Memory Retrieval
+
+When you need to look for useful information in the past, scan the `agents-memory` directory.
