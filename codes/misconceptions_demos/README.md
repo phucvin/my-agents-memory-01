@@ -72,6 +72,23 @@ cd 04_separate_compilation
 ./run_comparison.sh
 ```
 
+## 5. Undefined Behavior and Optimizations (`05_undefined_behavior`)
+
+**Misconception:** "Undefined Behavior (UB) only enables optimizations."
+
+**Reality:** While UB allows the compiler to make assumptions that enable some optimizations (like removing overflow checks), avoiding the introduction of UB can *prevent* other optimizations (like loop hoisting). The compiler cannot perform a transformation if it might introduce UB on a path where it didn't exist before.
+
+**The Demo:**
+- `signed_overflow.cpp` demonstrates UB enabling optimization. The compiler assumes signed overflow never happens, so `(a + 1) > a` becomes a constant `true`.
+- `loop_hoist.cpp` demonstrates UB disabling optimization. The compiler cannot blindly hoist `b / c` out of a loop if `n` (loop count) might be <= 0, because if `c == 0`, the hoisted division would crash the program on a path where it previously wouldn't have run.
+
+**Run:**
+```bash
+cd 05_undefined_behavior
+make
+# Open signed_overflow.s and loop_hoist.s
+```
+
 ## Demo Outputs
 
 ### 1. Data Locality
@@ -144,3 +161,31 @@ Comparison of compiling 50 files separately vs as a unity build:
 Separate Compilation Time: 10289 ms
 Unity Build Time: 586 ms
 ```
+
+### 5. Undefined Behavior and Optimizations
+
+**Enabling Optimization:**
+In `signed_overflow.s`, `signed_overflow_check` (which checks `(a + 1) > a`) is optimized to just return 1 (true), because signed overflow is UB and the compiler assumes it doesn't happen:
+```asm
+_Z21signed_overflow_checki:
+    ...
+    mov eax, 1
+    ret
+```
+In contrast, `unsigned_overflow_check` performs the actual comparison because unsigned wraparound is defined.
+
+**Disabling Optimization:**
+In `loop_hoist.s`, `cannot_hoist_trap` (which calculates `b / c` in a loop) keeps the division *after* the loop count check (`test ecx, ecx`) to ensure it doesn't execute if the loop is empty:
+```asm
+    test ecx, ecx
+    jle .L1     ; Jump if n <= 0
+    cdq
+    idiv edi    ; Division happens only if we passed the check
+```
+In `manual_hoist_trap`, where the programmer manually moved `b / c` up, the `idiv` instruction appears *before* the check, making it unsafe (it will crash if `c=0` even if `n=0`):
+```asm
+    idiv r8d    ; Division happens blindly
+    test ecx, ecx
+    jle .L16
+```
+This illustrates that the compiler is restricted from performing this optimization automatically because it must avoid introducing UB on the `n <= 0` path.
