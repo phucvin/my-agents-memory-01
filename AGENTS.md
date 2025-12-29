@@ -29,3 +29,7 @@ You are required to log your interactions.
 ## Memory Retrieval
 
 When you need to look for useful information in the past, scan the `agents-memory` directory.
+
+## Code Organization
+
+All prototypes, demos, and example codes created by agents must be placed under the `codes/` directory. Do not clutter the root directory.
