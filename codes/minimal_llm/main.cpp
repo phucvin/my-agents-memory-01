@@ -813,7 +813,7 @@ float cross_entropy_loss(Tensor& logits, const std::vector<int>& targets, Tensor
 }
 
 // --- Text Generation Helper ---
-void generate_text(GPTModel& model, const std::string& prompt, int length = 20) {
+void generate_text(GPTModel& model, const std::string& prompt, int length = 50) {
     std::vector<int> tokens = encode(prompt);
     std::cout << prompt;
     for (int i = 0; i < length; ++i) {

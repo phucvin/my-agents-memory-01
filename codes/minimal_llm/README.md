@@ -50,27 +50,27 @@ The program will:
 
 ```
 Model initialized. Training on: "The quick brown fox jumps over the lazy dog."
-Step 0, Loss: 8.86248
-Step 20, Loss: 0.193206
+Step 0, Loss: 8.56546
+Step 20, Loss: 0.112977
 ...
-Step 200, Loss: 0.00216047
+Step 200, Loss: 0.00213079
 
 Training complete. Generating text...
-Thequick brown fox jumps over the lazy dog.
-quickbrk brown fox jumps over the lazy dog.do
-applen k browbrfox jumps over the lazy dog.do
+Thequick brown fox jumps over the lazy dog.n fox jumps over the lazy dog.he lazy g.he lazy dog.he lazy
+quickbrk brown fox jumps over the lazy dog.n fox juy g. the lazy dog. the lazy dog.he lazy g. the lazy g.
+applequk brown fox jumps over the lazy dog.n fox jumps over the lazy dog.he lazy g.he lazy dog.he lazy g.
 
 Generating for 10 random words (30% in-training):
-Braine k brown fox jumps over the lazy dog.do
-Lightick brown fox jumps over the lazy dog.do
-thequick brown fox jumps over the lazy dog.
-Moonquick brown fox jumps over the lazy dog.
-Lifequick brown fox jumps over the lazy dog.
-Earthick brown fox jumps over the lazy dog.do
-brownover towy dog.dog.dodoer the lazy dog.do
-Spacen k brown fox jumps over the lazy dog.do
-dogquick brown fox jumps over the lazy dog.
-Skye n k brown fox jumps over the lazy dog.
+Lightick brown fox jumps over the lazy dog.n fox jumps over the lazy dog.he lazy g.he lazy g. the lazy g.
+Skyquick brown fox jumps over the lazy dog.n fox jumps over ts over the lazy g. the lazy dog.azy dog.he
+Brainbrfox fon fofox mps over the lazy dog.n fox azy g.azy g.erazy g.azy dog.azy g.he lazy g.azy g.he laz
+lazyquick brown fox jumps over the lazy dog.n fox jumps over the lazy dog.he lazy g.he lazy dog.he lazy
+quickbrk brown fox jumps over the lazy dog.n fox juy g. the lazy dog. the lazy dog.he lazy g. the lazy g.
+Timequick brown fox jumps over the lazy dog.n fox jumps over the lazy dog.he lazy g.he lazy dog.he lazy
+brown tk brown fox jumps azer the lazy dog. the lazy g.azy g. the lazy g.he lazy g.he lazy g.he lazy g.g.
+Earthick brown fox jumps over the lazy dog.n fox jumps over ts over the lazy g. the lazy dog.azy dog.he l
+Codequick brown fox jumps over the lazy dog.n fox jumps over ts azy dog.he lazy dog.he lazy dog.he lazy
+Spacequk brown fox jumps over the lazy dog.n fox jumps over the lazy dog.he lazy g.he lazy dog.he lazy g.
 ```
 
 ## Code Structure
