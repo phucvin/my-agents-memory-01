@@ -75,7 +75,9 @@ struct Tensor {
     // Initialize the data with random numbers.
     // This is crucial for breaking symmetry so the network can learn.
     void random_init(float std_dev = 0.02f) {
-        std::mt19937 gen(42);
+        // Use a random device to seed the generator for true randomness across runs
+        std::random_device rd;
+        std::mt19937 gen(rd());
         std::normal_distribution<float> d(0.0f, std_dev);
         for (auto &x : data) x = d(gen);
     }
@@ -791,8 +793,37 @@ float cross_entropy_loss(Tensor& logits, const std::vector<int>& targets, Tensor
     return total_loss / seq_len;
 }
 
+// --- Text Generation Helper ---
+void generate_text(GPTModel& model, const std::string& prompt, int length = 40) {
+    std::vector<int> tokens = encode(prompt);
+    std::cout << prompt;
+    for (int i = 0; i < length; ++i) {
+        Tensor logits = model.forward(tokens);
+
+        int last_idx = logits.shape[0] - 1;
+        int vocab_size = logits.shape[1];
+
+        // Greedy decoding: pick the token with highest probability
+        int best_token = 0;
+        float best_val = -1e9f;
+        for (int v = 0; v < vocab_size; ++v) {
+            if (logits.at(last_idx, v) > best_val) {
+                best_val = logits.at(last_idx, v);
+                best_token = v;
+            }
+        }
+
+        tokens.push_back(best_token);
+        std::cout << index_to_char(best_token) << std::flush;
+        if (tokens.size() > MAX_SEQUENCE_LENGTH) tokens.erase(tokens.begin());
+    }
+    std::cout << std::endl;
+}
+
 int main() {
-    srand(42);
+    // Seed global random with time
+    srand(time(NULL));
+
     GPTModel model;
     AdamOptimizer optimizer(ADAM_LEARNING_RATE);
     model.register_params(optimizer);
@@ -836,84 +867,37 @@ int main() {
 
     std::cout << "\nTraining complete. Generating text..." << std::endl;
 
-    // First Generation: "The"
-    std::string prompt = "The";
-    std::vector<int> tokens = encode(prompt);
+    // Fixed generations for consistency checks
+    generate_text(model, "The");
+    generate_text(model, "quick");
+    generate_text(model, "apple");
 
-    std::cout << prompt;
-    for (int i = 0; i < 40; ++i) {
-        Tensor logits = model.forward(tokens);
+    // Random word generation
+    std::vector<std::string> training_words = {"The", "quick", "brown", "fox", "jumps", "over", "the", "lazy", "dog"};
+    std::vector<std::string> other_words = {
+        "Sun", "Moon", "Earth", "Sky", "Code", "Brain", "Life", "Time", "Space", "Light"
+    };
 
-        int last_idx = logits.shape[0] - 1;
-        int vocab_size = logits.shape[1];
+    // Shuffle and pick
+    std::random_device rd;
+    std::mt19937 g(rd());
 
-        // Greedy decoding: pick the token with highest probability
-        int best_token = 0;
-        float best_val = -1e9f;
-        for (int v = 0; v < vocab_size; ++v) {
-            if (logits.at(last_idx, v) > best_val) {
-                best_val = logits.at(last_idx, v);
-                best_token = v;
-            }
-        }
+    std::shuffle(training_words.begin(), training_words.end(), g);
+    std::shuffle(other_words.begin(), other_words.end(), g);
 
-        tokens.push_back(best_token);
-        std::cout << index_to_char(best_token) << std::flush;
-        if (tokens.size() > MAX_SEQUENCE_LENGTH) tokens.erase(tokens.begin());
+    std::vector<std::string> selected_words;
+    // 3 from training (30% of 10)
+    for (int i = 0; i < 3 && i < training_words.size(); ++i) selected_words.push_back(training_words[i]);
+    // 7 from other
+    for (int i = 0; i < 7 && i < other_words.size(); ++i) selected_words.push_back(other_words[i]);
+
+    // Shuffle selected words for random order
+    std::shuffle(selected_words.begin(), selected_words.end(), g);
+
+    std::cout << "\nGenerating for 10 random words (30% in-training):" << std::endl;
+    for (const auto& word : selected_words) {
+        generate_text(model, word);
     }
-    std::cout << std::endl;
-
-    // Second Generation: "quick"
-    std::string prompt2 = "quick";
-    std::vector<int> tokens2 = encode(prompt2);
-
-    std::cout << prompt2;
-    for (int i = 0; i < 40; ++i) {
-        Tensor logits = model.forward(tokens2);
-
-        int last_idx = logits.shape[0] - 1;
-        int vocab_size = logits.shape[1];
-
-        int best_token = 0;
-        float best_val = -1e9f;
-        for (int v = 0; v < vocab_size; ++v) {
-            if (logits.at(last_idx, v) > best_val) {
-                best_val = logits.at(last_idx, v);
-                best_token = v;
-            }
-        }
-
-        tokens2.push_back(best_token);
-        std::cout << index_to_char(best_token) << std::flush;
-        if (tokens2.size() > MAX_SEQUENCE_LENGTH) tokens2.erase(tokens2.begin());
-    }
-    std::cout << std::endl;
-
-    // Third Generation: "apple"
-    std::string prompt3 = "apple";
-    std::vector<int> tokens3 = encode(prompt3);
-
-    std::cout << prompt3;
-    for (int i = 0; i < 40; ++i) {
-        Tensor logits = model.forward(tokens3);
-
-        int last_idx = logits.shape[0] - 1;
-        int vocab_size = logits.shape[1];
-
-        int best_token = 0;
-        float best_val = -1e9f;
-        for (int v = 0; v < vocab_size; ++v) {
-            if (logits.at(last_idx, v) > best_val) {
-                best_val = logits.at(last_idx, v);
-                best_token = v;
-            }
-        }
-
-        tokens3.push_back(best_token);
-        std::cout << index_to_char(best_token) << std::flush;
-        if (tokens3.size() > MAX_SEQUENCE_LENGTH) tokens3.erase(tokens3.begin());
-    }
-    std::cout << std::endl;
 
     return 0;
 }

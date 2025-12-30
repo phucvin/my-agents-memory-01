@@ -57,8 +57,20 @@ Step 200, Loss: 0.00117248
 
 Training complete. Generating text...
 The quick brown fox jumps over the lazy dog
-quick bb  brown fox jumps over the lazy dog.a
-applezezk brgzzzrozzmumps over tge lazy dog.a
+quickuick brown fox jumps over the lazy dog.
+appleuoro orown dox jumps over the lazy dog.
+
+Generating for 10 random words (30% in-training):
+The quick brown fox jumps over the lazy dog
+the quick brown fox jumps over the lazy dog
+fox qu he  rown fox jumps over the lazy dog
+Sky quick brown fox jumps over the lazy dog
+Eartheo o orown fox ju ps over the lazy dog.
+Spaceuoro orown fox jumps over the lazy dog.
+Time uihk  rown fox jumps over the lazy dog.
+Brain oea  rown fox jumps over the lazy dog.
+Code u tr  o boobox jumps over the lazy dog.
+Sun quick brown fox jumps over the lazy dog
 ```
 
 ## Code Structure
