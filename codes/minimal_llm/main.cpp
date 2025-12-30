@@ -18,6 +18,7 @@
 // - Manual Backpropagation (Reverse Mode Auto-Differentiation via explicit backward methods)
 // - Adam Optimizer
 // - Training Loop to overfit a sentence
+// - 2-Character Tokenization
 //
 // This code is designed to be readable for software engineers who may not have a deep
 // background in mathematics or artificial intelligence.
@@ -25,14 +26,18 @@
 // ======================================================================================
 
 // --- Constants ---
-// The size of our dictionary. We use a simple character-level vocabulary (A-Z, a-z, punctuation).
-const int VOCABULARY_SIZE = 65;
+// The size of our base character set. (A-Z, a-z, punctuation).
+const int BASE_VOCAB_SIZE = 65;
+
+// The size of the dictionary. We use 2 characters per token.
+const int VOCABULARY_SIZE = BASE_VOCAB_SIZE * BASE_VOCAB_SIZE;
 
 // The size of the vector representation for each token.
 // Think of this as the "richness" of the information we store about each character.
 const int EMBEDDING_DIMENSION = 48;
 
-// The maximum number of characters the model can look back at to make a prediction.
+// The maximum number of tokens the model can look back at.
+// Since each token is 2 chars, this covers 128 characters.
 const int MAX_SEQUENCE_LENGTH = 64;
 
 // Transformer models split their attention into multiple "heads" to focus on different
@@ -732,7 +737,7 @@ public:
 
 // --- Utils ---
 
-int char_to_index(char c) {
+int single_char_to_index(char c) {
     if (c >= 'A' && c <= 'Z') return c - 'A';
     if (c >= 'a' && c <= 'z') return c - 'a' + 26;
     if (c == ' ') return 52;
@@ -741,7 +746,7 @@ int char_to_index(char c) {
     return 64; // Unknown
 }
 
-char index_to_char(int i) {
+char index_to_single_char(int i) {
     if (i >= 0 && i < 26) return 'A' + i;
     if (i >= 26 && i < 52) return 'a' + (i - 26);
     if (i == 52) return ' ';
@@ -750,9 +755,23 @@ char index_to_char(int i) {
     return '?';
 }
 
+int pair_to_index(char c1, char c2) {
+    return single_char_to_index(c1) * BASE_VOCAB_SIZE + single_char_to_index(c2);
+}
+
+std::pair<char, char> index_to_pair(int i) {
+    int idx1 = i / BASE_VOCAB_SIZE;
+    int idx2 = i % BASE_VOCAB_SIZE;
+    return {index_to_single_char(idx1), index_to_single_char(idx2)};
+}
+
 std::vector<int> encode(const std::string& s) {
     std::vector<int> tokens;
-    for (char c : s) tokens.push_back(char_to_index(c));
+    for (size_t i = 0; i < s.length(); i += 2) {
+        char c1 = s[i];
+        char c2 = (i + 1 < s.length()) ? s[i + 1] : ' '; // Pad with space
+        tokens.push_back(pair_to_index(c1, c2));
+    }
     return tokens;
 }
 
@@ -794,7 +813,7 @@ float cross_entropy_loss(Tensor& logits, const std::vector<int>& targets, Tensor
 }
 
 // --- Text Generation Helper ---
-void generate_text(GPTModel& model, const std::string& prompt, int length = 40) {
+void generate_text(GPTModel& model, const std::string& prompt, int length = 20) {
     std::vector<int> tokens = encode(prompt);
     std::cout << prompt;
     for (int i = 0; i < length; ++i) {
@@ -814,7 +833,8 @@ void generate_text(GPTModel& model, const std::string& prompt, int length = 40) 
         }
 
         tokens.push_back(best_token);
-        std::cout << index_to_char(best_token) << std::flush;
+        std::pair<char, char> p = index_to_pair(best_token);
+        std::cout << p.first << p.second << std::flush;
         if (tokens.size() > MAX_SEQUENCE_LENGTH) tokens.erase(tokens.begin());
     }
     std::cout << std::endl;

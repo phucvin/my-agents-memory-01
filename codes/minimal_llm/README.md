@@ -26,7 +26,7 @@ If you are a software engineer without a background in Deep Learning, this proje
   - `TransformerBlock`: A single layer of the GPT architecture.
   - `AdamOptimizer`: The algorithm that updates the weights based on gradients.
 - **Architecture**: A GPT-style decoder-only model.
-- **Tokenizer**: A hardcoded character-level tokenizer (A-Z, a-z, space, punctuation).
+- **Tokenizer**: A hardcoded 2-character tokenizer. Each token represents a pair of characters (e.g., "Th", "e "), increasing the vocabulary to ~4000 tokens.
 
 ## Usage
 
