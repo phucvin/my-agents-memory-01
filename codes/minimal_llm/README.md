@@ -26,7 +26,7 @@ If you are a software engineer without a background in Deep Learning, this proje
   - `TransformerBlock`: A single layer of the GPT architecture.
   - `AdamOptimizer`: The algorithm that updates the weights based on gradients.
 - **Architecture**: A GPT-style decoder-only model.
-- **Tokenizer**: A hardcoded character-level tokenizer (A-Z, a-z, space, punctuation).
+- **Tokenizer**: A hardcoded 2-character tokenizer. Each token represents a pair of characters (e.g., "Th", "e "), increasing the vocabulary to ~4000 tokens.
 
 ## Usage
 
@@ -50,27 +50,27 @@ The program will:
 
 ```
 Model initialized. Training on: "The quick brown fox jumps over the lazy dog."
-Step 0, Loss: 4.75491
-Step 20, Loss: 0.0650338
+Step 0, Loss: 8.56546
+Step 20, Loss: 0.112977
 ...
-Step 200, Loss: 0.00117248
+Step 200, Loss: 0.00213079
 
 Training complete. Generating text...
-The quick brown fox jumps over the lazy dog
-quickuick brown fox jumps over the lazy dog.
-appleuoro orown dox jumps over the lazy dog.
+Thequick brown fox jumps over the lazy dog.n fox jumps over the lazy dog.he lazy g.he lazy dog.he lazy
+quickbrk brown fox jumps over the lazy dog.n fox juy g. the lazy dog. the lazy dog.he lazy g. the lazy g.
+applequk brown fox jumps over the lazy dog.n fox jumps over the lazy dog.he lazy g.he lazy dog.he lazy g.
 
 Generating for 10 random words (30% in-training):
-The quick brown fox jumps over the lazy dog
-the quick brown fox jumps over the lazy dog
-fox qu he  rown fox jumps over the lazy dog
-Sky quick brown fox jumps over the lazy dog
-Eartheo o orown fox ju ps over the lazy dog.
-Spaceuoro orown fox jumps over the lazy dog.
-Time uihk  rown fox jumps over the lazy dog.
-Brain oea  rown fox jumps over the lazy dog.
-Code u tr  o boobox jumps over the lazy dog.
-Sun quick brown fox jumps over the lazy dog
+Lightick brown fox jumps over the lazy dog.n fox jumps over the lazy dog.he lazy g.he lazy g. the lazy g.
+Skyquick brown fox jumps over the lazy dog.n fox jumps over ts over the lazy g. the lazy dog.azy dog.he
+Brainbrfox fon fofox mps over the lazy dog.n fox azy g.azy g.erazy g.azy dog.azy g.he lazy g.azy g.he laz
+lazyquick brown fox jumps over the lazy dog.n fox jumps over the lazy dog.he lazy g.he lazy dog.he lazy
+quickbrk brown fox jumps over the lazy dog.n fox juy g. the lazy dog. the lazy dog.he lazy g. the lazy g.
+Timequick brown fox jumps over the lazy dog.n fox jumps over the lazy dog.he lazy g.he lazy dog.he lazy
+brown tk brown fox jumps azer the lazy dog. the lazy g.azy g. the lazy g.he lazy g.he lazy g.he lazy g.g.
+Earthick brown fox jumps over the lazy dog.n fox jumps over ts over the lazy g. the lazy dog.azy dog.he l
+Codequick brown fox jumps over the lazy dog.n fox jumps over ts azy dog.he lazy dog.he lazy dog.he lazy
+Spacequk brown fox jumps over the lazy dog.n fox jumps over the lazy dog.he lazy g.he lazy dog.he lazy g.
 ```
 
 ## Code Structure
