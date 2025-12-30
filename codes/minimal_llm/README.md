@@ -34,7 +34,23 @@ The program will:
 1. Initialize the model with random weights.
 2. Train (overfit) on the sentence: *"The quick brown fox jumps over the lazy dog."*
 3. Print the loss at every 20 steps.
-4. After training, generate text starting with the prompt "The".
+4. After training, generate text starting with two prompts: "The" and "quick".
+
+### Example Output
+
+```
+Model initialized. Training on: "The quick brown fox jumps over the lazy dog."
+Step 0, Loss: 4.75491
+Step 20, Loss: 0.0650338
+...
+Step 200, Loss: 0.00117248
+
+Training complete. Generating text...
+The quick brown fox jumps over the lazy dog
+quick bb  brown fox jumps over the lazy dog.a
+```
+
+*Note: The second output shows slight imperfection ("bb", ".a") likely due to limited context window or training steps, but captures the core phrase.*
 
 ## Limitations
 
