@@ -50,27 +50,27 @@ The program will:
 
 ```
 Model initialized. Training on: "The quick brown fox jumps over the lazy dog."
-Step 0, Loss: 4.75491
-Step 20, Loss: 0.0650338
+Step 0, Loss: 8.86248
+Step 20, Loss: 0.193206
 ...
-Step 200, Loss: 0.00117248
+Step 200, Loss: 0.00216047
 
 Training complete. Generating text...
-The quick brown fox jumps over the lazy dog
-quickuick brown fox jumps over the lazy dog.
-appleuoro orown dox jumps over the lazy dog.
+Thequick brown fox jumps over the lazy dog.
+quickbrk brown fox jumps over the lazy dog.do
+applen k browbrfox jumps over the lazy dog.do
 
 Generating for 10 random words (30% in-training):
-The quick brown fox jumps over the lazy dog
-the quick brown fox jumps over the lazy dog
-fox qu he  rown fox jumps over the lazy dog
-Sky quick brown fox jumps over the lazy dog
-Eartheo o orown fox ju ps over the lazy dog.
-Spaceuoro orown fox jumps over the lazy dog.
-Time uihk  rown fox jumps over the lazy dog.
-Brain oea  rown fox jumps over the lazy dog.
-Code u tr  o boobox jumps over the lazy dog.
-Sun quick brown fox jumps over the lazy dog
+Braine k brown fox jumps over the lazy dog.do
+Lightick brown fox jumps over the lazy dog.do
+thequick brown fox jumps over the lazy dog.
+Moonquick brown fox jumps over the lazy dog.
+Lifequick brown fox jumps over the lazy dog.
+Earthick brown fox jumps over the lazy dog.do
+brownover towy dog.dog.dodoer the lazy dog.do
+Spacen k brown fox jumps over the lazy dog.do
+dogquick brown fox jumps over the lazy dog.
+Skye n k brown fox jumps over the lazy dog.
 ```
 
 ## Code Structure
