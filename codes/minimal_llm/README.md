@@ -57,7 +57,8 @@ Step 200, Loss: 0.00117248
 
 Training complete. Generating text...
 The quick brown fox jumps over the lazy dog
-quick brown fox jumps over the lazy dog.
+quick bb  brown fox jumps over the lazy dog.a
+applezezk brgzzzrozzmumps over tge lazy dog.a
 ```
 
 ## Code Structure

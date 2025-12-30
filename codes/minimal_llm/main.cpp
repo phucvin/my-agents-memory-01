@@ -889,5 +889,31 @@ int main() {
     }
     std::cout << std::endl;
 
+    // Third Generation: "apple"
+    std::string prompt3 = "apple";
+    std::vector<int> tokens3 = encode(prompt3);
+
+    std::cout << prompt3;
+    for (int i = 0; i < 40; ++i) {
+        Tensor logits = model.forward(tokens3);
+
+        int last_idx = logits.shape[0] - 1;
+        int vocab_size = logits.shape[1];
+
+        int best_token = 0;
+        float best_val = -1e9f;
+        for (int v = 0; v < vocab_size; ++v) {
+            if (logits.at(last_idx, v) > best_val) {
+                best_val = logits.at(last_idx, v);
+                best_token = v;
+            }
+        }
+
+        tokens3.push_back(best_token);
+        std::cout << index_to_char(best_token) << std::flush;
+        if (tokens3.size() > MAX_SEQUENCE_LENGTH) tokens3.erase(tokens3.begin());
+    }
+    std::cout << std::endl;
+
     return 0;
 }
