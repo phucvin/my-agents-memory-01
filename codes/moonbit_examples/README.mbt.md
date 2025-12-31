@@ -36,22 +36,23 @@ moon run cmd/fibonacci
 
 ## Generated Artifacts
 
-The project includes a `target_artifacts/` directory containing the generated code for C and WebAssembly (Text Format).
+The project includes a `target_artifacts/` directory containing the generated code for C, WebAssembly (Text Format), JavaScript, and LLVM IR.
 
 - `*.c`: Generated C code (from `native` target).
 - `*.wat`: Generated WebAssembly Text Format (from `wasm` target).
-- `*.gc.wat`: Generated WebAssembly Text Format (from `wasm-gc` target). Note: Generating WAT for GC might fail if the installed `wasm2wat` version does not support the specific GC features used.
+- `*.gc.wat`: Generated WebAssembly Text Format (from `wasm-gc` target).
+- `*.js`: Generated JavaScript code (from `js` target).
+- `*.ll`: Generated LLVM IR (from `native` target).
 
 To rebuild these artifacts:
 
-1.  Install `wabt` (for `wasm2wat`).
-2.  Run the build script (conceptually):
+1.  Ensure you have `moon` installed.
+2.  Run the build script:
     ```bash
-    moon build --target c
-    moon build --target wasm
-    moon build --target wasm-gc
-    # Copy artifacts from target/ to target_artifacts/
+    python3 scripts/build_artifacts.py
     ```
+
+    This script builds all targets (`native`, `wasm`, `wasm-gc`, `js`) with `--output-wat` and copies the relevant output files to `target_artifacts/`.
 
 ## Example Output (Hello World)
 

@@ -30,19 +30,15 @@ def main():
     os.chdir(project_root)
 
     dirs = ["hello", "fibonacci", "factorial", "arrays", "structs", "enums", "hof", "option", "generics", "traits"]
-    targets = ["native", "wasm", "wasm-gc"]
 
-    print(f"Building targets: {targets}...")
-    for t in targets:
-        cmd = [moon_cmd, "build", "--target", t]
-        if t in ["wasm", "wasm-gc"]:
-            cmd.append("--output-wat")
-
-        try:
-            subprocess.run(cmd, check=True)
-        except subprocess.CalledProcessError as e:
-            print(f"Error building target {t}: {e}")
-            sys.exit(1)
+    # Build all targets
+    print(f"Building all targets (js, native, wasm, wasm-gc) with --output-wat...")
+    cmd = [moon_cmd, "build", "--target", "all", "--output-wat"]
+    try:
+        subprocess.run(cmd, check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"Error building targets: {e}")
+        sys.exit(1)
 
     print("Copying artifacts...")
     for d in dirs:
@@ -72,6 +68,24 @@ def main():
             print(f"Copied {d}.gc.wat")
         else:
             print(f"Warning: {wat_gc_src} not found")
+
+        # 4. Copy JS
+        js_src = os.path.join(target_dir, "js/release/build/cmd", d, f"{d}.js")
+        if os.path.exists(js_src):
+            js_dst = os.path.join(artifact_dir, f"{d}.js")
+            shutil.copy(js_src, js_dst)
+            print(f"Copied {d}.js")
+        else:
+            print(f"Warning: {js_src} not found")
+
+        # 5. Copy LLVM IR
+        ll_src = os.path.join(target_dir, "native/release/build/cmd", d, f"{d}.ll")
+        if os.path.exists(ll_src):
+            ll_dst = os.path.join(artifact_dir, f"{d}.ll")
+            shutil.copy(ll_src, ll_dst)
+            print(f"Copied {d}.ll")
+        else:
+            print(f"Warning: {ll_src} not found")
 
     print("Done.")
 
