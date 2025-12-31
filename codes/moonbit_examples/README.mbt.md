@@ -1,69 +1,61 @@
 # MoonBit Examples
 
-This project demonstrates 10 examples of MoonBit language features.
+This project demonstrates 10 examples of MoonBit language features, now split into independent runnable commands.
 
 ## Prerequisites
 
-- MoonBit CLI (`moon`)
+- **MoonBit CLI (`moon`)**: Required to build and run the examples.
+  - Install via: `curl -fsSL https://cli.moonbitlang.com/install/unix.sh | bash`
+  - Ensure `~/.moon/bin` is in your PATH.
+
+## Structure
+
+The examples are located in `cmd/` as separate packages:
+
+- `cmd/hello`: Hello World
+- `cmd/fibonacci`: Fibonacci sequence (Recursion)
+- `cmd/factorial`: Factorial calculation (Loop)
+- `cmd/arrays`: Array operations
+- `cmd/structs`: Structs and methods
+- `cmd/enums`: Enums and pattern matching
+- `cmd/hof`: Higher-order functions
+- `cmd/option`: Option type handling
+- `cmd/generics`: Generics
+- `cmd/traits`: Traits
 
 ## Build and Run
 
+To run a specific example, use `moon run cmd/<example_name>`.
+
+For example:
+
 ```bash
-moon run cmd/main
+moon run cmd/hello
+moon run cmd/fibonacci
 ```
 
-## Examples Included
+## Generated Artifacts
 
-1.  **Hello World**: Basic printing.
-2.  **Fibonacci**: Recursive function.
-3.  **Factorial**: Loop-based implementation.
-4.  **Array Operations**: Creation, iteration, and mapping.
-5.  **Structs & Methods**: Defining types and methods.
-6.  **Enums & Pattern Matching**: Algebraic data types.
-7.  **Higher Order Functions**: Functions as arguments.
-8.  **Option Type**: Handling optional values safely.
-9.  **Generics**: Generic types (Box).
-10. **Traits**: Interface-like behavior (Speak trait).
+The project includes a `target_artifacts/` directory containing the generated code for C and WebAssembly (Text Format).
 
-## Example Output
+- `*.c`: Generated C code (from `native` target).
+- `*.wat`: Generated WebAssembly Text Format (from `wasm` target).
+- `*.gc.wat`: Generated WebAssembly Text Format (from `wasm-gc` target). Note: Generating WAT for GC might fail if the installed `wasm2wat` version does not support the specific GC features used.
 
-```
-Running 10 MoonBit Examples
+To rebuild these artifacts:
 
---- 1. Hello World ---
+1.  Install `wabt` (for `wasm2wat`).
+2.  Run the build script (conceptually):
+    ```bash
+    moon build --target c
+    moon build --target wasm
+    moon build --target wasm-gc
+    # Copy artifacts from target/ to target_artifacts/
+    ```
+
+## Example Output (Hello World)
+
+```bash
+$ moon run cmd/hello
 Hello, MoonBit!
-
---- 2. Fibonacci (Recursion) ---
-Fibonacci of 10 is 55
-
---- 3. Factorial (Loop) ---
-Factorial of 5 is 120
-
---- 4. Array Operations ---
-Original array: [1, 2, 3, 4, 5]
-Sum of array elements: 15
-Doubled array: [2, 4, 6, 8, 10]
-
---- 5. Structs & Methods ---
-User(id=1, name=Alice, email=alice@example.com)
-
---- 6. Enums & Pattern Matching ---
-Area of circle: 78.53975
-Area of rectangle: 24
-
---- 7. Higher Order Functions ---
-Apply double to 5: 10
-Apply square to 5: 25
-
---- 8. Option Type ---
-10 / 2 = 5
-Cannot divide by zero
-
---- 9. Generics (Box) ---
-Int box contains: 42
-String box contains: Hello Generics
-
---- 10. Traits (Speak) ---
-Woof! I am Buddy
-Meow! I am Whiskers
 ```
