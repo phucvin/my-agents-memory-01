@@ -78,5 +78,9 @@ Emulator initialized. Automation sequence started.
 [Sending]: ./hello
 Hello from C++ inside DSL!
 
-[Step 6] Done. Exiting.
+[Step 6] Checking Kernel...
+[Sending]: uname -a
+Linux box 2.4.31 #2 Sun Mar 18 19:25:02 PDT 2012 i686 unknown
+
+[Step 7] Done. Exiting.
 ```

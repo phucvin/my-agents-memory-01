@@ -1,0 +1,34 @@
+Starting v86 with DSL...
+BIOS: /app/codes/v86_arch_linux/bios/seabios.bin
+CDROM: /app/codes/v86_arch_linux/images/dsl.iso
+Emulator initialized. Automation sequence started.
+[Emulator Loaded]
+
+[Step 1] Sending boot parameters...
+[Sending]: dsl 2 console=ttyS0
+
+[Step 2] Sending Enter confirmation...
+[Sending]:
+
+[Step 3] Assuming boot complete. Creating C++ file...
+[Sending]: cat > hello.cpp <<EOF
+[Sending]:
+[Sending]: #include <iostream>
+[Sending]: using namespace std;
+[Sending]: int main() {
+[Sending]: cout << "Hello from C++ inside DSL!" << endl;
+[Sending]: return 0;
+[Sending]: }
+[Sending]:
+[Sending]: EOF
+
+[Step 4] Compiling...
+[Sending]: g++ hello.cpp -o hello
+
+[Step 5] Running...
+[Sending]: ./hello
+
+[Step 6] Checking Kernel...
+[Sending]: uname -a
+
+[Step 7] Done. Exiting.
