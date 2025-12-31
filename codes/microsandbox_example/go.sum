@@ -1,0 +1,4 @@
+github.com/google/uuid v1.5.0 h1:1p67kYwdtXjb0gL0BPiP1Av9wiZPo5A8z2cWkTZ+eyU=
+github.com/google/uuid v1.5.0/go.mod h1:TIyPZe4MgqvfeYDBFedMoGGpEw/LqOeaOT+nhxU+yHo=
+github.com/zerocore-ai/microsandbox/sdk/go v0.0.0-20251230183715-79f8d3257317 h1:9DQSxcaxG6MrcwEU9iSUHyLQ2heLPLNOIe/MEnsmhhA=
+github.com/zerocore-ai/microsandbox/sdk/go v0.0.0-20251230183715-79f8d3257317/go.mod h1:Dr+SHwunRAGqJgTrqraUD8kqgv9+hi51d5Rly/V/ljs=
