@@ -32,8 +32,8 @@ const emulator = new V86({
     // v86 package usually locates wasm automatically if not specified,
     // or we point to the build in node_modules relative to the script location.
     wasm_path: path.join(__dirname, 'node_modules/v86/build/v86.wasm'),
-    disable_keyboard: true,
-    disable_mouse: true,
+    disable_keyboard: false,
+    disable_mouse: false,
 });
 
 let output_buffer = '';
@@ -52,6 +52,11 @@ emulator.add_listener('serial0-output-char', function(char) {
     process.stdout.write(char);
     output_buffer += char;
 });
+
+// Debug: Periodic tick to ensure event loop is alive
+setInterval(() => {
+    // Keep alive
+}, 1000);
 
 emulator.add_listener('emulator-loaded', function() {
     console.log('[Emulator Loaded]');
@@ -77,7 +82,7 @@ const STEPS = [
     },
     // Step 3: Wait for boot (can take a while) and create file
     {
-        delay: 60000, // Wait 1 minute for boot
+        delay: 120000, // Wait 2 minutes for boot
         action: () => {
             console.log('\n[Step 3] Assuming boot complete. Creating C++ file...');
             const cpp_code = `
@@ -114,11 +119,19 @@ int main() {
             send_serial('./hello\n');
         }
     },
-    // Step 6: Finish
+    // Step 6: Uname
     {
         delay: 5000,
         action: () => {
-            console.log('\n[Step 6] Done. Exiting.');
+            console.log('\n[Step 6] Checking Kernel...');
+            send_serial('uname -a\n');
+        }
+    },
+    // Step 7: Finish
+    {
+        delay: 5000,
+        action: () => {
+            console.log('\n[Step 7] Done. Exiting.');
             process.exit(0);
         }
     }
