@@ -54,3 +54,9 @@ The host interpreter is built in C++.
 make
 ./silang examples/hello.si
 ```
+
+## Self-Hosting
+
+The file `examples/self.si` contains a Silang interpreter written in Silang.
+It implements a Lexer, Parser (recursive descent), and Interpreter (AST walker).
+Due to complexity and current host parser limitations, full self-hosting verification is a work in progress, but the structure is complete.

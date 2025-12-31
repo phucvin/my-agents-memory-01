@@ -29,6 +29,9 @@ private:
     std::shared_ptr<Stmt> exprStmt();
 
     std::shared_ptr<Expr> expression();
+    std::shared_ptr<Expr> assignment();
+    std::shared_ptr<Expr> logicOr();
+    std::shared_ptr<Expr> logicAnd();
     std::shared_ptr<Expr> equality();
     std::shared_ptr<Expr> comparison();
     std::shared_ptr<Expr> term();

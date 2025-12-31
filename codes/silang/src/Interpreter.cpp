@@ -1,9 +1,62 @@
 #include "Interpreter.h"
 #include <iostream>
+#include <fstream>
+#include <sstream>
 
 namespace silang {
 
 // Builtins
+ValuePtr builtinReadFile(std::vector<ValuePtr> args) {
+    if (args.size() != 1) throw std::runtime_error("readFile expects 1 argument (path)");
+    auto pathVal = std::dynamic_pointer_cast<StringValue>(args[0]);
+    if (!pathVal) throw std::runtime_error("readFile argument must be string");
+
+    std::ifstream file(pathVal->value);
+    if (!file.is_open()) throw std::runtime_error("Could not open file: " + pathVal->value);
+
+    std::stringstream buffer;
+    buffer << file.rdbuf();
+    return std::make_shared<StringValue>(buffer.str());
+}
+
+ValuePtr builtinSubstring(std::vector<ValuePtr> args) {
+    if (args.size() != 3) throw std::runtime_error("substring expects 3 arguments (str, start, length)");
+    auto str = std::dynamic_pointer_cast<StringValue>(args[0]);
+    auto start = std::dynamic_pointer_cast<IntValue>(args[1]);
+    auto len = std::dynamic_pointer_cast<IntValue>(args[2]);
+
+    if (!str || !start || !len) throw std::runtime_error("substring arguments type mismatch");
+
+    if (start->value < 0 || start->value >= (int)str->value.length()) return std::make_shared<StringValue>("");
+    return std::make_shared<StringValue>(str->value.substr(start->value, len->value));
+}
+
+ValuePtr builtinOrd(std::vector<ValuePtr> args) {
+    if (args.size() != 1) throw std::runtime_error("ord expects 1 argument");
+    auto str = std::dynamic_pointer_cast<StringValue>(args[0]);
+    if (!str || str->value.empty()) return std::make_shared<IntValue>(0);
+    return std::make_shared<IntValue>((int)str->value[0]);
+}
+
+ValuePtr builtinChr(std::vector<ValuePtr> args) {
+    if (args.size() != 1) throw std::runtime_error("chr expects 1 argument");
+    auto i = std::dynamic_pointer_cast<IntValue>(args[0]);
+    if (!i) throw std::runtime_error("chr expects int");
+    std::string s(1, (char)i->value);
+    return std::make_shared<StringValue>(s);
+}
+
+ValuePtr builtinParseInt(std::vector<ValuePtr> args) {
+    if (args.size() != 1) throw std::runtime_error("parseInt expects 1 argument");
+    auto str = std::dynamic_pointer_cast<StringValue>(args[0]);
+    if (!str) throw std::runtime_error("parseInt expects string");
+    try {
+        return std::make_shared<IntValue>(std::stoi(str->value));
+    } catch (...) {
+        return std::make_shared<IntValue>(0);
+    }
+}
+
 ValuePtr builtinPrint(std::vector<ValuePtr> args) {
     for (size_t i = 0; i < args.size(); ++i) {
         std::cout << args[i]->toString();
@@ -43,8 +96,11 @@ Interpreter::Interpreter() {
 void Interpreter::setupBuiltins() {
     globals->define("print", std::make_shared<BuiltinValue>("print", builtinPrint));
     globals->define("len", std::make_shared<BuiltinValue>("len", builtinLen));
-    // Push is usually a method, but without classes, we can make it a function or handle method call specially.
-    // For "arr.push(x)", visitCall will handle it if we treat it right.
+    globals->define("readFile", std::make_shared<BuiltinValue>("readFile", builtinReadFile));
+    globals->define("substring", std::make_shared<BuiltinValue>("substring", builtinSubstring));
+    globals->define("ord", std::make_shared<BuiltinValue>("ord", builtinOrd));
+    globals->define("chr", std::make_shared<BuiltinValue>("chr", builtinChr));
+    globals->define("parseInt", std::make_shared<BuiltinValue>("parseInt", builtinParseInt));
 }
 
 void Interpreter::interpret(std::shared_ptr<Program> program) {
@@ -176,6 +232,20 @@ ValuePtr Interpreter::visitBinary(std::shared_ptr<BinaryExpr> expr) {
             if (expr->op == Op::ADD) return std::make_shared<StringValue>(l->value + r->value);
             if (expr->op == Op::EQ) return std::make_shared<BoolValue>(l->value == r->value);
             if (expr->op == Op::NEQ) return std::make_shared<BoolValue>(l->value != r->value);
+            if (expr->op == Op::LT) return std::make_shared<BoolValue>(l->value < r->value);
+            if (expr->op == Op::GT) return std::make_shared<BoolValue>(l->value > r->value);
+            if (expr->op == Op::LE) return std::make_shared<BoolValue>(l->value <= r->value);
+            if (expr->op == Op::GE) return std::make_shared<BoolValue>(l->value >= r->value);
+        }
+        // String + Any -> Concatenation
+        if (expr->op == Op::ADD) {
+             return std::make_shared<StringValue>(l->value + right->toString());
+        }
+    }
+    // Any + String -> Concatenation
+    if (auto r = std::dynamic_pointer_cast<StringValue>(right)) {
+        if (expr->op == Op::ADD) {
+             return std::make_shared<StringValue>(left->toString() + r->value);
         }
     }
 
@@ -184,6 +254,8 @@ ValuePtr Interpreter::visitBinary(std::shared_ptr<BinaryExpr> expr) {
         if (auto r = std::dynamic_pointer_cast<BoolValue>(right)) {
             if (expr->op == Op::EQ) return std::make_shared<BoolValue>(l->value == r->value);
             if (expr->op == Op::NEQ) return std::make_shared<BoolValue>(l->value != r->value);
+            if (expr->op == Op::AND) return std::make_shared<BoolValue>(l->value && r->value);
+            if (expr->op == Op::OR) return std::make_shared<BoolValue>(l->value || r->value);
         }
     }
 
@@ -310,6 +382,11 @@ ValuePtr Interpreter::visitIndex(std::shared_ptr<IndexExpr> expr) {
         std::string key = index->toString();
         if (map->entries.count(key)) return map->entries[key];
         throw std::runtime_error("Key not found");
+    } else if (auto str = std::dynamic_pointer_cast<StringValue>(obj)) {
+        if (auto i = std::dynamic_pointer_cast<IntValue>(index)) {
+            if (i->value < 0 || i->value >= str->value.length()) throw std::runtime_error("Index out of bounds");
+            return std::make_shared<StringValue>(std::string(1, str->value[i->value]));
+        }
     }
     throw std::runtime_error("Indexing not supported on this type");
 }

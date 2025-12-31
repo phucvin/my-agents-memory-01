@@ -218,30 +218,34 @@ std::shared_ptr<Stmt> Parser::exprStmt() {
 }
 
 std::shared_ptr<Expr> Parser::expression() {
-    // Assignment?
-    // Let's check for equality first, but assignment has lower precedence.
-    // identifier = expr
-    // complex.member = expr
-    // array[index] = expr
-    // This is "term" or "unary" or "call"? No, usually assignment is right-associative and low precedence.
+    return assignment();
+}
 
-    // Simplest: use recursive descent hierarchy.
-    // Expression -> Assignment
-    // Assignment -> Equality ( = Assignment )?
-
-    // But left side of assignment must be l-value.
-    // Let's parse equality first.
-    std::shared_ptr<Expr> expr = equality();
+std::shared_ptr<Expr> Parser::assignment() {
+    std::shared_ptr<Expr> expr = logicOr();
 
     if (match(TokenType::EQUAL)) {
-        std::shared_ptr<Expr> value = expression(); // Right associative
-        // Check if expr is l-value (Variable, MemberAccess, Index?)
-        // For now, just wrap in BinaryExpr with ASSIGN op?
-        // Or specific AssignmentExpr?
-        // Let's use BinaryExpr with ASSIGN op for simplicity, though semantics differ.
+        std::shared_ptr<Expr> value = assignment();
         return std::make_shared<BinaryExpr>(expr, Op::ASSIGN, value);
     }
+    return expr;
+}
 
+std::shared_ptr<Expr> Parser::logicOr() {
+    std::shared_ptr<Expr> expr = logicAnd();
+    while (match(TokenType::PIPE_PIPE)) {
+        std::shared_ptr<Expr> right = logicAnd();
+        expr = std::make_shared<BinaryExpr>(expr, Op::OR, right);
+    }
+    return expr;
+}
+
+std::shared_ptr<Expr> Parser::logicAnd() {
+    std::shared_ptr<Expr> expr = equality();
+    while (match(TokenType::AMP_AMP)) {
+        std::shared_ptr<Expr> right = equality();
+        expr = std::make_shared<BinaryExpr>(expr, Op::AND, right);
+    }
     return expr;
 }
 
