@@ -23,28 +23,31 @@ Demonstrates array iteration, filtering, and mapping.
 ### 4. Objects (`objects.js`)
 Demonstrates object property access, modification, and nested objects.
 
-### 5. Closures (`closures.js`)
+### 5. Objects - Add Field (`objects_add_field.js`)
+Demonstrates adding a new field to an object after initialization, contrasting with the static shape optimization in `objects.js`.
+
+### 6. Closures (`closures.js`)
 Demonstrates function closures and state retention.
 
-### 6. Recursion (`recursion.js`)
+### 7. Recursion (`recursion.js`)
 Demonstrates recursive function calls (Fibonacci sequence).
 
-### 7. String Manipulation (`strings.js`)
+### 8. String Manipulation (`strings.js`)
 Demonstrates string methods like `substring`, `indexOf`, `split`, and `toUpperCase`.
 
-### 8. Control Flow (`control_flow.js`)
+### 9. Control Flow (`control_flow.js`)
 Demonstrates `if-else`, `while`, and `do-while` loops.
 
-### 9. Math Operations (`math_ops.js`)
+### 10. Math Operations (`math_ops.js`)
 Demonstrates `Math` library functions.
 
-### 10. Exception Handling (`try_catch.js`)
+### 11. Exception Handling (`try_catch.js`)
 Demonstrates `try-catch-finally` blocks.
 
-### 11. Bitwise Operations (`bitwise.js`)
+### 12. Bitwise Operations (`bitwise.js`)
 Demonstrates bitwise AND, OR, XOR, NOT, and shifts.
 
-### 12. Matrix Multiplication (`matrix.js`)
+### 13. Matrix Multiplication (`matrix.js`)
 Demonstrates nested loops and 2D arrays.
 
 ## Compilation
