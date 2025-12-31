@@ -12,7 +12,7 @@ static inline SHPrivateNameCacheEntry* get_private_name_cache(SHUnit *);
 static const SHSrcLoc s_source_locations[];
 static SHNativeFuncInfo s_function_info_table[];
 static SHLegacyValue _0_global(SHRuntime *shr);
-// codes/static_hermes_examples/hello.js:1:1
+// hello.js:1:1
 static SHLegacyValue _0_global(SHRuntime *shr) {
   _SH_MODEL();
   struct {

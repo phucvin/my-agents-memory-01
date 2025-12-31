@@ -9,31 +9,52 @@ This directory contains examples of compiling JavaScript to C using [Static Herm
 
 ## Examples
 
-### Hello World
+The following examples demonstrate various JavaScript features supported by Static Hermes. All examples are compiled to C using the `shermes` compiler.
 
-**Input (`hello.js`):**
-```javascript
-print("Hello from Static Hermes!");
-```
+### 1. Hello World
+**Input (`hello.js`):** Basic print statement.
 
-**Command:**
+### 2. Math
+**Input (`math.js`):** Basic arithmetic function.
+
+### 3. Arrays (`arrays.js`)
+Demonstrates array iteration, filtering, and mapping.
+
+### 4. Objects (`objects.js`)
+Demonstrates object property access, modification, and nested objects.
+
+### 5. Closures (`closures.js`)
+Demonstrates function closures and state retention.
+
+### 6. Recursion (`recursion.js`)
+Demonstrates recursive function calls (Fibonacci sequence).
+
+### 7. String Manipulation (`strings.js`)
+Demonstrates string methods like `substring`, `indexOf`, `split`, and `toUpperCase`.
+
+### 8. Control Flow (`control_flow.js`)
+Demonstrates `if-else`, `while`, and `do-while` loops.
+
+### 9. Math Operations (`math_ops.js`)
+Demonstrates `Math` library functions.
+
+### 10. Exception Handling (`try_catch.js`)
+Demonstrates `try-catch-finally` blocks.
+
+### 11. Bitwise Operations (`bitwise.js`)
+Demonstrates bitwise AND, OR, XOR, NOT, and shifts.
+
+### 12. Matrix Multiplication (`matrix.js`)
+Demonstrates nested loops and 2D arrays.
+
+## Compilation
+
+The `compile_all.sh` script compiles all `.js` files in this directory to `.c` files using `shermes`.
+
 ```bash
-shermes -O -emit-c -exported-unit=hello hello.js -o hello.c
-```
-
-### Math
-
-**Input (`math.js`):**
-```javascript
-function add(a, b) { return a + b; } print(add(10, 20));
-```
-
-**Command:**
-```bash
-shermes -O -emit-c -exported-unit=math math.js -o math.c
+./compile_all.sh
 ```
 
 ## Generated Files
 
-*   `hello.c`: The C source code generated from `hello.js`.
-*   `math.c`: The C source code generated from `math.js`.
+For each `.js` file, a corresponding `.c` file exists (e.g., `arrays.c` from `arrays.js`). These C files contain the compiled bytecode and runtime calls necessary to execute the JavaScript logic within the Hermes VM environment.
