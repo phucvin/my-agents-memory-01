@@ -54,9 +54,37 @@ To rebuild these artifacts:
 
     This script builds all targets (`native`, `wasm`, `wasm-gc`, `js`) with `--output-wat` and copies the relevant output files to `target_artifacts/`.
 
-## Example Output (Hello World)
+## Example Output
+
+### Hello World (Default and JS Target)
 
 ```bash
 $ moon run cmd/hello
 Hello, MoonBit!
+
+$ moon run cmd/hello --target js
+Hello, MoonBit!
+```
+
+### Fibonacci
+
+```bash
+$ moon run cmd/fibonacci
+Fibonacci of 10 is 55
+```
+
+### Factorial
+
+```bash
+$ moon run cmd/factorial
+Factorial of 5 is 120
+```
+
+### Arrays
+
+```bash
+$ moon run cmd/arrays
+Original array: [1, 2, 3, 4, 5]
+Sum of array elements: 15
+Doubled array: [2, 4, 6, 8, 10]
 ```
