@@ -1,0 +1,14 @@
+{
+  "name": "v86_arch_linux",
+  "version": "1.0.0",
+  "description": "v86 Node.js Example running DSL",
+  "main": "index.mjs",
+  "type": "module",
+  "scripts": {
+    "start": "node index.mjs",
+    "setup": "./setup.sh"
+  },
+  "dependencies": {
+    "v86": "^0.5.301"
+  }
+}
