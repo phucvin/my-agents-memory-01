@@ -1,0 +1,118 @@
+// Silang Interpreter in Silang
+
+// ... (Data structures and Lexer same) ...
+
+struct Token {
+    string type;
+    string text;
+}
+
+struct ASTNode {
+    string kind;
+    string sVal;
+    int iVal;
+    bool bVal;
+    Array<ASTNode> children;
+    string name;
+    string op;
+}
+
+Array<Token> tokens;
+int current = 0;
+
+// ... Lexer omitted for brevity (assume correct) ...
+// Copied from previous working lexer
+bool isAlpha(string c) { int code = ord(c); return (code >= 65 && code <= 90) || (code >= 97 && code <= 122) || c == "_"; }
+bool isDigit(string c) { int code = ord(c); return code >= 48 && code <= 57; }
+bool isAlphaNumeric(string c) { return isAlpha(c) || isDigit(c); }
+void addToken(string type, string text) { Token t; t.type = type; t.text = text; tokens.push(t); }
+void lex(string source) {
+    int i = 0;
+    int length = len(source);
+    while (i < length) {
+        string c = substring(source, i, 1);
+        if (c == "(") { addToken("LPAREN", "("); i = i + 1; }
+        else if (c == ")") { addToken("RPAREN", ")"); i = i + 1; }
+        else if (c == "{") { addToken("LBRACE", "{"); i = i + 1; }
+        else if (c == "}") { addToken("RBRACE", "}"); i = i + 1; }
+        else if (c == "[") { addToken("LBRACKET", "["); i = i + 1; }
+        else if (c == "]") { addToken("RBRACKET", "]"); i = i + 1; }
+        else if (c == ",") { addToken("COMMA", ","); i = i + 1; }
+        else if (c == ".") { addToken("DOT", "."); i = i + 1; }
+        else if (c == ";") { addToken("SEMICOLON", ";"); i = i + 1; }
+        else if (c == "+") { addToken("PLUS", "+"); i = i + 1; }
+        else if (c == "-") { addToken("MINUS", "-"); i = i + 1; }
+        else if (c == "*") { addToken("STAR", "*"); i = i + 1; }
+        else if (c == "/") { addToken("SLASH", "/"); i = i + 1; }
+        else if (c == "=") { addToken("EQUAL", "="); i = i + 1; }
+        else if (c == " " || c == "\n" || c == "\r" || c == "\t") { i = i + 1; }
+        else if (c == "\"") {
+            i = i + 1;
+            int start = i;
+            while (i < length && substring(source, i, 1) != "\"") { i = i + 1; }
+            string text = substring(source, start, i - start);
+            addToken("STRING", text);
+            i = i + 1;
+        }
+        else if (isDigit(c)) {
+            int start = i;
+            while (i < length && isDigit(substring(source, i, 1))) { i = i + 1; }
+            string text = substring(source, start, i - start);
+            addToken("NUMBER", text);
+        }
+        else if (isAlpha(c)) {
+            int start = i;
+            while (i < length && isAlphaNumeric(substring(source, i, 1))) { i = i + 1; }
+            string text = substring(source, start, i - start);
+            string type = "IDENTIFIER";
+            if (text == "struct") type = "STRUCT";
+            else if (text == "int") type = "INT";
+            else if (text == "bool") type = "BOOL";
+            else if (text == "string") type = "STRING_TYPE";
+            else if (text == "void") type = "VOID";
+            else if (text == "return") type = "RETURN";
+            else if (text == "if") type = "IF";
+            else if (text == "else") type = "ELSE";
+            else if (text == "while") type = "WHILE";
+            else if (text == "print") type = "IDENTIFIER";
+            addToken(type, text);
+        }
+        else { print("Unknown char:", c); i = i + 1; }
+    }
+    addToken("EOF", "");
+}
+
+Token peek() { return tokens[current]; }
+Token advance() { Token t = tokens[current]; current = current + 1; return t; }
+bool match(string type) { if (peek().type == type) { advance(); return true; } return false; }
+void consume(string type, string msg) { if (match(type)) return; print("Error:", msg, "Found:", peek().type, peek().text); }
+
+ASTNode parseExpr() { ASTNode n; return n; } // stub
+
+ASTNode parseCall() { ASTNode n; return n; } // stub
+
+ASTNode parseTerm() {
+    ASTNode left = parseCall();
+    while (match("PLUS")) {
+        ASTNode bin;
+        bin.kind = "Binary";
+        bin.children = [];
+        bin.children.push(left);
+        left = bin;
+    }
+    return left;
+}
+
+ASTNode parseStmt() { ASTNode n; return n; }
+ASTNode parseProgram() { ASTNode n; return n; }
+void interpret(ASTNode prog) {}
+
+void main() {
+    print("parseTerm loop test");
+    string path = "examples/hello.si";
+    string source = readFile(path);
+    print("Source read. Lexing...");
+
+    lex(source);
+    print("Tokens:", len(tokens));
+}

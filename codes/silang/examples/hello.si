@@ -1,0 +1,29 @@
+struct Token {
+  string type;
+  string value;
+}
+
+int add(int a, int b) {
+  return a + b;
+}
+
+void main() {
+  print("Hello, Silang!");
+
+  int result = add(10, 20);
+  print(result);
+
+  Array<int> numbers = [1, 2, 3];
+  numbers.push(4);
+  print("Array len:", len(numbers));
+  print("Array[3]:", numbers[3]);
+
+  Map<string, int> ages;
+  ages.set("Alice", 30);
+  print("Alice age:", ages.get("Alice"));
+
+  Token t;
+  t.type = "IDENTIFIER";
+  t.value = "x";
+  print("Token:", t.type, t.value);
+}

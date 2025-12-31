@@ -1,0 +1,8 @@
+void main() {
+  print("Host test starting...");
+
+  string path = "examples/hello.si";
+  string content = readFile(path);
+  print("File read, length:", len(content));
+  print("First 10 chars:", substring(content, 0, 10));
+}
