@@ -1,69 +1,66 @@
 # MoonBit Examples
 
-This project demonstrates 10 examples of MoonBit language features.
+This directory contains 10 independent examples of MoonBit language, demonstrating various features like recursion, structs, enums, higher-order functions, and generics.
 
 ## Prerequisites
 
-- MoonBit CLI (`moon`)
+- [MoonBit CLI](https://www.moonbitlang.com/download) installed.
+- `moon` command available in your PATH.
 
-## Build and Run
+## Project Structure
+
+Each example is located in its own directory under `cmd/`:
+
+- `cmd/hello`: Hello World
+- `cmd/fib`: Fibonacci Sequence (Recursion)
+- `cmd/fact`: Factorial (Loop)
+- `cmd/array`: Array Operations
+- `cmd/struct`: Structs & Methods
+- `cmd/enum`: Enums & Pattern Matching
+- `cmd/hof`: Higher Order Functions
+- `cmd/option`: Option Type
+- `cmd/generics`: Generics (Box)
+- `cmd/traits`: Traits (Speak)
+
+## How to Run
+
+To run any example, use the `moon run` command with the path to the example package:
 
 ```bash
-moon run cmd/main
+# Run Hello World
+moon run cmd/hello
+
+# Run Fibonacci
+moon run cmd/fib
+
+# Run Generics
+moon run cmd/generics
 ```
 
-## Examples Included
+## Build Artifacts
 
-1.  **Hello World**: Basic printing.
-2.  **Fibonacci**: Recursive function.
-3.  **Factorial**: Loop-based implementation.
-4.  **Array Operations**: Creation, iteration, and mapping.
-5.  **Structs & Methods**: Defining types and methods.
-6.  **Enums & Pattern Matching**: Algebraic data types.
-7.  **Higher Order Functions**: Functions as arguments.
-8.  **Option Type**: Handling optional values safely.
-9.  **Generics**: Generic types (Box).
-10. **Traits**: Interface-like behavior (Speak trait).
+We maintain generated C and WebAssembly (WAT) files for reference.
+
+- **C Output**: Located in `c_output/`. Generated using `moon build --target native`.
+- **WAT Output**: Located in `wat_output/`. Generated using `moon build --target wasm --output-wat`.
 
 ## Example Output
 
-```
-Running 10 MoonBit Examples
-
---- 1. Hello World ---
+### 1. Hello World
+```bash
+$ moon run cmd/hello
 Hello, MoonBit!
+```
 
---- 2. Fibonacci (Recursion) ---
+### 2. Fibonacci
+```bash
+$ moon run cmd/fib
 Fibonacci of 10 is 55
+```
 
---- 3. Factorial (Loop) ---
-Factorial of 5 is 120
-
---- 4. Array Operations ---
-Original array: [1, 2, 3, 4, 5]
-Sum of array elements: 15
-Doubled array: [2, 4, 6, 8, 10]
-
---- 5. Structs & Methods ---
-User(id=1, name=Alice, email=alice@example.com)
-
---- 6. Enums & Pattern Matching ---
-Area of circle: 78.53975
-Area of rectangle: 24
-
---- 7. Higher Order Functions ---
-Apply double to 5: 10
-Apply square to 5: 25
-
---- 8. Option Type ---
-10 / 2 = 5
-Cannot divide by zero
-
---- 9. Generics (Box) ---
-Int box contains: 42
-String box contains: Hello Generics
-
---- 10. Traits (Speak) ---
+### 10. Traits
+```bash
+$ moon run cmd/traits
 Woof! I am Buddy
 Meow! I am Whiskers
 ```
