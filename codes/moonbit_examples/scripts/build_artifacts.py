@@ -21,17 +21,7 @@ def main():
             print("Error: 'moon' CLI not found in PATH or ~/.moon/bin/")
             sys.exit(1)
 
-    clang_cmd = shutil.which("clang")
-
-    # Determine include path for moonbit.h
-    # Assuming standard installation at ~/.moon/include/moonbit.h
-    moon_include_dir = os.path.expanduser("~/.moon/include")
-    if not os.path.exists(moon_include_dir):
-         # Try to infer from moon binary location if possible, or just default to empty if not found
-         # But usually it is in ~/.moon/include
-         pass
-
-    # Ensure artifact dir exists
+    # Ensure artifact dir exists and is clean
     if os.path.exists(artifact_dir):
         shutil.rmtree(artifact_dir)
     os.makedirs(artifact_dir)
@@ -55,12 +45,9 @@ def main():
         # 1. Copy C files (from native target)
         c_src = os.path.join(target_dir, "native/release/build/cmd", d, f"{d}.c")
         c_dst = os.path.join(artifact_dir, f"{d}.c")
-        # Initialize c_dst existence flag to avoid UnboundLocalError later
-        c_dst_exists = False
 
         if os.path.exists(c_src):
             shutil.copy(c_src, c_dst)
-            c_dst_exists = True
             print(f"Copied {d}.c")
         else:
             print(f"Warning: {c_src} not found")
@@ -92,28 +79,15 @@ def main():
         else:
             print(f"Warning: {js_src} not found")
 
-        # 5. Copy LLVM IR
+        # 5. Copy LLVM IR (if exists)
         ll_src = os.path.join(target_dir, "native/release/build/cmd", d, f"{d}.ll")
         ll_dst = os.path.join(artifact_dir, f"{d}.ll")
 
         if os.path.exists(ll_src):
             shutil.copy(ll_src, ll_dst)
             print(f"Copied {d}.ll")
-        elif c_dst_exists and clang_cmd:
-            # If no .ll file but we have .c and clang, generate it
-            # Need to include the directory containing moonbit.h
-            print(f"Generating {d}.ll from {d}.c using clang...")
-            clang_args = [clang_cmd, "-S", "-emit-llvm", "-o", ll_dst, c_dst]
-            if os.path.exists(moon_include_dir):
-                clang_args.extend(["-I", moon_include_dir])
-
-            try:
-                subprocess.run(clang_args, check=True)
-                print(f"Generated {d}.ll")
-            except subprocess.CalledProcessError as e:
-                print(f"Warning: Failed to generate {d}.ll using clang: {e}")
         else:
-            print(f"Warning: {ll_src} not found and cannot generate from C")
+            print(f"Note: {ll_src} not found (LLVM IR generation skipped)")
 
     print("Done.")
 
