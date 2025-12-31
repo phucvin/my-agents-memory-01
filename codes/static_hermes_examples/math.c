@@ -13,7 +13,7 @@ static const SHSrcLoc s_source_locations[];
 static SHNativeFuncInfo s_function_info_table[];
 static SHLegacyValue _0_global(SHRuntime *shr);
 static SHLegacyValue _1_add(SHRuntime *shr);
-// codes/static_hermes_examples/math.js:1:1
+// math.js:1:1
 static SHLegacyValue _0_global(SHRuntime *shr) {
   _SH_MODEL();
   struct {
@@ -52,7 +52,7 @@ L0:
   _sh_leave(shr, &locals.head, frame);
   return locals.t0;
 }
-// codes/static_hermes_examples/math.js:1:1
+// math.js:1:1
 static SHLegacyValue _1_add(SHRuntime *shr) {
   struct {
     SHLocals head;
