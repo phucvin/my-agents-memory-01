@@ -21,10 +21,6 @@ def main():
             print("Error: 'moon' CLI not found in PATH or ~/.moon/bin/")
             sys.exit(1)
 
-    wasm2wat_cmd = shutil.which("wasm2wat")
-    if not wasm2wat_cmd:
-        print("Warning: 'wasm2wat' not found. generated .wat files will be skipped.")
-
     # Ensure artifact dir exists
     if os.path.exists(artifact_dir):
         shutil.rmtree(artifact_dir)
@@ -38,8 +34,12 @@ def main():
 
     print(f"Building targets: {targets}...")
     for t in targets:
+        cmd = [moon_cmd, "build", "--target", t]
+        if t in ["wasm", "wasm-gc"]:
+            cmd.append("--output-wat")
+
         try:
-            subprocess.run([moon_cmd, "build", "--target", t], check=True)
+            subprocess.run(cmd, check=True)
         except subprocess.CalledProcessError as e:
             print(f"Error building target {t}: {e}")
             sys.exit(1)
@@ -55,26 +55,23 @@ def main():
         else:
             print(f"Warning: {c_src} not found")
 
-        # 2. Convert Wasm to WAT (Standard)
-        if wasm2wat_cmd:
-            wasm_src = os.path.join(target_dir, "wasm/release/build/cmd", d, f"{d}.wasm")
-            if os.path.exists(wasm_src):
-                wat_dst = os.path.join(artifact_dir, f"{d}.wat")
-                try:
-                    subprocess.run([wasm2wat_cmd, wasm_src, "-o", wat_dst], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                    print(f"Generated {d}.wat")
-                except subprocess.CalledProcessError:
-                    print(f"Failed to convert {d}.wasm to wat")
+        # 2. Copy WAT (Standard)
+        wat_src = os.path.join(target_dir, "wasm/release/build/cmd", d, f"{d}.wat")
+        if os.path.exists(wat_src):
+            wat_dst = os.path.join(artifact_dir, f"{d}.wat")
+            shutil.copy(wat_src, wat_dst)
+            print(f"Copied {d}.wat")
+        else:
+            print(f"Warning: {wat_src} not found")
 
-            # 3. Convert Wasm to WAT (GC)
-            wasm_gc_src = os.path.join(target_dir, "wasm-gc/release/build/cmd", d, f"{d}.wasm")
-            if os.path.exists(wasm_gc_src):
-                wat_gc_dst = os.path.join(artifact_dir, f"{d}.gc.wat")
-                try:
-                    subprocess.run([wasm2wat_cmd, "--enable-all", wasm_gc_src, "-o", wat_gc_dst], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                    print(f"Generated {d}.gc.wat")
-                except subprocess.CalledProcessError:
-                    print(f"Failed to convert {d}.wasm (GC) to wat (might require newer wasm2wat or specific flags)")
+        # 3. Copy WAT (GC)
+        wat_gc_src = os.path.join(target_dir, "wasm-gc/release/build/cmd", d, f"{d}.wat")
+        if os.path.exists(wat_gc_src):
+            wat_gc_dst = os.path.join(artifact_dir, f"{d}.gc.wat")
+            shutil.copy(wat_gc_src, wat_gc_dst)
+            print(f"Copied {d}.gc.wat")
+        else:
+            print(f"Warning: {wat_gc_src} not found")
 
     print("Done.")
 
