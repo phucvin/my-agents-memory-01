@@ -1,0 +1,8 @@
+Start
+Middle
+Inner Scope
+Inner Scope Deferred
+End (Deferred)
+Program linked to executable './defers'.
+Launching ./defers
+Program completed with exit code 0.

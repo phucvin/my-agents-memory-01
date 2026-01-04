@@ -1,0 +1,7 @@
+Value: 42
+Pointer Address: 0x7fff893eb03c
+Dereferenced: 42
+New Value: 100
+Program linked to executable './pointers'.
+Launching ./pointers
+Program completed with exit code 0.

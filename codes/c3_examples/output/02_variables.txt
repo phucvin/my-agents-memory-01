@@ -1,0 +1,8 @@
+Int: 10
+Float: 3.140000
+Char: A
+Bool: 1
+String: String literal
+Program linked to executable './variables'.
+Launching ./variables
+Program completed with exit code 0.

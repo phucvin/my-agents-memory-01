@@ -1,0 +1,5 @@
+Point: (10, 20)
+Updated Point: (30, 20)
+Program linked to executable './structs'.
+Launching ./structs
+Program completed with exit code 0.

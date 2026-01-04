@@ -1,0 +1,4 @@
+Hello, World!
+Program linked to executable './hello'.
+Launching ./hello
+Program completed with exit code 0.
