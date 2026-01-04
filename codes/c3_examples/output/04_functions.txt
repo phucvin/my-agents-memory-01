@@ -1,0 +1,5 @@
+Sum: 8
+Hello, User!
+Program linked to executable './functions'.
+Launching ./functions
+Program completed with exit code 0.

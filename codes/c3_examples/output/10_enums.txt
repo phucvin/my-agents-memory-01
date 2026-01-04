@@ -1,0 +1,5 @@
+Green
+It's Green
+Program linked to executable './enums'.
+Launching ./enums
+Program completed with exit code 0.

@@ -1,0 +1,5 @@
+Int: 10
+Other type
+Program linked to executable './macros'.
+Launching ./macros
+Program completed with exit code 0.

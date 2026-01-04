@@ -1,0 +1,13 @@
+Array elements:
+1
+2
+3
+4
+5
+Slice elements (1..3):
+2
+3
+4
+Program linked to executable './arrays'.
+Launching ./arrays
+Program completed with exit code 0.
