@@ -41,3 +41,10 @@ This script will:
 - `string`: String manipulation.
 - `closure`: Closures.
 - `even_odd`: Mutual recursion.
+- `obj_field_add`: Simulating adding a field to an object.
+- `polymorphism`: Polymorphic function using a tagged struct.
+- `sum_array`: Summing array elements.
+- `is_prime`: Primality test loop.
+- `fib_iter`: Iterative Fibonacci.
+- `reverse_string`: Reversing a string.
+- `collatz`: Collatz conjecture sequence.
