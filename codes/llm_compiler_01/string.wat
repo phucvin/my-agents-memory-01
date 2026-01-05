@@ -1,7 +1,7 @@
 (module
   (import "env" "putchar" (func $putchar (param i32)))
 
-  (type $string (array i8))
+  (type $string (array (mut i8)))
   (data $s1_data "Hello")
   (data $s2_data " ")
   (data $s3_data "World")
