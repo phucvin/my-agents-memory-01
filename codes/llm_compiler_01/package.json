@@ -1,0 +1,13 @@
+{
+  "name": "llm_compiler_examples",
+  "version": "1.0.0",
+  "description": "Verification for LLM Compiler Examples",
+  "main": "verify.js",
+  "type": "module",
+  "scripts": {
+    "test": "node verify.js"
+  },
+  "dependencies": {
+    "binaryen": "^125.0.0"
+  }
+}
