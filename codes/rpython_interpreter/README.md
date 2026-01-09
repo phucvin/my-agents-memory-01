@@ -39,15 +39,15 @@ Example `fib.sl`:
 
 ## Benchmarks
 
-We benchmarked the calculation of `fib(35)` using both interpreters.
-*Note: We used `fib(35)` instead of `fib(20)` as requested because `fib(20)` executes too quickly (< 0.01s) to measure meaningful performance differences.*
+We benchmarked the calculation of `fib(40)` using both interpreters.
+*Note: We used `fib(40)` instead of `fib(20)` as requested because `fib(20)` executes too quickly (< 0.01s) to measure meaningful performance differences.*
 
-| Interpreter | Time (fib 35) |
+| Interpreter | Time (fib 40) |
 | :--- | :--- |
-| **No JIT** | 5.736s |
-| **JIT** | 3.776s |
+| **No JIT** | 63.024s |
+| **JIT** | 44.590s |
 
-The JIT-enabled interpreter is approximately **1.5x faster** for this recursive workload. Greater speedups are expected for loop-heavy code where JIT tracing is most effective.
+The JIT-enabled interpreter is approximately **1.4x faster** for this recursive workload. Greater speedups are expected for loop-heavy code where JIT tracing is most effective.
 
 ## Files
 
