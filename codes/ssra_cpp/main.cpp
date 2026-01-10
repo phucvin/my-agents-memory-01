@@ -1,6 +1,7 @@
 #include "ir.h"
 #include "allocator.h"
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <string>
 
@@ -44,26 +45,35 @@ int main() {
         }
     }
 
+    // Output to file
+    std::ofstream outfile("out.txt");
+    if (!outfile.is_open()) {
+        std::cerr << "Error opening out.txt for writing" << std::endl;
+        return 1;
+    }
+
     // Print result (forward)
     // Allocator output is in reverse order.
-    std::cout << "Generated Assembly (Forward):" << std::endl;
+    std::cout << "Writing generated assembly to out.txt..." << std::endl;
     for (int i = allocator.out.size() - 1; i >= 0; --i) {
         AsmOp& asm_op = allocator.out[i];
         if (asm_op.type == AsmOpType::Unary) {
             if (asm_op.lhs == -1) // Nullary
-                 std::cout << "r" << asm_op.out << " = " << asm_op.name << "()" << std::endl;
+                 outfile << "r" << asm_op.out << " = " << asm_op.name << "()" << std::endl;
             else if (asm_op.lhs == asm_op.out) // In-place or simple unary
-                 std::cout << "r" << asm_op.out << " = " << asm_op.name << "(r" << asm_op.lhs << ")" << std::endl;
+                 outfile << "r" << asm_op.out << " = " << asm_op.name << "(r" << asm_op.lhs << ")" << std::endl;
             else
-                 std::cout << "r" << asm_op.out << " = " << asm_op.name << "(r" << asm_op.lhs << ")" << std::endl; // Should be move?
+                 outfile << "r" << asm_op.out << " = " << asm_op.name << "(r" << asm_op.lhs << ")" << std::endl; // Should be move?
         } else if (asm_op.type == AsmOpType::Binary) {
-             std::cout << "r" << asm_op.out << " = " << asm_op.name << "(r" << asm_op.lhs << ", r" << asm_op.rhs << ")" << std::endl;
+             outfile << "r" << asm_op.out << " = " << asm_op.name << "(r" << asm_op.lhs << ", r" << asm_op.rhs << ")" << std::endl;
         } else if (asm_op.type == AsmOpType::Load) {
-             std::cout << "r" << asm_op.out << " = LOAD(mem[" << asm_op.mem << "])" << std::endl;
+             outfile << "r" << asm_op.out << " = LOAD(mem[" << asm_op.mem << "])" << std::endl;
         } else if (asm_op.type == AsmOpType::Store) {
-             std::cout << "STORE(r" << asm_op.out << ", mem[" << asm_op.mem << "])" << std::endl;
+             outfile << "STORE(r" << asm_op.out << ", mem[" << asm_op.mem << "])" << std::endl;
         }
     }
+    outfile.close();
+    std::cout << "Done." << std::endl;
 
     return 0;
 }
