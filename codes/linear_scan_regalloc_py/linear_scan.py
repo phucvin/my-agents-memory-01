@@ -54,13 +54,17 @@ class Interval:
         self.start = float('inf')
         self.end = -1
         self.reg = None
+        self.stack_slot = None
 
     def add_range(self, start, end):
         self.start = min(self.start, start)
         self.end = max(self.end, end)
 
     def __repr__(self):
-        return f"{self.var}: [{self.start}, {self.end}] -> {self.reg}"
+        loc = self.reg
+        if loc == "Spill":
+            loc = f"[Stack{self.stack_slot}]"
+        return f"{self.var}: {loc} \t(Interval: [{self.start}, {self.end}])"
 
 class Program:
     def __init__(self):
@@ -215,6 +219,7 @@ class Program:
 
         free_regs = [f"R{i}" for i in range(num_regs)]
         active = [] # List of intervals
+        stack_slot_counter = 0
 
         for i in sorted_intervals:
             # Expire old intervals
@@ -238,9 +243,14 @@ class Program:
                 spill_candidate = max(active + [i], key=lambda x: x.end)
                 if spill_candidate == i:
                     i.reg = "Spill"
+                    i.stack_slot = stack_slot_counter
+                    stack_slot_counter += 1
                 else:
+                    # Steal register
                     i.reg = spill_candidate.reg
                     spill_candidate.reg = "Spill"
+                    spill_candidate.stack_slot = stack_slot_counter
+                    stack_slot_counter += 1
                     active.remove(spill_candidate)
                     active.append(i)
                     active.sort(key=lambda x: x.end)
@@ -254,12 +264,166 @@ class Program:
                 active.append(i)
                 active.sort(key=lambda x: x.end)
 
+    def get_operand_loc(self, operand):
+        if operand not in self.intervals:
+            # Maybe a constant or undefined?
+            return operand
+        inter = self.intervals[operand]
+        if inter.reg == "Spill":
+            return f"[stack{inter.stack_slot}]"
+        return inter.reg
+
+    def generate_assembly(self):
+        print("\nGenerated Pseudo-Assembly:")
+        for bid in sorted(self.blocks.keys()):
+            block = self.blocks[bid]
+            print(f"L{bid}:")
+
+            # Identify pending Phi moves for successors
+            # Map successor_id -> list of moves (dest_var, src_var)
+            # But we are iterating linear instructions.
+            # Usually we process instructions, and at the branch (or end), we emit moves.
+
+            for instr in block.instructions:
+                if instr.is_phi:
+                    continue # Phis are handled in predecessors
+
+                # Check for Branch/Jump to handle Phi copies
+                # If this instruction is a branch/jump, we need to emit copies for successors BEFORE it?
+                # Actually, standard SSA: copies are parallel on the edge.
+                # If we emit before branch, we are fine for unconditional jumps.
+                # For conditional branch, we have two successors. We can't emit moves for both here blindly.
+                # But wait, in critical edge splitting, we would put moves in a new block.
+                # If we don't have critical edges, we can put moves at end of this block IF it only goes to one succ
+                # OR if the succ only has one pred.
+                # If we have `Branch(%c, T, F)`, we can't emit moves for T and F here if they conflict.
+                # But Phi moves for T are only needed if we go to T.
+                # So technically they should be IN the branch target or on the edge.
+                # Pseudo-assembly: "If %c Jump L_T_WithMoves else Jump L_F_WithMoves"?
+                # Or just assume the standard layout:
+                # For a prototype, let's just print the moves before the branch if unique,
+                # or annotating the edge.
+
+                # Let's try to emit them right before the terminator for simplicity,
+                # assuming no conflicts or just printing them as "on edge to X: ..."
+
+                # Handling normal instructions
+                output = []
+
+                # Prepare operands
+                # If spilled, load to temp
+                tmps = ["R_TMP1", "R_TMP2", "R_TMP3"] # Scratch registers
+                tmp_idx = 0
+
+                real_args = []
+                for arg in instr.args:
+                    if arg.startswith('%'):
+                        loc = self.get_operand_loc(arg)
+                        if loc.startswith('['):
+                            # Emit Load
+                            print(f"  LOAD {tmps[tmp_idx]}, {loc}  ; Reload {arg}")
+                            real_args.append(tmps[tmp_idx])
+                            tmp_idx += 1
+                        else:
+                            real_args.append(loc)
+                    else:
+                        real_args.append(arg)
+
+                # Branch / Jump special handling for Phis
+                if instr.op in ["Branch", "Jump"]:
+                    # Succs are in instr args usually.
+                    # Branch(%cond, true_blk, false_blk)
+                    # Jump(target)
+                    targets = []
+                    if instr.op == "Jump":
+                        targets = [int(instr.args[0])]
+                    elif instr.op == "Branch":
+                        targets = [int(instr.args[1]), int(instr.args[2])]
+
+                    for tid in targets:
+                        # Find Phis in target block `tid`
+                        succ = self.blocks.get(tid)
+                        if succ:
+                            for s_instr in succ.instructions:
+                                if s_instr.is_phi:
+                                    # Find index of current block `bid` in succ.preds
+                                    try:
+                                        pred_idx = succ.preds.index(bid)
+                                        src_val = s_instr.args[pred_idx]
+                                        dest_var = s_instr.lhs
+
+                                        # Emit Move: dest_var = src_val
+                                        # But this happens ON THE EDGE to `tid`.
+                                        # We will print it as a comment or pseudo-instr
+                                        print(f"  ; On edge to L{tid}: {dest_var} = {src_val}")
+
+                                        # Generate Move Code
+                                        # Src
+                                        src_loc = src_val
+                                        if src_val.startswith('%'):
+                                            src_loc = self.get_operand_loc(src_val)
+                                            if src_loc.startswith('['):
+                                                print(f"  LOAD {tmps[tmp_idx]}, {src_loc} ; Reload for Phi")
+                                                src_loc = tmps[tmp_idx]
+                                                tmp_idx = (tmp_idx + 1) % 3
+
+                                        # Dest
+                                        dest_loc = self.get_operand_loc(dest_var)
+                                        if dest_loc.startswith('['):
+                                            # Move to memory: LOAD src to Reg, STORE Reg to Dest
+                                            # We already have src in Reg (src_loc)
+                                            if not src_loc.startswith('R'):
+                                                # Const or something, load to Reg
+                                                print(f"  MOV {tmps[tmp_idx]}, {src_loc}")
+                                                src_loc = tmps[tmp_idx]
+                                                tmp_idx = (tmp_idx + 1) % 3
+                                            print(f"  STORE {dest_loc}, {src_loc} ; Spill Phi dest {dest_var}")
+                                        else:
+                                            # Move Reg to Reg
+                                            if src_loc != dest_loc:
+                                                print(f"  MOV {dest_loc}, {src_loc}")
+
+                                    except ValueError:
+                                        pass
+
+                # Emit operation
+                if instr.op == "Return":
+                     print(f"  RETURN {real_args[0]}")
+                elif instr.op == "Branch":
+                     # Branch cond, T, F
+                     print(f"  BRANCH {real_args[0]}, L{real_args[1]}, L{real_args[2]}")
+                elif instr.op == "Jump":
+                     print(f"  JUMP L{real_args[0]}")
+                else:
+                    # BinOp or Assignment
+                    # Dest
+                    if instr.lhs:
+                        dest_loc = self.get_operand_loc(instr.lhs)
+                        dest_reg = dest_loc
+                        is_spilled = False
+                        if dest_loc.startswith('['):
+                            dest_reg = tmps[tmp_idx] # Use temp for result
+                            is_spilled = True
+
+                        args_str = ", ".join(real_args)
+                        print(f"  {instr.op.upper()} {dest_reg}, {args_str}")
+
+                        if is_spilled:
+                            print(f"  STORE {dest_loc}, {dest_reg} ; Spill {instr.lhs}")
+                    else:
+                        # Void op?
+                        args_str = ", ".join(real_args)
+                        print(f"  {instr.op.upper()} {args_str}")
+
     def print_allocation(self):
         print("Register Allocation Results:")
         # Sort by var name/number
         for var in sorted(self.intervals.keys(), key=lambda x: int(x[1:]) if x[1:].isdigit() else x):
             inter = self.intervals[var]
-            print(f"{var}: {inter.reg} \t(Interval: [{inter.start}, {inter.end}])")
+            loc = inter.reg
+            if loc == "Spill":
+                loc = f"Stack[{inter.stack_slot}]"
+            print(f"{var}: {loc} \t(Interval: [{inter.start}, {inter.end}])")
 
 if __name__ == "__main__":
     import argparse
@@ -277,3 +441,4 @@ if __name__ == "__main__":
     prog.build_intervals()
     prog.allocate_registers(num_regs=args.regs)
     prog.print_allocation()
+    prog.generate_assembly()
