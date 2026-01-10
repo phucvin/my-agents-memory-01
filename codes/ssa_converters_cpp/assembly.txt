@@ -1,0 +1,46 @@
+; Assembly Generation with Spill Code
+; Num Registers: 3
+; Stack Frame Size: 16 bytes
+
+L0:
+  MOV TMP1, #0
+  STORE [SP+0], TMP1
+  MOV TMP1, #0
+  STORE [SP+4], TMP1
+  ; Phi Resolution for L1
+  LOAD R2, [SP+0]
+  ; Phi Resolution for L1
+  LOAD R0, [SP+4]
+  JMP #1
+
+L1:
+  CMP_LT R1, R0, #10
+  BRANCH R1, #2, #6
+
+L6:
+  RET R2
+
+L2:
+  CMP_LT R1, R0, #5
+  BRANCH R1, #3, #4
+
+L4:
+  SUB R1, R2, #1
+  ; Phi Resolution for L5
+  MOV R2, R1
+  JMP #5
+
+L3:
+  ADD TMP1, R2, R0
+  STORE [SP+8], TMP1
+  ; Phi Resolution for L5
+  LOAD R2, [SP+8]
+  JMP #5
+
+L5:
+  ADD TMP1, R0, #1
+  STORE [SP+12], TMP1
+  ; Phi Resolution for L1
+  ; Phi Resolution for L1
+  LOAD R0, [SP+12]
+  JMP #1

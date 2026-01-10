@@ -1,6 +1,7 @@
 #include "ir.h"
 #include "ssa.h"
 #include "regalloc.h"
+#include "codegen.h"
 #include <iostream>
 #include <fstream>
 
@@ -26,8 +27,9 @@ int main() {
 
     // Register Allocation on Standard SSA
     // Let's assume 3 physical registers
-    std::cout << "Running Register Allocation on Standard SSA (3 regs)...\n";
-    auto assignment = RegisterAllocator::Allocate(std_ssa.get(), 3);
+    int num_regs = 3;
+    std::cout << "Running Register Allocation on Standard SSA (" << num_regs << " regs)...\n";
+    auto assignment = RegisterAllocator::Allocate(std_ssa.get(), num_regs);
 
     std::string reg_output = "Register Allocation (Value -> Reg):\n";
     for (auto kv : assignment) {
@@ -37,6 +39,11 @@ int main() {
         reg_output += "\n";
     }
     WriteToFile("regalloc.txt", reg_output);
+
+    // Assembly Generation
+    std::cout << "Generating Assembly...\n";
+    std::string asm_output = CodeGenerator::GenerateAssembly(std_ssa.get(), assignment, num_regs);
+    WriteToFile("assembly.txt", asm_output);
 
     // Functional SSA
     auto func_ssa = SSAConverter::ConvertToFunctional(func);

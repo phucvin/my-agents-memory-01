@@ -1,7 +1,7 @@
 CXX = g++
 CXXFLAGS = -std=c++17 -Wall -Wextra -g
 
-OBJS = main.o ir.o ssa.o regalloc.o
+OBJS = main.o ir.o ssa.o regalloc.o codegen.o
 
 all: ssa_converter
 
