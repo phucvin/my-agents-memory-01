@@ -7,3 +7,6 @@ codes/llm_compiler_01/node_modules/
 codes/ecs_frontend/node_modules/
 codes/ecs_frontend/dist/
 codes/adk_agent/node_modules/
+__pycache__/
+*.pyc
+codes/ssa_converters/output_*.txt
