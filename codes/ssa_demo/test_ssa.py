@@ -14,30 +14,34 @@ class TestSSA(unittest.TestCase):
         converter = SSAConverter(blocks, entry)
         converter.convert()
 
-        # Check that we have valid SSA
-        # Just check output structure for now
-        # x should be renamed to x_0
-        # y should be y_0
-        # usage of x in binop should be x_0
-
         found_x_def = False
         found_y_def = False
+
+        # Verify Literals and Variables are preserved
+        op_checked = False
+
+        # Structure:
+        # x_0 = 1
+        # t0_0 = x_0 + 1
+        # y_0 = t0_0
 
         for b in blocks:
             for instr in b.instrs:
                 if isinstance(instr, SetInst):
                     if instr.dst == "x_0": found_x_def = True
                     if instr.dst == "y_0": found_y_def = True
-                    if instr.dst == "y_0" and instr.val == "x_0": pass # Correct propagation
                 if isinstance(instr, OpInst):
-                    if instr.dst == "y_0" and instr.arg1 == "x_0": pass
+                    # We expect t0_0 = x_0 + 1
+                    op_checked = True
+                    self.assertEqual(instr.arg1, "x_0")
+                    self.assertEqual(instr.arg2, 1) # AST Num is int 1
+                    self.assertTrue(instr.dst.startswith("t")) # Temp var
 
         self.assertTrue(found_x_def)
-        # In our IR, BinOp result is assigned to temp, then temp assigned to y.
-        # So y = t0, t0 = x + 1.
-        # Let's verify general structure.
+        self.assertTrue(found_y_def)
+        self.assertTrue(op_checked)
 
-    def test_if_phi(self):
+    def test_if_functional(self):
         # x = 0
         # if 1:
         #   x = 1
@@ -58,17 +62,31 @@ class TestSSA(unittest.TestCase):
         converter = SSAConverter(blocks, entry)
         converter.convert()
 
-        # We expect a Phi node for x in the join block
-        phi_found = False
+        # We expect the join block to have a parameter for x
+        # And predecessors to jump with arguments
+
+        join_block = None
         for b in blocks:
-            for instr in b.instrs:
-                if isinstance(instr, PhiInst) and instr.dst.startswith("x_"):
-                    phi_found = True
-                    self.assertEqual(len(instr.args), 2)
+            if "join" in b.label:
+                join_block = b
+                break
 
-        self.assertTrue(phi_found, "Phi node for x not found in If-Join")
+        self.assertIsNotNone(join_block)
+        # Check params
+        # Note: variable naming might vary, but it should have one param
+        self.assertEqual(len(join_block.params), 1)
+        self.assertTrue(join_block.params[0].startswith("x_"))
 
-    def test_loop_phi(self):
+        # Check predecessors (then, else) have args in jumps
+        for pred in join_block.preds:
+            term = pred.instrs[-1]
+            if isinstance(term, JumpInst):
+                self.assertEqual(len(term.args), 1)
+            elif isinstance(term, BranchInst):
+                # Should not happen in this simple if-join logic (jumps are inserted)
+                pass
+
+    def test_loop_functional(self):
         # i = 0
         # while i < 10:
         #   i = i + 1
@@ -84,16 +102,22 @@ class TestSSA(unittest.TestCase):
         converter = SSAConverter(blocks, entry)
         converter.convert()
 
-        # We expect a Phi node for i in the loop header
-        phi_found = False
+        # Loop header should have parameters (for i)
+        header_block = None
         for b in blocks:
             if "loop_header" in b.label:
-                for instr in b.instrs:
-                    if isinstance(instr, PhiInst) and instr.dst.startswith("i_"):
-                        phi_found = True
-                        self.assertGreaterEqual(len(instr.args), 2) # Entry and Backedge
+                header_block = b
+                break
 
-        self.assertTrue(phi_found, "Phi node for i not found in Loop Header")
+        self.assertIsNotNone(header_block)
+        self.assertGreaterEqual(len(header_block.params), 1)
+
+        # Check entry jump args
+        # Check backedge jump args
+        for pred in header_block.preds:
+            term = pred.instrs[-1]
+            if isinstance(term, JumpInst):
+                self.assertGreaterEqual(len(term.args), 1)
 
 if __name__ == "__main__":
     unittest.main()

@@ -61,6 +61,7 @@ class Block:
         self.instrs = []
         self.succs = []
         self.preds = []
+        self.params = [] # List of var names for Functional SSA
 
     def add_instr(self, instr):
         self.instrs.append(instr)
@@ -73,6 +74,9 @@ class Block:
             block.preds.append(self)
 
     def __repr__(self):
+        if self.params:
+            params_str = ", ".join(self.params)
+            return f"Block {self.label}({params_str})"
         return f"Block {self.label}"
 
 class Instruction:
@@ -99,14 +103,23 @@ class BranchInst(Instruction):
         self.cond = cond
         self.true_target = true_target
         self.false_target = false_target
+        self.true_args = []
+        self.false_args = []
     def __repr__(self):
-        return f"br {self.cond}, {self.true_target.label}, {self.false_target.label}"
+        t_args = ""
+        if self.true_args: t_args = f" ({', '.join(str(a) for a in self.true_args)})"
+        f_args = ""
+        if self.false_args: f_args = f" ({', '.join(str(a) for a in self.false_args)})"
+        return f"br {self.cond}, {self.true_target.label}{t_args}, {self.false_target.label}{f_args}"
 
 class JumpInst(Instruction):
     def __init__(self, target):
         self.target = target
+        self.args = []
     def __repr__(self):
-        return f"jmp {self.target.label}"
+        args_str = ""
+        if self.args: args_str = f" ({', '.join(str(a) for a in self.args)})"
+        return f"jmp {self.target.label}{args_str}"
 
 class PrintInst(Instruction):
     def __init__(self, val):
@@ -118,6 +131,7 @@ class PhiInst(Instruction):
     def __init__(self, dst):
         self.dst = dst
         self.args = {} # block_label -> val
+        self.original_var = None # For debugging/renaming
     def __repr__(self):
         args_str = ", ".join(f"[{v}, {l}]" for l, v in self.args.items())
         return f"{self.dst} = phi({args_str})"
@@ -311,6 +325,7 @@ class SSAConverter:
         globals_, blocks_def_var = self.get_globals()
         self.insert_phis(globals_, blocks_def_var)
         self.rename_vars(globals_)
+        self.convert_to_functional()
 
     def get_globals(self):
         globals_ = set()
@@ -394,22 +409,26 @@ class SSAConverter:
                         if stk: instr.val = stk[-1]
                         else: instr.val = f"{instr.val}_undef"
                 elif isinstance(instr, OpInst):
-                    stk1 = get_stack(instr.arg1)
-                    if stk1: instr.arg1 = stk1[-1]
-                    else: instr.arg1 = f"{instr.arg1}_undef"
+                    if isinstance(instr.arg1, str) and not instr.arg1.isdigit():
+                        stk1 = get_stack(instr.arg1)
+                        if stk1: instr.arg1 = stk1[-1]
+                        else: instr.arg1 = f"{instr.arg1}_undef"
 
-                    stk2 = get_stack(instr.arg2)
-                    if stk2: instr.arg2 = stk2[-1]
-                    else: instr.arg2 = f"{instr.arg2}_undef"
+                    if isinstance(instr.arg2, str) and not instr.arg2.isdigit():
+                        stk2 = get_stack(instr.arg2)
+                        if stk2: instr.arg2 = stk2[-1]
+                        else: instr.arg2 = f"{instr.arg2}_undef"
                 elif isinstance(instr, BranchInst):
                     # cond is usually a temp from OpInst, but treat as var
-                     stk = get_stack(instr.cond)
-                     if stk: instr.cond = stk[-1]
-                     else: instr.cond = f"{instr.cond}_undef"
+                     if isinstance(instr.cond, str) and not instr.cond.isdigit():
+                         stk = get_stack(instr.cond)
+                         if stk: instr.cond = stk[-1]
+                         else: instr.cond = f"{instr.cond}_undef"
                 elif isinstance(instr, PrintInst):
-                     stk = get_stack(instr.val)
-                     if stk: instr.val = stk[-1]
-                     else: instr.val = f"{instr.val}_undef"
+                     if isinstance(instr.val, str) and not instr.val.isdigit():
+                         stk = get_stack(instr.val)
+                         if stk: instr.val = stk[-1]
+                         else: instr.val = f"{instr.val}_undef"
 
                 # Replace Defs
                 dst = None
@@ -444,15 +463,63 @@ class SSAConverter:
 
         rename(self.entry)
 
+    def convert_to_functional(self):
+        # Post-pass to convert Phis to Block Args
+        for b in self.blocks:
+            # Collect Phis
+            phis = [instr for instr in b.instrs if isinstance(instr, PhiInst)]
+            if not phis:
+                continue
+
+            # Remove Phis from instrs
+            b.instrs = [instr for instr in b.instrs if not isinstance(instr, PhiInst)]
+
+            # Add params to Block
+            for phi in phis:
+                b.params.append(phi.dst)
+
+            # Update predecessors
+            for pred in b.preds:
+                # Find the terminator that jumps to b
+                term = pred.instrs[-1]
+
+                # Determine which args to add
+                args = []
+                for phi in phis:
+                    # Look up the value for this predecessor
+                    # Note: pred.label might not match exactly if we have complex flow?
+                    # The phi.args uses labels.
+                    val = phi.args.get(pred.label)
+                    # If val is missing (e.g. unreachable edge or something), handle it?
+                    # In valid SSA, it should be there.
+                    args.append(val)
+
+                if isinstance(term, JumpInst):
+                    if term.target == b:
+                        term.args = args
+                elif isinstance(term, BranchInst):
+                    if term.true_target == b:
+                        term.true_args = args
+                    if term.false_target == b:
+                        term.false_args = args
+
 def print_cfg(blocks):
     for b in blocks:
-        print(f"{b.label}:")
+        if b.params:
+            print(f"{b.label}({', '.join(b.params)}):")
+        else:
+            print(f"{b.label}:")
+
         for instr in b.instrs:
             print(f"  {instr}")
-        if b.succs:
-            print(f"  => {', '.join(s.label for s in b.succs)}")
-        else:
-            print("  => (end)")
+
+        # Helper to format succs with args?
+        # Actually the instructions (br, jmp) show the args now.
+        if not b.instrs or not isinstance(b.instrs[-1], (JumpInst, BranchInst)):
+            if b.succs:
+                print(f"  => {', '.join(s.label for s in b.succs)}")
+            else:
+                print("  => (end)")
         print()
 
 def run_test():
@@ -481,7 +548,7 @@ def run_test():
     converter = SSAConverter(blocks, entry)
     converter.convert()
 
-    print("--- SSA CFG ---")
+    print("--- Functional SSA CFG ---")
     print_cfg(blocks)
 
 if __name__ == "__main__":
