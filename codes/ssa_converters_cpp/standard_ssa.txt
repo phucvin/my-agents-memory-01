@@ -1,0 +1,44 @@
+Block 0:
+  Preds:
+  %1 = Const(0)
+  %2 = Const(0)
+  Jump(1)
+  Succs: 1
+
+Block 1:
+  Preds: 0 5
+  %3 = Phi(%1, %9)
+  %4 = Phi(%2, %10)
+  %5 = Lt(%4, 10)
+  Branch(%5, 2, 6)
+  Succs: 2 6
+
+Block 2:
+  Preds: 1
+  %6 = Lt(%4, 5)
+  Branch(%6, 3, 4)
+  Succs: 3 4
+
+Block 3:
+  Preds: 2
+  %7 = Add(%3, %4)
+  Jump(5)
+  Succs: 5
+
+Block 4:
+  Preds: 2
+  %8 = Sub(%3, 1)
+  Jump(5)
+  Succs: 5
+
+Block 5:
+  Preds: 3 4
+  %9 = Phi(%7, %8)
+  %10 = Add(%4, 1)
+  Jump(1)
+  Succs: 1
+
+Block 6:
+  Preds: 1
+  Return(%3)
+  Succs:
