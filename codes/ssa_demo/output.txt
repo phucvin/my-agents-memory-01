@@ -1,0 +1,40 @@
+--- Initial CFG ---
+L0_entry:
+  x = 1
+  y = 1
+  br x, L1_then, L2_else
+  => L1_then, L2_else
+
+L1_then:
+  y = 2
+  jmp L3_join
+  => L3_join
+
+L2_else:
+  jmp L3_join
+  => L3_join
+
+L3_join:
+  print y
+  => (end)
+
+--- SSA CFG ---
+L0_entry:
+  x_0 = 1
+  y_0 = 1
+  br x_0, L1_then, L2_else
+  => L1_then, L2_else
+
+L1_then:
+  y_1 = 2
+  jmp L3_join
+  => L3_join
+
+L2_else:
+  jmp L3_join
+  => L3_join
+
+L3_join:
+  y_2 = phi([y_1, L1_then], [y_0, L2_else])
+  print y_2
+  => (end)
