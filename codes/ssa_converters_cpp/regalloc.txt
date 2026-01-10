@@ -1,0 +1,11 @@
+Register Allocation (Value -> Reg):
+%1 -> SPILLED
+%2 -> SPILLED
+%3 -> R2
+%4 -> R0
+%5 -> R1
+%6 -> R1
+%7 -> SPILLED
+%8 -> R1
+%9 -> R2
+%10 -> SPILLED
