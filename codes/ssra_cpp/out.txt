@@ -1,0 +1,7 @@
+r1 = BAR()
+r0 = BAR()
+STORE(r1, mem[0])
+r1 = FOO(r1, r0)
+r1 = FOO(r1, r0)
+r0 = LOAD(mem[0])
+r0 = FOO(r0, r1)
