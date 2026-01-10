@@ -1,0 +1,20 @@
+{
+  "name": "adk_agent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node scripts/patch_adk.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google/adk": "^0.2.2",
+    "dotenv": "^16.4.5",
+    "tsx": "^4.21.0",
+    "zod": "^3.23.8"
+  }
+}
