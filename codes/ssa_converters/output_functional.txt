@@ -1,0 +1,23 @@
+entry:
+    x_0 = Const(1)
+    y_0 = Const(10)
+    Jump(if_check)
+if_check:
+    cond_0 = <(x_0, 5)
+    Branch(cond_0, then, else)
+then:
+    x_1 = +(x_0, 1)
+    Jump(loop_header) args(Undef, y_0, x_1)
+else:
+    x_2 = *(x_0, 2)
+    Jump(loop_header) args(Undef, y_0, x_2)
+loop_header: (loop_cond_0, y_1, x_3)
+    loop_cond_1 = >(y_1, 0)
+    Branch(loop_cond_1, loop_body, exit)
+loop_body:
+    y_2 = -(y_1, 1)
+    x_4 = +(x_3, y_2)
+    Jump(loop_header) args(loop_cond_1, y_2, x_4)
+exit:
+    Print(x_3)
+    Return(0)

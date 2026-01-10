@@ -1,0 +1,33 @@
+entry:
+    x_0 = Const(1)
+    y_0 = Const(10)
+    Jump(if_check)
+if_check:
+    cond_0 = <(x_0, 5)
+    Branch(cond_0, then, else)
+then:
+    x_1 = +(x_0, 1)
+    Upsilon(y_0, ^y_1)
+    Upsilon(x_1, ^x_3)
+    Jump(loop_header)
+else:
+    x_2 = *(x_0, 2)
+    Upsilon(y_0, ^y_1)
+    Upsilon(x_2, ^x_3)
+    Jump(loop_header)
+loop_header:
+    loop_cond_0 = Phi()
+    y_1 = Phi()
+    x_3 = Phi()
+    loop_cond_1 = >(y_1, 0)
+    Branch(loop_cond_1, loop_body, exit)
+loop_body:
+    y_2 = -(y_1, 1)
+    x_4 = +(x_3, y_2)
+    Upsilon(loop_cond_1, ^loop_cond_0)
+    Upsilon(y_2, ^y_1)
+    Upsilon(x_4, ^x_3)
+    Jump(loop_header)
+exit:
+    Print(x_3)
+    Return(0)
