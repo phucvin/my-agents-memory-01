@@ -1,0 +1,41 @@
+Block 0:
+  Preds:
+  x = Const(0)
+  i = Const(0)
+  Jump(1)
+  Succs: 1
+
+Block 1:
+  Preds: 0 5
+  tmp1 = Lt(i, 10)
+  Branch(tmp1, 2, 6)
+  Succs: 2 6
+
+Block 2:
+  Preds: 1
+  tmp2 = Lt(i, 5)
+  Branch(tmp2, 3, 4)
+  Succs: 3 4
+
+Block 3:
+  Preds: 2
+  x = Add(x, i)
+  Jump(5)
+  Succs: 5
+
+Block 4:
+  Preds: 2
+  x = Sub(x, 1)
+  Jump(5)
+  Succs: 5
+
+Block 5:
+  Preds: 3 4
+  i = Add(i, 1)
+  Jump(1)
+  Succs: 1
+
+Block 6:
+  Preds: 1
+  Return(x)
+  Succs:
