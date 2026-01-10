@@ -273,11 +273,11 @@ class Program:
             return f"[stack{inter.stack_slot}]"
         return inter.reg
 
-    def generate_assembly(self):
-        print("\nGenerated Pseudo-Assembly:")
+    def generate_assembly(self, output_file=sys.stdout):
+        print("\nGenerated Pseudo-Assembly:", file=output_file)
         for bid in sorted(self.blocks.keys()):
             block = self.blocks[bid]
-            print(f"L{bid}:")
+            print(f"L{bid}:", file=output_file)
 
             # Identify pending Phi moves for successors
             # Map successor_id -> list of moves (dest_var, src_var)
@@ -321,7 +321,7 @@ class Program:
                         loc = self.get_operand_loc(arg)
                         if loc.startswith('['):
                             # Emit Load
-                            print(f"  LOAD {tmps[tmp_idx]}, {loc}  ; Reload {arg}")
+                            print(f"  LOAD {tmps[tmp_idx]}, {loc}  ; Reload {arg}", file=output_file)
                             real_args.append(tmps[tmp_idx])
                             tmp_idx += 1
                         else:
@@ -355,7 +355,7 @@ class Program:
                                         # Emit Move: dest_var = src_val
                                         # But this happens ON THE EDGE to `tid`.
                                         # We will print it as a comment or pseudo-instr
-                                        print(f"  ; On edge to L{tid}: {dest_var} = {src_val}")
+                                        print(f"  ; On edge to L{tid}: {dest_var} = {src_val}", file=output_file)
 
                                         # Generate Move Code
                                         # Src
@@ -363,7 +363,7 @@ class Program:
                                         if src_val.startswith('%'):
                                             src_loc = self.get_operand_loc(src_val)
                                             if src_loc.startswith('['):
-                                                print(f"  LOAD {tmps[tmp_idx]}, {src_loc} ; Reload for Phi")
+                                                print(f"  LOAD {tmps[tmp_idx]}, {src_loc} ; Reload for Phi", file=output_file)
                                                 src_loc = tmps[tmp_idx]
                                                 tmp_idx = (tmp_idx + 1) % 3
 
@@ -374,26 +374,26 @@ class Program:
                                             # We already have src in Reg (src_loc)
                                             if not src_loc.startswith('R'):
                                                 # Const or something, load to Reg
-                                                print(f"  MOV {tmps[tmp_idx]}, {src_loc}")
+                                                print(f"  MOV {tmps[tmp_idx]}, {src_loc}", file=output_file)
                                                 src_loc = tmps[tmp_idx]
                                                 tmp_idx = (tmp_idx + 1) % 3
-                                            print(f"  STORE {dest_loc}, {src_loc} ; Spill Phi dest {dest_var}")
+                                            print(f"  STORE {dest_loc}, {src_loc} ; Spill Phi dest {dest_var}", file=output_file)
                                         else:
                                             # Move Reg to Reg
                                             if src_loc != dest_loc:
-                                                print(f"  MOV {dest_loc}, {src_loc}")
+                                                print(f"  MOV {dest_loc}, {src_loc}", file=output_file)
 
                                     except ValueError:
                                         pass
 
                 # Emit operation
                 if instr.op == "Return":
-                     print(f"  RETURN {real_args[0]}")
+                     print(f"  RETURN {real_args[0]}", file=output_file)
                 elif instr.op == "Branch":
                      # Branch cond, T, F
-                     print(f"  BRANCH {real_args[0]}, L{real_args[1]}, L{real_args[2]}")
+                     print(f"  BRANCH {real_args[0]}, L{real_args[1]}, L{real_args[2]}", file=output_file)
                 elif instr.op == "Jump":
-                     print(f"  JUMP L{real_args[0]}")
+                     print(f"  JUMP L{real_args[0]}", file=output_file)
                 else:
                     # BinOp or Assignment
                     # Dest
@@ -406,30 +406,31 @@ class Program:
                             is_spilled = True
 
                         args_str = ", ".join(real_args)
-                        print(f"  {instr.op.upper()} {dest_reg}, {args_str}")
+                        print(f"  {instr.op.upper()} {dest_reg}, {args_str}", file=output_file)
 
                         if is_spilled:
-                            print(f"  STORE {dest_loc}, {dest_reg} ; Spill {instr.lhs}")
+                            print(f"  STORE {dest_loc}, {dest_reg} ; Spill {instr.lhs}", file=output_file)
                     else:
                         # Void op?
                         args_str = ", ".join(real_args)
-                        print(f"  {instr.op.upper()} {args_str}")
+                        print(f"  {instr.op.upper()} {args_str}", file=output_file)
 
-    def print_allocation(self):
-        print("Register Allocation Results:")
+    def print_allocation(self, output_file=sys.stdout):
+        print("Register Allocation Results:", file=output_file)
         # Sort by var name/number
         for var in sorted(self.intervals.keys(), key=lambda x: int(x[1:]) if x[1:].isdigit() else x):
             inter = self.intervals[var]
             loc = inter.reg
             if loc == "Spill":
                 loc = f"Stack[{inter.stack_slot}]"
-            print(f"{var}: {loc} \t(Interval: [{inter.start}, {inter.end}])")
+            print(f"{var}: {loc} \t(Interval: [{inter.start}, {inter.end}])", file=output_file)
 
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description="Linear Scan Register Allocator for SSA")
     parser.add_argument("file", help="Path to SSA input file")
     parser.add_argument("--regs", type=int, default=4, help="Number of physical registers")
+    parser.add_argument("--output", "-o", help="Path to output file (default: stdout)")
     args = parser.parse_args()
 
     with open(args.file, 'r') as f:
@@ -440,5 +441,11 @@ if __name__ == "__main__":
     prog.compute_liveness()
     prog.build_intervals()
     prog.allocate_registers(num_regs=args.regs)
-    prog.print_allocation()
-    prog.generate_assembly()
+
+    if args.output:
+        with open(args.output, 'w') as out:
+            prog.print_allocation(output_file=out)
+            prog.generate_assembly(output_file=out)
+    else:
+        prog.print_allocation()
+        prog.generate_assembly()
