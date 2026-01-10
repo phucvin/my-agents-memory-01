@@ -9,6 +9,7 @@ namespace RegexVM {
 
 enum OpCode {
     OP_CHAR,
+    OP_ANY,
     OP_MATCH,
     OP_JMP,
     OP_SPLIT,

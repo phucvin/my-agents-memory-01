@@ -27,6 +27,13 @@ struct CharNode : public Node {
     }
 };
 
+struct AnyNode : public Node {
+    void emit(Compiler& c, std::vector<int>& out_patches) override {
+        c.emit(OP_ANY);
+        // Falls through
+    }
+};
+
 struct ConcatNode : public Node {
     Node *left, *right;
     ConcatNode(Node* l, Node* r) : left(l), right(r) {}
@@ -231,6 +238,8 @@ Node* Compiler::parse_atom() {
             std::cerr << "Expected ')'" << std::endl;
         }
         return new GroupNode(expr, idx);
+    } else if (match_char('.')) {
+        return new AnyNode();
     } else {
         char c = consume();
         // Handle escapes? For now just simple chars

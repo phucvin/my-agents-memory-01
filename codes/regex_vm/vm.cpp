@@ -202,6 +202,12 @@ bool VM::match(const std::string& input, std::vector<std::string>& captured_grou
                     next_t.pc++;
                     add_thread(next_t, nlist, visited, prog_, i + 1);
                 }
+            } else if (inst.op == OP_ANY) {
+                if (i < input.length()) {
+                    Thread next_t = t;
+                    next_t.pc++;
+                    add_thread(next_t, nlist, visited, prog_, i + 1);
+                }
             }
         }
         clist = std::move(nlist);

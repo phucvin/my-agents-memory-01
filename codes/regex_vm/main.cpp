@@ -60,6 +60,12 @@ int main() {
     // Multiple groups
     test("(a)(b)", "ab", true, {"ab", "a", "b"});
 
+    // Dot matches
+    test("a.c", "abc", true, {"abc"});
+    test("a.c", "axc", true, {"axc"});
+    test("a.c", "ac", false);
+    test(".*", "anything", true, {"anything"});
+
     std::cout << "Done." << std::endl;
     return 0;
 }
