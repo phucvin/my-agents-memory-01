@@ -20,9 +20,10 @@ This project implements a **Linear Scan Register Allocator** for a simple SSA IR
 
 2. **Run**:
    ```bash
-   ./regalloc [input_file]
+   ./regalloc [input_file] [output_file]
    ```
-   If no input file is provided, it defaults to `input.txt`.
+   - `input_file`: Path to input SSA text file (defaults to `input.txt`).
+   - `output_file`: Path to save output (defaults to `assembly.txt`).
 
 ## Example Output
 
@@ -36,7 +37,7 @@ Block 1:
 ...
 ```
 
-The allocator (with 3 registers) produces:
+The allocator (with 3 registers) produces (in `assembly.txt`):
 
 ```
 Allocating with 3 registers...

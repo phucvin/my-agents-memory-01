@@ -1,0 +1,47 @@
+Intervals:
+%1 [0, 6)
+%2 [2, 6)
+%3 [6, 32)
+%4 [0, 32)
+%5 [10, 12)
+%6 [14, 16)
+%7 [18, 22)
+%8 [22, 26)
+%9 [26, 32)
+%10 [28, 32)
+
+Allocating with 3 registers...
+Allocation:
+%1 -> R0
+%2 -> R2
+%3 -> R0
+%4 -> R1
+%5 -> R2
+%6 -> R2
+%7 -> R2
+%8 -> R2
+%9 -> R2
+%10 -> Stack[0]
+
+Rewritten Code (Pseudo-Assembly):
+Block 0:
+  R0 = Const 0
+  R2 = Const 0
+  Jump 1
+Block 1:
+  R2 = Lt R1, 10
+  Branch R2, 2, 6
+Block 2:
+  R2 = Lt R1, 5
+  Branch R2, 3, 4
+Block 3:
+  R2 = Add R0, R1
+  Jump 5
+Block 4:
+  R2 = Sub R0, 1
+  Jump 5
+Block 5:
+  Stack[0] = Add R1, 1
+  Jump 1
+Block 6:
+  Return R0
