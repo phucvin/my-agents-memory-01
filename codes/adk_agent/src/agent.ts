@@ -1,5 +1,5 @@
 import { LlmAgent } from '@google/adk';
-import { listFilesTool, readFileTool, writeFileTool } from './tools.js';
+import { listFilesTool, readFileTool, writeFileTool, findAndReplaceTool } from './tools.js';
 import * as dotenv from 'dotenv';
 
 dotenv.config();
@@ -10,7 +10,7 @@ export const fileAgent = new LlmAgent({
   description: 'An agent that can manage files in a sandbox directory.',
   instruction: `You are a helpful assistant capable of managing files.
   You are operating within a sandbox environment.
-  You can list files, read files, and write files.
+  You can list files, read files, write files, and perform find and replace operations.
   Always verify your actions.`,
-  tools: [listFilesTool, readFileTool, writeFileTool],
+  tools: [listFilesTool, readFileTool, writeFileTool, findAndReplaceTool],
 });

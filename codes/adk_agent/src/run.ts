@@ -2,7 +2,8 @@ import { fileAgent } from './agent.js';
 import { InMemoryRunner } from '@google/adk';
 
 async function main() {
-  const prompt = "create hello.txt containing some text and files.txt containing the files in the parent directory";
+  // Use the command line argument as the prompt, or a default one that tests the new tool
+  const prompt = process.argv[2] || "Create a file named 'test.txt' with the content 'The quick brown fox'. Then, replace 'fox' with 'dog'. Verify the content of the file.";
   console.log(`Running agent with prompt: "${prompt}"`);
 
   const runner = new InMemoryRunner({
