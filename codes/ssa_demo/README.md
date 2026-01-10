@@ -1,17 +1,23 @@
-# SSA Conversion Prototype (Functional SSA)
+# SSA Conversion Prototype (Pizlo SSA Form)
 
-This project demonstrates a prototype for converting code to **Functional SSA** form (also known as Block Arguments). It supports integers, variables, `if` statements, and `while` loops.
+This project demonstrates a prototype for converting code to **Pizlo SSA Form**, as described in [Pizlo SSA Form (short version)](https://gist.github.com/pizlonator/79b0aa601912ff1a0eb1cb9253f5e98d).
 
-In Functional SSA, Phi nodes are replaced by Basic Block parameters. Predecessors pass arguments to the successor blocks, similar to function calls.
+It supports integers, variables, `if` statements, and `while` loops.
 
 ## Features
 
 - **IR**: Simple AST and CFG-based Intermediate Representation.
 - **CFG Construction**: Converts linear/structured code into Basic Blocks.
 - **SSA Conversion**:
-  - Dominance Frontier calculation.
-  - Phi-node insertion & Renaming (Standard SSA).
-  - **Functional Conversion**: Transforms Phis into Block Parameters and Jump Arguments.
+  - Dominance Frontier calculation and Standard SSA construction.
+  - **Pizlo Form Conversion**: Transforms Standard Phis into `Upsilon` stores and implicit `Phi` loads using shadow variables.
+
+## Pizlo SSA Form
+
+In this form:
+- Every Phi node `x = phi(...)` is replaced by `x = phi()` which implicitly reads a **shadow variable** (e.g., `^x`).
+- Incoming values from predecessors are handled by `upsilon(val, ^x)` instructions inserted in the predecessor blocks.
+- This decouples SSA data flow from the CFG structure (no block arguments).
 
 ## Usage
 
@@ -58,7 +64,7 @@ L3_join:
   => (end)
 ```
 
-Functional SSA CFG:
+Pizlo SSA Form CFG:
 ```
 L0_entry:
   x_0 = 1
@@ -67,12 +73,15 @@ L0_entry:
 
 L1_then:
   y_1 = 2
-  jmp L3_join (y_1)
+  upsilon(y_1, ^y_2)
+  jmp L3_join
 
 L2_else:
-  jmp L3_join (y_0)
+  upsilon(y_0, ^y_2)
+  jmp L3_join
 
-L3_join(y_2):
+L3_join:
+  y_2 = phi()  # reads ^y_2
   print y_2
   => (end)
 ```
