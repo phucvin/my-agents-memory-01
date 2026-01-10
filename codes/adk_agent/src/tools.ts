@@ -69,3 +69,28 @@ export const writeFileTool = new FunctionTool({
     }
   },
 });
+
+export const findAndReplaceTool = new FunctionTool({
+  name: 'find_and_replace',
+  description: 'Replaces all occurrences of a string in a file with a new string.',
+  parameters: z.object({
+    filepath: z.string().describe('The path of the file to modify (relative to sandbox root).'),
+    search_string: z.string().describe('The string to search for.'),
+    replace_string: z.string().describe('The string to replace with.'),
+  }),
+  execute: ({ filepath, search_string, replace_string }) => {
+    try {
+      const fullPath = resolvePath(filepath);
+      if (!fs.existsSync(fullPath)) {
+        throw new Error(`File ${filepath} does not exist.`);
+      }
+      let content = fs.readFileSync(fullPath, 'utf-8');
+      // Use global replace
+      const newContent = content.split(search_string).join(replace_string);
+      fs.writeFileSync(fullPath, newContent, 'utf-8');
+      return { status: 'success', message: `Replaced occurrences of '${search_string}' with '${replace_string}' in ${filepath}.` };
+    } catch (error: any) {
+      return { status: 'error', message: error.message };
+    }
+  },
+});
