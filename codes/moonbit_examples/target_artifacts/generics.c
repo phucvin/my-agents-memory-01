@@ -529,8 +529,6 @@ struct $$moonbitlang$core$builtin$SourceLocRepr;
 
 struct $$moonbitlang$core$builtin$Logger;
 
-struct $$3c$StringView$2a$StringView$3e$;
-
 struct $Option$3c$StringView$3e$$Some;
 
 struct $Result$3c$StringView$2a$$moonbitlang$core$builtin$CreatingViewError$3e$$Err;
@@ -599,16 +597,6 @@ struct $$moonbitlang$core$builtin$Logger {
 
 };
 
-struct $$3c$StringView$2a$StringView$3e$ {
-  int32_t $0_1;
-  int32_t $0_2;
-  int32_t $1_1;
-  int32_t $1_2;
-  moonbit_string_t $0_0;
-  moonbit_string_t $1_0;
-
-};
-
 struct $Option$3c$StringView$3e$$Some {
   int32_t $0_1;
   int32_t $0_2;
@@ -652,346 +640,225 @@ struct moonbit_result_0 {
 };
 
 moonbit_string_t $$username$moonbit_examples$cmd$generics$Box$$unwrap$1(
-  struct $Box$3c$String$3e$* self$318
+  struct $Box$3c$String$3e$* self$291
 );
 
 int32_t $$username$moonbit_examples$cmd$generics$Box$$unwrap$0(
-  struct $Box$3c$Int$3e$* self$317
+  struct $Box$3c$Int$3e$* self$290
 );
 
 struct $Box$3c$String$3e$* $$username$moonbit_examples$cmd$generics$Box$$new$1(
-  moonbit_string_t value$316
+  moonbit_string_t value$289
 );
 
 struct $Box$3c$Int$3e$* $$username$moonbit_examples$cmd$generics$Box$$new$0(
-  int32_t value$315
+  int32_t value$288
 );
 
 int32_t $$moonbitlang$core$builtin$Show$$$moonbitlang$core$builtin$SourceLoc$$output(
-  moonbit_string_t self$313,
-  struct $$moonbitlang$core$builtin$Logger logger$314
+  moonbit_string_t self$286,
+  struct $$moonbitlang$core$builtin$Logger logger$287
 );
 
 int32_t $$moonbitlang$core$builtin$Show$$$moonbitlang$core$builtin$SourceLocRepr$$output(
-  struct $$moonbitlang$core$builtin$SourceLocRepr* self$299,
-  struct $$moonbitlang$core$builtin$Logger logger$312
+  struct $$moonbitlang$core$builtin$SourceLocRepr* self$249,
+  struct $$moonbitlang$core$builtin$Logger logger$285
 );
 
-int32_t $moonbitlang$core$builtin$println$0(moonbit_string_t input$297);
+int32_t $moonbitlang$core$builtin$println$0(moonbit_string_t input$247);
 
 moonbit_string_t $$moonbitlang$core$builtin$Show$$String$$to_string(
-  moonbit_string_t self$296
+  moonbit_string_t self$246
 );
 
 int32_t $$moonbitlang$core$builtin$Show$$Int$$output(
-  int32_t self$295,
-  struct $$moonbitlang$core$builtin$Logger logger$294
+  int32_t self$245,
+  struct $$moonbitlang$core$builtin$Logger logger$244
 );
 
 int32_t $$moonbitlang$core$builtin$Logger$$$moonbitlang$core$builtin$StringBuilder$$write_view(
-  struct $$moonbitlang$core$builtin$StringBuilder* self$292,
-  struct $StringView str$293
+  struct $$moonbitlang$core$builtin$StringBuilder* self$242,
+  struct $StringView str$243
 );
 
-int64_t $String$$offset_of_nth_char$inner(
-  moonbit_string_t self$289,
-  int32_t i$290,
-  int32_t start_offset$291,
-  int64_t end_offset$287
-);
-
-int64_t $String$$offset_of_nth_char_forward(
-  moonbit_string_t self$284,
-  int32_t n$282,
-  int32_t start_offset$278,
-  int32_t end_offset$279
-);
-
-int64_t $String$$offset_of_nth_char_backward(
-  moonbit_string_t self$276,
-  int32_t n$274,
-  int32_t start_offset$273,
-  int32_t end_offset$272
-);
-
-int32_t $String$$char_length_ge$inner(
-  moonbit_string_t self$262,
-  int32_t len$265,
-  int32_t start_offset$269,
-  int64_t end_offset$260
-);
-
-moonbit_string_t $Int$$to_string$inner(int32_t self$243, int32_t radix$242);
+moonbit_string_t $Int$$to_string$inner(int32_t self$226, int32_t radix$225);
 
 int32_t $moonbitlang$core$builtin$radix_count32(
-  uint32_t value$236,
-  int32_t radix$239
+  uint32_t value$219,
+  int32_t radix$222
 );
 
-int32_t $moonbitlang$core$builtin$hex_count32(uint32_t value$234);
+int32_t $moonbitlang$core$builtin$hex_count32(uint32_t value$217);
 
-int32_t $moonbitlang$core$builtin$dec_count32(uint32_t value$233);
+int32_t $moonbitlang$core$builtin$dec_count32(uint32_t value$216);
 
 int32_t $moonbitlang$core$builtin$int_to_string_dec(
-  uint16_t* buffer$223,
-  uint32_t num$211,
-  int32_t digit_start$214,
-  int32_t total_len$213
+  uint16_t* buffer$206,
+  uint32_t num$194,
+  int32_t digit_start$197,
+  int32_t total_len$196
 );
 
 int32_t $moonbitlang$core$builtin$int_to_string_generic(
-  uint16_t* buffer$205,
-  uint32_t num$199,
-  int32_t digit_start$197,
-  int32_t total_len$196,
-  int32_t radix$201
+  uint16_t* buffer$188,
+  uint32_t num$182,
+  int32_t digit_start$180,
+  int32_t total_len$179,
+  int32_t radix$184
 );
 
 int32_t $moonbitlang$core$builtin$int_to_string_hex(
-  uint16_t* buffer$192,
-  uint32_t num$188,
-  int32_t digit_start$186,
-  int32_t total_len$185
+  uint16_t* buffer$175,
+  uint32_t num$171,
+  int32_t digit_start$169,
+  int32_t total_len$168
 );
 
 moonbit_string_t $$moonbitlang$core$builtin$Show$$$default_impl$$to_string$1(
-  moonbit_string_t self$183
+  moonbit_string_t self$166
 );
 
 moonbit_string_t $$moonbitlang$core$builtin$Show$$$default_impl$$to_string$0(
-  int32_t self$181
+  int32_t self$164
 );
 
-int32_t $StringView$$start_offset(struct $StringView self$179);
+int32_t $StringView$$start_offset(struct $StringView self$162);
 
-moonbit_string_t $StringView$$data(struct $StringView self$178);
+int32_t $StringView$$length(struct $StringView self$161);
+
+moonbit_string_t $StringView$$data(struct $StringView self$160);
 
 int32_t $$moonbitlang$core$builtin$Logger$$$default_impl$$write_substring$0(
-  struct $$moonbitlang$core$builtin$StringBuilder* self$172,
-  moonbit_string_t value$175,
-  int32_t start$176,
-  int32_t len$177
+  struct $$moonbitlang$core$builtin$StringBuilder* self$154,
+  moonbit_string_t value$157,
+  int32_t start$158,
+  int32_t len$159
+);
+
+struct moonbit_result_0 $String$$sub(
+  moonbit_string_t self$152,
+  int64_t start$opt$150,
+  int64_t end$153
 );
 
 struct moonbit_result_0 $String$$sub$inner(
-  moonbit_string_t self$165,
-  int32_t start$171,
-  int64_t end$167
+  moonbit_string_t self$142,
+  int32_t start$148,
+  int64_t end$144
 );
 
 int32_t $$moonbitlang$core$builtin$Logger$$$moonbitlang$core$builtin$StringBuilder$$write_string(
-  struct $$moonbitlang$core$builtin$StringBuilder* self$162,
-  moonbit_string_t str$163
+  struct $$moonbitlang$core$builtin$StringBuilder* self$139,
+  moonbit_string_t str$140
 );
 
 int32_t $FixedArray$$blit_from_string(
-  moonbit_bytes_t self$154,
-  int32_t bytes_offset$149,
-  moonbit_string_t str$156,
-  int32_t str_offset$152,
-  int32_t length$150
+  moonbit_bytes_t self$131,
+  int32_t bytes_offset$126,
+  moonbit_string_t str$133,
+  int32_t str_offset$129,
+  int32_t length$127
 );
 
 struct $$moonbitlang$core$builtin$SourceLocRepr* $$moonbitlang$core$builtin$SourceLocRepr$$parse(
-  moonbit_string_t repr$116
+  moonbit_string_t repr$48
 );
 
-struct $$3c$StringView$2a$StringView$3e$* $moonbitlang$core$builtin$parse$parse_loc$7c$1101(
-  struct $StringView view$112
-);
+int32_t $String$$unsafe_charcode_at(moonbit_string_t self$45, int32_t idx$46);
 
-struct $StringView $StringView$$view$inner(
-  struct $StringView self$109,
-  int32_t start_offset$110,
-  int64_t end_offset$107
-);
-
-int64_t $StringView$$rev_find(
-  struct $StringView self$105,
-  struct $StringView str$104
-);
-
-int64_t $moonbitlang$core$builtin$brute_force_rev_find(
-  struct $StringView haystack$95,
-  struct $StringView needle$97
-);
-
-int64_t $moonbitlang$core$builtin$boyer_moore_horspool_rev_find(
-  struct $StringView haystack$84,
-  struct $StringView needle$86
-);
-
-int64_t $StringView$$find(
-  struct $StringView self$82,
-  struct $StringView str$81
-);
-
-int64_t $moonbitlang$core$builtin$brute_force_find(
-  struct $StringView haystack$71,
-  struct $StringView needle$73
-);
-
-int64_t $moonbitlang$core$builtin$boyer_moore_horspool_find(
-  struct $StringView haystack$57,
-  struct $StringView needle$59
-);
-
-int32_t $StringView$$unsafe_charcode_at(
-  struct $StringView self$53,
-  int32_t index$54
-);
-
-int32_t $StringView$$length(struct $StringView self$52);
-
-int32_t $Int$$is_trailing_surrogate(int32_t self$51);
-
-int32_t $Int$$is_leading_surrogate(int32_t self$50);
+int32_t $Int$$is_trailing_surrogate(int32_t self$44);
 
 int32_t $$moonbitlang$core$builtin$Logger$$$moonbitlang$core$builtin$StringBuilder$$write_char(
-  struct $$moonbitlang$core$builtin$StringBuilder* self$47,
-  int32_t ch$49
+  struct $$moonbitlang$core$builtin$StringBuilder* self$41,
+  int32_t ch$43
 );
 
 int32_t $$moonbitlang$core$builtin$StringBuilder$$grow_if_necessary(
-  struct $$moonbitlang$core$builtin$StringBuilder* self$42,
-  int32_t required$43
+  struct $$moonbitlang$core$builtin$StringBuilder* self$36,
+  int32_t required$37
 );
 
 int32_t $$moonbitlang$core$builtin$Default$$Byte$$default();
 
 int32_t $FixedArray$$set_utf16le_char(
-  moonbit_bytes_t self$36,
-  int32_t offset$37,
-  int32_t value$35
+  moonbit_bytes_t self$30,
+  int32_t offset$31,
+  int32_t value$29
 );
 
-int32_t $UInt$$to_byte(uint32_t self$33);
+int32_t $UInt$$to_byte(uint32_t self$27);
 
-uint32_t $Char$$to_uint(int32_t self$32);
+uint32_t $Char$$to_uint(int32_t self$26);
 
 moonbit_string_t $$moonbitlang$core$builtin$StringBuilder$$to_string(
-  struct $$moonbitlang$core$builtin$StringBuilder* self$31
+  struct $$moonbitlang$core$builtin$StringBuilder* self$25
 );
 
 moonbit_string_t $Bytes$$to_unchecked_string$inner(
-  moonbit_bytes_t self$26,
-  int32_t offset$30,
-  int64_t length$28
+  moonbit_bytes_t self$20,
+  int32_t offset$24,
+  int64_t length$22
 );
 
 #define $moonbitlang$core$builtin$unsafe_sub_string moonbit_unsafe_bytes_sub_string
 
 struct $$moonbitlang$core$builtin$StringBuilder* $$moonbitlang$core$builtin$StringBuilder$$new$inner(
-  int32_t size_hint$23
+  int32_t size_hint$17
 );
 
 int32_t $FixedArray$$unsafe_blit$0(
-  moonbit_bytes_t dst$13,
-  int32_t dst_offset$15,
-  moonbit_bytes_t src$14,
-  int32_t src_offset$16,
-  int32_t len$18
-);
-
-int64_t $moonbitlang$core$builtin$abort$3(
-  moonbit_string_t string$11,
-  moonbit_string_t loc$12
-);
-
-struct $StringView $moonbitlang$core$builtin$abort$2(
-  moonbit_string_t string$9,
-  moonbit_string_t loc$10
+  moonbit_bytes_t dst$7,
+  int32_t dst_offset$9,
+  moonbit_bytes_t src$8,
+  int32_t src_offset$10,
+  int32_t len$12
 );
 
 int32_t $moonbitlang$core$builtin$abort$1(
-  moonbit_string_t string$7,
-  moonbit_string_t loc$8
-);
-
-int32_t $moonbitlang$core$builtin$abort$0(
   moonbit_string_t string$5,
   moonbit_string_t loc$6
 );
 
-int64_t $moonbitlang$core$abort$abort$3(moonbit_string_t msg$4);
-
-struct $StringView $moonbitlang$core$abort$abort$2(moonbit_string_t msg$3);
+int32_t $moonbitlang$core$builtin$abort$0(
+  moonbit_string_t string$3,
+  moonbit_string_t loc$4
+);
 
 int32_t $moonbitlang$core$abort$abort$1(moonbit_string_t msg$2);
 
 int32_t $moonbitlang$core$abort$abort$0(moonbit_string_t msg$1);
 
 int32_t $$moonbitlang$core$builtin$Logger$$$moonbitlang$core$builtin$StringBuilder$$write_char$dyncall_as_$moonbitlang$core$builtin$Logger(
-  void* _obj_ptr$478,
-  int32_t _param$477
+  void* _obj_ptr$460,
+  int32_t _param$459
 );
 
 int32_t $$moonbitlang$core$builtin$Logger$$$moonbitlang$core$builtin$StringBuilder$$write_view$dyncall_as_$moonbitlang$core$builtin$Logger(
-  void* _obj_ptr$475,
-  struct $StringView _param$474
+  void* _obj_ptr$457,
+  struct $StringView _param$456
 );
 
 int32_t $$moonbitlang$core$builtin$Logger$$$default_impl$$write_substring$dyncall_as_$moonbitlang$core$builtin$Logger$0(
-  void* _obj_ptr$472,
-  moonbit_string_t _param$469,
-  int32_t _param$470,
-  int32_t _param$471
+  void* _obj_ptr$454,
+  moonbit_string_t _param$451,
+  int32_t _param$452,
+  int32_t _param$453
 );
 
 int32_t $$moonbitlang$core$builtin$Logger$$$moonbitlang$core$builtin$StringBuilder$$write_string$dyncall_as_$moonbitlang$core$builtin$Logger(
-  void* _obj_ptr$467,
-  moonbit_string_t _param$466
+  void* _obj_ptr$449,
+  moonbit_string_t _param$448
 );
 
-struct { int32_t rc; uint32_t meta; uint16_t const data[50];
-} const moonbit_string_literal_6 =
-  {
-    -1, Moonbit_make_array_header(moonbit_BLOCK_KIND_VAL_ARRAY, 1, 49),
-    64, 109, 111, 111, 110, 98, 105, 116, 108, 97, 110, 103, 47, 99,
-    111, 114, 101, 47, 98, 117, 105, 108, 116, 105, 110, 58, 115, 116,
-    114, 105, 110, 103, 46, 109, 98, 116, 58, 52, 57, 49, 58, 57, 45,
-    52, 57, 49, 58, 52, 48, 0
-  };
-
-struct { int32_t rc; uint32_t meta; uint16_t const data[2];
-} const moonbit_string_literal_1 =
-  { -1, Moonbit_make_array_header(moonbit_BLOCK_KIND_VAL_ARRAY, 1, 1), 45, 0};
-
-struct { int32_t rc; uint32_t meta; uint16_t const data[23];
-} const moonbit_string_literal_5 =
-  {
-    -1, Moonbit_make_array_header(moonbit_BLOCK_KIND_VAL_ARRAY, 1, 22),
-    105, 110, 118, 97, 108, 105, 100, 32, 115, 117, 114, 114, 111, 103,
-    97, 116, 101, 32, 112, 97, 105, 114, 0
-  };
-
 struct { int32_t rc; uint32_t meta; uint16_t const data[7];
-} const moonbit_string_literal_15 =
+} const moonbit_string_literal_6 =
   {
     -1, Moonbit_make_array_header(moonbit_BLOCK_KIND_VAL_ARRAY, 1, 6),
     10, 32, 32, 97, 116, 32, 0
   };
 
-struct { int32_t rc; uint32_t meta; uint16_t const data[49];
-} const moonbit_string_literal_14 =
-  {
-    -1, Moonbit_make_array_header(moonbit_BLOCK_KIND_VAL_ARRAY, 1, 48),
-    64, 109, 111, 111, 110, 98, 105, 116, 108, 97, 110, 103, 47, 99,
-    111, 114, 101, 47, 98, 117, 105, 108, 116, 105, 110, 58, 98, 121,
-    116, 101, 115, 46, 109, 98, 116, 58, 50, 57, 48, 58, 53, 45, 50,
-    57, 48, 58, 51, 49, 0
-  };
-
-struct { int32_t rc; uint32_t meta; uint16_t const data[23];
-} const moonbit_string_literal_11 =
-  {
-    -1, Moonbit_make_array_header(moonbit_BLOCK_KIND_VAL_ARRAY, 1, 22),
-    73, 110, 118, 97, 108, 105, 100, 32, 105, 110, 100, 101, 120, 32,
-    102, 111, 114, 32, 86, 105, 101, 119, 0
-  };
-
 struct { int32_t rc; uint32_t meta; uint16_t const data[31];
-} const moonbit_string_literal_7 =
+} const moonbit_string_literal_0 =
   {
     -1, Moonbit_make_array_header(moonbit_BLOCK_KIND_VAL_ARRAY, 1, 30),
     114, 97, 100, 105, 120, 32, 109, 117, 115, 116, 32, 98, 101, 32,
@@ -1000,11 +867,11 @@ struct { int32_t rc; uint32_t meta; uint16_t const data[31];
   };
 
 struct { int32_t rc; uint32_t meta; uint16_t const data[2];
-} const moonbit_string_literal_9 =
+} const moonbit_string_literal_2 =
   { -1, Moonbit_make_array_header(moonbit_BLOCK_KIND_VAL_ARRAY, 1, 1), 48, 0};
 
 struct { int32_t rc; uint32_t meta; uint16_t const data[18];
-} const moonbit_string_literal_13 =
+} const moonbit_string_literal_4 =
   {
     -1, Moonbit_make_array_header(moonbit_BLOCK_KIND_VAL_ARRAY, 1, 17),
     67, 104, 97, 114, 32, 111, 117, 116, 32, 111, 102, 32, 114, 97, 110,
@@ -1012,7 +879,7 @@ struct { int32_t rc; uint32_t meta; uint16_t const data[18];
   };
 
 struct { int32_t rc; uint32_t meta; uint16_t const data[15];
-} const moonbit_string_literal_17 =
+} const moonbit_string_literal_8 =
   {
     -1, Moonbit_make_array_header(moonbit_BLOCK_KIND_VAL_ARRAY, 1, 14),
     72, 101, 108, 108, 111, 32, 71, 101, 110, 101, 114, 105, 99, 115,
@@ -1020,33 +887,33 @@ struct { int32_t rc; uint32_t meta; uint16_t const data[15];
   };
 
 struct { int32_t rc; uint32_t meta; uint16_t const data[22];
-} const moonbit_string_literal_19 =
+} const moonbit_string_literal_10 =
   {
     -1, Moonbit_make_array_header(moonbit_BLOCK_KIND_VAL_ARRAY, 1, 21),
     83, 116, 114, 105, 110, 103, 32, 98, 111, 120, 32, 99, 111, 110,
     116, 97, 105, 110, 115, 58, 32, 0
   };
 
-struct { int32_t rc; uint32_t meta; uint16_t const data[54];
-} const moonbit_string_literal_12 =
-  {
-    -1, Moonbit_make_array_header(moonbit_BLOCK_KIND_VAL_ARRAY, 1, 53),
-    64, 109, 111, 111, 110, 98, 105, 116, 108, 97, 110, 103, 47, 99,
-    111, 114, 101, 47, 98, 117, 105, 108, 116, 105, 110, 58, 115, 116,
-    114, 105, 110, 103, 118, 105, 101, 119, 46, 109, 98, 116, 58, 49,
-    49, 49, 58, 53, 45, 49, 49, 49, 58, 51, 54, 0
-  };
-
 struct { int32_t rc; uint32_t meta; uint16_t const data[19];
-} const moonbit_string_literal_18 =
+} const moonbit_string_literal_9 =
   {
     -1, Moonbit_make_array_header(moonbit_BLOCK_KIND_VAL_ARRAY, 1, 18),
     73, 110, 116, 32, 98, 111, 120, 32, 99, 111, 110, 116, 97, 105, 110,
     115, 58, 32, 0
   };
 
+struct { int32_t rc; uint32_t meta; uint16_t const data[49];
+} const moonbit_string_literal_5 =
+  {
+    -1, Moonbit_make_array_header(moonbit_BLOCK_KIND_VAL_ARRAY, 1, 48),
+    64, 109, 111, 111, 110, 98, 105, 116, 108, 97, 110, 103, 47, 99,
+    111, 114, 101, 47, 98, 117, 105, 108, 116, 105, 110, 58, 98, 121,
+    116, 101, 115, 46, 109, 98, 116, 58, 50, 57, 56, 58, 53, 45, 50,
+    57, 56, 58, 51, 49, 0
+  };
+
 struct { int32_t rc; uint32_t meta; uint16_t const data[53];
-} const moonbit_string_literal_8 =
+} const moonbit_string_literal_1 =
   {
     -1, Moonbit_make_array_header(moonbit_BLOCK_KIND_VAL_ARRAY, 1, 52),
     64, 109, 111, 111, 110, 98, 105, 116, 108, 97, 110, 103, 47, 99,
@@ -1056,7 +923,7 @@ struct { int32_t rc; uint32_t meta; uint16_t const data[53];
   };
 
 struct { int32_t rc; uint32_t meta; uint16_t const data[37];
-} const moonbit_string_literal_10 =
+} const moonbit_string_literal_3 =
   {
     -1, Moonbit_make_array_header(moonbit_BLOCK_KIND_VAL_ARRAY, 1, 36),
     48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 97, 98, 99, 100, 101, 102,
@@ -1064,35 +931,9 @@ struct { int32_t rc; uint32_t meta; uint16_t const data[37];
     116, 117, 118, 119, 120, 121, 122, 0
   };
 
-struct { int32_t rc; uint32_t meta; uint16_t const data[20];
-} const moonbit_string_literal_3 =
-  {
-    -1, Moonbit_make_array_header(moonbit_BLOCK_KIND_VAL_ARRAY, 1, 19),
-    73, 110, 118, 97, 108, 105, 100, 32, 115, 116, 97, 114, 116, 32,
-    105, 110, 100, 101, 120, 0
-  };
-
 struct { int32_t rc; uint32_t meta; uint16_t const data[2];
-} const moonbit_string_literal_16 =
+} const moonbit_string_literal_7 =
   { -1, Moonbit_make_array_header(moonbit_BLOCK_KIND_VAL_ARRAY, 1, 1), 10, 0};
-
-struct { int32_t rc; uint32_t meta; uint16_t const data[2];
-} const moonbit_string_literal_0 =
-  { -1, Moonbit_make_array_header(moonbit_BLOCK_KIND_VAL_ARRAY, 1, 1), 58, 0};
-
-struct { int32_t rc; uint32_t meta; uint16_t const data[50];
-} const moonbit_string_literal_4 =
-  {
-    -1, Moonbit_make_array_header(moonbit_BLOCK_KIND_VAL_ARRAY, 1, 49),
-    64, 109, 111, 111, 110, 98, 105, 116, 108, 97, 110, 103, 47, 99,
-    111, 114, 101, 47, 98, 117, 105, 108, 116, 105, 110, 58, 115, 116,
-    114, 105, 110, 103, 46, 109, 98, 116, 58, 51, 54, 54, 58, 53, 45,
-    51, 54, 54, 58, 51, 51, 0
-  };
-
-struct { int32_t rc; uint32_t meta; uint16_t const data[2];
-} const moonbit_string_literal_2 =
-  { -1, Moonbit_make_array_header(moonbit_BLOCK_KIND_VAL_ARRAY, 1, 1), 47, 0};
 
 struct moonbit_object const moonbit_constant_constructor_0 =
   { -1, Moonbit_make_regular_object_header(2, 0, 0)};
@@ -1127,221 +968,377 @@ struct {
 struct $$moonbitlang$core$builtin$Logger$static_method_table* $$moonbitlang$core$builtin$StringBuilder$as_$moonbitlang$core$builtin$Logger$static_method_table_id =
   &$$moonbitlang$core$builtin$StringBuilder$as_$moonbitlang$core$builtin$Logger$static_method_table_id$object.data;
 
-moonbit_string_t $moonbitlang$core$builtin$parse$$2a$bind$7c$5404 =
-  (moonbit_string_t)moonbit_string_literal_0.data;
-
-moonbit_string_t $moonbitlang$core$builtin$parse$$2a$bind$7c$5443 =
-  (moonbit_string_t)moonbit_string_literal_0.data;
-
-moonbit_string_t $moonbitlang$core$builtin$parse$$2a$bind$7c$5437 =
-  (moonbit_string_t)moonbit_string_literal_1.data;
-
-moonbit_string_t $moonbitlang$core$builtin$parse$$2a$bind$7c$5424 =
-  (moonbit_string_t)moonbit_string_literal_0.data;
-
-moonbit_string_t $moonbitlang$core$builtin$parse$$2a$bind$7c$5418 =
-  (moonbit_string_t)moonbit_string_literal_0.data;
-
-moonbit_string_t $moonbitlang$core$builtin$output$$2a$bind$7c$8193 =
-  (moonbit_string_t)moonbit_string_literal_2.data;
-
-moonbit_string_t $moonbitlang$core$builtin$output$$2a$bind$7c$8187 =
-  (moonbit_string_t)moonbit_string_literal_2.data;
-
-int64_t $moonbitlang$core$builtin$boyer_moore_horspool_find$constr$55;
-
-int64_t $moonbitlang$core$builtin$brute_force_find$constr$69;
-
 moonbit_string_t $$username$moonbit_examples$cmd$generics$Box$$unwrap$1(
-  struct $Box$3c$String$3e$* self$318
+  struct $Box$3c$String$3e$* self$291
 ) {
-  moonbit_string_t _field$932 = self$318->$0;
-  int32_t _cnt$1001 = Moonbit_object_header(self$318)->rc;
-  if (_cnt$1001 > 1) {
-    int32_t _new_cnt$1002;
-    moonbit_incref(_field$932);
-    _new_cnt$1002 = _cnt$1001 - 1;
-    Moonbit_object_header(self$318)->rc = _new_cnt$1002;
-  } else if (_cnt$1001 == 1) {
-    moonbit_free(self$318);
+  moonbit_string_t _field$807 = self$291->$0;
+  int32_t _cnt$839 = Moonbit_object_header(self$291)->rc;
+  if (_cnt$839 > 1) {
+    int32_t _new_cnt$840 = _cnt$839 - 1;
+    Moonbit_object_header(self$291)->rc = _new_cnt$840;
+    moonbit_incref(_field$807);
+  } else if (_cnt$839 == 1) {
+    moonbit_free(self$291);
   }
-  return _field$932;
+  return _field$807;
 }
 
 int32_t $$username$moonbit_examples$cmd$generics$Box$$unwrap$0(
-  struct $Box$3c$Int$3e$* self$317
+  struct $Box$3c$Int$3e$* self$290
 ) {
-  int32_t _field$933 = self$317->$0;
-  moonbit_decref(self$317);
-  return _field$933;
+  int32_t _field$808 = self$290->$0;
+  moonbit_decref(self$290);
+  return _field$808;
 }
 
 struct $Box$3c$String$3e$* $$username$moonbit_examples$cmd$generics$Box$$new$1(
-  moonbit_string_t value$316
+  moonbit_string_t value$289
 ) {
-  struct $Box$3c$String$3e$* _block$1020 =
+  struct $Box$3c$String$3e$* _block$854 =
     (struct $Box$3c$String$3e$*)moonbit_malloc(
       sizeof(struct $Box$3c$String$3e$)
     );
-  Moonbit_object_header(_block$1020)->meta
+  Moonbit_object_header(_block$854)->meta
   = Moonbit_make_regular_object_header(
     offsetof(struct $Box$3c$String$3e$, $0) >> 2, 1, 0
   );
-  _block$1020->$0 = value$316;
-  return _block$1020;
+  _block$854->$0 = value$289;
+  return _block$854;
 }
 
 struct $Box$3c$Int$3e$* $$username$moonbit_examples$cmd$generics$Box$$new$0(
-  int32_t value$315
+  int32_t value$288
 ) {
-  struct $Box$3c$Int$3e$* _block$1021 =
+  struct $Box$3c$Int$3e$* _block$855 =
     (struct $Box$3c$Int$3e$*)moonbit_malloc(sizeof(struct $Box$3c$Int$3e$));
-  Moonbit_object_header(_block$1021)->meta
+  Moonbit_object_header(_block$855)->meta
   = Moonbit_make_regular_object_header(
     sizeof(struct $Box$3c$Int$3e$) >> 2, 0, 0
   );
-  _block$1021->$0 = value$315;
-  return _block$1021;
+  _block$855->$0 = value$288;
+  return _block$855;
 }
 
 int32_t $$moonbitlang$core$builtin$Show$$$moonbitlang$core$builtin$SourceLoc$$output(
-  moonbit_string_t self$313,
-  struct $$moonbitlang$core$builtin$Logger logger$314
+  moonbit_string_t self$286,
+  struct $$moonbitlang$core$builtin$Logger logger$287
 ) {
-  moonbit_string_t _tmp$931 = self$313;
-  struct $$moonbitlang$core$builtin$SourceLocRepr* _tmp$930 =
-    $$moonbitlang$core$builtin$SourceLocRepr$$parse(_tmp$931);
+  moonbit_string_t _tmp$806 = self$286;
+  struct $$moonbitlang$core$builtin$SourceLocRepr* _tmp$805 =
+    $$moonbitlang$core$builtin$SourceLocRepr$$parse(_tmp$806);
   $$moonbitlang$core$builtin$Show$$$moonbitlang$core$builtin$SourceLocRepr$$output(
-    _tmp$930, logger$314
+    _tmp$805, logger$287
   );
   return 0;
 }
 
 int32_t $$moonbitlang$core$builtin$Show$$$moonbitlang$core$builtin$SourceLocRepr$$output(
-  struct $$moonbitlang$core$builtin$SourceLocRepr* self$299,
-  struct $$moonbitlang$core$builtin$Logger logger$312
+  struct $$moonbitlang$core$builtin$SourceLocRepr* self$249,
+  struct $$moonbitlang$core$builtin$Logger logger$285
 ) {
-  struct $StringView _field$942 =
-    (struct $StringView){self$299->$0_1, self$299->$0_2, self$299->$0_0};
-  struct $StringView pkg$298 = _field$942;
-  int32_t _tmp$929 =
-    Moonbit_array_length($moonbitlang$core$builtin$output$$2a$bind$7c$8193);
-  struct $StringView _tmp$928;
-  int64_t _bind$300;
-  struct $$3c$StringView$2a$Option$3c$StringView$3e$$3e$* _bind$301;
-  struct $StringView _field$941;
-  struct $StringView _module_name$308;
-  void* _field$940;
-  int32_t _cnt$1003;
-  void* _package_name$309;
-  struct $StringView _field$938;
-  struct $StringView filename$911;
-  struct $StringView _field$937;
-  struct $StringView start_line$912;
-  struct $StringView _field$936;
-  struct $StringView start_column$913;
-  struct $StringView _field$935;
-  struct $StringView end_line$914;
-  struct $StringView _field$934;
-  int32_t _cnt$1007;
-  struct $StringView end_column$915;
-  struct $$moonbitlang$core$builtin$Logger _bind$910;
-  moonbit_incref($moonbitlang$core$builtin$output$$2a$bind$7c$8193);
-  _tmp$928
-  = (struct $StringView){
-    0, _tmp$929, $moonbitlang$core$builtin$output$$2a$bind$7c$8193
-  };
-  moonbit_incref(pkg$298.$0);
-  moonbit_incref(pkg$298.$0);
-  _bind$300 = $StringView$$find(pkg$298, _tmp$928);
-  if (_bind$300 == 4294967296ll) {
-    void* None$916 =
-      (struct moonbit_object*)&moonbit_constant_constructor_0 + 1;
-    _bind$301
-    = (struct $$3c$StringView$2a$Option$3c$StringView$3e$$3e$*)moonbit_malloc(
-        sizeof(struct $$3c$StringView$2a$Option$3c$StringView$3e$$3e$)
-      );
-    Moonbit_object_header(_bind$301)->meta
-    = Moonbit_make_regular_object_header(
-      offsetof(
-        struct $$3c$StringView$2a$Option$3c$StringView$3e$$3e$, $0_0
-      )
-      >> 2,
-        2,
-        0
-    );
-    _bind$301->$0_0 = pkg$298.$0;
-    _bind$301->$0_1 = pkg$298.$1;
-    _bind$301->$0_2 = pkg$298.$2;
-    _bind$301->$1 = None$916;
-  } else {
-    int64_t _Some$302 = _bind$300;
-    int32_t _first_slash$303 = (int32_t)_Some$302;
-    int32_t _tmp$927 = _first_slash$303 + 1;
-    struct $StringView _tmp$924;
-    int32_t _tmp$926;
-    struct $StringView _tmp$925;
-    int64_t _bind$304;
-    moonbit_incref(pkg$298.$0);
-    _tmp$924 = $StringView$$view$inner(pkg$298, _tmp$927, 4294967296ll);
-    _tmp$926
-    = Moonbit_array_length(
-      $moonbitlang$core$builtin$output$$2a$bind$7c$8187
-    );
-    moonbit_incref($moonbitlang$core$builtin$output$$2a$bind$7c$8187);
-    _tmp$925
-    = (struct $StringView){
-      0, _tmp$926, $moonbitlang$core$builtin$output$$2a$bind$7c$8187
-    };
-    _bind$304 = $StringView$$find(_tmp$924, _tmp$925);
-    if (_bind$304 == 4294967296ll) {
-      void* None$917 =
-        (struct moonbit_object*)&moonbit_constant_constructor_0 + 1;
-      _bind$301
-      = (struct $$3c$StringView$2a$Option$3c$StringView$3e$$3e$*)moonbit_malloc(
-          sizeof(struct $$3c$StringView$2a$Option$3c$StringView$3e$$3e$)
-        );
-      Moonbit_object_header(_bind$301)->meta
-      = Moonbit_make_regular_object_header(
-        offsetof(
-          struct $$3c$StringView$2a$Option$3c$StringView$3e$$3e$, $0_0
-        )
-        >> 2,
-          2,
-          0
-      );
-      _bind$301->$0_0 = pkg$298.$0;
-      _bind$301->$0_1 = pkg$298.$1;
-      _bind$301->$0_2 = pkg$298.$2;
-      _bind$301->$1 = None$917;
+  struct $StringView _field$818 =
+    (struct $StringView){self$249->$0_1, self$249->$0_2, self$249->$0_0};
+  struct $StringView pkg$248 = _field$818;
+  moonbit_string_t _field$817 = pkg$248.$0;
+  moonbit_string_t _data$250 = _field$817;
+  int32_t _start$251 = pkg$248.$1;
+  int32_t end$803 = pkg$248.$2;
+  int32_t start$804 = pkg$248.$1;
+  int32_t _tmp$802 = end$803 - start$804;
+  int32_t _end$252 = _start$251 + _tmp$802;
+  int32_t _cursor$253 = _start$251;
+  int32_t accept_state$254 = -1;
+  int32_t match_end$255 = -1;
+  int32_t match_tag_saver_0$256 = -1;
+  int32_t tag_0$257 = -1;
+  struct $$3c$StringView$2a$Option$3c$StringView$3e$$3e$* _bind$258;
+  struct $StringView _field$816;
+  struct $StringView _module_name$281;
+  void* _field$815;
+  int32_t _cnt$841;
+  void* _package_name$282;
+  struct $StringView _field$813;
+  struct $StringView filename$765;
+  struct $StringView _field$812;
+  struct $StringView start_line$766;
+  struct $StringView _field$811;
+  struct $StringView start_column$767;
+  struct $StringView _field$810;
+  struct $StringView end_line$768;
+  struct $StringView _field$809;
+  int32_t _cnt$845;
+  struct $StringView end_column$769;
+  struct $$moonbitlang$core$builtin$Logger _bind$764;
+  moonbit_incref(_data$250);
+  moonbit_incref(pkg$248.$0);
+  while (1) {
+    int32_t _tmp$784 = _cursor$253;
+    if (_tmp$784 < _end$252) {
+      int32_t _p$410 = _cursor$253;
+      int32_t next_char$268 = _data$250[_p$410];
+      int32_t _tmp$785 = _cursor$253;
+      _cursor$253 = _tmp$785 + 1;
+      if (next_char$268 < 55296) {
+        if (next_char$268 < 47) {
+          goto $join$266;
+        } else if (next_char$268 > 47) {
+          goto $join$266;
+        } else {
+          while (1) {
+            int32_t _tmp$786;
+            tag_0$257 = _cursor$253;
+            _tmp$786 = _cursor$253;
+            if (_tmp$786 < _end$252) {
+              int32_t _p$413 = _cursor$253;
+              int32_t next_char$271 = _data$250[_p$413];
+              int32_t _tmp$787 = _cursor$253;
+              _cursor$253 = _tmp$787 + 1;
+              if (next_char$271 < 55296) {
+                if (next_char$271 < 47) {
+                  goto $join$269;
+                } else if (next_char$271 > 47) {
+                  goto $join$269;
+                } else {
+                  while (1) {
+                    int32_t _tmp$788 = _cursor$253;
+                    if (_tmp$788 < _end$252) {
+                      int32_t _p$416 = _cursor$253;
+                      int32_t next_char$274 = _data$250[_p$416];
+                      int32_t _tmp$789 = _cursor$253;
+                      _cursor$253 = _tmp$789 + 1;
+                      if (next_char$274 < 56319) {
+                        if (next_char$274 < 55296) {
+                          goto $join$272;
+                        } else {
+                          int32_t _tmp$790 = _cursor$253;
+                          if (_tmp$790 < _end$252) {
+                            int32_t _p$419 = _cursor$253;
+                            int32_t next_char$275 = _data$250[_p$419];
+                            int32_t _tmp$791 = _cursor$253;
+                            _cursor$253 = _tmp$791 + 1;
+                            if (next_char$275 < 56320) {
+                              goto $join$259;
+                            } else if (next_char$275 > 65535) {
+                              goto $join$259;
+                            } else {
+                              continue;
+                            }
+                          } else {
+                            goto $join$259;
+                          }
+                        }
+                      } else if (next_char$274 > 56319) {
+                        if (next_char$274 < 65536) {
+                          goto $join$272;
+                        } else {
+                          goto $join$259;
+                        }
+                      } else {
+                        int32_t _tmp$792 = _cursor$253;
+                        if (_tmp$792 < _end$252) {
+                          int32_t _p$422 = _cursor$253;
+                          int32_t next_char$276 = _data$250[_p$422];
+                          int32_t _tmp$793 = _cursor$253;
+                          _cursor$253 = _tmp$793 + 1;
+                          if (next_char$276 < 56320) {
+                            goto $join$259;
+                          } else if (next_char$276 > 57343) {
+                            goto $join$259;
+                          } else {
+                            continue;
+                          }
+                        } else {
+                          goto $join$259;
+                        }
+                      }
+                      goto $joinlet$862;
+                      $join$272:;
+                      continue;
+                      $joinlet$862:;
+                    } else {
+                      match_tag_saver_0$256 = tag_0$257;
+                      accept_state$254 = 0;
+                      match_end$255 = _cursor$253;
+                      goto $join$259;
+                    }
+                    break;
+                  }
+                }
+              } else if (next_char$271 > 56318) {
+                if (next_char$271 < 57344) {
+                  int32_t _tmp$794 = _cursor$253;
+                  if (_tmp$794 < _end$252) {
+                    int32_t _p$425 = _cursor$253;
+                    int32_t next_char$277 = _data$250[_p$425];
+                    int32_t _tmp$795 = _cursor$253;
+                    _cursor$253 = _tmp$795 + 1;
+                    if (next_char$277 < 56320) {
+                      goto $join$259;
+                    } else if (next_char$277 > 57343) {
+                      goto $join$259;
+                    } else {
+                      continue;
+                    }
+                  } else {
+                    goto $join$259;
+                  }
+                } else if (next_char$271 > 65535) {
+                  goto $join$259;
+                } else {
+                  goto $join$269;
+                }
+              } else {
+                int32_t _tmp$796 = _cursor$253;
+                if (_tmp$796 < _end$252) {
+                  int32_t _p$428 = _cursor$253;
+                  int32_t next_char$278 = _data$250[_p$428];
+                  int32_t _tmp$797 = _cursor$253;
+                  _cursor$253 = _tmp$797 + 1;
+                  if (next_char$278 < 56320) {
+                    goto $join$259;
+                  } else if (next_char$278 > 65535) {
+                    goto $join$259;
+                  } else {
+                    continue;
+                  }
+                } else {
+                  goto $join$259;
+                }
+              }
+              goto $joinlet$860;
+              $join$269:;
+              continue;
+              $joinlet$860:;
+            } else {
+              goto $join$259;
+            }
+            break;
+          }
+        }
+      } else if (next_char$268 > 56318) {
+        if (next_char$268 < 57344) {
+          int32_t _tmp$798 = _cursor$253;
+          if (_tmp$798 < _end$252) {
+            int32_t _p$431 = _cursor$253;
+            int32_t next_char$279 = _data$250[_p$431];
+            int32_t _tmp$799 = _cursor$253;
+            _cursor$253 = _tmp$799 + 1;
+            if (next_char$279 < 56320) {
+              goto $join$259;
+            } else if (next_char$279 > 57343) {
+              goto $join$259;
+            } else {
+              continue;
+            }
+          } else {
+            goto $join$259;
+          }
+        } else if (next_char$268 > 65535) {
+          goto $join$259;
+        } else {
+          goto $join$266;
+        }
+      } else {
+        int32_t _tmp$800 = _cursor$253;
+        if (_tmp$800 < _end$252) {
+          int32_t _p$434 = _cursor$253;
+          int32_t next_char$280 = _data$250[_p$434];
+          int32_t _tmp$801 = _cursor$253;
+          _cursor$253 = _tmp$801 + 1;
+          if (next_char$280 < 56320) {
+            goto $join$259;
+          } else if (next_char$280 > 65535) {
+            goto $join$259;
+          } else {
+            continue;
+          }
+        } else {
+          goto $join$259;
+        }
+      }
+      goto $joinlet$858;
+      $join$266:;
+      continue;
+      $joinlet$858:;
     } else {
-      int64_t _Some$305 = _bind$304;
-      int32_t _second_slash$306 = (int32_t)_Some$305;
-      int32_t _tmp$923 = _first_slash$303 + 1;
-      int32_t module_name_end$307 = _tmp$923 + _second_slash$306;
-      int64_t _tmp$922 = (int64_t)module_name_end$307;
-      struct $StringView _tmp$918;
-      int32_t _tmp$921;
-      struct $StringView _tmp$920;
-      void* Some$919;
-      moonbit_incref(pkg$298.$0);
-      _tmp$918 = $StringView$$view$inner(pkg$298, 0, _tmp$922);
-      _tmp$921 = module_name_end$307 + 1;
-      _tmp$920 = $StringView$$view$inner(pkg$298, _tmp$921, 4294967296ll);
-      Some$919
+      goto $join$259;
+    }
+    break;
+  }
+  goto $joinlet$856;
+  $join$259:;
+  switch (accept_state$254) {
+    case 0: {
+      void* _try_err$262;
+      struct $StringView package_name$260;
+      int32_t _tmp$780;
+      int32_t _tmp$779;
+      int64_t _tmp$776;
+      int32_t _tmp$778;
+      int64_t _tmp$777;
+      struct moonbit_result_0 _tmp$864;
+      void* _try_err$265;
+      struct $StringView module_name$263;
+      int64_t _tmp$771;
+      int32_t _tmp$773;
+      int64_t _tmp$772;
+      struct moonbit_result_0 _tmp$866;
+      void* Some$770;
+      moonbit_decref(pkg$248.$0);
+      _tmp$780 = match_tag_saver_0$256;
+      _tmp$779 = _tmp$780 + 1;
+      _tmp$776 = (int64_t)_tmp$779;
+      _tmp$778 = match_end$255;
+      _tmp$777 = (int64_t)_tmp$778;
+      moonbit_incref(_data$250);
+      _tmp$864 = $String$$sub(_data$250, _tmp$776, _tmp$777);
+      if (_tmp$864.tag) {
+        struct $StringView const _ok$781 = _tmp$864.data.ok;
+        package_name$260 = _ok$781;
+      } else {
+        void* const _err$782 = _tmp$864.data.err;
+        _try_err$262 = _err$782;
+        goto $join$261;
+      }
+      goto $joinlet$863;
+      $join$261:;
+      moonbit_decref(_try_err$262);
+      moonbit_panic();
+      $joinlet$863:;
+      _tmp$771 = (int64_t)_start$251;
+      _tmp$773 = match_tag_saver_0$256;
+      _tmp$772 = (int64_t)_tmp$773;
+      _tmp$866 = $String$$sub(_data$250, _tmp$771, _tmp$772);
+      if (_tmp$866.tag) {
+        struct $StringView const _ok$774 = _tmp$866.data.ok;
+        module_name$263 = _ok$774;
+      } else {
+        void* const _err$775 = _tmp$866.data.err;
+        _try_err$265 = _err$775;
+        goto $join$264;
+      }
+      goto $joinlet$865;
+      $join$264:;
+      moonbit_decref(_try_err$265);
+      moonbit_panic();
+      $joinlet$865:;
+      Some$770
       = (void*)moonbit_malloc(sizeof(struct $Option$3c$StringView$3e$$Some));
-      Moonbit_object_header(Some$919)->meta
+      Moonbit_object_header(Some$770)->meta
       = Moonbit_make_regular_object_header(
         offsetof(struct $Option$3c$StringView$3e$$Some, $0_0) >> 2, 1, 1
       );
-      ((struct $Option$3c$StringView$3e$$Some*)Some$919)->$0_0 = _tmp$920.$0;
-      ((struct $Option$3c$StringView$3e$$Some*)Some$919)->$0_1 = _tmp$920.$1;
-      ((struct $Option$3c$StringView$3e$$Some*)Some$919)->$0_2 = _tmp$920.$2;
-      _bind$301
+      ((struct $Option$3c$StringView$3e$$Some*)Some$770)->$0_0
+      = package_name$260.$0;
+      ((struct $Option$3c$StringView$3e$$Some*)Some$770)->$0_1
+      = package_name$260.$1;
+      ((struct $Option$3c$StringView$3e$$Some*)Some$770)->$0_2
+      = package_name$260.$2;
+      _bind$258
       = (struct $$3c$StringView$2a$Option$3c$StringView$3e$$3e$*)moonbit_malloc(
           sizeof(struct $$3c$StringView$2a$Option$3c$StringView$3e$$3e$)
         );
-      Moonbit_object_header(_bind$301)->meta
+      Moonbit_object_header(_bind$258)->meta
       = Moonbit_make_regular_object_header(
         offsetof(
           struct $$3c$StringView$2a$Option$3c$StringView$3e$$3e$, $0_0
@@ -1350,620 +1347,443 @@ int32_t $$moonbitlang$core$builtin$Show$$$moonbitlang$core$builtin$SourceLocRepr
           2,
           0
       );
-      _bind$301->$0_0 = _tmp$918.$0;
-      _bind$301->$0_1 = _tmp$918.$1;
-      _bind$301->$0_2 = _tmp$918.$2;
-      _bind$301->$1 = Some$919;
-    }
-  }
-  _field$941
-  = (struct $StringView){
-    _bind$301->$0_1, _bind$301->$0_2, _bind$301->$0_0
-  };
-  _module_name$308 = _field$941;
-  _field$940 = _bind$301->$1;
-  _cnt$1003 = Moonbit_object_header(_bind$301)->rc;
-  if (_cnt$1003 > 1) {
-    int32_t _new_cnt$1004;
-    moonbit_incref(_field$940);
-    moonbit_incref(_module_name$308.$0);
-    _new_cnt$1004 = _cnt$1003 - 1;
-    Moonbit_object_header(_bind$301)->rc = _new_cnt$1004;
-  } else if (_cnt$1003 == 1) {
-    moonbit_free(_bind$301);
-  }
-  _package_name$309 = _field$940;
-  switch (Moonbit_object_tag(_package_name$309)) {
-    case 1: {
-      struct $Option$3c$StringView$3e$$Some* _Some$310 =
-        (struct $Option$3c$StringView$3e$$Some*)_package_name$309;
-      struct $StringView _field$939 =
-        (struct $StringView){
-          _Some$310->$0_1, _Some$310->$0_2, _Some$310->$0_0
-        };
-      int32_t _cnt$1005 = Moonbit_object_header(_Some$310)->rc;
-      struct $StringView _pkg_name$311;
-      struct $$moonbitlang$core$builtin$Logger _bind$909;
-      if (_cnt$1005 > 1) {
-        int32_t _new_cnt$1006;
-        moonbit_incref(_field$939.$0);
-        _new_cnt$1006 = _cnt$1005 - 1;
-        Moonbit_object_header(_Some$310)->rc = _new_cnt$1006;
-      } else if (_cnt$1005 == 1) {
-        moonbit_free(_Some$310);
-      }
-      _pkg_name$311 = _field$939;
-      if (logger$312.$1) {
-        moonbit_incref(logger$312.$1);
-      }
-      logger$312.$0->$method_2(logger$312.$1, _pkg_name$311);
-      _bind$909 = logger$312;
-      if (_bind$909.$1) {
-        moonbit_incref(_bind$909.$1);
-      }
-      _bind$909.$0->$method_3(_bind$909.$1, 47);
+      _bind$258->$0_0 = module_name$263.$0;
+      _bind$258->$0_1 = module_name$263.$1;
+      _bind$258->$0_2 = module_name$263.$2;
+      _bind$258->$1 = Some$770;
       break;
     }
     default: {
-      moonbit_decref(_package_name$309);
+      void* None$783;
+      moonbit_decref(_data$250);
+      None$783 = (struct moonbit_object*)&moonbit_constant_constructor_0 + 1;
+      _bind$258
+      = (struct $$3c$StringView$2a$Option$3c$StringView$3e$$3e$*)moonbit_malloc(
+          sizeof(struct $$3c$StringView$2a$Option$3c$StringView$3e$$3e$)
+        );
+      Moonbit_object_header(_bind$258)->meta
+      = Moonbit_make_regular_object_header(
+        offsetof(
+          struct $$3c$StringView$2a$Option$3c$StringView$3e$$3e$, $0_0
+        )
+        >> 2,
+          2,
+          0
+      );
+      _bind$258->$0_0 = pkg$248.$0;
+      _bind$258->$0_1 = pkg$248.$1;
+      _bind$258->$0_2 = pkg$248.$2;
+      _bind$258->$1 = None$783;
       break;
     }
   }
-  _field$938
+  $joinlet$856:;
+  _field$816
   = (struct $StringView){
-    self$299->$1_1, self$299->$1_2, self$299->$1_0
+    _bind$258->$0_1, _bind$258->$0_2, _bind$258->$0_0
   };
-  filename$911 = _field$938;
-  moonbit_incref(filename$911.$0);
-  if (logger$312.$1) {
-    moonbit_incref(logger$312.$1);
+  _module_name$281 = _field$816;
+  _field$815 = _bind$258->$1;
+  _cnt$841 = Moonbit_object_header(_bind$258)->rc;
+  if (_cnt$841 > 1) {
+    int32_t _new_cnt$842 = _cnt$841 - 1;
+    Moonbit_object_header(_bind$258)->rc = _new_cnt$842;
+    moonbit_incref(_field$815);
+    moonbit_incref(_module_name$281.$0);
+  } else if (_cnt$841 == 1) {
+    moonbit_free(_bind$258);
   }
-  logger$312.$0->$method_2(logger$312.$1, filename$911);
-  if (logger$312.$1) {
-    moonbit_incref(logger$312.$1);
+  _package_name$282 = _field$815;
+  switch (Moonbit_object_tag(_package_name$282)) {
+    case 1: {
+      struct $Option$3c$StringView$3e$$Some* _Some$283 =
+        (struct $Option$3c$StringView$3e$$Some*)_package_name$282;
+      struct $StringView _field$814 =
+        (struct $StringView){
+          _Some$283->$0_1, _Some$283->$0_2, _Some$283->$0_0
+        };
+      int32_t _cnt$843 = Moonbit_object_header(_Some$283)->rc;
+      struct $StringView _pkg_name$284;
+      struct $$moonbitlang$core$builtin$Logger _bind$763;
+      if (_cnt$843 > 1) {
+        int32_t _new_cnt$844 = _cnt$843 - 1;
+        Moonbit_object_header(_Some$283)->rc = _new_cnt$844;
+        moonbit_incref(_field$814.$0);
+      } else if (_cnt$843 == 1) {
+        moonbit_free(_Some$283);
+      }
+      _pkg_name$284 = _field$814;
+      if (logger$285.$1) {
+        moonbit_incref(logger$285.$1);
+      }
+      logger$285.$0->$method_2(logger$285.$1, _pkg_name$284);
+      _bind$763 = logger$285;
+      if (_bind$763.$1) {
+        moonbit_incref(_bind$763.$1);
+      }
+      _bind$763.$0->$method_3(_bind$763.$1, 47);
+      break;
+    }
+    default: {
+      moonbit_decref(_package_name$282);
+      break;
+    }
   }
-  logger$312.$0->$method_3(logger$312.$1, 58);
-  _field$937
+  _field$813
   = (struct $StringView){
-    self$299->$2_1, self$299->$2_2, self$299->$2_0
+    self$249->$1_1, self$249->$1_2, self$249->$1_0
   };
-  start_line$912 = _field$937;
-  moonbit_incref(start_line$912.$0);
-  if (logger$312.$1) {
-    moonbit_incref(logger$312.$1);
+  filename$765 = _field$813;
+  moonbit_incref(filename$765.$0);
+  if (logger$285.$1) {
+    moonbit_incref(logger$285.$1);
   }
-  logger$312.$0->$method_2(logger$312.$1, start_line$912);
-  if (logger$312.$1) {
-    moonbit_incref(logger$312.$1);
+  logger$285.$0->$method_2(logger$285.$1, filename$765);
+  if (logger$285.$1) {
+    moonbit_incref(logger$285.$1);
   }
-  logger$312.$0->$method_3(logger$312.$1, 58);
-  _field$936
+  logger$285.$0->$method_3(logger$285.$1, 58);
+  _field$812
   = (struct $StringView){
-    self$299->$3_1, self$299->$3_2, self$299->$3_0
+    self$249->$2_1, self$249->$2_2, self$249->$2_0
   };
-  start_column$913 = _field$936;
-  moonbit_incref(start_column$913.$0);
-  if (logger$312.$1) {
-    moonbit_incref(logger$312.$1);
+  start_line$766 = _field$812;
+  moonbit_incref(start_line$766.$0);
+  if (logger$285.$1) {
+    moonbit_incref(logger$285.$1);
   }
-  logger$312.$0->$method_2(logger$312.$1, start_column$913);
-  if (logger$312.$1) {
-    moonbit_incref(logger$312.$1);
+  logger$285.$0->$method_2(logger$285.$1, start_line$766);
+  if (logger$285.$1) {
+    moonbit_incref(logger$285.$1);
   }
-  logger$312.$0->$method_3(logger$312.$1, 45);
-  _field$935
+  logger$285.$0->$method_3(logger$285.$1, 58);
+  _field$811
   = (struct $StringView){
-    self$299->$4_1, self$299->$4_2, self$299->$4_0
+    self$249->$3_1, self$249->$3_2, self$249->$3_0
   };
-  end_line$914 = _field$935;
-  moonbit_incref(end_line$914.$0);
-  if (logger$312.$1) {
-    moonbit_incref(logger$312.$1);
+  start_column$767 = _field$811;
+  moonbit_incref(start_column$767.$0);
+  if (logger$285.$1) {
+    moonbit_incref(logger$285.$1);
   }
-  logger$312.$0->$method_2(logger$312.$1, end_line$914);
-  if (logger$312.$1) {
-    moonbit_incref(logger$312.$1);
+  logger$285.$0->$method_2(logger$285.$1, start_column$767);
+  if (logger$285.$1) {
+    moonbit_incref(logger$285.$1);
   }
-  logger$312.$0->$method_3(logger$312.$1, 58);
-  _field$934
+  logger$285.$0->$method_3(logger$285.$1, 45);
+  _field$810
   = (struct $StringView){
-    self$299->$5_1, self$299->$5_2, self$299->$5_0
+    self$249->$4_1, self$249->$4_2, self$249->$4_0
   };
-  _cnt$1007 = Moonbit_object_header(self$299)->rc;
-  if (_cnt$1007 > 1) {
-    int32_t _new_cnt$1013;
-    moonbit_incref(_field$934.$0);
-    _new_cnt$1013 = _cnt$1007 - 1;
-    Moonbit_object_header(self$299)->rc = _new_cnt$1013;
-  } else if (_cnt$1007 == 1) {
-    struct $StringView _field$1012 =
-      (struct $StringView){self$299->$4_1, self$299->$4_2, self$299->$4_0};
-    struct $StringView _field$1011;
-    struct $StringView _field$1010;
-    struct $StringView _field$1009;
-    struct $StringView _field$1008;
-    moonbit_decref(_field$1012.$0);
-    _field$1011
+  end_line$768 = _field$810;
+  moonbit_incref(end_line$768.$0);
+  if (logger$285.$1) {
+    moonbit_incref(logger$285.$1);
+  }
+  logger$285.$0->$method_2(logger$285.$1, end_line$768);
+  if (logger$285.$1) {
+    moonbit_incref(logger$285.$1);
+  }
+  logger$285.$0->$method_3(logger$285.$1, 58);
+  _field$809
+  = (struct $StringView){
+    self$249->$5_1, self$249->$5_2, self$249->$5_0
+  };
+  _cnt$845 = Moonbit_object_header(self$249)->rc;
+  if (_cnt$845 > 1) {
+    int32_t _new_cnt$851 = _cnt$845 - 1;
+    Moonbit_object_header(self$249)->rc = _new_cnt$851;
+    moonbit_incref(_field$809.$0);
+  } else if (_cnt$845 == 1) {
+    struct $StringView _field$850 =
+      (struct $StringView){self$249->$4_1, self$249->$4_2, self$249->$4_0};
+    struct $StringView _field$849;
+    struct $StringView _field$848;
+    struct $StringView _field$847;
+    struct $StringView _field$846;
+    moonbit_decref(_field$850.$0);
+    _field$849
     = (struct $StringView){
-      self$299->$3_1, self$299->$3_2, self$299->$3_0
+      self$249->$3_1, self$249->$3_2, self$249->$3_0
     };
-    moonbit_decref(_field$1011.$0);
-    _field$1010
+    moonbit_decref(_field$849.$0);
+    _field$848
     = (struct $StringView){
-      self$299->$2_1, self$299->$2_2, self$299->$2_0
+      self$249->$2_1, self$249->$2_2, self$249->$2_0
     };
-    moonbit_decref(_field$1010.$0);
-    _field$1009
+    moonbit_decref(_field$848.$0);
+    _field$847
     = (struct $StringView){
-      self$299->$1_1, self$299->$1_2, self$299->$1_0
+      self$249->$1_1, self$249->$1_2, self$249->$1_0
     };
-    moonbit_decref(_field$1009.$0);
-    _field$1008
+    moonbit_decref(_field$847.$0);
+    _field$846
     = (struct $StringView){
-      self$299->$0_1, self$299->$0_2, self$299->$0_0
+      self$249->$0_1, self$249->$0_2, self$249->$0_0
     };
-    moonbit_decref(_field$1008.$0);
-    moonbit_free(self$299);
+    moonbit_decref(_field$846.$0);
+    moonbit_free(self$249);
   }
-  end_column$915 = _field$934;
-  if (logger$312.$1) {
-    moonbit_incref(logger$312.$1);
+  end_column$769 = _field$809;
+  if (logger$285.$1) {
+    moonbit_incref(logger$285.$1);
   }
-  logger$312.$0->$method_2(logger$312.$1, end_column$915);
-  if (logger$312.$1) {
-    moonbit_incref(logger$312.$1);
+  logger$285.$0->$method_2(logger$285.$1, end_column$769);
+  if (logger$285.$1) {
+    moonbit_incref(logger$285.$1);
   }
-  logger$312.$0->$method_3(logger$312.$1, 64);
-  _bind$910 = logger$312;
-  _bind$910.$0->$method_2(_bind$910.$1, _module_name$308);
+  logger$285.$0->$method_3(logger$285.$1, 64);
+  _bind$764 = logger$285;
+  _bind$764.$0->$method_2(_bind$764.$1, _module_name$281);
   return 0;
 }
 
-int32_t $moonbitlang$core$builtin$println$0(moonbit_string_t input$297) {
-  moonbit_println(input$297);
-  moonbit_decref(input$297);
+int32_t $moonbitlang$core$builtin$println$0(moonbit_string_t input$247) {
+  moonbit_println(input$247);
+  moonbit_decref(input$247);
   return 0;
 }
 
 moonbit_string_t $$moonbitlang$core$builtin$Show$$String$$to_string(
-  moonbit_string_t self$296
+  moonbit_string_t self$246
 ) {
-  return self$296;
+  return self$246;
 }
 
 int32_t $$moonbitlang$core$builtin$Show$$Int$$output(
-  int32_t self$295,
-  struct $$moonbitlang$core$builtin$Logger logger$294
+  int32_t self$245,
+  struct $$moonbitlang$core$builtin$Logger logger$244
 ) {
-  moonbit_string_t _tmp$908 = $Int$$to_string$inner(self$295, 10);
-  logger$294.$0->$method_0(logger$294.$1, _tmp$908);
+  moonbit_string_t _tmp$762 = $Int$$to_string$inner(self$245, 10);
+  logger$244.$0->$method_0(logger$244.$1, _tmp$762);
   return 0;
 }
 
 int32_t $$moonbitlang$core$builtin$Logger$$$moonbitlang$core$builtin$StringBuilder$$write_view(
-  struct $$moonbitlang$core$builtin$StringBuilder* self$292,
-  struct $StringView str$293
+  struct $$moonbitlang$core$builtin$StringBuilder* self$242,
+  struct $StringView str$243
 ) {
-  int32_t len$890 = self$292->$1;
-  int32_t end$893 = str$293.$2;
-  int32_t start$894 = str$293.$1;
-  int32_t _tmp$892 = end$893 - start$894;
-  int32_t _tmp$891 = _tmp$892 * 2;
-  int32_t _tmp$889 = len$890 + _tmp$891;
-  moonbit_bytes_t _field$945;
-  moonbit_bytes_t data$895;
-  int32_t len$896;
-  moonbit_string_t _field$944;
-  moonbit_string_t str$897;
-  int32_t start$898;
-  int32_t end$900;
-  int32_t start$901;
-  int32_t _tmp$899;
-  int32_t len$903;
-  int32_t end$906;
-  int32_t _field$943;
-  int32_t start$907;
-  int32_t _tmp$905;
-  int32_t _tmp$904;
-  int32_t _tmp$902;
-  moonbit_incref(self$292);
+  int32_t len$744 = self$242->$1;
+  int32_t end$747 = str$243.$2;
+  int32_t start$748 = str$243.$1;
+  int32_t _tmp$746 = end$747 - start$748;
+  int32_t _tmp$745 = _tmp$746 * 2;
+  int32_t _tmp$743 = len$744 + _tmp$745;
+  moonbit_bytes_t _field$821;
+  moonbit_bytes_t data$749;
+  int32_t len$750;
+  moonbit_string_t _field$820;
+  moonbit_string_t str$751;
+  int32_t start$752;
+  int32_t end$754;
+  int32_t start$755;
+  int32_t _tmp$753;
+  int32_t len$757;
+  int32_t end$760;
+  int32_t _field$819;
+  int32_t start$761;
+  int32_t _tmp$759;
+  int32_t _tmp$758;
+  int32_t _tmp$756;
+  moonbit_incref(self$242);
   $$moonbitlang$core$builtin$StringBuilder$$grow_if_necessary(
-    self$292, _tmp$889
+    self$242, _tmp$743
   );
-  _field$945 = self$292->$0;
-  data$895 = _field$945;
-  len$896 = self$292->$1;
-  _field$944 = str$293.$0;
-  str$897 = _field$944;
-  start$898 = str$293.$1;
-  end$900 = str$293.$2;
-  start$901 = str$293.$1;
-  _tmp$899 = end$900 - start$901;
-  moonbit_incref(str$897);
-  moonbit_incref(data$895);
+  _field$821 = self$242->$0;
+  data$749 = _field$821;
+  len$750 = self$242->$1;
+  _field$820 = str$243.$0;
+  str$751 = _field$820;
+  start$752 = str$243.$1;
+  end$754 = str$243.$2;
+  start$755 = str$243.$1;
+  _tmp$753 = end$754 - start$755;
+  moonbit_incref(str$751);
+  moonbit_incref(data$749);
   $FixedArray$$blit_from_string(
-    data$895, len$896, str$897, start$898, _tmp$899
+    data$749, len$750, str$751, start$752, _tmp$753
   );
-  len$903 = self$292->$1;
-  end$906 = str$293.$2;
-  _field$943 = str$293.$1;
-  moonbit_decref(str$293.$0);
-  start$907 = _field$943;
-  _tmp$905 = end$906 - start$907;
-  _tmp$904 = _tmp$905 * 2;
-  _tmp$902 = len$903 + _tmp$904;
-  self$292->$1 = _tmp$902;
-  moonbit_decref(self$292);
+  len$757 = self$242->$1;
+  end$760 = str$243.$2;
+  _field$819 = str$243.$1;
+  moonbit_decref(str$243.$0);
+  start$761 = _field$819;
+  _tmp$759 = end$760 - start$761;
+  _tmp$758 = _tmp$759 * 2;
+  _tmp$756 = len$757 + _tmp$758;
+  self$242->$1 = _tmp$756;
+  moonbit_decref(self$242);
   return 0;
 }
 
-int64_t $String$$offset_of_nth_char$inner(
-  moonbit_string_t self$289,
-  int32_t i$290,
-  int32_t start_offset$291,
-  int64_t end_offset$287
-) {
-  int32_t end_offset$286;
-  if (end_offset$287 == 4294967296ll) {
-    end_offset$286 = Moonbit_array_length(self$289);
-  } else {
-    int64_t _Some$288 = end_offset$287;
-    end_offset$286 = (int32_t)_Some$288;
-  }
-  if (i$290 >= 0) {
-    return $String$$offset_of_nth_char_forward(
-             self$289, i$290, start_offset$291, end_offset$286
-           );
-  } else {
-    int32_t _tmp$888 = -i$290;
-    return $String$$offset_of_nth_char_backward(
-             self$289, _tmp$888, start_offset$291, end_offset$286
-           );
-  }
-}
-
-int64_t $String$$offset_of_nth_char_forward(
-  moonbit_string_t self$284,
-  int32_t n$282,
-  int32_t start_offset$278,
-  int32_t end_offset$279
-) {
-  if (start_offset$278 >= 0 && start_offset$278 <= end_offset$279) {
-    int32_t utf16_offset$280 = start_offset$278;
-    int32_t char_count$281 = 0;
-    int32_t _tmp$886;
-    int32_t _if_result$1024;
-    while (1) {
-      int32_t _tmp$880 = utf16_offset$280;
-      int32_t _if_result$1023;
-      if (_tmp$880 < end_offset$279) {
-        int32_t _tmp$879 = char_count$281;
-        _if_result$1023 = _tmp$879 < n$282;
-      } else {
-        _if_result$1023 = 0;
-      }
-      if (_if_result$1023) {
-        int32_t _tmp$884 = utf16_offset$280;
-        int32_t c$283 = self$284[_tmp$884];
-        int32_t _tmp$883;
-        if (55296 <= c$283 && c$283 <= 56319) {
-          int32_t _tmp$881 = utf16_offset$280;
-          utf16_offset$280 = _tmp$881 + 2;
-        } else {
-          int32_t _tmp$882 = utf16_offset$280;
-          utf16_offset$280 = _tmp$882 + 1;
-        }
-        _tmp$883 = char_count$281;
-        char_count$281 = _tmp$883 + 1;
-        continue;
-      } else {
-        moonbit_decref(self$284);
-      }
-      break;
-    }
-    _tmp$886 = char_count$281;
-    if (_tmp$886 < n$282) {
-      _if_result$1024 = 1;
-    } else {
-      int32_t _tmp$885 = utf16_offset$280;
-      _if_result$1024 = _tmp$885 >= end_offset$279;
-    }
-    if (_if_result$1024) {
-      return 4294967296ll;
-    } else {
-      int32_t _tmp$887 = utf16_offset$280;
-      return (int64_t)_tmp$887;
-    }
-  } else {
-    moonbit_decref(self$284);
-    return $moonbitlang$core$builtin$abort$3(
-             (moonbit_string_t)moonbit_string_literal_3.data,
-               (moonbit_string_t)moonbit_string_literal_4.data
-           );
-  }
-}
-
-int64_t $String$$offset_of_nth_char_backward(
-  moonbit_string_t self$276,
-  int32_t n$274,
-  int32_t start_offset$273,
-  int32_t end_offset$272
-) {
-  int32_t char_count$270 = 0;
-  int32_t utf16_offset$271 = end_offset$272;
-  int32_t _tmp$877;
-  int32_t _if_result$1027;
-  while (1) {
-    int32_t _tmp$870 = utf16_offset$271;
-    int32_t _tmp$869 = _tmp$870 - 1;
-    int32_t _if_result$1026;
-    if (_tmp$869 >= start_offset$273) {
-      int32_t _tmp$868 = char_count$270;
-      _if_result$1026 = _tmp$868 < n$274;
-    } else {
-      _if_result$1026 = 0;
-    }
-    if (_if_result$1026) {
-      int32_t _tmp$875 = utf16_offset$271;
-      int32_t _tmp$874 = _tmp$875 - 1;
-      int32_t c$275 = self$276[_tmp$874];
-      int32_t _tmp$873;
-      if (56320 <= c$275 && c$275 <= 57343) {
-        int32_t _tmp$871 = utf16_offset$271;
-        utf16_offset$271 = _tmp$871 - 2;
-      } else {
-        int32_t _tmp$872 = utf16_offset$271;
-        utf16_offset$271 = _tmp$872 - 1;
-      }
-      _tmp$873 = char_count$270;
-      char_count$270 = _tmp$873 + 1;
-      continue;
-    } else {
-      moonbit_decref(self$276);
-    }
-    break;
-  }
-  _tmp$877 = char_count$270;
-  if (_tmp$877 < n$274) {
-    _if_result$1027 = 1;
-  } else {
-    int32_t _tmp$876 = utf16_offset$271;
-    _if_result$1027 = _tmp$876 < start_offset$273;
-  }
-  if (_if_result$1027) {
-    return 4294967296ll;
-  } else {
-    int32_t _tmp$878 = utf16_offset$271;
-    return (int64_t)_tmp$878;
-  }
-}
-
-int32_t $String$$char_length_ge$inner(
-  moonbit_string_t self$262,
-  int32_t len$265,
-  int32_t start_offset$269,
-  int64_t end_offset$260
-) {
-  int32_t end_offset$259;
-  int32_t index$263;
-  int32_t count$264;
-  if (end_offset$260 == 4294967296ll) {
-    end_offset$259 = Moonbit_array_length(self$262);
-  } else {
-    int64_t _Some$261 = end_offset$260;
-    end_offset$259 = (int32_t)_Some$261;
-  }
-  index$263 = start_offset$269;
-  count$264 = 0;
-  while (1) {
-    if (index$263 < end_offset$259 && count$264 < len$265) {
-      int32_t c1$266 = self$262[index$263];
-      int32_t _if_result$1029;
-      int32_t _tmp$866;
-      int32_t _tmp$867;
-      if (55296 <= c1$266 && c1$266 <= 56319) {
-        int32_t _tmp$862 = index$263 + 1;
-        _if_result$1029 = _tmp$862 < end_offset$259;
-      } else {
-        _if_result$1029 = 0;
-      }
-      if (_if_result$1029) {
-        int32_t _tmp$865 = index$263 + 1;
-        int32_t c2$267 = self$262[_tmp$865];
-        if (56320 <= c2$267 && c2$267 <= 57343) {
-          int32_t _tmp$863 = index$263 + 2;
-          int32_t _tmp$864 = count$264 + 1;
-          index$263 = _tmp$863;
-          count$264 = _tmp$864;
-          continue;
-        } else {
-          $moonbitlang$core$builtin$abort$0(
-            (moonbit_string_t)moonbit_string_literal_5.data,
-              (moonbit_string_t)moonbit_string_literal_6.data
-          );
-        }
-      }
-      _tmp$866 = index$263 + 1;
-      _tmp$867 = count$264 + 1;
-      index$263 = _tmp$866;
-      count$264 = _tmp$867;
-      continue;
-    } else {
-      moonbit_decref(self$262);
-      return count$264 >= len$265;
-    }
-    break;
-  }
-}
-
-moonbit_string_t $Int$$to_string$inner(int32_t self$243, int32_t radix$242) {
-  int32_t is_negative$244;
-  uint32_t num$245;
-  uint16_t* buffer$246;
-  if (radix$242 < 2 || radix$242 > 36) {
+moonbit_string_t $Int$$to_string$inner(int32_t self$226, int32_t radix$225) {
+  int32_t is_negative$227;
+  uint32_t num$228;
+  uint16_t* buffer$229;
+  if (radix$225 < 2 || radix$225 > 36) {
     $moonbitlang$core$builtin$abort$0(
-      (moonbit_string_t)moonbit_string_literal_7.data,
-        (moonbit_string_t)moonbit_string_literal_8.data
+      (moonbit_string_t)moonbit_string_literal_0.data,
+        (moonbit_string_t)moonbit_string_literal_1.data
     );
   }
-  if (self$243 == 0) {
-    return (moonbit_string_t)moonbit_string_literal_9.data;
+  if (self$226 == 0) {
+    return (moonbit_string_t)moonbit_string_literal_2.data;
   }
-  is_negative$244 = self$243 < 0;
-  if (is_negative$244) {
-    int32_t _tmp$861 = -self$243;
-    num$245 = *(uint32_t*)&_tmp$861;
+  is_negative$227 = self$226 < 0;
+  if (is_negative$227) {
+    int32_t _tmp$742 = -self$226;
+    num$228 = *(uint32_t*)&_tmp$742;
   } else {
-    num$245 = *(uint32_t*)&self$243;
+    num$228 = *(uint32_t*)&self$226;
   }
-  switch (radix$242) {
+  switch (radix$225) {
     case 10: {
-      int32_t digit_len$247 = $moonbitlang$core$builtin$dec_count32(num$245);
-      int32_t _tmp$858;
-      int32_t total_len$248;
-      uint16_t* buffer$249;
-      int32_t digit_start$250;
-      if (is_negative$244) {
-        _tmp$858 = 1;
+      int32_t digit_len$230 = $moonbitlang$core$builtin$dec_count32(num$228);
+      int32_t _tmp$739;
+      int32_t total_len$231;
+      uint16_t* buffer$232;
+      int32_t digit_start$233;
+      if (is_negative$227) {
+        _tmp$739 = 1;
       } else {
-        _tmp$858 = 0;
+        _tmp$739 = 0;
       }
-      total_len$248 = digit_len$247 + _tmp$858;
-      buffer$249 = (uint16_t*)moonbit_make_string(total_len$248, 0);
-      if (is_negative$244) {
-        digit_start$250 = 1;
+      total_len$231 = digit_len$230 + _tmp$739;
+      buffer$232 = (uint16_t*)moonbit_make_string(total_len$231, 0);
+      if (is_negative$227) {
+        digit_start$233 = 1;
       } else {
-        digit_start$250 = 0;
+        digit_start$233 = 0;
       }
-      moonbit_incref(buffer$249);
+      moonbit_incref(buffer$232);
       $moonbitlang$core$builtin$int_to_string_dec(
-        buffer$249, num$245, digit_start$250, total_len$248
+        buffer$232, num$228, digit_start$233, total_len$231
       );
-      buffer$246 = buffer$249;
+      buffer$229 = buffer$232;
       break;
     }
 
     case 16: {
-      int32_t digit_len$251 = $moonbitlang$core$builtin$hex_count32(num$245);
-      int32_t _tmp$859;
-      int32_t total_len$252;
-      uint16_t* buffer$253;
-      int32_t digit_start$254;
-      if (is_negative$244) {
-        _tmp$859 = 1;
+      int32_t digit_len$234 = $moonbitlang$core$builtin$hex_count32(num$228);
+      int32_t _tmp$740;
+      int32_t total_len$235;
+      uint16_t* buffer$236;
+      int32_t digit_start$237;
+      if (is_negative$227) {
+        _tmp$740 = 1;
       } else {
-        _tmp$859 = 0;
+        _tmp$740 = 0;
       }
-      total_len$252 = digit_len$251 + _tmp$859;
-      buffer$253 = (uint16_t*)moonbit_make_string(total_len$252, 0);
-      if (is_negative$244) {
-        digit_start$254 = 1;
+      total_len$235 = digit_len$234 + _tmp$740;
+      buffer$236 = (uint16_t*)moonbit_make_string(total_len$235, 0);
+      if (is_negative$227) {
+        digit_start$237 = 1;
       } else {
-        digit_start$254 = 0;
+        digit_start$237 = 0;
       }
-      moonbit_incref(buffer$253);
+      moonbit_incref(buffer$236);
       $moonbitlang$core$builtin$int_to_string_hex(
-        buffer$253, num$245, digit_start$254, total_len$252
+        buffer$236, num$228, digit_start$237, total_len$235
       );
-      buffer$246 = buffer$253;
+      buffer$229 = buffer$236;
       break;
     }
     default: {
-      int32_t digit_len$255 =
-        $moonbitlang$core$builtin$radix_count32(num$245, radix$242);
-      int32_t _tmp$860;
-      int32_t total_len$256;
-      uint16_t* buffer$257;
-      int32_t digit_start$258;
-      if (is_negative$244) {
-        _tmp$860 = 1;
+      int32_t digit_len$238 =
+        $moonbitlang$core$builtin$radix_count32(num$228, radix$225);
+      int32_t _tmp$741;
+      int32_t total_len$239;
+      uint16_t* buffer$240;
+      int32_t digit_start$241;
+      if (is_negative$227) {
+        _tmp$741 = 1;
       } else {
-        _tmp$860 = 0;
+        _tmp$741 = 0;
       }
-      total_len$256 = digit_len$255 + _tmp$860;
-      buffer$257 = (uint16_t*)moonbit_make_string(total_len$256, 0);
-      if (is_negative$244) {
-        digit_start$258 = 1;
+      total_len$239 = digit_len$238 + _tmp$741;
+      buffer$240 = (uint16_t*)moonbit_make_string(total_len$239, 0);
+      if (is_negative$227) {
+        digit_start$241 = 1;
       } else {
-        digit_start$258 = 0;
+        digit_start$241 = 0;
       }
-      moonbit_incref(buffer$257);
+      moonbit_incref(buffer$240);
       $moonbitlang$core$builtin$int_to_string_generic(
-        buffer$257, num$245, digit_start$258, total_len$256, radix$242
+        buffer$240, num$228, digit_start$241, total_len$239, radix$225
       );
-      buffer$246 = buffer$257;
+      buffer$229 = buffer$240;
       break;
     }
   }
-  if (is_negative$244) {
-    buffer$246[0] = 45;
+  if (is_negative$227) {
+    buffer$229[0] = 45;
   }
-  return buffer$246;
+  return buffer$229;
 }
 
 int32_t $moonbitlang$core$builtin$radix_count32(
-  uint32_t value$236,
-  int32_t radix$239
+  uint32_t value$219,
+  int32_t radix$222
 ) {
-  uint32_t num$237;
-  uint32_t base$238;
-  int32_t count$240;
-  if (value$236 == 0u) {
+  uint32_t num$220;
+  uint32_t base$221;
+  int32_t count$223;
+  if (value$219 == 0u) {
     return 1;
   }
-  num$237 = value$236;
-  base$238 = *(uint32_t*)&radix$239;
-  count$240 = 0;
+  num$220 = value$219;
+  base$221 = *(uint32_t*)&radix$222;
+  count$223 = 0;
   while (1) {
-    uint32_t _tmp$855 = num$237;
-    if (_tmp$855 > 0u) {
-      int32_t _tmp$856 = count$240;
-      uint32_t _tmp$857;
-      count$240 = _tmp$856 + 1;
-      _tmp$857 = num$237;
-      num$237 = _tmp$857 / base$238;
+    uint32_t _tmp$736 = num$220;
+    if (_tmp$736 > 0u) {
+      int32_t _tmp$737 = count$223;
+      uint32_t _tmp$738;
+      count$223 = _tmp$737 + 1;
+      _tmp$738 = num$220;
+      num$220 = _tmp$738 / base$221;
       continue;
     }
     break;
   }
-  return count$240;
+  return count$223;
 }
 
-int32_t $moonbitlang$core$builtin$hex_count32(uint32_t value$234) {
-  if (value$234 == 0u) {
+int32_t $moonbitlang$core$builtin$hex_count32(uint32_t value$217) {
+  if (value$217 == 0u) {
     return 1;
   } else {
-    int32_t leading_zeros$235 = moonbit_clz32(value$234);
-    int32_t _tmp$854 = 31 - leading_zeros$235;
-    int32_t _tmp$853 = _tmp$854 / 4;
-    return _tmp$853 + 1;
+    int32_t leading_zeros$218 = moonbit_clz32(value$217);
+    int32_t _tmp$735 = 31 - leading_zeros$218;
+    int32_t _tmp$734 = _tmp$735 / 4;
+    return _tmp$734 + 1;
   }
 }
 
-int32_t $moonbitlang$core$builtin$dec_count32(uint32_t value$233) {
-  if (value$233 >= 100000u) {
-    if (value$233 >= 10000000u) {
-      if (value$233 >= 1000000000u) {
+int32_t $moonbitlang$core$builtin$dec_count32(uint32_t value$216) {
+  if (value$216 >= 100000u) {
+    if (value$216 >= 10000000u) {
+      if (value$216 >= 1000000000u) {
         return 10;
-      } else if (value$233 >= 100000000u) {
+      } else if (value$216 >= 100000000u) {
         return 9;
       } else {
         return 8;
       }
-    } else if (value$233 >= 1000000u) {
+    } else if (value$216 >= 1000000u) {
       return 7;
     } else {
       return 6;
     }
-  } else if (value$233 >= 1000u) {
-    if (value$233 >= 10000u) {
+  } else if (value$216 >= 1000u) {
+    if (value$216 >= 10000u) {
       return 5;
     } else {
       return 4;
     }
-  } else if (value$233 >= 100u) {
+  } else if (value$216 >= 100u) {
     return 3;
-  } else if (value$233 >= 10u) {
+  } else if (value$216 >= 10u) {
     return 2;
   } else {
     return 1;
@@ -1971,260 +1791,260 @@ int32_t $moonbitlang$core$builtin$dec_count32(uint32_t value$233) {
 }
 
 int32_t $moonbitlang$core$builtin$int_to_string_dec(
-  uint16_t* buffer$223,
-  uint32_t num$211,
-  int32_t digit_start$214,
-  int32_t total_len$213
+  uint16_t* buffer$206,
+  uint32_t num$194,
+  int32_t digit_start$197,
+  int32_t total_len$196
 ) {
-  uint32_t num$210 = num$211;
-  int32_t offset$212 = total_len$213 - digit_start$214;
-  uint32_t _tmp$852;
-  int32_t remaining$225;
-  int32_t _tmp$833;
+  uint32_t num$193 = num$194;
+  int32_t offset$195 = total_len$196 - digit_start$197;
+  uint32_t _tmp$733;
+  int32_t remaining$208;
+  int32_t _tmp$714;
   while (1) {
-    uint32_t _tmp$796 = num$210;
-    if (_tmp$796 >= 10000u) {
-      uint32_t _tmp$819 = num$210;
-      uint32_t t$215 = _tmp$819 / 10000u;
-      uint32_t _tmp$818 = num$210;
-      uint32_t _tmp$817 = _tmp$818 % 10000u;
-      int32_t r$216 = *(int32_t*)&_tmp$817;
-      int32_t d1$217;
-      int32_t d2$218;
-      int32_t _tmp$797;
-      int32_t _tmp$816;
-      int32_t _tmp$815;
-      int32_t d1_hi$219;
-      int32_t _tmp$814;
-      int32_t _tmp$813;
-      int32_t d1_lo$220;
-      int32_t _tmp$812;
-      int32_t _tmp$811;
-      int32_t d2_hi$221;
-      int32_t _tmp$810;
-      int32_t _tmp$809;
-      int32_t d2_lo$222;
-      int32_t _tmp$799;
-      int32_t _tmp$798;
-      int32_t _tmp$802;
-      int32_t _tmp$801;
-      int32_t _tmp$800;
-      int32_t _tmp$805;
-      int32_t _tmp$804;
-      int32_t _tmp$803;
-      int32_t _tmp$808;
-      int32_t _tmp$807;
-      int32_t _tmp$806;
-      num$210 = t$215;
-      d1$217 = r$216 / 100;
-      d2$218 = r$216 % 100;
-      _tmp$797 = offset$212;
-      offset$212 = _tmp$797 - 4;
-      _tmp$816 = d1$217 / 10;
-      _tmp$815 = 48 + _tmp$816;
-      d1_hi$219 = (uint16_t)_tmp$815;
-      _tmp$814 = d1$217 % 10;
-      _tmp$813 = 48 + _tmp$814;
-      d1_lo$220 = (uint16_t)_tmp$813;
-      _tmp$812 = d2$218 / 10;
-      _tmp$811 = 48 + _tmp$812;
-      d2_hi$221 = (uint16_t)_tmp$811;
-      _tmp$810 = d2$218 % 10;
-      _tmp$809 = 48 + _tmp$810;
-      d2_lo$222 = (uint16_t)_tmp$809;
-      _tmp$799 = offset$212;
-      _tmp$798 = digit_start$214 + _tmp$799;
-      buffer$223[_tmp$798] = d1_hi$219;
-      _tmp$802 = offset$212;
-      _tmp$801 = digit_start$214 + _tmp$802;
-      _tmp$800 = _tmp$801 + 1;
-      buffer$223[_tmp$800] = d1_lo$220;
-      _tmp$805 = offset$212;
-      _tmp$804 = digit_start$214 + _tmp$805;
-      _tmp$803 = _tmp$804 + 2;
-      buffer$223[_tmp$803] = d2_hi$221;
-      _tmp$808 = offset$212;
-      _tmp$807 = digit_start$214 + _tmp$808;
-      _tmp$806 = _tmp$807 + 3;
-      buffer$223[_tmp$806] = d2_lo$222;
+    uint32_t _tmp$677 = num$193;
+    if (_tmp$677 >= 10000u) {
+      uint32_t _tmp$700 = num$193;
+      uint32_t t$198 = _tmp$700 / 10000u;
+      uint32_t _tmp$699 = num$193;
+      uint32_t _tmp$698 = _tmp$699 % 10000u;
+      int32_t r$199 = *(int32_t*)&_tmp$698;
+      int32_t d1$200;
+      int32_t d2$201;
+      int32_t _tmp$678;
+      int32_t _tmp$697;
+      int32_t _tmp$696;
+      int32_t d1_hi$202;
+      int32_t _tmp$695;
+      int32_t _tmp$694;
+      int32_t d1_lo$203;
+      int32_t _tmp$693;
+      int32_t _tmp$692;
+      int32_t d2_hi$204;
+      int32_t _tmp$691;
+      int32_t _tmp$690;
+      int32_t d2_lo$205;
+      int32_t _tmp$680;
+      int32_t _tmp$679;
+      int32_t _tmp$683;
+      int32_t _tmp$682;
+      int32_t _tmp$681;
+      int32_t _tmp$686;
+      int32_t _tmp$685;
+      int32_t _tmp$684;
+      int32_t _tmp$689;
+      int32_t _tmp$688;
+      int32_t _tmp$687;
+      num$193 = t$198;
+      d1$200 = r$199 / 100;
+      d2$201 = r$199 % 100;
+      _tmp$678 = offset$195;
+      offset$195 = _tmp$678 - 4;
+      _tmp$697 = d1$200 / 10;
+      _tmp$696 = 48 + _tmp$697;
+      d1_hi$202 = (uint16_t)_tmp$696;
+      _tmp$695 = d1$200 % 10;
+      _tmp$694 = 48 + _tmp$695;
+      d1_lo$203 = (uint16_t)_tmp$694;
+      _tmp$693 = d2$201 / 10;
+      _tmp$692 = 48 + _tmp$693;
+      d2_hi$204 = (uint16_t)_tmp$692;
+      _tmp$691 = d2$201 % 10;
+      _tmp$690 = 48 + _tmp$691;
+      d2_lo$205 = (uint16_t)_tmp$690;
+      _tmp$680 = offset$195;
+      _tmp$679 = digit_start$197 + _tmp$680;
+      buffer$206[_tmp$679] = d1_hi$202;
+      _tmp$683 = offset$195;
+      _tmp$682 = digit_start$197 + _tmp$683;
+      _tmp$681 = _tmp$682 + 1;
+      buffer$206[_tmp$681] = d1_lo$203;
+      _tmp$686 = offset$195;
+      _tmp$685 = digit_start$197 + _tmp$686;
+      _tmp$684 = _tmp$685 + 2;
+      buffer$206[_tmp$684] = d2_hi$204;
+      _tmp$689 = offset$195;
+      _tmp$688 = digit_start$197 + _tmp$689;
+      _tmp$687 = _tmp$688 + 3;
+      buffer$206[_tmp$687] = d2_lo$205;
       continue;
     }
     break;
   }
-  _tmp$852 = num$210;
-  remaining$225 = *(int32_t*)&_tmp$852;
+  _tmp$733 = num$193;
+  remaining$208 = *(int32_t*)&_tmp$733;
   while (1) {
-    int32_t _tmp$820 = remaining$225;
-    if (_tmp$820 >= 100) {
-      int32_t _tmp$832 = remaining$225;
-      int32_t t$226 = _tmp$832 / 100;
-      int32_t _tmp$831 = remaining$225;
-      int32_t d$227 = _tmp$831 % 100;
-      int32_t _tmp$821;
-      int32_t _tmp$830;
-      int32_t _tmp$829;
-      int32_t d_hi$228;
-      int32_t _tmp$828;
-      int32_t _tmp$827;
-      int32_t d_lo$229;
-      int32_t _tmp$823;
-      int32_t _tmp$822;
-      int32_t _tmp$826;
-      int32_t _tmp$825;
-      int32_t _tmp$824;
-      remaining$225 = t$226;
-      _tmp$821 = offset$212;
-      offset$212 = _tmp$821 - 2;
-      _tmp$830 = d$227 / 10;
-      _tmp$829 = 48 + _tmp$830;
-      d_hi$228 = (uint16_t)_tmp$829;
-      _tmp$828 = d$227 % 10;
-      _tmp$827 = 48 + _tmp$828;
-      d_lo$229 = (uint16_t)_tmp$827;
-      _tmp$823 = offset$212;
-      _tmp$822 = digit_start$214 + _tmp$823;
-      buffer$223[_tmp$822] = d_hi$228;
-      _tmp$826 = offset$212;
-      _tmp$825 = digit_start$214 + _tmp$826;
-      _tmp$824 = _tmp$825 + 1;
-      buffer$223[_tmp$824] = d_lo$229;
+    int32_t _tmp$701 = remaining$208;
+    if (_tmp$701 >= 100) {
+      int32_t _tmp$713 = remaining$208;
+      int32_t t$209 = _tmp$713 / 100;
+      int32_t _tmp$712 = remaining$208;
+      int32_t d$210 = _tmp$712 % 100;
+      int32_t _tmp$702;
+      int32_t _tmp$711;
+      int32_t _tmp$710;
+      int32_t d_hi$211;
+      int32_t _tmp$709;
+      int32_t _tmp$708;
+      int32_t d_lo$212;
+      int32_t _tmp$704;
+      int32_t _tmp$703;
+      int32_t _tmp$707;
+      int32_t _tmp$706;
+      int32_t _tmp$705;
+      remaining$208 = t$209;
+      _tmp$702 = offset$195;
+      offset$195 = _tmp$702 - 2;
+      _tmp$711 = d$210 / 10;
+      _tmp$710 = 48 + _tmp$711;
+      d_hi$211 = (uint16_t)_tmp$710;
+      _tmp$709 = d$210 % 10;
+      _tmp$708 = 48 + _tmp$709;
+      d_lo$212 = (uint16_t)_tmp$708;
+      _tmp$704 = offset$195;
+      _tmp$703 = digit_start$197 + _tmp$704;
+      buffer$206[_tmp$703] = d_hi$211;
+      _tmp$707 = offset$195;
+      _tmp$706 = digit_start$197 + _tmp$707;
+      _tmp$705 = _tmp$706 + 1;
+      buffer$206[_tmp$705] = d_lo$212;
       continue;
     }
     break;
   }
-  _tmp$833 = remaining$225;
-  if (_tmp$833 >= 10) {
-    int32_t _tmp$834 = offset$212;
-    int32_t _tmp$845;
-    int32_t _tmp$844;
-    int32_t _tmp$843;
-    int32_t d_hi$231;
-    int32_t _tmp$842;
-    int32_t _tmp$841;
-    int32_t _tmp$840;
-    int32_t d_lo$232;
-    int32_t _tmp$836;
-    int32_t _tmp$835;
-    int32_t _tmp$839;
-    int32_t _tmp$838;
-    int32_t _tmp$837;
-    offset$212 = _tmp$834 - 2;
-    _tmp$845 = remaining$225;
-    _tmp$844 = _tmp$845 / 10;
-    _tmp$843 = 48 + _tmp$844;
-    d_hi$231 = (uint16_t)_tmp$843;
-    _tmp$842 = remaining$225;
-    _tmp$841 = _tmp$842 % 10;
-    _tmp$840 = 48 + _tmp$841;
-    d_lo$232 = (uint16_t)_tmp$840;
-    _tmp$836 = offset$212;
-    _tmp$835 = digit_start$214 + _tmp$836;
-    buffer$223[_tmp$835] = d_hi$231;
-    _tmp$839 = offset$212;
-    _tmp$838 = digit_start$214 + _tmp$839;
-    _tmp$837 = _tmp$838 + 1;
-    buffer$223[_tmp$837] = d_lo$232;
-    moonbit_decref(buffer$223);
+  _tmp$714 = remaining$208;
+  if (_tmp$714 >= 10) {
+    int32_t _tmp$715 = offset$195;
+    int32_t _tmp$726;
+    int32_t _tmp$725;
+    int32_t _tmp$724;
+    int32_t d_hi$214;
+    int32_t _tmp$723;
+    int32_t _tmp$722;
+    int32_t _tmp$721;
+    int32_t d_lo$215;
+    int32_t _tmp$717;
+    int32_t _tmp$716;
+    int32_t _tmp$720;
+    int32_t _tmp$719;
+    int32_t _tmp$718;
+    offset$195 = _tmp$715 - 2;
+    _tmp$726 = remaining$208;
+    _tmp$725 = _tmp$726 / 10;
+    _tmp$724 = 48 + _tmp$725;
+    d_hi$214 = (uint16_t)_tmp$724;
+    _tmp$723 = remaining$208;
+    _tmp$722 = _tmp$723 % 10;
+    _tmp$721 = 48 + _tmp$722;
+    d_lo$215 = (uint16_t)_tmp$721;
+    _tmp$717 = offset$195;
+    _tmp$716 = digit_start$197 + _tmp$717;
+    buffer$206[_tmp$716] = d_hi$214;
+    _tmp$720 = offset$195;
+    _tmp$719 = digit_start$197 + _tmp$720;
+    _tmp$718 = _tmp$719 + 1;
+    buffer$206[_tmp$718] = d_lo$215;
+    moonbit_decref(buffer$206);
   } else {
-    int32_t _tmp$846 = offset$212;
-    int32_t _tmp$851;
-    int32_t _tmp$847;
-    int32_t _tmp$850;
-    int32_t _tmp$849;
-    int32_t _tmp$848;
-    offset$212 = _tmp$846 - 1;
-    _tmp$851 = offset$212;
-    _tmp$847 = digit_start$214 + _tmp$851;
-    _tmp$850 = remaining$225;
-    _tmp$849 = 48 + _tmp$850;
-    _tmp$848 = (uint16_t)_tmp$849;
-    buffer$223[_tmp$847] = _tmp$848;
-    moonbit_decref(buffer$223);
+    int32_t _tmp$727 = offset$195;
+    int32_t _tmp$732;
+    int32_t _tmp$728;
+    int32_t _tmp$731;
+    int32_t _tmp$730;
+    int32_t _tmp$729;
+    offset$195 = _tmp$727 - 1;
+    _tmp$732 = offset$195;
+    _tmp$728 = digit_start$197 + _tmp$732;
+    _tmp$731 = remaining$208;
+    _tmp$730 = 48 + _tmp$731;
+    _tmp$729 = (uint16_t)_tmp$730;
+    buffer$206[_tmp$728] = _tmp$729;
+    moonbit_decref(buffer$206);
   }
   return 0;
 }
 
 int32_t $moonbitlang$core$builtin$int_to_string_generic(
-  uint16_t* buffer$205,
-  uint32_t num$199,
-  int32_t digit_start$197,
-  int32_t total_len$196,
-  int32_t radix$201
+  uint16_t* buffer$188,
+  uint32_t num$182,
+  int32_t digit_start$180,
+  int32_t total_len$179,
+  int32_t radix$184
 ) {
-  int32_t offset$195 = total_len$196 - digit_start$197;
-  uint32_t n$198 = num$199;
-  uint32_t base$200 = *(uint32_t*)&radix$201;
-  int32_t _tmp$776 = radix$201 - 1;
-  int32_t _tmp$775 = radix$201 & _tmp$776;
-  if (_tmp$775 == 0) {
-    int32_t shift$202 = moonbit_ctz32(radix$201);
-    uint32_t mask$203 = base$200 - 1u;
+  int32_t offset$178 = total_len$179 - digit_start$180;
+  uint32_t n$181 = num$182;
+  uint32_t base$183 = *(uint32_t*)&radix$184;
+  int32_t _tmp$657 = radix$184 - 1;
+  int32_t _tmp$656 = radix$184 & _tmp$657;
+  if (_tmp$656 == 0) {
+    int32_t shift$185 = moonbit_ctz32(radix$184);
+    uint32_t mask$186 = base$183 - 1u;
     while (1) {
-      uint32_t _tmp$777 = n$198;
-      if (_tmp$777 > 0u) {
-        int32_t _tmp$778 = offset$195;
-        uint32_t _tmp$785;
-        uint32_t _tmp$784;
-        int32_t digit$204;
-        int32_t _tmp$782;
-        int32_t _tmp$779;
-        int32_t _tmp$781;
-        int32_t _tmp$780;
-        uint32_t _tmp$783;
-        offset$195 = _tmp$778 - 1;
-        _tmp$785 = n$198;
-        _tmp$784 = _tmp$785 & mask$203;
-        digit$204 = *(int32_t*)&_tmp$784;
-        _tmp$782 = offset$195;
-        _tmp$779 = digit_start$197 + _tmp$782;
-        _tmp$781
-        = ((moonbit_string_t)moonbit_string_literal_10.data)[
-          digit$204
+      uint32_t _tmp$658 = n$181;
+      if (_tmp$658 > 0u) {
+        int32_t _tmp$659 = offset$178;
+        uint32_t _tmp$666;
+        uint32_t _tmp$665;
+        int32_t digit$187;
+        int32_t _tmp$663;
+        int32_t _tmp$660;
+        int32_t _tmp$662;
+        int32_t _tmp$661;
+        uint32_t _tmp$664;
+        offset$178 = _tmp$659 - 1;
+        _tmp$666 = n$181;
+        _tmp$665 = _tmp$666 & mask$186;
+        digit$187 = *(int32_t*)&_tmp$665;
+        _tmp$663 = offset$178;
+        _tmp$660 = digit_start$180 + _tmp$663;
+        _tmp$662
+        = ((moonbit_string_t)moonbit_string_literal_3.data)[
+          digit$187
         ];
-        _tmp$780 = (uint16_t)_tmp$781;
-        buffer$205[_tmp$779] = _tmp$780;
-        _tmp$783 = n$198;
-        n$198 = _tmp$783 >> (shift$202 & 31);
+        _tmp$661 = (uint16_t)_tmp$662;
+        buffer$188[_tmp$660] = _tmp$661;
+        _tmp$664 = n$181;
+        n$181 = _tmp$664 >> (shift$185 & 31);
         continue;
       } else {
-        moonbit_decref(buffer$205);
+        moonbit_decref(buffer$188);
       }
       break;
     }
   } else {
     while (1) {
-      uint32_t _tmp$786 = n$198;
-      if (_tmp$786 > 0u) {
-        int32_t _tmp$787 = offset$195;
-        uint32_t _tmp$795;
-        uint32_t q$207;
-        uint32_t _tmp$793;
-        uint32_t _tmp$794;
-        uint32_t _tmp$792;
-        int32_t digit$208;
-        int32_t _tmp$791;
-        int32_t _tmp$788;
-        int32_t _tmp$790;
-        int32_t _tmp$789;
-        offset$195 = _tmp$787 - 1;
-        _tmp$795 = n$198;
-        q$207 = _tmp$795 / base$200;
-        _tmp$793 = n$198;
-        _tmp$794 = q$207 * base$200;
-        _tmp$792 = _tmp$793 - _tmp$794;
-        digit$208 = *(int32_t*)&_tmp$792;
-        _tmp$791 = offset$195;
-        _tmp$788 = digit_start$197 + _tmp$791;
-        _tmp$790
-        = ((moonbit_string_t)moonbit_string_literal_10.data)[
-          digit$208
+      uint32_t _tmp$667 = n$181;
+      if (_tmp$667 > 0u) {
+        int32_t _tmp$668 = offset$178;
+        uint32_t _tmp$676;
+        uint32_t q$190;
+        uint32_t _tmp$674;
+        uint32_t _tmp$675;
+        uint32_t _tmp$673;
+        int32_t digit$191;
+        int32_t _tmp$672;
+        int32_t _tmp$669;
+        int32_t _tmp$671;
+        int32_t _tmp$670;
+        offset$178 = _tmp$668 - 1;
+        _tmp$676 = n$181;
+        q$190 = _tmp$676 / base$183;
+        _tmp$674 = n$181;
+        _tmp$675 = q$190 * base$183;
+        _tmp$673 = _tmp$674 - _tmp$675;
+        digit$191 = *(int32_t*)&_tmp$673;
+        _tmp$672 = offset$178;
+        _tmp$669 = digit_start$180 + _tmp$672;
+        _tmp$671
+        = ((moonbit_string_t)moonbit_string_literal_3.data)[
+          digit$191
         ];
-        _tmp$789 = (uint16_t)_tmp$790;
-        buffer$205[_tmp$788] = _tmp$789;
-        n$198 = q$207;
+        _tmp$670 = (uint16_t)_tmp$671;
+        buffer$188[_tmp$669] = _tmp$670;
+        n$181 = q$190;
         continue;
       } else {
-        moonbit_decref(buffer$205);
+        moonbit_decref(buffer$188);
       }
       break;
     }
@@ -2233,1346 +2053,1348 @@ int32_t $moonbitlang$core$builtin$int_to_string_generic(
 }
 
 int32_t $moonbitlang$core$builtin$int_to_string_hex(
-  uint16_t* buffer$192,
-  uint32_t num$188,
-  int32_t digit_start$186,
-  int32_t total_len$185
+  uint16_t* buffer$175,
+  uint32_t num$171,
+  int32_t digit_start$169,
+  int32_t total_len$168
 ) {
-  int32_t offset$184 = total_len$185 - digit_start$186;
-  uint32_t n$187 = num$188;
-  int32_t _tmp$770;
+  int32_t offset$167 = total_len$168 - digit_start$169;
+  uint32_t n$170 = num$171;
+  int32_t _tmp$651;
   while (1) {
-    int32_t _tmp$756 = offset$184;
-    if (_tmp$756 >= 2) {
-      int32_t _tmp$757 = offset$184;
-      uint32_t _tmp$769;
-      uint32_t _tmp$768;
-      int32_t byte_val$189;
-      int32_t hi$190;
-      int32_t lo$191;
-      int32_t _tmp$761;
-      int32_t _tmp$758;
-      int32_t _tmp$760;
-      int32_t _tmp$759;
-      int32_t _tmp$766;
-      int32_t _tmp$765;
-      int32_t _tmp$762;
-      int32_t _tmp$764;
-      int32_t _tmp$763;
-      uint32_t _tmp$767;
-      offset$184 = _tmp$757 - 2;
-      _tmp$769 = n$187;
-      _tmp$768 = _tmp$769 & 255u;
-      byte_val$189 = *(int32_t*)&_tmp$768;
-      hi$190 = byte_val$189 / 16;
-      lo$191 = byte_val$189 % 16;
-      _tmp$761 = offset$184;
-      _tmp$758 = digit_start$186 + _tmp$761;
-      _tmp$760 = ((moonbit_string_t)moonbit_string_literal_10.data)[hi$190];
-      _tmp$759 = (uint16_t)_tmp$760;
-      buffer$192[_tmp$758] = _tmp$759;
-      _tmp$766 = offset$184;
-      _tmp$765 = digit_start$186 + _tmp$766;
-      _tmp$762 = _tmp$765 + 1;
-      _tmp$764 = ((moonbit_string_t)moonbit_string_literal_10.data)[lo$191];
-      _tmp$763 = (uint16_t)_tmp$764;
-      buffer$192[_tmp$762] = _tmp$763;
-      _tmp$767 = n$187;
-      n$187 = _tmp$767 >> 8;
+    int32_t _tmp$637 = offset$167;
+    if (_tmp$637 >= 2) {
+      int32_t _tmp$638 = offset$167;
+      uint32_t _tmp$650;
+      uint32_t _tmp$649;
+      int32_t byte_val$172;
+      int32_t hi$173;
+      int32_t lo$174;
+      int32_t _tmp$642;
+      int32_t _tmp$639;
+      int32_t _tmp$641;
+      int32_t _tmp$640;
+      int32_t _tmp$647;
+      int32_t _tmp$646;
+      int32_t _tmp$643;
+      int32_t _tmp$645;
+      int32_t _tmp$644;
+      uint32_t _tmp$648;
+      offset$167 = _tmp$638 - 2;
+      _tmp$650 = n$170;
+      _tmp$649 = _tmp$650 & 255u;
+      byte_val$172 = *(int32_t*)&_tmp$649;
+      hi$173 = byte_val$172 / 16;
+      lo$174 = byte_val$172 % 16;
+      _tmp$642 = offset$167;
+      _tmp$639 = digit_start$169 + _tmp$642;
+      _tmp$641 = ((moonbit_string_t)moonbit_string_literal_3.data)[hi$173];
+      _tmp$640 = (uint16_t)_tmp$641;
+      buffer$175[_tmp$639] = _tmp$640;
+      _tmp$647 = offset$167;
+      _tmp$646 = digit_start$169 + _tmp$647;
+      _tmp$643 = _tmp$646 + 1;
+      _tmp$645 = ((moonbit_string_t)moonbit_string_literal_3.data)[lo$174];
+      _tmp$644 = (uint16_t)_tmp$645;
+      buffer$175[_tmp$643] = _tmp$644;
+      _tmp$648 = n$170;
+      n$170 = _tmp$648 >> 8;
       continue;
     }
     break;
   }
-  _tmp$770 = offset$184;
-  if (_tmp$770 == 1) {
-    uint32_t _tmp$774 = n$187;
-    uint32_t _tmp$773 = _tmp$774 & 15u;
-    int32_t nibble$194 = *(int32_t*)&_tmp$773;
-    int32_t _tmp$772 =
-      ((moonbit_string_t)moonbit_string_literal_10.data)[nibble$194];
-    int32_t _tmp$771 = (uint16_t)_tmp$772;
-    buffer$192[digit_start$186] = _tmp$771;
-    moonbit_decref(buffer$192);
+  _tmp$651 = offset$167;
+  if (_tmp$651 == 1) {
+    uint32_t _tmp$655 = n$170;
+    uint32_t _tmp$654 = _tmp$655 & 15u;
+    int32_t nibble$177 = *(int32_t*)&_tmp$654;
+    int32_t _tmp$653 =
+      ((moonbit_string_t)moonbit_string_literal_3.data)[nibble$177];
+    int32_t _tmp$652 = (uint16_t)_tmp$653;
+    buffer$175[digit_start$169] = _tmp$652;
+    moonbit_decref(buffer$175);
   } else {
-    moonbit_decref(buffer$192);
+    moonbit_decref(buffer$175);
   }
   return 0;
 }
 
 moonbit_string_t $$moonbitlang$core$builtin$Show$$$default_impl$$to_string$1(
-  moonbit_string_t self$183
+  moonbit_string_t self$166
 ) {
-  struct $$moonbitlang$core$builtin$StringBuilder* logger$182 =
+  struct $$moonbitlang$core$builtin$StringBuilder* logger$165 =
     $$moonbitlang$core$builtin$StringBuilder$$new$inner(0);
-  struct $$moonbitlang$core$builtin$Logger _tmp$755;
-  moonbit_incref(logger$182);
-  _tmp$755
+  struct $$moonbitlang$core$builtin$Logger _tmp$636;
+  moonbit_incref(logger$165);
+  _tmp$636
   = (struct $$moonbitlang$core$builtin$Logger){
     $$moonbitlang$core$builtin$StringBuilder$as_$moonbitlang$core$builtin$Logger$static_method_table_id,
-      logger$182
+      logger$165
   };
   $$moonbitlang$core$builtin$Show$$$moonbitlang$core$builtin$SourceLoc$$output(
-    self$183, _tmp$755
+    self$166, _tmp$636
   );
-  return $$moonbitlang$core$builtin$StringBuilder$$to_string(logger$182);
+  return $$moonbitlang$core$builtin$StringBuilder$$to_string(logger$165);
 }
 
 moonbit_string_t $$moonbitlang$core$builtin$Show$$$default_impl$$to_string$0(
-  int32_t self$181
+  int32_t self$164
 ) {
-  struct $$moonbitlang$core$builtin$StringBuilder* logger$180 =
+  struct $$moonbitlang$core$builtin$StringBuilder* logger$163 =
     $$moonbitlang$core$builtin$StringBuilder$$new$inner(0);
-  struct $$moonbitlang$core$builtin$Logger _tmp$754;
-  moonbit_incref(logger$180);
-  _tmp$754
+  struct $$moonbitlang$core$builtin$Logger _tmp$635;
+  moonbit_incref(logger$163);
+  _tmp$635
   = (struct $$moonbitlang$core$builtin$Logger){
     $$moonbitlang$core$builtin$StringBuilder$as_$moonbitlang$core$builtin$Logger$static_method_table_id,
-      logger$180
+      logger$163
   };
-  $$moonbitlang$core$builtin$Show$$Int$$output(self$181, _tmp$754);
-  return $$moonbitlang$core$builtin$StringBuilder$$to_string(logger$180);
+  $$moonbitlang$core$builtin$Show$$Int$$output(self$164, _tmp$635);
+  return $$moonbitlang$core$builtin$StringBuilder$$to_string(logger$163);
 }
 
-int32_t $StringView$$start_offset(struct $StringView self$179) {
-  int32_t _field$946 = self$179.$1;
-  moonbit_decref(self$179.$0);
-  return _field$946;
+int32_t $StringView$$start_offset(struct $StringView self$162) {
+  int32_t _field$822 = self$162.$1;
+  moonbit_decref(self$162.$0);
+  return _field$822;
 }
 
-moonbit_string_t $StringView$$data(struct $StringView self$178) {
-  moonbit_string_t _field$947 = self$178.$0;
-  return _field$947;
+int32_t $StringView$$length(struct $StringView self$161) {
+  int32_t end$633 = self$161.$2;
+  int32_t _field$823 = self$161.$1;
+  int32_t start$634;
+  moonbit_decref(self$161.$0);
+  start$634 = _field$823;
+  return end$633 - start$634;
+}
+
+moonbit_string_t $StringView$$data(struct $StringView self$160) {
+  moonbit_string_t _field$824 = self$160.$0;
+  return _field$824;
 }
 
 int32_t $$moonbitlang$core$builtin$Logger$$$default_impl$$write_substring$0(
-  struct $$moonbitlang$core$builtin$StringBuilder* self$172,
-  moonbit_string_t value$175,
-  int32_t start$176,
-  int32_t len$177
+  struct $$moonbitlang$core$builtin$StringBuilder* self$154,
+  moonbit_string_t value$157,
+  int32_t start$158,
+  int32_t len$159
 ) {
-  void* _try_err$174;
-  struct $StringView _tmp$749;
-  int32_t _tmp$751 = start$176 + len$177;
-  int64_t _tmp$750 = (int64_t)_tmp$751;
-  struct moonbit_result_0 _tmp$1037 =
-    $String$$sub$inner(value$175, start$176, _tmp$750);
-  if (_tmp$1037.tag) {
-    struct $StringView const _ok$752 = _tmp$1037.data.ok;
-    _tmp$749 = _ok$752;
+  void* _try_err$156;
+  struct $StringView _tmp$628;
+  int32_t _tmp$630 = start$158 + len$159;
+  int64_t _tmp$629 = (int64_t)_tmp$630;
+  struct moonbit_result_0 _tmp$874 =
+    $String$$sub$inner(value$157, start$158, _tmp$629);
+  if (_tmp$874.tag) {
+    struct $StringView const _ok$631 = _tmp$874.data.ok;
+    _tmp$628 = _ok$631;
   } else {
-    void* const _err$753 = _tmp$1037.data.err;
-    _try_err$174 = _err$753;
-    goto $join$173;
+    void* const _err$632 = _tmp$874.data.err;
+    _try_err$156 = _err$632;
+    goto $join$155;
   }
-  goto $joinlet$1036;
-  $join$173:;
-  moonbit_decref(_try_err$174);
+  goto $joinlet$873;
+  $join$155:;
+  moonbit_decref(_try_err$156);
   moonbit_panic();
-  $joinlet$1036:;
+  $joinlet$873:;
   $$moonbitlang$core$builtin$Logger$$$moonbitlang$core$builtin$StringBuilder$$write_view(
-    self$172, _tmp$749
+    self$154, _tmp$628
   );
   return 0;
 }
 
-struct moonbit_result_0 $String$$sub$inner(
-  moonbit_string_t self$165,
-  int32_t start$171,
-  int64_t end$167
+struct moonbit_result_0 $String$$sub(
+  moonbit_string_t self$152,
+  int64_t start$opt$150,
+  int64_t end$153
 ) {
-  int32_t len$164 = Moonbit_array_length(self$165);
-  int32_t end$166;
-  int32_t start$170;
-  if (end$167 == 4294967296ll) {
-    end$166 = len$164;
+  int32_t start$149;
+  if (start$opt$150 == 4294967296ll) {
+    start$149 = 0;
   } else {
-    int64_t _Some$168 = end$167;
-    int32_t _end$169 = (int32_t)_Some$168;
-    if (_end$169 < 0) {
-      end$166 = len$164 + _end$169;
+    int64_t _Some$151 = start$opt$150;
+    start$149 = (int32_t)_Some$151;
+  }
+  return $String$$sub$inner(self$152, start$149, end$153);
+}
+
+struct moonbit_result_0 $String$$sub$inner(
+  moonbit_string_t self$142,
+  int32_t start$148,
+  int64_t end$144
+) {
+  int32_t len$141 = Moonbit_array_length(self$142);
+  int32_t end$143;
+  int32_t start$147;
+  if (end$144 == 4294967296ll) {
+    end$143 = len$141;
+  } else {
+    int64_t _Some$145 = end$144;
+    int32_t _end$146 = (int32_t)_Some$145;
+    if (_end$146 < 0) {
+      end$143 = len$141 + _end$146;
     } else {
-      end$166 = _end$169;
+      end$143 = _end$146;
     }
   }
-  if (start$171 < 0) {
-    start$170 = len$164 + start$171;
+  if (start$148 < 0) {
+    start$147 = len$141 + start$148;
   } else {
-    start$170 = start$171;
+    start$147 = start$148;
   }
-  if (start$170 >= 0 && start$170 <= end$166 && end$166 <= len$164) {
-    int32_t _if_result$1038;
-    int32_t _if_result$1040;
-    struct $StringView _tmp$747;
-    struct moonbit_result_0 _result$1042;
-    if (start$170 < len$164) {
-      int32_t _p$429 = self$165[start$170];
-      _if_result$1038 = 56320 <= _p$429 && _p$429 <= 57343;
+  if (start$147 >= 0 && start$147 <= end$143 && end$143 <= len$141) {
+    int32_t _if_result$875;
+    int32_t _if_result$877;
+    struct $StringView _tmp$626;
+    struct moonbit_result_0 _result$879;
+    if (start$147 < len$141) {
+      int32_t _p$386 = self$142[start$147];
+      _if_result$875 = 56320 <= _p$386 && _p$386 <= 57343;
     } else {
-      _if_result$1038 = 0;
+      _if_result$875 = 0;
     }
-    if (_if_result$1038) {
-      void* moonbitlang$core$builtin$CreatingViewError$InvalidIndex$745;
-      struct moonbit_result_0 _result$1039;
-      moonbit_decref(self$165);
-      moonbitlang$core$builtin$CreatingViewError$InvalidIndex$745
+    if (_if_result$875) {
+      void* moonbitlang$core$builtin$CreatingViewError$InvalidIndex$624;
+      struct moonbit_result_0 _result$876;
+      moonbit_decref(self$142);
+      moonbitlang$core$builtin$CreatingViewError$InvalidIndex$624
       = (struct moonbit_object*)&moonbit_constant_constructor_0 + 1;
-      _result$1039.tag = 0;
-      _result$1039.data.err
-      = moonbitlang$core$builtin$CreatingViewError$InvalidIndex$745;
-      return _result$1039;
+      _result$876.tag = 0;
+      _result$876.data.err
+      = moonbitlang$core$builtin$CreatingViewError$InvalidIndex$624;
+      return _result$876;
     }
-    if (end$166 < len$164) {
-      int32_t _p$432 = self$165[end$166];
-      _if_result$1040 = 56320 <= _p$432 && _p$432 <= 57343;
+    if (end$143 < len$141) {
+      int32_t _p$389 = self$142[end$143];
+      _if_result$877 = 56320 <= _p$389 && _p$389 <= 57343;
     } else {
-      _if_result$1040 = 0;
+      _if_result$877 = 0;
     }
-    if (_if_result$1040) {
-      void* moonbitlang$core$builtin$CreatingViewError$InvalidIndex$746;
-      struct moonbit_result_0 _result$1041;
-      moonbit_decref(self$165);
-      moonbitlang$core$builtin$CreatingViewError$InvalidIndex$746
+    if (_if_result$877) {
+      void* moonbitlang$core$builtin$CreatingViewError$InvalidIndex$625;
+      struct moonbit_result_0 _result$878;
+      moonbit_decref(self$142);
+      moonbitlang$core$builtin$CreatingViewError$InvalidIndex$625
       = (struct moonbit_object*)&moonbit_constant_constructor_0 + 1;
-      _result$1041.tag = 0;
-      _result$1041.data.err
-      = moonbitlang$core$builtin$CreatingViewError$InvalidIndex$746;
-      return _result$1041;
+      _result$878.tag = 0;
+      _result$878.data.err
+      = moonbitlang$core$builtin$CreatingViewError$InvalidIndex$625;
+      return _result$878;
     }
-    _tmp$747 = (struct $StringView){start$170, end$166, self$165};
-    _result$1042.tag = 1;
-    _result$1042.data.ok = _tmp$747;
-    return _result$1042;
+    _tmp$626 = (struct $StringView){start$147, end$143, self$142};
+    _result$879.tag = 1;
+    _result$879.data.ok = _tmp$626;
+    return _result$879;
   } else {
-    void* moonbitlang$core$builtin$CreatingViewError$IndexOutOfBounds$748;
-    struct moonbit_result_0 _result$1043;
-    moonbit_decref(self$165);
-    moonbitlang$core$builtin$CreatingViewError$IndexOutOfBounds$748
+    void* moonbitlang$core$builtin$CreatingViewError$IndexOutOfBounds$627;
+    struct moonbit_result_0 _result$880;
+    moonbit_decref(self$142);
+    moonbitlang$core$builtin$CreatingViewError$IndexOutOfBounds$627
     = (struct moonbit_object*)&moonbit_constant_constructor_1 + 1;
-    _result$1043.tag = 0;
-    _result$1043.data.err
-    = moonbitlang$core$builtin$CreatingViewError$IndexOutOfBounds$748;
-    return _result$1043;
+    _result$880.tag = 0;
+    _result$880.data.err
+    = moonbitlang$core$builtin$CreatingViewError$IndexOutOfBounds$627;
+    return _result$880;
   }
 }
 
 int32_t $$moonbitlang$core$builtin$Logger$$$moonbitlang$core$builtin$StringBuilder$$write_string(
-  struct $$moonbitlang$core$builtin$StringBuilder* self$162,
-  moonbit_string_t str$163
+  struct $$moonbitlang$core$builtin$StringBuilder* self$139,
+  moonbit_string_t str$140
 ) {
-  int32_t len$735 = self$162->$1;
-  int32_t _tmp$737 = Moonbit_array_length(str$163);
-  int32_t _tmp$736 = _tmp$737 * 2;
-  int32_t _tmp$734 = len$735 + _tmp$736;
-  moonbit_bytes_t _field$949;
-  moonbit_bytes_t data$738;
-  int32_t len$739;
-  int32_t _tmp$740;
-  int32_t len$742;
-  int32_t _tmp$948;
-  int32_t _tmp$744;
-  int32_t _tmp$743;
-  int32_t _tmp$741;
-  moonbit_incref(self$162);
+  int32_t len$614 = self$139->$1;
+  int32_t _tmp$616 = Moonbit_array_length(str$140);
+  int32_t _tmp$615 = _tmp$616 * 2;
+  int32_t _tmp$613 = len$614 + _tmp$615;
+  moonbit_bytes_t _field$826;
+  moonbit_bytes_t data$617;
+  int32_t len$618;
+  int32_t _tmp$619;
+  int32_t len$621;
+  int32_t _tmp$825;
+  int32_t _tmp$623;
+  int32_t _tmp$622;
+  int32_t _tmp$620;
+  moonbit_incref(self$139);
   $$moonbitlang$core$builtin$StringBuilder$$grow_if_necessary(
-    self$162, _tmp$734
+    self$139, _tmp$613
   );
-  _field$949 = self$162->$0;
-  data$738 = _field$949;
-  len$739 = self$162->$1;
-  _tmp$740 = Moonbit_array_length(str$163);
-  moonbit_incref(data$738);
-  moonbit_incref(str$163);
-  $FixedArray$$blit_from_string(data$738, len$739, str$163, 0, _tmp$740);
-  len$742 = self$162->$1;
-  _tmp$948 = Moonbit_array_length(str$163);
-  moonbit_decref(str$163);
-  _tmp$744 = _tmp$948;
-  _tmp$743 = _tmp$744 * 2;
-  _tmp$741 = len$742 + _tmp$743;
-  self$162->$1 = _tmp$741;
-  moonbit_decref(self$162);
+  _field$826 = self$139->$0;
+  data$617 = _field$826;
+  len$618 = self$139->$1;
+  _tmp$619 = Moonbit_array_length(str$140);
+  moonbit_incref(data$617);
+  moonbit_incref(str$140);
+  $FixedArray$$blit_from_string(data$617, len$618, str$140, 0, _tmp$619);
+  len$621 = self$139->$1;
+  _tmp$825 = Moonbit_array_length(str$140);
+  moonbit_decref(str$140);
+  _tmp$623 = _tmp$825;
+  _tmp$622 = _tmp$623 * 2;
+  _tmp$620 = len$621 + _tmp$622;
+  self$139->$1 = _tmp$620;
+  moonbit_decref(self$139);
   return 0;
 }
 
 int32_t $FixedArray$$blit_from_string(
-  moonbit_bytes_t self$154,
-  int32_t bytes_offset$149,
-  moonbit_string_t str$156,
-  int32_t str_offset$152,
-  int32_t length$150
+  moonbit_bytes_t self$131,
+  int32_t bytes_offset$126,
+  moonbit_string_t str$133,
+  int32_t str_offset$129,
+  int32_t length$127
 ) {
-  int32_t _tmp$733 = length$150 * 2;
-  int32_t _tmp$732 = bytes_offset$149 + _tmp$733;
-  int32_t e1$148 = _tmp$732 - 1;
-  int32_t _tmp$731 = str_offset$152 + length$150;
-  int32_t e2$151 = _tmp$731 - 1;
-  int32_t len1$153 = Moonbit_array_length(self$154);
-  int32_t len2$155 = Moonbit_array_length(str$156);
+  int32_t _tmp$612 = length$127 * 2;
+  int32_t _tmp$611 = bytes_offset$126 + _tmp$612;
+  int32_t e1$125 = _tmp$611 - 1;
+  int32_t _tmp$610 = str_offset$129 + length$127;
+  int32_t e2$128 = _tmp$610 - 1;
+  int32_t len1$130 = Moonbit_array_length(self$131);
+  int32_t len2$132 = Moonbit_array_length(str$133);
   if (
-    length$150 >= 0
-    && bytes_offset$149 >= 0
-    && e1$148 < len1$153
-    && str_offset$152 >= 0
-    && e2$151 < len2$155
+    length$127 >= 0
+    && bytes_offset$126 >= 0
+    && e1$125 < len1$130
+    && str_offset$129 >= 0
+    && e2$128 < len2$132
   ) {
-    int32_t end_str_offset$157 = str_offset$152 + length$150;
-    int32_t i$158 = str_offset$152;
-    int32_t j$159 = bytes_offset$149;
+    int32_t end_str_offset$134 = str_offset$129 + length$127;
+    int32_t i$135 = str_offset$129;
+    int32_t j$136 = bytes_offset$126;
     while (1) {
-      if (i$158 < end_str_offset$157) {
-        int32_t _tmp$728 = str$156[i$158];
-        uint32_t c$160 = *(uint32_t*)&_tmp$728;
-        uint32_t _p$423 = c$160 & 255u;
-        int32_t _tmp$724 = *(int32_t*)&_p$423;
-        int32_t _tmp$723 = _tmp$724 & 0xff;
-        int32_t _tmp$725;
-        uint32_t _p$426;
-        int32_t _tmp$727;
-        int32_t _tmp$726;
-        int32_t _tmp$729;
-        int32_t _tmp$730;
-        if (j$159 < 0 || j$159 >= Moonbit_array_length(self$154)) {
+      if (i$135 < end_str_offset$134) {
+        int32_t _tmp$607 = str$133[i$135];
+        uint32_t c$137 = *(uint32_t*)&_tmp$607;
+        uint32_t _p$380 = c$137 & 255u;
+        int32_t _tmp$603 = *(int32_t*)&_p$380;
+        int32_t _tmp$602 = _tmp$603 & 0xff;
+        int32_t _tmp$604;
+        uint32_t _p$383;
+        int32_t _tmp$606;
+        int32_t _tmp$605;
+        int32_t _tmp$608;
+        int32_t _tmp$609;
+        if (j$136 < 0 || j$136 >= Moonbit_array_length(self$131)) {
           moonbit_panic();
         }
-        self$154[j$159] = _tmp$723;
-        _tmp$725 = j$159 + 1;
-        _p$426 = c$160 >> 8;
-        _tmp$727 = *(int32_t*)&_p$426;
-        _tmp$726 = _tmp$727 & 0xff;
-        if (_tmp$725 < 0 || _tmp$725 >= Moonbit_array_length(self$154)) {
+        self$131[j$136] = _tmp$602;
+        _tmp$604 = j$136 + 1;
+        _p$383 = c$137 >> 8;
+        _tmp$606 = *(int32_t*)&_p$383;
+        _tmp$605 = _tmp$606 & 0xff;
+        if (_tmp$604 < 0 || _tmp$604 >= Moonbit_array_length(self$131)) {
           moonbit_panic();
         }
-        self$154[_tmp$725] = _tmp$726;
-        _tmp$729 = i$158 + 1;
-        _tmp$730 = j$159 + 2;
-        i$158 = _tmp$729;
-        j$159 = _tmp$730;
+        self$131[_tmp$604] = _tmp$605;
+        _tmp$608 = i$135 + 1;
+        _tmp$609 = j$136 + 2;
+        i$135 = _tmp$608;
+        j$136 = _tmp$609;
         continue;
       } else {
-        moonbit_decref(str$156);
-        moonbit_decref(self$154);
+        moonbit_decref(str$133);
+        moonbit_decref(self$131);
       }
       break;
     }
   } else {
-    moonbit_decref(str$156);
-    moonbit_decref(self$154);
+    moonbit_decref(str$133);
+    moonbit_decref(self$131);
     moonbit_panic();
   }
   return 0;
 }
 
 struct $$moonbitlang$core$builtin$SourceLocRepr* $$moonbitlang$core$builtin$SourceLocRepr$$parse(
-  moonbit_string_t repr$116
+  moonbit_string_t repr$48
 ) {
-  int32_t _tmp$692 = Moonbit_array_length(repr$116);
-  int64_t _tmp$691 = (int64_t)_tmp$692;
-  moonbit_incref(repr$116);
-  if ($String$$char_length_ge$inner(repr$116, 1, 0, _tmp$691)) {
-    int32_t _tmp$722 = repr$116[0];
-    int32_t _x$117 = _tmp$722;
-    if (_x$117 == 64) {
-      int32_t _tmp$721 = Moonbit_array_length(repr$116);
-      int64_t _tmp$720 = (int64_t)_tmp$721;
-      int64_t _bind$321;
-      int32_t _tmp$718;
-      int32_t _tmp$719;
-      struct $StringView _x$118;
-      int32_t _tmp$717;
-      struct $StringView _tmp$716;
-      int64_t _bind$120;
-      moonbit_incref(repr$116);
-      _bind$321 = $String$$offset_of_nth_char$inner(repr$116, 1, 0, _tmp$720);
-      if (_bind$321 == 4294967296ll) {
-        _tmp$718 = Moonbit_array_length(repr$116);
+  int32_t _tmp$601 = Moonbit_array_length(repr$48);
+  struct $StringView _bind$47 = (struct $StringView){0, _tmp$601, repr$48};
+  moonbit_string_t _field$828 = _bind$47.$0;
+  moonbit_string_t _data$49 = _field$828;
+  int32_t _start$50 = _bind$47.$1;
+  int32_t end$599 = _bind$47.$2;
+  int32_t _field$827 = _bind$47.$1;
+  int32_t start$600 = _field$827;
+  int32_t _tmp$598 = end$599 - start$600;
+  int32_t _end$51 = _start$50 + _tmp$598;
+  int32_t _cursor$52 = _start$50;
+  int32_t accept_state$53 = -1;
+  int32_t match_end$54 = -1;
+  int32_t match_tag_saver_0$55 = -1;
+  int32_t match_tag_saver_1$56 = -1;
+  int32_t match_tag_saver_2$57 = -1;
+  int32_t match_tag_saver_3$58 = -1;
+  int32_t match_tag_saver_4$59 = -1;
+  int32_t tag_0$60 = -1;
+  int32_t tag_1$61 = -1;
+  int32_t tag_1_1$62 = -1;
+  int32_t tag_1_2$63 = -1;
+  int32_t tag_3$64 = -1;
+  int32_t tag_2$65 = -1;
+  int32_t tag_2_1$66 = -1;
+  int32_t tag_4$67 = -1;
+  int32_t join_dispatch_19$88;
+  int32_t _tmp$588 = _cursor$52;
+  int32_t dispatch_19$89;
+  if (_tmp$588 < _end$51) {
+    int32_t _p$326 = _cursor$52;
+    int32_t next_char$117 = _data$49[_p$326];
+    int32_t _tmp$589 = _cursor$52;
+    _cursor$52 = _tmp$589 + 1;
+    if (next_char$117 < 65) {
+      if (next_char$117 < 64) {
+        goto $join$68;
       } else {
-        int64_t _Some$119 = _bind$321;
-        _tmp$718 = (int32_t)_Some$119;
-      }
-      _tmp$719 = Moonbit_array_length(repr$116);
-      _x$118 = (struct $StringView){_tmp$718, _tmp$719, repr$116};
-      _tmp$717
-      = Moonbit_array_length(
-        $moonbitlang$core$builtin$parse$$2a$bind$7c$5443
-      );
-      moonbit_incref($moonbitlang$core$builtin$parse$$2a$bind$7c$5443);
-      _tmp$716
-      = (struct $StringView){
-        0, _tmp$717, $moonbitlang$core$builtin$parse$$2a$bind$7c$5443
-      };
-      moonbit_incref(_x$118.$0);
-      _bind$120 = $StringView$$find(_x$118, _tmp$716);
-      if (_bind$120 == 4294967296ll) {
-        moonbit_decref(_x$118.$0);
-        moonbit_panic();
-      } else {
-        int64_t _Some$121 = _bind$120;
-        int32_t _pkg_end$122 = (int32_t)_Some$121;
-        int64_t _tmp$715 = (int64_t)_pkg_end$122;
-        struct $StringView pkg$123;
-        int32_t _tmp$714;
-        struct $StringView _tmp$713;
-        int64_t _bind$124;
-        moonbit_incref(_x$118.$0);
-        pkg$123 = $StringView$$view$inner(_x$118, 0, _tmp$715);
-        _tmp$714
-        = Moonbit_array_length(
-          $moonbitlang$core$builtin$parse$$2a$bind$7c$5437
-        );
-        moonbit_incref($moonbitlang$core$builtin$parse$$2a$bind$7c$5437);
-        _tmp$713
-        = (struct $StringView){
-          0, _tmp$714, $moonbitlang$core$builtin$parse$$2a$bind$7c$5437
-        };
-        moonbit_incref(_x$118.$0);
-        _bind$124 = $StringView$$rev_find(_x$118, _tmp$713);
-        if (_bind$124 == 4294967296ll) {
-          moonbit_decref(pkg$123.$0);
-          moonbit_decref(_x$118.$0);
-          moonbit_panic();
-        } else {
-          int64_t _Some$125 = _bind$124;
-          int32_t _start_loc_end$126 = (int32_t)_Some$125;
-          int32_t _tmp$693 = _start_loc_end$126 + 1;
-          int32_t end$695 = _x$118.$2;
-          int32_t start$696 = _x$118.$1;
-          int32_t _tmp$694 = end$695 - start$696;
-          if (_tmp$693 < _tmp$694) {
-            int32_t _tmp$712 = _start_loc_end$126 + 1;
-            struct $StringView end_loc$127;
-            struct $$3c$StringView$2a$StringView$3e$* _bind$128;
-            moonbit_incref(_x$118.$0);
-            end_loc$127
-            = $StringView$$view$inner(
-              _x$118, _tmp$712, 4294967296ll
-            );
-            _bind$128
-            = $moonbitlang$core$builtin$parse$parse_loc$7c$1101(
-              end_loc$127
-            );
-            if (_bind$128 == 0) {
-              if (_bind$128) {
-                moonbit_decref(_bind$128);
-              }
-              moonbit_decref(pkg$123.$0);
-              moonbit_decref(_x$118.$0);
-              moonbit_panic();
-            } else {
-              struct $$3c$StringView$2a$StringView$3e$* _Some$129 = _bind$128;
-              struct $$3c$StringView$2a$StringView$3e$* _x$130 = _Some$129;
-              struct $StringView _field$953 =
-                (struct $StringView){
-                  _x$130->$0_1, _x$130->$0_2, _x$130->$0_0
-                };
-              struct $StringView _end_line$131 = _field$953;
-              struct $StringView _field$952 =
-                (struct $StringView){
-                  _x$130->$1_1, _x$130->$1_2, _x$130->$1_0
-                };
-              int32_t _cnt$1014 = Moonbit_object_header(_x$130)->rc;
-              struct $StringView _end_column$132;
-              int64_t _tmp$711;
-              struct $StringView rest$133;
-              int32_t _tmp$710;
-              struct $StringView _tmp$709;
-              int64_t _bind$135;
-              if (_cnt$1014 > 1) {
-                int32_t _new_cnt$1015;
-                moonbit_incref(_field$952.$0);
-                moonbit_incref(_end_line$131.$0);
-                _new_cnt$1015 = _cnt$1014 - 1;
-                Moonbit_object_header(_x$130)->rc = _new_cnt$1015;
-              } else if (_cnt$1014 == 1) {
-                moonbit_free(_x$130);
-              }
-              _end_column$132 = _field$952;
-              _tmp$711 = (int64_t)_start_loc_end$126;
-              rest$133 = $StringView$$view$inner(_x$118, 0, _tmp$711);
-              _tmp$710
-              = Moonbit_array_length(
-                $moonbitlang$core$builtin$parse$$2a$bind$7c$5424
-              );
-              moonbit_incref(
-                $moonbitlang$core$builtin$parse$$2a$bind$7c$5424
-              );
-              _tmp$709
-              = (struct $StringView){
-                0, _tmp$710, $moonbitlang$core$builtin$parse$$2a$bind$7c$5424
-              };
-              moonbit_incref(rest$133.$0);
-              _bind$135 = $StringView$$rev_find(rest$133, _tmp$709);
-              if (_bind$135 == 4294967296ll) {
-                moonbit_decref(rest$133.$0);
-                moonbit_decref(_end_column$132.$0);
-                moonbit_decref(_end_line$131.$0);
-                moonbit_decref(pkg$123.$0);
-                goto $join$134;
+        while (1) {
+          int32_t _tmp$590;
+          tag_0$60 = _cursor$52;
+          _tmp$590 = _cursor$52;
+          if (_tmp$590 < _end$51) {
+            int32_t _p$329 = _cursor$52;
+            int32_t next_char$120 = _data$49[_p$329];
+            int32_t _tmp$591 = _cursor$52;
+            _cursor$52 = _tmp$591 + 1;
+            if (next_char$120 < 55296) {
+              if (next_char$120 < 58) {
+                goto $join$118;
+              } else if (next_char$120 > 58) {
+                goto $join$118;
               } else {
-                int64_t _Some$136 = _bind$135;
-                int32_t _start_line_end$137 = (int32_t)_Some$136;
-                int64_t _tmp$708 = (int64_t)_start_line_end$137;
-                struct $StringView _tmp$705;
-                int32_t _tmp$707;
-                struct $StringView _tmp$706;
-                int64_t _bind$138;
-                moonbit_incref(rest$133.$0);
-                _tmp$705 = $StringView$$view$inner(rest$133, 0, _tmp$708);
-                _tmp$707
-                = Moonbit_array_length(
-                  $moonbitlang$core$builtin$parse$$2a$bind$7c$5418
-                );
-                moonbit_incref(
-                  $moonbitlang$core$builtin$parse$$2a$bind$7c$5418
-                );
-                _tmp$706
-                = (struct $StringView){
-                  0,
-                    _tmp$707,
-                    $moonbitlang$core$builtin$parse$$2a$bind$7c$5418
-                };
-                _bind$138 = $StringView$$rev_find(_tmp$705, _tmp$706);
-                if (_bind$138 == 4294967296ll) {
-                  moonbit_decref(rest$133.$0);
-                  moonbit_decref(_end_column$132.$0);
-                  moonbit_decref(_end_line$131.$0);
-                  moonbit_decref(pkg$123.$0);
-                  goto $join$134;
-                } else {
-                  int64_t _Some$139 = _bind$138;
-                  int32_t _filename_end$140 = (int32_t)_Some$139;
-                  int32_t _tmp$697 = _filename_end$140 + 1;
-                  int32_t end$699 = rest$133.$2;
-                  int32_t start$700 = rest$133.$1;
-                  int32_t _tmp$698 = end$699 - start$700;
-                  if (_tmp$697 < _tmp$698) {
-                    int32_t _tmp$704 = _filename_end$140 + 1;
-                    struct $StringView start_loc$141;
-                    struct $$3c$StringView$2a$StringView$3e$* _bind$142;
-                    moonbit_incref(rest$133.$0);
-                    start_loc$141
-                    = $StringView$$view$inner(
-                      rest$133, _tmp$704, 4294967296ll
-                    );
-                    _bind$142
-                    = $moonbitlang$core$builtin$parse$parse_loc$7c$1101(
-                      start_loc$141
-                    );
-                    if (_bind$142 == 0) {
-                      if (_bind$142) {
-                        moonbit_decref(_bind$142);
-                      }
-                      moonbit_decref(rest$133.$0);
-                      moonbit_decref(_end_column$132.$0);
-                      moonbit_decref(_end_line$131.$0);
-                      moonbit_decref(pkg$123.$0);
-                      moonbit_panic();
+                int32_t _tmp$592 = _cursor$52;
+                if (_tmp$592 < _end$51) {
+                  int32_t _p$332 = _cursor$52;
+                  int32_t next_char$122 = _data$49[_p$332];
+                  int32_t _tmp$593 = _cursor$52;
+                  _cursor$52 = _tmp$593 + 1;
+                  if (next_char$122 < 56319) {
+                    if (next_char$122 < 55296) {
+                      goto $join$121;
                     } else {
-                      struct $$3c$StringView$2a$StringView$3e$* _Some$143 =
-                        _bind$142;
-                      struct $$3c$StringView$2a$StringView$3e$* _x$144 =
-                        _Some$143;
-                      struct $StringView _field$951 =
-                        (struct $StringView){
-                          _x$144->$0_1, _x$144->$0_2, _x$144->$0_0
-                        };
-                      struct $StringView _start_line$145 = _field$951;
-                      struct $StringView _field$950 =
-                        (struct $StringView){
-                          _x$144->$1_1, _x$144->$1_2, _x$144->$1_0
-                        };
-                      int32_t _cnt$1016 = Moonbit_object_header(_x$144)->rc;
-                      struct $StringView _start_column$146;
-                      int32_t _tmp$701;
-                      if (_cnt$1016 > 1) {
-                        int32_t _new_cnt$1017;
-                        moonbit_incref(_field$950.$0);
-                        moonbit_incref(_start_line$145.$0);
-                        _new_cnt$1017 = _cnt$1016 - 1;
-                        Moonbit_object_header(_x$144)->rc = _new_cnt$1017;
-                      } else if (_cnt$1016 == 1) {
-                        moonbit_free(_x$144);
-                      }
-                      _start_column$146 = _field$950;
-                      _tmp$701 = _pkg_end$122 + 1;
-                      if (_filename_end$140 > _tmp$701) {
-                        int32_t _tmp$702 = _pkg_end$122 + 1;
-                        int64_t _tmp$703 = (int64_t)_filename_end$140;
-                        struct $StringView filename$147 =
-                          $StringView$$view$inner(
-                            rest$133, _tmp$702, _tmp$703
-                          );
-                        struct $$moonbitlang$core$builtin$SourceLocRepr* _block$1047 =
-                          (struct $$moonbitlang$core$builtin$SourceLocRepr*)moonbit_malloc(
-                            sizeof(
-                              struct $$moonbitlang$core$builtin$SourceLocRepr
-                            )
-                          );
-                        Moonbit_object_header(_block$1047)->meta
-                        = Moonbit_make_regular_object_header(
-                          offsetof(
-                            struct $$moonbitlang$core$builtin$SourceLocRepr,
-                              $0_0
-                          )
-                          >> 2,
-                            6,
-                            0
-                        );
-                        _block$1047->$0_0 = pkg$123.$0;
-                        _block$1047->$0_1 = pkg$123.$1;
-                        _block$1047->$0_2 = pkg$123.$2;
-                        _block$1047->$1_0 = filename$147.$0;
-                        _block$1047->$1_1 = filename$147.$1;
-                        _block$1047->$1_2 = filename$147.$2;
-                        _block$1047->$2_0 = _start_line$145.$0;
-                        _block$1047->$2_1 = _start_line$145.$1;
-                        _block$1047->$2_2 = _start_line$145.$2;
-                        _block$1047->$3_0 = _start_column$146.$0;
-                        _block$1047->$3_1 = _start_column$146.$1;
-                        _block$1047->$3_2 = _start_column$146.$2;
-                        _block$1047->$4_0 = _end_line$131.$0;
-                        _block$1047->$4_1 = _end_line$131.$1;
-                        _block$1047->$4_2 = _end_line$131.$2;
-                        _block$1047->$5_0 = _end_column$132.$0;
-                        _block$1047->$5_1 = _end_column$132.$1;
-                        _block$1047->$5_2 = _end_column$132.$2;
-                        return _block$1047;
-                      } else {
-                        moonbit_decref(_start_column$146.$0);
-                        moonbit_decref(_start_line$145.$0);
-                        moonbit_decref(rest$133.$0);
-                        moonbit_decref(_end_column$132.$0);
-                        moonbit_decref(_end_line$131.$0);
-                        moonbit_decref(pkg$123.$0);
-                        moonbit_panic();
-                      }
+                      join_dispatch_19$88 = 7;
+                      goto $join$87;
+                    }
+                  } else if (next_char$122 > 56319) {
+                    if (next_char$122 < 65536) {
+                      goto $join$121;
+                    } else {
+                      goto $join$68;
                     }
                   } else {
-                    moonbit_decref(rest$133.$0);
-                    moonbit_decref(_end_column$132.$0);
-                    moonbit_decref(_end_line$131.$0);
-                    moonbit_decref(pkg$123.$0);
-                    moonbit_panic();
+                    join_dispatch_19$88 = 8;
+                    goto $join$87;
                   }
+                  $join$121:;
+                  join_dispatch_19$88 = 0;
+                  goto $join$87;
+                } else {
+                  goto $join$68;
                 }
               }
-              $join$134:;
-              moonbit_panic();
+            } else if (next_char$120 > 56318) {
+              if (next_char$120 < 57344) {
+                int32_t _tmp$594 = _cursor$52;
+                if (_tmp$594 < _end$51) {
+                  int32_t _p$335 = _cursor$52;
+                  int32_t next_char$123 = _data$49[_p$335];
+                  int32_t _tmp$595 = _cursor$52;
+                  _cursor$52 = _tmp$595 + 1;
+                  if (next_char$123 < 56320) {
+                    goto $join$68;
+                  } else if (next_char$123 > 57343) {
+                    goto $join$68;
+                  } else {
+                    continue;
+                  }
+                } else {
+                  goto $join$68;
+                }
+              } else if (next_char$120 > 65535) {
+                goto $join$68;
+              } else {
+                goto $join$118;
+              }
+            } else {
+              int32_t _tmp$596 = _cursor$52;
+              if (_tmp$596 < _end$51) {
+                int32_t _p$338 = _cursor$52;
+                int32_t next_char$124 = _data$49[_p$338];
+                int32_t _tmp$597 = _cursor$52;
+                _cursor$52 = _tmp$597 + 1;
+                if (next_char$124 < 56320) {
+                  goto $join$68;
+                } else if (next_char$124 > 65535) {
+                  goto $join$68;
+                } else {
+                  continue;
+                }
+              } else {
+                goto $join$68;
+              }
+            }
+            $join$118:;
+            continue;
+          } else {
+            goto $join$68;
+          }
+          break;
+        }
+      }
+    } else {
+      goto $join$68;
+    }
+  } else {
+    goto $join$68;
+  }
+  $join$87:;
+  dispatch_19$89 = join_dispatch_19$88;
+  $loop_label_19$92:;
+  while (1) {
+    int32_t _tmp$562;
+    switch (dispatch_19$89) {
+      case 3: {
+        int32_t _tmp$564;
+        tag_1_2$63 = tag_1_1$62;
+        tag_1_1$62 = tag_1$61;
+        tag_1$61 = _cursor$52;
+        _tmp$564 = _cursor$52;
+        if (_tmp$564 < _end$51) {
+          int32_t _p$341 = _cursor$52;
+          int32_t next_char$96 = _data$49[_p$341];
+          int32_t _tmp$565 = _cursor$52;
+          _cursor$52 = _tmp$565 + 1;
+          if (next_char$96 < 55296) {
+            if (next_char$96 < 58) {
+              if (next_char$96 < 48) {
+                goto $join$95;
+              } else {
+                int32_t _tmp$566;
+                tag_1$61 = _cursor$52;
+                tag_2_1$66 = tag_2$65;
+                tag_2$65 = _cursor$52;
+                tag_3$64 = _cursor$52;
+                _tmp$566 = _cursor$52;
+                if (_tmp$566 < _end$51) {
+                  int32_t _p$344 = _cursor$52;
+                  int32_t next_char$98 = _data$49[_p$344];
+                  int32_t _tmp$567 = _cursor$52;
+                  _cursor$52 = _tmp$567 + 1;
+                  if (next_char$98 < 59) {
+                    if (next_char$98 < 46) {
+                      if (next_char$98 < 45) {
+                        goto $join$97;
+                      } else {
+                        goto $join$90;
+                      }
+                    } else if (next_char$98 > 47) {
+                      if (next_char$98 < 58) {
+                        dispatch_19$89 = 6;
+                        goto $loop_label_19$92;
+                      } else {
+                        dispatch_19$89 = 3;
+                        goto $loop_label_19$92;
+                      }
+                    } else {
+                      goto $join$97;
+                    }
+                  } else if (next_char$98 > 55295) {
+                    if (next_char$98 < 57344) {
+                      if (next_char$98 < 56319) {
+                        dispatch_19$89 = 7;
+                        goto $loop_label_19$92;
+                      } else {
+                        dispatch_19$89 = 8;
+                        goto $loop_label_19$92;
+                      }
+                    } else if (next_char$98 > 65535) {
+                      goto $join$68;
+                    } else {
+                      goto $join$97;
+                    }
+                  } else {
+                    goto $join$97;
+                  }
+                  $join$97:;
+                  dispatch_19$89 = 0;
+                  goto $loop_label_19$92;
+                } else {
+                  goto $join$68;
+                }
+              }
+            } else if (next_char$96 > 58) {
+              goto $join$95;
+            } else {
+              dispatch_19$89 = 1;
+              goto $loop_label_19$92;
+            }
+          } else if (next_char$96 > 56318) {
+            if (next_char$96 < 57344) {
+              dispatch_19$89 = 8;
+              goto $loop_label_19$92;
+            } else if (next_char$96 > 65535) {
+              goto $join$68;
+            } else {
+              goto $join$95;
             }
           } else {
-            moonbit_decref(pkg$123.$0);
-            moonbit_decref(_x$118.$0);
-            moonbit_panic();
+            dispatch_19$89 = 7;
+            goto $loop_label_19$92;
           }
+          $join$95:;
+          dispatch_19$89 = 0;
+          goto $loop_label_19$92;
+        } else {
+          goto $join$68;
         }
+        break;
       }
-    } else {
-      moonbit_decref(repr$116);
-      goto $join$115;
-    }
-  } else {
-    moonbit_decref(repr$116);
-    goto $join$115;
-  }
-  $join$115:;
-  moonbit_panic();
-}
 
-struct $$3c$StringView$2a$StringView$3e$* $moonbitlang$core$builtin$parse$parse_loc$7c$1101(
-  struct $StringView view$112
-) {
-  int32_t _tmp$690 =
-    Moonbit_array_length($moonbitlang$core$builtin$parse$$2a$bind$7c$5404);
-  struct $StringView _tmp$689;
-  int64_t _bind$111;
-  moonbit_incref($moonbitlang$core$builtin$parse$$2a$bind$7c$5404);
-  _tmp$689
-  = (struct $StringView){
-    0, _tmp$690, $moonbitlang$core$builtin$parse$$2a$bind$7c$5404
-  };
-  moonbit_incref(view$112.$0);
-  _bind$111 = $StringView$$find(view$112, _tmp$689);
-  if (_bind$111 == 4294967296ll) {
-    moonbit_decref(view$112.$0);
-    return 0;
-  } else {
-    int64_t _Some$113 = _bind$111;
-    int32_t _i$114 = (int32_t)_Some$113;
-    int32_t _if_result$1048;
-    if (_i$114 > 0) {
-      int32_t _tmp$680 = _i$114 + 1;
-      int32_t end$682 = view$112.$2;
-      int32_t start$683 = view$112.$1;
-      int32_t _tmp$681 = end$682 - start$683;
-      _if_result$1048 = _tmp$680 < _tmp$681;
-    } else {
-      _if_result$1048 = 0;
+      case 2: {
+        int32_t _tmp$568;
+        tag_1$61 = _cursor$52;
+        tag_2$65 = _cursor$52;
+        _tmp$568 = _cursor$52;
+        if (_tmp$568 < _end$51) {
+          int32_t _p$347 = _cursor$52;
+          int32_t next_char$100 = _data$49[_p$347];
+          int32_t _tmp$569 = _cursor$52;
+          _cursor$52 = _tmp$569 + 1;
+          if (next_char$100 < 55296) {
+            if (next_char$100 < 58) {
+              if (next_char$100 < 48) {
+                goto $join$99;
+              } else {
+                dispatch_19$89 = 2;
+                goto $loop_label_19$92;
+              }
+            } else if (next_char$100 > 58) {
+              goto $join$99;
+            } else {
+              dispatch_19$89 = 3;
+              goto $loop_label_19$92;
+            }
+          } else if (next_char$100 > 56318) {
+            if (next_char$100 < 57344) {
+              dispatch_19$89 = 8;
+              goto $loop_label_19$92;
+            } else if (next_char$100 > 65535) {
+              goto $join$68;
+            } else {
+              goto $join$99;
+            }
+          } else {
+            dispatch_19$89 = 7;
+            goto $loop_label_19$92;
+          }
+          $join$99:;
+          dispatch_19$89 = 0;
+          goto $loop_label_19$92;
+        } else {
+          goto $join$68;
+        }
+        break;
+      }
+
+      case 0: {
+        int32_t _tmp$570;
+        tag_1$61 = _cursor$52;
+        _tmp$570 = _cursor$52;
+        if (_tmp$570 < _end$51) {
+          int32_t _p$350 = _cursor$52;
+          int32_t next_char$102 = _data$49[_p$350];
+          int32_t _tmp$571 = _cursor$52;
+          _cursor$52 = _tmp$571 + 1;
+          if (next_char$102 < 55296) {
+            if (next_char$102 < 58) {
+              goto $join$101;
+            } else if (next_char$102 > 58) {
+              goto $join$101;
+            } else {
+              dispatch_19$89 = 1;
+              goto $loop_label_19$92;
+            }
+          } else if (next_char$102 > 56318) {
+            if (next_char$102 < 57344) {
+              dispatch_19$89 = 8;
+              goto $loop_label_19$92;
+            } else if (next_char$102 > 65535) {
+              goto $join$68;
+            } else {
+              goto $join$101;
+            }
+          } else {
+            dispatch_19$89 = 7;
+            goto $loop_label_19$92;
+          }
+          $join$101:;
+          dispatch_19$89 = 0;
+          goto $loop_label_19$92;
+        } else {
+          goto $join$68;
+        }
+        break;
+      }
+
+      case 8: {
+        int32_t _tmp$572 = _cursor$52;
+        if (_tmp$572 < _end$51) {
+          int32_t _p$353 = _cursor$52;
+          int32_t next_char$103 = _data$49[_p$353];
+          int32_t _tmp$573 = _cursor$52;
+          _cursor$52 = _tmp$573 + 1;
+          if (next_char$103 < 56320) {
+            goto $join$68;
+          } else if (next_char$103 > 57343) {
+            goto $join$68;
+          } else {
+            dispatch_19$89 = 0;
+            goto $loop_label_19$92;
+          }
+        } else {
+          goto $join$68;
+        }
+        break;
+      }
+
+      case 4: {
+        int32_t _tmp$574;
+        tag_1$61 = _cursor$52;
+        tag_4$67 = _cursor$52;
+        _tmp$574 = _cursor$52;
+        if (_tmp$574 < _end$51) {
+          int32_t _p$356 = _cursor$52;
+          int32_t next_char$105 = _data$49[_p$356];
+          int32_t _tmp$575 = _cursor$52;
+          _cursor$52 = _tmp$575 + 1;
+          if (next_char$105 < 55296) {
+            if (next_char$105 < 58) {
+              if (next_char$105 < 48) {
+                goto $join$104;
+              } else {
+                dispatch_19$89 = 4;
+                goto $loop_label_19$92;
+              }
+            } else if (next_char$105 > 58) {
+              goto $join$104;
+            } else {
+              int32_t _tmp$576;
+              tag_1_2$63 = tag_1_1$62;
+              tag_1_1$62 = tag_1$61;
+              tag_1$61 = _cursor$52;
+              _tmp$576 = _cursor$52;
+              if (_tmp$576 < _end$51) {
+                int32_t _p$359 = _cursor$52;
+                int32_t next_char$107 = _data$49[_p$359];
+                int32_t _tmp$577 = _cursor$52;
+                _cursor$52 = _tmp$577 + 1;
+                if (next_char$107 < 55296) {
+                  if (next_char$107 < 58) {
+                    if (next_char$107 < 48) {
+                      goto $join$106;
+                    } else {
+                      int32_t _tmp$578;
+                      tag_1$61 = _cursor$52;
+                      tag_2_1$66 = tag_2$65;
+                      tag_2$65 = _cursor$52;
+                      _tmp$578 = _cursor$52;
+                      if (_tmp$578 < _end$51) {
+                        int32_t _p$362 = _cursor$52;
+                        int32_t next_char$109 = _data$49[_p$362];
+                        int32_t _tmp$579 = _cursor$52;
+                        _cursor$52 = _tmp$579 + 1;
+                        if (next_char$109 < 55296) {
+                          if (next_char$109 < 58) {
+                            if (next_char$109 < 48) {
+                              goto $join$108;
+                            } else {
+                              dispatch_19$89 = 5;
+                              goto $loop_label_19$92;
+                            }
+                          } else if (next_char$109 > 58) {
+                            goto $join$108;
+                          } else {
+                            dispatch_19$89 = 3;
+                            goto $loop_label_19$92;
+                          }
+                        } else if (next_char$109 > 56318) {
+                          if (next_char$109 < 57344) {
+                            dispatch_19$89 = 8;
+                            goto $loop_label_19$92;
+                          } else if (next_char$109 > 65535) {
+                            goto $join$68;
+                          } else {
+                            goto $join$108;
+                          }
+                        } else {
+                          dispatch_19$89 = 7;
+                          goto $loop_label_19$92;
+                        }
+                        $join$108:;
+                        dispatch_19$89 = 0;
+                        goto $loop_label_19$92;
+                      } else {
+                        goto $join$94;
+                      }
+                    }
+                  } else if (next_char$107 > 58) {
+                    goto $join$106;
+                  } else {
+                    dispatch_19$89 = 1;
+                    goto $loop_label_19$92;
+                  }
+                } else if (next_char$107 > 56318) {
+                  if (next_char$107 < 57344) {
+                    dispatch_19$89 = 8;
+                    goto $loop_label_19$92;
+                  } else if (next_char$107 > 65535) {
+                    goto $join$68;
+                  } else {
+                    goto $join$106;
+                  }
+                } else {
+                  dispatch_19$89 = 7;
+                  goto $loop_label_19$92;
+                }
+                $join$106:;
+                dispatch_19$89 = 0;
+                goto $loop_label_19$92;
+              } else {
+                goto $join$68;
+              }
+            }
+          } else if (next_char$105 > 56318) {
+            if (next_char$105 < 57344) {
+              dispatch_19$89 = 8;
+              goto $loop_label_19$92;
+            } else if (next_char$105 > 65535) {
+              goto $join$68;
+            } else {
+              goto $join$104;
+            }
+          } else {
+            dispatch_19$89 = 7;
+            goto $loop_label_19$92;
+          }
+          $join$104:;
+          dispatch_19$89 = 0;
+          goto $loop_label_19$92;
+        } else {
+          goto $join$68;
+        }
+        break;
+      }
+
+      case 5: {
+        int32_t _tmp$580;
+        tag_1$61 = _cursor$52;
+        tag_2$65 = _cursor$52;
+        _tmp$580 = _cursor$52;
+        if (_tmp$580 < _end$51) {
+          int32_t _p$365 = _cursor$52;
+          int32_t next_char$111 = _data$49[_p$365];
+          int32_t _tmp$581 = _cursor$52;
+          _cursor$52 = _tmp$581 + 1;
+          if (next_char$111 < 55296) {
+            if (next_char$111 < 58) {
+              if (next_char$111 < 48) {
+                goto $join$110;
+              } else {
+                dispatch_19$89 = 5;
+                goto $loop_label_19$92;
+              }
+            } else if (next_char$111 > 58) {
+              goto $join$110;
+            } else {
+              dispatch_19$89 = 3;
+              goto $loop_label_19$92;
+            }
+          } else if (next_char$111 > 56318) {
+            if (next_char$111 < 57344) {
+              dispatch_19$89 = 8;
+              goto $loop_label_19$92;
+            } else if (next_char$111 > 65535) {
+              goto $join$68;
+            } else {
+              goto $join$110;
+            }
+          } else {
+            dispatch_19$89 = 7;
+            goto $loop_label_19$92;
+          }
+          $join$110:;
+          dispatch_19$89 = 0;
+          goto $loop_label_19$92;
+        } else {
+          goto $join$94;
+        }
+        break;
+      }
+
+      case 6: {
+        int32_t _tmp$582;
+        tag_1$61 = _cursor$52;
+        tag_2$65 = _cursor$52;
+        tag_3$64 = _cursor$52;
+        _tmp$582 = _cursor$52;
+        if (_tmp$582 < _end$51) {
+          int32_t _p$368 = _cursor$52;
+          int32_t next_char$113 = _data$49[_p$368];
+          int32_t _tmp$583 = _cursor$52;
+          _cursor$52 = _tmp$583 + 1;
+          if (next_char$113 < 59) {
+            if (next_char$113 < 46) {
+              if (next_char$113 < 45) {
+                goto $join$112;
+              } else {
+                goto $join$90;
+              }
+            } else if (next_char$113 > 47) {
+              if (next_char$113 < 58) {
+                dispatch_19$89 = 6;
+                goto $loop_label_19$92;
+              } else {
+                dispatch_19$89 = 3;
+                goto $loop_label_19$92;
+              }
+            } else {
+              goto $join$112;
+            }
+          } else if (next_char$113 > 55295) {
+            if (next_char$113 < 57344) {
+              if (next_char$113 < 56319) {
+                dispatch_19$89 = 7;
+                goto $loop_label_19$92;
+              } else {
+                dispatch_19$89 = 8;
+                goto $loop_label_19$92;
+              }
+            } else if (next_char$113 > 65535) {
+              goto $join$68;
+            } else {
+              goto $join$112;
+            }
+          } else {
+            goto $join$112;
+          }
+          $join$112:;
+          dispatch_19$89 = 0;
+          goto $loop_label_19$92;
+        } else {
+          goto $join$68;
+        }
+        break;
+      }
+
+      case 7: {
+        int32_t _tmp$584 = _cursor$52;
+        if (_tmp$584 < _end$51) {
+          int32_t _p$371 = _cursor$52;
+          int32_t next_char$114 = _data$49[_p$371];
+          int32_t _tmp$585 = _cursor$52;
+          _cursor$52 = _tmp$585 + 1;
+          if (next_char$114 < 56320) {
+            goto $join$68;
+          } else if (next_char$114 > 65535) {
+            goto $join$68;
+          } else {
+            dispatch_19$89 = 0;
+            goto $loop_label_19$92;
+          }
+        } else {
+          goto $join$68;
+        }
+        break;
+      }
+
+      case 1: {
+        int32_t _tmp$586;
+        tag_1_1$62 = tag_1$61;
+        tag_1$61 = _cursor$52;
+        _tmp$586 = _cursor$52;
+        if (_tmp$586 < _end$51) {
+          int32_t _p$374 = _cursor$52;
+          int32_t next_char$116 = _data$49[_p$374];
+          int32_t _tmp$587 = _cursor$52;
+          _cursor$52 = _tmp$587 + 1;
+          if (next_char$116 < 55296) {
+            if (next_char$116 < 58) {
+              if (next_char$116 < 48) {
+                goto $join$115;
+              } else {
+                dispatch_19$89 = 2;
+                goto $loop_label_19$92;
+              }
+            } else if (next_char$116 > 58) {
+              goto $join$115;
+            } else {
+              dispatch_19$89 = 1;
+              goto $loop_label_19$92;
+            }
+          } else if (next_char$116 > 56318) {
+            if (next_char$116 < 57344) {
+              dispatch_19$89 = 8;
+              goto $loop_label_19$92;
+            } else if (next_char$116 > 65535) {
+              goto $join$68;
+            } else {
+              goto $join$115;
+            }
+          } else {
+            dispatch_19$89 = 7;
+            goto $loop_label_19$92;
+          }
+          $join$115:;
+          dispatch_19$89 = 0;
+          goto $loop_label_19$92;
+        } else {
+          goto $join$68;
+        }
+        break;
+      }
+      default: {
+        goto $join$68;
+        break;
+      }
     }
-    if (_if_result$1048) {
-      int64_t _tmp$688 = (int64_t)_i$114;
-      struct $StringView _tmp$685;
-      int32_t _tmp$687;
-      struct $StringView _tmp$686;
-      struct $$3c$StringView$2a$StringView$3e$* _tuple$684;
-      moonbit_incref(view$112.$0);
-      _tmp$685 = $StringView$$view$inner(view$112, 0, _tmp$688);
-      _tmp$687 = _i$114 + 1;
-      _tmp$686 = $StringView$$view$inner(view$112, _tmp$687, 4294967296ll);
-      _tuple$684
-      = (struct $$3c$StringView$2a$StringView$3e$*)moonbit_malloc(
-          sizeof(struct $$3c$StringView$2a$StringView$3e$)
+    $join$94:;
+    tag_1$61 = tag_1_2$63;
+    tag_2$65 = tag_2_1$66;
+    match_tag_saver_0$55 = tag_0$60;
+    match_tag_saver_1$56 = tag_1$61;
+    match_tag_saver_2$57 = tag_2$65;
+    match_tag_saver_3$58 = tag_3$64;
+    match_tag_saver_4$59 = tag_4$67;
+    accept_state$53 = 0;
+    match_end$54 = _cursor$52;
+    goto $join$68;
+    $join$90:;
+    tag_1_1$62 = tag_1_2$63;
+    tag_1$61 = _cursor$52;
+    tag_2$65 = tag_2_1$66;
+    _tmp$562 = _cursor$52;
+    if (_tmp$562 < _end$51) {
+      int32_t _p$377 = _cursor$52;
+      int32_t next_char$93 = _data$49[_p$377];
+      int32_t _tmp$563 = _cursor$52;
+      _cursor$52 = _tmp$563 + 1;
+      if (next_char$93 < 55296) {
+        if (next_char$93 < 58) {
+          if (next_char$93 < 48) {
+            goto $join$91;
+          } else {
+            dispatch_19$89 = 4;
+            continue;
+          }
+        } else if (next_char$93 > 58) {
+          goto $join$91;
+        } else {
+          dispatch_19$89 = 1;
+          continue;
+        }
+      } else if (next_char$93 > 56318) {
+        if (next_char$93 < 57344) {
+          dispatch_19$89 = 8;
+          continue;
+        } else if (next_char$93 > 65535) {
+          goto $join$68;
+        } else {
+          goto $join$91;
+        }
+      } else {
+        dispatch_19$89 = 7;
+        continue;
+      }
+      $join$91:;
+      dispatch_19$89 = 0;
+      continue;
+    } else {
+      goto $join$68;
+    }
+    break;
+  }
+  $join$68:;
+  switch (accept_state$53) {
+    case 0: {
+      void* _try_err$71;
+      struct $StringView start_line$69;
+      int32_t _tmp$559 = match_tag_saver_1$56;
+      int32_t _tmp$558 = _tmp$559 + 1;
+      int64_t _tmp$555 = (int64_t)_tmp$558;
+      int32_t _tmp$557 = match_tag_saver_2$57;
+      int64_t _tmp$556 = (int64_t)_tmp$557;
+      struct moonbit_result_0 _tmp$902;
+      void* _try_err$74;
+      struct $StringView start_column$72;
+      int32_t _tmp$552;
+      int32_t _tmp$551;
+      int64_t _tmp$548;
+      int32_t _tmp$550;
+      int64_t _tmp$549;
+      struct moonbit_result_0 _tmp$904;
+      void* _try_err$77;
+      struct $StringView pkg$75;
+      int32_t _tmp$545;
+      int64_t _tmp$542;
+      int32_t _tmp$544;
+      int64_t _tmp$543;
+      struct moonbit_result_0 _tmp$906;
+      void* _try_err$80;
+      struct $StringView filename$78;
+      int32_t _tmp$539;
+      int32_t _tmp$538;
+      int64_t _tmp$535;
+      int32_t _tmp$537;
+      int64_t _tmp$536;
+      struct moonbit_result_0 _tmp$908;
+      void* _try_err$83;
+      struct $StringView end_line$81;
+      int32_t _tmp$532;
+      int32_t _tmp$531;
+      int64_t _tmp$528;
+      int32_t _tmp$530;
+      int64_t _tmp$529;
+      struct moonbit_result_0 _tmp$910;
+      void* _try_err$86;
+      struct $StringView end_column$84;
+      int32_t _tmp$525;
+      int32_t _tmp$524;
+      int64_t _tmp$521;
+      int32_t _tmp$523;
+      int64_t _tmp$522;
+      struct moonbit_result_0 _tmp$912;
+      struct $$moonbitlang$core$builtin$SourceLocRepr* _block$913;
+      moonbit_incref(_data$49);
+      _tmp$902 = $String$$sub(_data$49, _tmp$555, _tmp$556);
+      if (_tmp$902.tag) {
+        struct $StringView const _ok$560 = _tmp$902.data.ok;
+        start_line$69 = _ok$560;
+      } else {
+        void* const _err$561 = _tmp$902.data.err;
+        _try_err$71 = _err$561;
+        goto $join$70;
+      }
+      goto $joinlet$901;
+      $join$70:;
+      moonbit_decref(_try_err$71);
+      moonbit_panic();
+      $joinlet$901:;
+      _tmp$552 = match_tag_saver_2$57;
+      _tmp$551 = _tmp$552 + 1;
+      _tmp$548 = (int64_t)_tmp$551;
+      _tmp$550 = match_tag_saver_3$58;
+      _tmp$549 = (int64_t)_tmp$550;
+      moonbit_incref(_data$49);
+      _tmp$904 = $String$$sub(_data$49, _tmp$548, _tmp$549);
+      if (_tmp$904.tag) {
+        struct $StringView const _ok$553 = _tmp$904.data.ok;
+        start_column$72 = _ok$553;
+      } else {
+        void* const _err$554 = _tmp$904.data.err;
+        _try_err$74 = _err$554;
+        goto $join$73;
+      }
+      goto $joinlet$903;
+      $join$73:;
+      moonbit_decref(_try_err$74);
+      moonbit_panic();
+      $joinlet$903:;
+      _tmp$545 = _start$50 + 1;
+      _tmp$542 = (int64_t)_tmp$545;
+      _tmp$544 = match_tag_saver_0$55;
+      _tmp$543 = (int64_t)_tmp$544;
+      moonbit_incref(_data$49);
+      _tmp$906 = $String$$sub(_data$49, _tmp$542, _tmp$543);
+      if (_tmp$906.tag) {
+        struct $StringView const _ok$546 = _tmp$906.data.ok;
+        pkg$75 = _ok$546;
+      } else {
+        void* const _err$547 = _tmp$906.data.err;
+        _try_err$77 = _err$547;
+        goto $join$76;
+      }
+      goto $joinlet$905;
+      $join$76:;
+      moonbit_decref(_try_err$77);
+      moonbit_panic();
+      $joinlet$905:;
+      _tmp$539 = match_tag_saver_0$55;
+      _tmp$538 = _tmp$539 + 1;
+      _tmp$535 = (int64_t)_tmp$538;
+      _tmp$537 = match_tag_saver_1$56;
+      _tmp$536 = (int64_t)_tmp$537;
+      moonbit_incref(_data$49);
+      _tmp$908 = $String$$sub(_data$49, _tmp$535, _tmp$536);
+      if (_tmp$908.tag) {
+        struct $StringView const _ok$540 = _tmp$908.data.ok;
+        filename$78 = _ok$540;
+      } else {
+        void* const _err$541 = _tmp$908.data.err;
+        _try_err$80 = _err$541;
+        goto $join$79;
+      }
+      goto $joinlet$907;
+      $join$79:;
+      moonbit_decref(_try_err$80);
+      moonbit_panic();
+      $joinlet$907:;
+      _tmp$532 = match_tag_saver_3$58;
+      _tmp$531 = _tmp$532 + 1;
+      _tmp$528 = (int64_t)_tmp$531;
+      _tmp$530 = match_tag_saver_4$59;
+      _tmp$529 = (int64_t)_tmp$530;
+      moonbit_incref(_data$49);
+      _tmp$910 = $String$$sub(_data$49, _tmp$528, _tmp$529);
+      if (_tmp$910.tag) {
+        struct $StringView const _ok$533 = _tmp$910.data.ok;
+        end_line$81 = _ok$533;
+      } else {
+        void* const _err$534 = _tmp$910.data.err;
+        _try_err$83 = _err$534;
+        goto $join$82;
+      }
+      goto $joinlet$909;
+      $join$82:;
+      moonbit_decref(_try_err$83);
+      moonbit_panic();
+      $joinlet$909:;
+      _tmp$525 = match_tag_saver_4$59;
+      _tmp$524 = _tmp$525 + 1;
+      _tmp$521 = (int64_t)_tmp$524;
+      _tmp$523 = match_end$54;
+      _tmp$522 = (int64_t)_tmp$523;
+      _tmp$912 = $String$$sub(_data$49, _tmp$521, _tmp$522);
+      if (_tmp$912.tag) {
+        struct $StringView const _ok$526 = _tmp$912.data.ok;
+        end_column$84 = _ok$526;
+      } else {
+        void* const _err$527 = _tmp$912.data.err;
+        _try_err$86 = _err$527;
+        goto $join$85;
+      }
+      goto $joinlet$911;
+      $join$85:;
+      moonbit_decref(_try_err$86);
+      moonbit_panic();
+      $joinlet$911:;
+      _block$913
+      = (struct $$moonbitlang$core$builtin$SourceLocRepr*)moonbit_malloc(
+          sizeof(struct $$moonbitlang$core$builtin$SourceLocRepr)
         );
-      Moonbit_object_header(_tuple$684)->meta
+      Moonbit_object_header(_block$913)->meta
       = Moonbit_make_regular_object_header(
-        offsetof(struct $$3c$StringView$2a$StringView$3e$, $0_0) >> 2, 2, 0
+        offsetof(struct $$moonbitlang$core$builtin$SourceLocRepr, $0_0) >> 2,
+          6,
+          0
       );
-      _tuple$684->$0_0 = _tmp$685.$0;
-      _tuple$684->$0_1 = _tmp$685.$1;
-      _tuple$684->$0_2 = _tmp$685.$2;
-      _tuple$684->$1_0 = _tmp$686.$0;
-      _tuple$684->$1_1 = _tmp$686.$1;
-      _tuple$684->$1_2 = _tmp$686.$2;
-      return _tuple$684;
-    } else {
-      moonbit_decref(view$112.$0);
-      return 0;
+      _block$913->$0_0 = pkg$75.$0;
+      _block$913->$0_1 = pkg$75.$1;
+      _block$913->$0_2 = pkg$75.$2;
+      _block$913->$1_0 = filename$78.$0;
+      _block$913->$1_1 = filename$78.$1;
+      _block$913->$1_2 = filename$78.$2;
+      _block$913->$2_0 = start_line$69.$0;
+      _block$913->$2_1 = start_line$69.$1;
+      _block$913->$2_2 = start_line$69.$2;
+      _block$913->$3_0 = start_column$72.$0;
+      _block$913->$3_1 = start_column$72.$1;
+      _block$913->$3_2 = start_column$72.$2;
+      _block$913->$4_0 = end_line$81.$0;
+      _block$913->$4_1 = end_line$81.$1;
+      _block$913->$4_2 = end_line$81.$2;
+      _block$913->$5_0 = end_column$84.$0;
+      _block$913->$5_1 = end_column$84.$1;
+      _block$913->$5_2 = end_column$84.$2;
+      return _block$913;
+      break;
+    }
+    default: {
+      moonbit_decref(_data$49);
+      moonbit_panic();
+      break;
     }
   }
 }
 
-struct $StringView $StringView$$view$inner(
-  struct $StringView self$109,
-  int32_t start_offset$110,
-  int64_t end_offset$107
-) {
-  int32_t end_offset$106;
-  int32_t _if_result$1049;
-  if (end_offset$107 == 4294967296ll) {
-    int32_t end$678 = self$109.$2;
-    int32_t start$679 = self$109.$1;
-    end_offset$106 = end$678 - start$679;
-  } else {
-    int64_t _Some$108 = end_offset$107;
-    end_offset$106 = (int32_t)_Some$108;
-  }
-  if (start_offset$110 >= 0) {
-    if (start_offset$110 <= end_offset$106) {
-      int32_t end$671 = self$109.$2;
-      int32_t start$672 = self$109.$1;
-      int32_t _tmp$670 = end$671 - start$672;
-      _if_result$1049 = end_offset$106 <= _tmp$670;
-    } else {
-      _if_result$1049 = 0;
-    }
-  } else {
-    _if_result$1049 = 0;
-  }
-  if (_if_result$1049) {
-    moonbit_string_t _field$955 = self$109.$0;
-    moonbit_string_t str$673 = _field$955;
-    int32_t start$677 = self$109.$1;
-    int32_t _tmp$674 = start$677 + start_offset$110;
-    int32_t _field$954 = self$109.$1;
-    int32_t start$676 = _field$954;
-    int32_t _tmp$675 = start$676 + end_offset$106;
-    return (struct $StringView){_tmp$674, _tmp$675, str$673};
-  } else {
-    moonbit_decref(self$109.$0);
-    return $moonbitlang$core$builtin$abort$2(
-             (moonbit_string_t)moonbit_string_literal_11.data,
-               (moonbit_string_t)moonbit_string_literal_12.data
-           );
-  }
+int32_t $String$$unsafe_charcode_at(moonbit_string_t self$45, int32_t idx$46) {
+  int32_t _tmp$829 = self$45[idx$46];
+  moonbit_decref(self$45);
+  return _tmp$829;
 }
 
-int64_t $StringView$$rev_find(
-  struct $StringView self$105,
-  struct $StringView str$104
-) {
-  int32_t end$668 = str$104.$2;
-  int32_t start$669 = str$104.$1;
-  int32_t _tmp$667 = end$668 - start$669;
-  if (_tmp$667 <= 4) {
-    return $moonbitlang$core$builtin$brute_force_rev_find(self$105, str$104);
-  } else {
-    return $moonbitlang$core$builtin$boyer_moore_horspool_rev_find(
-             self$105, str$104
-           );
-  }
-}
-
-int64_t $moonbitlang$core$builtin$brute_force_rev_find(
-  struct $StringView haystack$95,
-  struct $StringView needle$97
-) {
-  int32_t end$665 = haystack$95.$2;
-  int32_t start$666 = haystack$95.$1;
-  int32_t haystack_len$94 = end$665 - start$666;
-  int32_t end$663 = needle$97.$2;
-  int32_t start$664 = needle$97.$1;
-  int32_t needle_len$96 = end$663 - start$664;
-  if (needle_len$96 > 0) {
-    if (haystack_len$94 >= needle_len$96) {
-      int32_t _p$400 = 0;
-      moonbit_string_t _field$963 = needle$97.$0;
-      moonbit_string_t str$660 = _field$963;
-      int32_t start$662 = needle$97.$1;
-      int32_t _tmp$661 = start$662 + _p$400;
-      int32_t _tmp$962 = str$660[_tmp$661];
-      int32_t needle_first$98 = _tmp$962;
-      int32_t i$99 = haystack_len$94 - needle_len$96;
-      while (1) {
-        int32_t _tmp$640 = i$99;
-        if (_tmp$640 >= 0) {
-          int32_t _tmp$647;
-          while (1) {
-            int32_t _tmp$645 = i$99;
-            int32_t _if_result$1052;
-            if (_tmp$645 >= 0) {
-              int32_t _p$403 = i$99;
-              moonbit_string_t _field$961 = haystack$95.$0;
-              moonbit_string_t str$642 = _field$961;
-              int32_t start$644 = haystack$95.$1;
-              int32_t _tmp$643 = start$644 + _p$403;
-              int32_t _tmp$960 = str$642[_tmp$643];
-              int32_t _tmp$641 = _tmp$960;
-              _if_result$1052 = _tmp$641 != needle_first$98;
-            } else {
-              _if_result$1052 = 0;
-            }
-            if (_if_result$1052) {
-              int32_t _tmp$646 = i$99;
-              i$99 = _tmp$646 - 1;
-              continue;
-            }
-            break;
-          }
-          _tmp$647 = i$99;
-          if (_tmp$647 >= 0) {
-            int32_t j$101 = 1;
-            int32_t _tmp$659;
-            while (1) {
-              if (j$101 < needle_len$96) {
-                int32_t _tmp$656 = i$99;
-                int32_t _p$406 = _tmp$656 + j$101;
-                moonbit_string_t _field$959 = haystack$95.$0;
-                moonbit_string_t str$653 = _field$959;
-                int32_t start$655 = haystack$95.$1;
-                int32_t _tmp$654 = start$655 + _p$406;
-                int32_t _tmp$958 = str$653[_tmp$654];
-                int32_t _tmp$648 = _tmp$958;
-                moonbit_string_t _field$957 = needle$97.$0;
-                moonbit_string_t str$650 = _field$957;
-                int32_t start$652 = needle$97.$1;
-                int32_t _tmp$651 = start$652 + j$101;
-                int32_t _tmp$956 = str$650[_tmp$651];
-                int32_t _tmp$649 = _tmp$956;
-                int32_t _tmp$657;
-                if (_tmp$648 != _tmp$649) {
-                  break;
-                }
-                _tmp$657 = j$101 + 1;
-                j$101 = _tmp$657;
-                continue;
-              } else {
-                int32_t _tmp$658;
-                moonbit_decref(needle$97.$0);
-                moonbit_decref(haystack$95.$0);
-                _tmp$658 = i$99;
-                return (int64_t)_tmp$658;
-              }
-              break;
-            }
-            _tmp$659 = i$99;
-            i$99 = _tmp$659 - 1;
-          }
-          continue;
-        } else {
-          moonbit_decref(needle$97.$0);
-          moonbit_decref(haystack$95.$0);
-        }
-        break;
-      }
-      return 4294967296ll;
-    } else {
-      moonbit_decref(needle$97.$0);
-      moonbit_decref(haystack$95.$0);
-      return 4294967296ll;
-    }
-  } else {
-    moonbit_decref(needle$97.$0);
-    moonbit_decref(haystack$95.$0);
-    return (int64_t)haystack_len$94;
-  }
-}
-
-int64_t $moonbitlang$core$builtin$boyer_moore_horspool_rev_find(
-  struct $StringView haystack$84,
-  struct $StringView needle$86
-) {
-  int32_t end$638 = haystack$84.$2;
-  int32_t start$639 = haystack$84.$1;
-  int32_t haystack_len$83 = end$638 - start$639;
-  int32_t end$636 = needle$86.$2;
-  int32_t start$637 = needle$86.$1;
-  int32_t needle_len$85 = end$636 - start$637;
-  if (needle_len$85 > 0) {
-    if (haystack_len$83 >= needle_len$85) {
-      int32_t* skip_table$87 =
-        (int32_t*)moonbit_make_int32_array(256, needle_len$85);
-      int32_t _tmp$618 = needle_len$85 - 1;
-      int32_t i$88 = _tmp$618;
-      int32_t _tmp$635;
-      int32_t i$90;
-      while (1) {
-        if (i$88 > 0) {
-          moonbit_string_t _field$971 = needle$86.$0;
-          moonbit_string_t str$614 = _field$971;
-          int32_t start$616 = needle$86.$1;
-          int32_t _tmp$615 = start$616 + i$88;
-          int32_t _tmp$970 = str$614[_tmp$615];
-          int32_t _tmp$613 = _tmp$970;
-          int32_t _tmp$612 = _tmp$613 & 255;
-          int32_t _tmp$617;
-          if (
-            _tmp$612 < 0 || _tmp$612 >= Moonbit_array_length(skip_table$87)
-          ) {
-            moonbit_panic();
-          }
-          skip_table$87[_tmp$612] = i$88;
-          _tmp$617 = i$88 - 1;
-          i$88 = _tmp$617;
-          continue;
-        }
-        break;
-      }
-      _tmp$635 = haystack_len$83 - needle_len$85;
-      i$90 = _tmp$635;
-      while (1) {
-        if (i$90 >= 0) {
-          int32_t j$91 = 0;
-          moonbit_string_t _field$965;
-          moonbit_string_t str$632;
-          int32_t start$634;
-          int32_t _tmp$633;
-          int32_t _tmp$964;
-          int32_t _tmp$631;
-          int32_t _tmp$630;
-          int32_t _tmp$629;
-          int32_t _tmp$628;
-          while (1) {
-            if (j$91 < needle_len$85) {
-              int32_t _p$389 = i$90 + j$91;
-              moonbit_string_t _field$969 = haystack$84.$0;
-              moonbit_string_t str$624 = _field$969;
-              int32_t start$626 = haystack$84.$1;
-              int32_t _tmp$625 = start$626 + _p$389;
-              int32_t _tmp$968 = str$624[_tmp$625];
-              int32_t _tmp$619 = _tmp$968;
-              moonbit_string_t _field$967 = needle$86.$0;
-              moonbit_string_t str$621 = _field$967;
-              int32_t start$623 = needle$86.$1;
-              int32_t _tmp$622 = start$623 + j$91;
-              int32_t _tmp$966 = str$621[_tmp$622];
-              int32_t _tmp$620 = _tmp$966;
-              int32_t _tmp$627;
-              if (_tmp$619 != _tmp$620) {
-                break;
-              }
-              _tmp$627 = j$91 + 1;
-              j$91 = _tmp$627;
-              continue;
-            } else {
-              moonbit_decref(skip_table$87);
-              moonbit_decref(needle$86.$0);
-              moonbit_decref(haystack$84.$0);
-              return (int64_t)i$90;
-            }
-            break;
-          }
-          _field$965 = haystack$84.$0;
-          str$632 = _field$965;
-          start$634 = haystack$84.$1;
-          _tmp$633 = start$634 + i$90;
-          _tmp$964 = str$632[_tmp$633];
-          _tmp$631 = _tmp$964;
-          _tmp$630 = _tmp$631 & 255;
-          if (
-            _tmp$630 < 0 || _tmp$630 >= Moonbit_array_length(skip_table$87)
-          ) {
-            moonbit_panic();
-          }
-          _tmp$629 = (int32_t)skip_table$87[_tmp$630];
-          _tmp$628 = i$90 - _tmp$629;
-          i$90 = _tmp$628;
-          continue;
-        } else {
-          moonbit_decref(skip_table$87);
-          moonbit_decref(needle$86.$0);
-          moonbit_decref(haystack$84.$0);
-        }
-        break;
-      }
-      return 4294967296ll;
-    } else {
-      moonbit_decref(needle$86.$0);
-      moonbit_decref(haystack$84.$0);
-      return 4294967296ll;
-    }
-  } else {
-    moonbit_decref(needle$86.$0);
-    moonbit_decref(haystack$84.$0);
-    return (int64_t)haystack_len$83;
-  }
-}
-
-int64_t $StringView$$find(
-  struct $StringView self$82,
-  struct $StringView str$81
-) {
-  int32_t end$610 = str$81.$2;
-  int32_t start$611 = str$81.$1;
-  int32_t _tmp$609 = end$610 - start$611;
-  if (_tmp$609 <= 4) {
-    return $moonbitlang$core$builtin$brute_force_find(self$82, str$81);
-  } else {
-    return $moonbitlang$core$builtin$boyer_moore_horspool_find(
-             self$82, str$81
-           );
-  }
-}
-
-int64_t $moonbitlang$core$builtin$brute_force_find(
-  struct $StringView haystack$71,
-  struct $StringView needle$73
-) {
-  int32_t end$607 = haystack$71.$2;
-  int32_t start$608 = haystack$71.$1;
-  int32_t haystack_len$70 = end$607 - start$608;
-  int32_t end$605 = needle$73.$2;
-  int32_t start$606 = needle$73.$1;
-  int32_t needle_len$72 = end$605 - start$606;
-  if (needle_len$72 > 0) {
-    if (haystack_len$70 >= needle_len$72) {
-      int32_t _p$370 = 0;
-      moonbit_string_t _field$979 = needle$73.$0;
-      moonbit_string_t str$602 = _field$979;
-      int32_t start$604 = needle$73.$1;
-      int32_t _tmp$603 = start$604 + _p$370;
-      int32_t _tmp$978 = str$602[_tmp$603];
-      int32_t needle_first$74 = _tmp$978;
-      int32_t forward_len$75 = haystack_len$70 - needle_len$72;
-      int32_t i$76 = 0;
-      while (1) {
-        int32_t _tmp$582 = i$76;
-        if (_tmp$582 <= forward_len$75) {
-          int32_t _tmp$589;
-          while (1) {
-            int32_t _tmp$587 = i$76;
-            int32_t _if_result$1059;
-            if (_tmp$587 <= forward_len$75) {
-              int32_t _p$373 = i$76;
-              moonbit_string_t _field$977 = haystack$71.$0;
-              moonbit_string_t str$584 = _field$977;
-              int32_t start$586 = haystack$71.$1;
-              int32_t _tmp$585 = start$586 + _p$373;
-              int32_t _tmp$976 = str$584[_tmp$585];
-              int32_t _tmp$583 = _tmp$976;
-              _if_result$1059 = _tmp$583 != needle_first$74;
-            } else {
-              _if_result$1059 = 0;
-            }
-            if (_if_result$1059) {
-              int32_t _tmp$588 = i$76;
-              i$76 = _tmp$588 + 1;
-              continue;
-            }
-            break;
-          }
-          _tmp$589 = i$76;
-          if (_tmp$589 <= forward_len$75) {
-            int32_t j$78 = 1;
-            int32_t _tmp$601;
-            while (1) {
-              if (j$78 < needle_len$72) {
-                int32_t _tmp$598 = i$76;
-                int32_t _p$376 = _tmp$598 + j$78;
-                moonbit_string_t _field$975 = haystack$71.$0;
-                moonbit_string_t str$595 = _field$975;
-                int32_t start$597 = haystack$71.$1;
-                int32_t _tmp$596 = start$597 + _p$376;
-                int32_t _tmp$974 = str$595[_tmp$596];
-                int32_t _tmp$590 = _tmp$974;
-                moonbit_string_t _field$973 = needle$73.$0;
-                moonbit_string_t str$592 = _field$973;
-                int32_t start$594 = needle$73.$1;
-                int32_t _tmp$593 = start$594 + j$78;
-                int32_t _tmp$972 = str$592[_tmp$593];
-                int32_t _tmp$591 = _tmp$972;
-                int32_t _tmp$599;
-                if (_tmp$590 != _tmp$591) {
-                  break;
-                }
-                _tmp$599 = j$78 + 1;
-                j$78 = _tmp$599;
-                continue;
-              } else {
-                int32_t _tmp$600;
-                moonbit_decref(needle$73.$0);
-                moonbit_decref(haystack$71.$0);
-                _tmp$600 = i$76;
-                return (int64_t)_tmp$600;
-              }
-              break;
-            }
-            _tmp$601 = i$76;
-            i$76 = _tmp$601 + 1;
-          }
-          continue;
-        } else {
-          moonbit_decref(needle$73.$0);
-          moonbit_decref(haystack$71.$0);
-        }
-        break;
-      }
-      return 4294967296ll;
-    } else {
-      moonbit_decref(needle$73.$0);
-      moonbit_decref(haystack$71.$0);
-      return 4294967296ll;
-    }
-  } else {
-    moonbit_decref(needle$73.$0);
-    moonbit_decref(haystack$71.$0);
-    return $moonbitlang$core$builtin$brute_force_find$constr$69;
-  }
-}
-
-int64_t $moonbitlang$core$builtin$boyer_moore_horspool_find(
-  struct $StringView haystack$57,
-  struct $StringView needle$59
-) {
-  int32_t end$580 = haystack$57.$2;
-  int32_t start$581 = haystack$57.$1;
-  int32_t haystack_len$56 = end$580 - start$581;
-  int32_t end$578 = needle$59.$2;
-  int32_t start$579 = needle$59.$1;
-  int32_t needle_len$58 = end$578 - start$579;
-  if (needle_len$58 > 0) {
-    if (haystack_len$56 >= needle_len$58) {
-      int32_t* skip_table$60 =
-        (int32_t*)moonbit_make_int32_array(256, needle_len$58);
-      int32_t _end4301$61 = needle_len$58 - 1;
-      int32_t i$62 = 0;
-      int32_t i$64;
-      while (1) {
-        if (i$62 < _end4301$61) {
-          moonbit_string_t _field$987 = needle$59.$0;
-          moonbit_string_t str$556 = _field$987;
-          int32_t start$558 = needle$59.$1;
-          int32_t _tmp$557 = start$558 + i$62;
-          int32_t _tmp$986 = str$556[_tmp$557];
-          int32_t _tmp$555 = _tmp$986;
-          int32_t _tmp$552 = _tmp$555 & 255;
-          int32_t _tmp$554 = needle_len$58 - 1;
-          int32_t _tmp$553 = _tmp$554 - i$62;
-          int32_t _tmp$559;
-          if (
-            _tmp$552 < 0 || _tmp$552 >= Moonbit_array_length(skip_table$60)
-          ) {
-            moonbit_panic();
-          }
-          skip_table$60[_tmp$552] = _tmp$553;
-          _tmp$559 = i$62 + 1;
-          i$62 = _tmp$559;
-          continue;
-        }
-        break;
-      }
-      i$64 = 0;
-      while (1) {
-        int32_t _tmp$560 = haystack_len$56 - needle_len$58;
-        if (i$64 <= _tmp$560) {
-          int32_t _end4307$65 = needle_len$58 - 1;
-          int32_t j$66 = 0;
-          int32_t _tmp$577;
-          int32_t _p$363;
-          moonbit_string_t _field$981;
-          moonbit_string_t str$574;
-          int32_t start$576;
-          int32_t _tmp$575;
-          int32_t _tmp$980;
-          int32_t _tmp$573;
-          int32_t _tmp$572;
-          int32_t _tmp$571;
-          int32_t _tmp$570;
-          while (1) {
-            if (j$66 <= _end4307$65) {
-              int32_t _p$358 = i$64 + j$66;
-              moonbit_string_t _field$985 = haystack$57.$0;
-              moonbit_string_t str$566 = _field$985;
-              int32_t start$568 = haystack$57.$1;
-              int32_t _tmp$567 = start$568 + _p$358;
-              int32_t _tmp$984 = str$566[_tmp$567];
-              int32_t _tmp$561 = _tmp$984;
-              moonbit_string_t _field$983 = needle$59.$0;
-              moonbit_string_t str$563 = _field$983;
-              int32_t start$565 = needle$59.$1;
-              int32_t _tmp$564 = start$565 + j$66;
-              int32_t _tmp$982 = str$563[_tmp$564];
-              int32_t _tmp$562 = _tmp$982;
-              int32_t _tmp$569;
-              if (_tmp$561 != _tmp$562) {
-                break;
-              }
-              _tmp$569 = j$66 + 1;
-              j$66 = _tmp$569;
-              continue;
-            } else {
-              moonbit_decref(skip_table$60);
-              moonbit_decref(needle$59.$0);
-              moonbit_decref(haystack$57.$0);
-              return (int64_t)i$64;
-            }
-            break;
-          }
-          _tmp$577 = i$64 + needle_len$58;
-          _p$363 = _tmp$577 - 1;
-          _field$981 = haystack$57.$0;
-          str$574 = _field$981;
-          start$576 = haystack$57.$1;
-          _tmp$575 = start$576 + _p$363;
-          _tmp$980 = str$574[_tmp$575];
-          _tmp$573 = _tmp$980;
-          _tmp$572 = _tmp$573 & 255;
-          if (
-            _tmp$572 < 0 || _tmp$572 >= Moonbit_array_length(skip_table$60)
-          ) {
-            moonbit_panic();
-          }
-          _tmp$571 = (int32_t)skip_table$60[_tmp$572];
-          _tmp$570 = i$64 + _tmp$571;
-          i$64 = _tmp$570;
-          continue;
-        } else {
-          moonbit_decref(skip_table$60);
-          moonbit_decref(needle$59.$0);
-          moonbit_decref(haystack$57.$0);
-        }
-        break;
-      }
-      return 4294967296ll;
-    } else {
-      moonbit_decref(needle$59.$0);
-      moonbit_decref(haystack$57.$0);
-      return 4294967296ll;
-    }
-  } else {
-    moonbit_decref(needle$59.$0);
-    moonbit_decref(haystack$57.$0);
-    return $moonbitlang$core$builtin$boyer_moore_horspool_find$constr$55;
-  }
-}
-
-int32_t $StringView$$unsafe_charcode_at(
-  struct $StringView self$53,
-  int32_t index$54
-) {
-  moonbit_string_t _field$990 = self$53.$0;
-  moonbit_string_t str$549 = _field$990;
-  int32_t _field$989 = self$53.$1;
-  int32_t start$551 = _field$989;
-  int32_t _tmp$550 = start$551 + index$54;
-  int32_t _tmp$988 = str$549[_tmp$550];
-  moonbit_decref(str$549);
-  return _tmp$988;
-}
-
-int32_t $StringView$$length(struct $StringView self$52) {
-  int32_t end$547 = self$52.$2;
-  int32_t _field$991 = self$52.$1;
-  int32_t start$548;
-  moonbit_decref(self$52.$0);
-  start$548 = _field$991;
-  return end$547 - start$548;
-}
-
-int32_t $Int$$is_trailing_surrogate(int32_t self$51) {
-  return 56320 <= self$51 && self$51 <= 57343;
-}
-
-int32_t $Int$$is_leading_surrogate(int32_t self$50) {
-  return 55296 <= self$50 && self$50 <= 56319;
+int32_t $Int$$is_trailing_surrogate(int32_t self$44) {
+  return 56320 <= self$44 && self$44 <= 57343;
 }
 
 int32_t $$moonbitlang$core$builtin$Logger$$$moonbitlang$core$builtin$StringBuilder$$write_char(
-  struct $$moonbitlang$core$builtin$StringBuilder* self$47,
-  int32_t ch$49
+  struct $$moonbitlang$core$builtin$StringBuilder* self$41,
+  int32_t ch$43
 ) {
-  int32_t len$542 = self$47->$1;
-  int32_t _tmp$541 = len$542 + 4;
-  moonbit_bytes_t _field$992;
-  moonbit_bytes_t data$545;
-  int32_t len$546;
-  int32_t inc$48;
-  int32_t len$544;
-  int32_t _tmp$543;
-  moonbit_incref(self$47);
+  int32_t len$516 = self$41->$1;
+  int32_t _tmp$515 = len$516 + 4;
+  moonbit_bytes_t _field$830;
+  moonbit_bytes_t data$519;
+  int32_t len$520;
+  int32_t inc$42;
+  int32_t len$518;
+  int32_t _tmp$517;
+  moonbit_incref(self$41);
   $$moonbitlang$core$builtin$StringBuilder$$grow_if_necessary(
-    self$47, _tmp$541
+    self$41, _tmp$515
   );
-  _field$992 = self$47->$0;
-  data$545 = _field$992;
-  len$546 = self$47->$1;
-  moonbit_incref(data$545);
-  inc$48 = $FixedArray$$set_utf16le_char(data$545, len$546, ch$49);
-  len$544 = self$47->$1;
-  _tmp$543 = len$544 + inc$48;
-  self$47->$1 = _tmp$543;
-  moonbit_decref(self$47);
+  _field$830 = self$41->$0;
+  data$519 = _field$830;
+  len$520 = self$41->$1;
+  moonbit_incref(data$519);
+  inc$42 = $FixedArray$$set_utf16le_char(data$519, len$520, ch$43);
+  len$518 = self$41->$1;
+  _tmp$517 = len$518 + inc$42;
+  self$41->$1 = _tmp$517;
+  moonbit_decref(self$41);
   return 0;
 }
 
 int32_t $$moonbitlang$core$builtin$StringBuilder$$grow_if_necessary(
-  struct $$moonbitlang$core$builtin$StringBuilder* self$42,
-  int32_t required$43
+  struct $$moonbitlang$core$builtin$StringBuilder* self$36,
+  int32_t required$37
 ) {
-  moonbit_bytes_t _field$996 = self$42->$0;
-  moonbit_bytes_t data$540 = _field$996;
-  int32_t _tmp$995 = Moonbit_array_length(data$540);
-  int32_t current_len$41 = _tmp$995;
-  int32_t enough_space$44;
-  int32_t _tmp$539;
-  moonbit_bytes_t new_data$46;
-  moonbit_bytes_t _field$994;
-  moonbit_bytes_t data$537;
-  int32_t len$538;
-  moonbit_bytes_t _old$993;
-  if (required$43 <= current_len$41) {
-    moonbit_decref(self$42);
+  moonbit_bytes_t _field$834 = self$36->$0;
+  moonbit_bytes_t data$514 = _field$834;
+  int32_t _tmp$833 = Moonbit_array_length(data$514);
+  int32_t current_len$35 = _tmp$833;
+  int32_t enough_space$38;
+  int32_t _tmp$513;
+  moonbit_bytes_t new_data$40;
+  moonbit_bytes_t _field$832;
+  moonbit_bytes_t data$511;
+  int32_t len$512;
+  moonbit_bytes_t _old$831;
+  if (required$37 <= current_len$35) {
+    moonbit_decref(self$36);
     return 0;
   }
-  enough_space$44 = current_len$41;
+  enough_space$38 = current_len$35;
   while (1) {
-    int32_t _tmp$535 = enough_space$44;
-    if (_tmp$535 < required$43) {
-      int32_t _tmp$536 = enough_space$44;
-      enough_space$44 = _tmp$536 * 2;
+    int32_t _tmp$509 = enough_space$38;
+    if (_tmp$509 < required$37) {
+      int32_t _tmp$510 = enough_space$38;
+      enough_space$38 = _tmp$510 * 2;
       continue;
     }
     break;
   }
-  _tmp$539 = enough_space$44;
-  new_data$46 = (moonbit_bytes_t)moonbit_make_bytes(_tmp$539, 0);
-  _field$994 = self$42->$0;
-  data$537 = _field$994;
-  len$538 = self$42->$1;
-  moonbit_incref(data$537);
-  moonbit_incref(new_data$46);
-  $FixedArray$$unsafe_blit$0(new_data$46, 0, data$537, 0, len$538);
-  _old$993 = self$42->$0;
-  moonbit_decref(_old$993);
-  self$42->$0 = new_data$46;
-  moonbit_decref(self$42);
+  _tmp$513 = enough_space$38;
+  new_data$40 = (moonbit_bytes_t)moonbit_make_bytes(_tmp$513, 0);
+  _field$832 = self$36->$0;
+  data$511 = _field$832;
+  len$512 = self$36->$1;
+  moonbit_incref(data$511);
+  moonbit_incref(new_data$40);
+  $FixedArray$$unsafe_blit$0(new_data$40, 0, data$511, 0, len$512);
+  _old$831 = self$36->$0;
+  moonbit_decref(_old$831);
+  self$36->$0 = new_data$40;
+  moonbit_decref(self$36);
   return 0;
 }
 
@@ -3581,236 +3403,236 @@ int32_t $$moonbitlang$core$builtin$Default$$Byte$$default() {
 }
 
 int32_t $FixedArray$$set_utf16le_char(
-  moonbit_bytes_t self$36,
-  int32_t offset$37,
-  int32_t value$35
+  moonbit_bytes_t self$30,
+  int32_t offset$31,
+  int32_t value$29
 ) {
-  int32_t _tmp$534 = value$35;
-  uint32_t code$34 = *(uint32_t*)&_tmp$534;
-  if (code$34 < 65536u) {
-    uint32_t _p$332 = code$34 & 255u;
-    int32_t _tmp$517 = *(int32_t*)&_p$332;
-    int32_t _tmp$516 = _tmp$517 & 0xff;
-    int32_t _tmp$518;
-    uint32_t _p$335;
-    int32_t _tmp$520;
-    int32_t _tmp$519;
-    if (offset$37 < 0 || offset$37 >= Moonbit_array_length(self$36)) {
+  int32_t _tmp$508 = value$29;
+  uint32_t code$28 = *(uint32_t*)&_tmp$508;
+  if (code$28 < 65536u) {
+    uint32_t _p$300 = code$28 & 255u;
+    int32_t _tmp$491 = *(int32_t*)&_p$300;
+    int32_t _tmp$490 = _tmp$491 & 0xff;
+    int32_t _tmp$492;
+    uint32_t _p$303;
+    int32_t _tmp$494;
+    int32_t _tmp$493;
+    if (offset$31 < 0 || offset$31 >= Moonbit_array_length(self$30)) {
       moonbit_panic();
     }
-    self$36[offset$37] = _tmp$516;
-    _tmp$518 = offset$37 + 1;
-    _p$335 = code$34 >> 8;
-    _tmp$520 = *(int32_t*)&_p$335;
-    _tmp$519 = _tmp$520 & 0xff;
-    if (_tmp$518 < 0 || _tmp$518 >= Moonbit_array_length(self$36)) {
+    self$30[offset$31] = _tmp$490;
+    _tmp$492 = offset$31 + 1;
+    _p$303 = code$28 >> 8;
+    _tmp$494 = *(int32_t*)&_p$303;
+    _tmp$493 = _tmp$494 & 0xff;
+    if (_tmp$492 < 0 || _tmp$492 >= Moonbit_array_length(self$30)) {
       moonbit_panic();
     }
-    self$36[_tmp$518] = _tmp$519;
-    moonbit_decref(self$36);
+    self$30[_tmp$492] = _tmp$493;
+    moonbit_decref(self$30);
     return 2;
-  } else if (code$34 < 1114112u) {
-    uint32_t hi$38 = code$34 - 65536u;
-    uint32_t _tmp$533 = hi$38 >> 10;
-    uint32_t lo$39 = _tmp$533 | 55296u;
-    uint32_t _tmp$532 = hi$38 & 1023u;
-    uint32_t hi$40 = _tmp$532 | 56320u;
-    uint32_t _p$338 = lo$39 & 255u;
-    int32_t _tmp$522 = *(int32_t*)&_p$338;
-    int32_t _tmp$521 = _tmp$522 & 0xff;
-    int32_t _tmp$523;
-    uint32_t _p$341;
-    int32_t _tmp$525;
-    int32_t _tmp$524;
-    int32_t _tmp$526;
-    uint32_t _p$344;
-    int32_t _tmp$528;
-    int32_t _tmp$527;
-    int32_t _tmp$529;
-    uint32_t _p$347;
-    int32_t _tmp$531;
-    int32_t _tmp$530;
-    if (offset$37 < 0 || offset$37 >= Moonbit_array_length(self$36)) {
+  } else if (code$28 < 1114112u) {
+    uint32_t hi$32 = code$28 - 65536u;
+    uint32_t _tmp$507 = hi$32 >> 10;
+    uint32_t lo$33 = _tmp$507 | 55296u;
+    uint32_t _tmp$506 = hi$32 & 1023u;
+    uint32_t hi$34 = _tmp$506 | 56320u;
+    uint32_t _p$306 = lo$33 & 255u;
+    int32_t _tmp$496 = *(int32_t*)&_p$306;
+    int32_t _tmp$495 = _tmp$496 & 0xff;
+    int32_t _tmp$497;
+    uint32_t _p$309;
+    int32_t _tmp$499;
+    int32_t _tmp$498;
+    int32_t _tmp$500;
+    uint32_t _p$312;
+    int32_t _tmp$502;
+    int32_t _tmp$501;
+    int32_t _tmp$503;
+    uint32_t _p$315;
+    int32_t _tmp$505;
+    int32_t _tmp$504;
+    if (offset$31 < 0 || offset$31 >= Moonbit_array_length(self$30)) {
       moonbit_panic();
     }
-    self$36[offset$37] = _tmp$521;
-    _tmp$523 = offset$37 + 1;
-    _p$341 = lo$39 >> 8;
-    _tmp$525 = *(int32_t*)&_p$341;
-    _tmp$524 = _tmp$525 & 0xff;
-    if (_tmp$523 < 0 || _tmp$523 >= Moonbit_array_length(self$36)) {
+    self$30[offset$31] = _tmp$495;
+    _tmp$497 = offset$31 + 1;
+    _p$309 = lo$33 >> 8;
+    _tmp$499 = *(int32_t*)&_p$309;
+    _tmp$498 = _tmp$499 & 0xff;
+    if (_tmp$497 < 0 || _tmp$497 >= Moonbit_array_length(self$30)) {
       moonbit_panic();
     }
-    self$36[_tmp$523] = _tmp$524;
-    _tmp$526 = offset$37 + 2;
-    _p$344 = hi$40 & 255u;
-    _tmp$528 = *(int32_t*)&_p$344;
-    _tmp$527 = _tmp$528 & 0xff;
-    if (_tmp$526 < 0 || _tmp$526 >= Moonbit_array_length(self$36)) {
+    self$30[_tmp$497] = _tmp$498;
+    _tmp$500 = offset$31 + 2;
+    _p$312 = hi$34 & 255u;
+    _tmp$502 = *(int32_t*)&_p$312;
+    _tmp$501 = _tmp$502 & 0xff;
+    if (_tmp$500 < 0 || _tmp$500 >= Moonbit_array_length(self$30)) {
       moonbit_panic();
     }
-    self$36[_tmp$526] = _tmp$527;
-    _tmp$529 = offset$37 + 3;
-    _p$347 = hi$40 >> 8;
-    _tmp$531 = *(int32_t*)&_p$347;
-    _tmp$530 = _tmp$531 & 0xff;
-    if (_tmp$529 < 0 || _tmp$529 >= Moonbit_array_length(self$36)) {
+    self$30[_tmp$500] = _tmp$501;
+    _tmp$503 = offset$31 + 3;
+    _p$315 = hi$34 >> 8;
+    _tmp$505 = *(int32_t*)&_p$315;
+    _tmp$504 = _tmp$505 & 0xff;
+    if (_tmp$503 < 0 || _tmp$503 >= Moonbit_array_length(self$30)) {
       moonbit_panic();
     }
-    self$36[_tmp$529] = _tmp$530;
-    moonbit_decref(self$36);
+    self$30[_tmp$503] = _tmp$504;
+    moonbit_decref(self$30);
     return 4;
   } else {
-    moonbit_decref(self$36);
+    moonbit_decref(self$30);
     return $moonbitlang$core$builtin$abort$1(
-             (moonbit_string_t)moonbit_string_literal_13.data,
-               (moonbit_string_t)moonbit_string_literal_14.data
+             (moonbit_string_t)moonbit_string_literal_4.data,
+               (moonbit_string_t)moonbit_string_literal_5.data
            );
   }
 }
 
-int32_t $UInt$$to_byte(uint32_t self$33) {
-  int32_t _tmp$515 = *(int32_t*)&self$33;
-  return _tmp$515 & 0xff;
+int32_t $UInt$$to_byte(uint32_t self$27) {
+  int32_t _tmp$489 = *(int32_t*)&self$27;
+  return _tmp$489 & 0xff;
 }
 
-uint32_t $Char$$to_uint(int32_t self$32) {
-  int32_t _tmp$514 = self$32;
-  return *(uint32_t*)&_tmp$514;
+uint32_t $Char$$to_uint(int32_t self$26) {
+  int32_t _tmp$488 = self$26;
+  return *(uint32_t*)&_tmp$488;
 }
 
 moonbit_string_t $$moonbitlang$core$builtin$StringBuilder$$to_string(
-  struct $$moonbitlang$core$builtin$StringBuilder* self$31
+  struct $$moonbitlang$core$builtin$StringBuilder* self$25
 ) {
-  moonbit_bytes_t _field$998 = self$31->$0;
-  moonbit_bytes_t data$513 = _field$998;
-  moonbit_bytes_t _tmp$510;
-  int32_t _field$997;
-  int32_t len$512;
-  int64_t _tmp$511;
-  moonbit_incref(data$513);
-  _tmp$510 = data$513;
-  _field$997 = self$31->$1;
-  moonbit_decref(self$31);
-  len$512 = _field$997;
-  _tmp$511 = (int64_t)len$512;
-  return $Bytes$$to_unchecked_string$inner(_tmp$510, 0, _tmp$511);
+  moonbit_bytes_t _field$836 = self$25->$0;
+  moonbit_bytes_t data$487 = _field$836;
+  moonbit_bytes_t _tmp$484;
+  int32_t _field$835;
+  int32_t len$486;
+  int64_t _tmp$485;
+  moonbit_incref(data$487);
+  _tmp$484 = data$487;
+  _field$835 = self$25->$1;
+  moonbit_decref(self$25);
+  len$486 = _field$835;
+  _tmp$485 = (int64_t)len$486;
+  return $Bytes$$to_unchecked_string$inner(_tmp$484, 0, _tmp$485);
 }
 
 moonbit_string_t $Bytes$$to_unchecked_string$inner(
-  moonbit_bytes_t self$26,
-  int32_t offset$30,
-  int64_t length$28
+  moonbit_bytes_t self$20,
+  int32_t offset$24,
+  int64_t length$22
 ) {
-  int32_t len$25 = Moonbit_array_length(self$26);
-  int32_t length$27;
-  int32_t _if_result$1065;
-  if (length$28 == 4294967296ll) {
-    length$27 = len$25 - offset$30;
+  int32_t len$19 = Moonbit_array_length(self$20);
+  int32_t length$21;
+  int32_t _if_result$915;
+  if (length$22 == 4294967296ll) {
+    length$21 = len$19 - offset$24;
   } else {
-    int64_t _Some$29 = length$28;
-    length$27 = (int32_t)_Some$29;
+    int64_t _Some$23 = length$22;
+    length$21 = (int32_t)_Some$23;
   }
-  if (offset$30 >= 0) {
-    if (length$27 >= 0) {
-      int32_t _tmp$509 = offset$30 + length$27;
-      _if_result$1065 = _tmp$509 <= len$25;
+  if (offset$24 >= 0) {
+    if (length$21 >= 0) {
+      int32_t _tmp$483 = offset$24 + length$21;
+      _if_result$915 = _tmp$483 <= len$19;
     } else {
-      _if_result$1065 = 0;
+      _if_result$915 = 0;
     }
   } else {
-    _if_result$1065 = 0;
+    _if_result$915 = 0;
   }
-  if (_if_result$1065) {
+  if (_if_result$915) {
     return $moonbitlang$core$builtin$unsafe_sub_string(
-             self$26, offset$30, length$27
+             self$20, offset$24, length$21
            );
   } else {
-    moonbit_decref(self$26);
+    moonbit_decref(self$20);
     moonbit_panic();
   }
 }
 
 struct $$moonbitlang$core$builtin$StringBuilder* $$moonbitlang$core$builtin$StringBuilder$$new$inner(
-  int32_t size_hint$23
+  int32_t size_hint$17
 ) {
-  int32_t initial$22;
-  moonbit_bytes_t data$24;
-  struct $$moonbitlang$core$builtin$StringBuilder* _block$1066;
-  if (size_hint$23 < 1) {
-    initial$22 = 1;
+  int32_t initial$16;
+  moonbit_bytes_t data$18;
+  struct $$moonbitlang$core$builtin$StringBuilder* _block$916;
+  if (size_hint$17 < 1) {
+    initial$16 = 1;
   } else {
-    initial$22 = size_hint$23;
+    initial$16 = size_hint$17;
   }
-  data$24 = (moonbit_bytes_t)moonbit_make_bytes(initial$22, 0);
-  _block$1066
+  data$18 = (moonbit_bytes_t)moonbit_make_bytes(initial$16, 0);
+  _block$916
   = (struct $$moonbitlang$core$builtin$StringBuilder*)moonbit_malloc(
       sizeof(struct $$moonbitlang$core$builtin$StringBuilder)
     );
-  Moonbit_object_header(_block$1066)->meta
+  Moonbit_object_header(_block$916)->meta
   = Moonbit_make_regular_object_header(
     offsetof(struct $$moonbitlang$core$builtin$StringBuilder, $0) >> 2, 1, 0
   );
-  _block$1066->$0 = data$24;
-  _block$1066->$1 = 0;
-  return _block$1066;
+  _block$916->$0 = data$18;
+  _block$916->$1 = 0;
+  return _block$916;
 }
 
 int32_t $FixedArray$$unsafe_blit$0(
-  moonbit_bytes_t dst$13,
-  int32_t dst_offset$15,
-  moonbit_bytes_t src$14,
-  int32_t src_offset$16,
-  int32_t len$18
+  moonbit_bytes_t dst$7,
+  int32_t dst_offset$9,
+  moonbit_bytes_t src$8,
+  int32_t src_offset$10,
+  int32_t len$12
 ) {
-  if (dst$13 == src$14 && dst_offset$15 < src_offset$16) {
-    int32_t i$17 = 0;
+  if (dst$7 == src$8 && dst_offset$9 < src_offset$10) {
+    int32_t i$11 = 0;
     while (1) {
-      if (i$17 < len$18) {
-        int32_t _tmp$500 = dst_offset$15 + i$17;
-        int32_t _tmp$502 = src_offset$16 + i$17;
-        int32_t _tmp$501;
-        int32_t _tmp$503;
-        if (_tmp$502 < 0 || _tmp$502 >= Moonbit_array_length(src$14)) {
+      if (i$11 < len$12) {
+        int32_t _tmp$474 = dst_offset$9 + i$11;
+        int32_t _tmp$476 = src_offset$10 + i$11;
+        int32_t _tmp$475;
+        int32_t _tmp$477;
+        if (_tmp$476 < 0 || _tmp$476 >= Moonbit_array_length(src$8)) {
           moonbit_panic();
         }
-        _tmp$501 = (int32_t)src$14[_tmp$502];
-        if (_tmp$500 < 0 || _tmp$500 >= Moonbit_array_length(dst$13)) {
+        _tmp$475 = (int32_t)src$8[_tmp$476];
+        if (_tmp$474 < 0 || _tmp$474 >= Moonbit_array_length(dst$7)) {
           moonbit_panic();
         }
-        dst$13[_tmp$500] = _tmp$501;
-        _tmp$503 = i$17 + 1;
-        i$17 = _tmp$503;
+        dst$7[_tmp$474] = _tmp$475;
+        _tmp$477 = i$11 + 1;
+        i$11 = _tmp$477;
         continue;
       } else {
-        moonbit_decref(src$14);
-        moonbit_decref(dst$13);
+        moonbit_decref(src$8);
+        moonbit_decref(dst$7);
       }
       break;
     }
   } else {
-    int32_t _tmp$508 = len$18 - 1;
-    int32_t i$20 = _tmp$508;
+    int32_t _tmp$482 = len$12 - 1;
+    int32_t i$14 = _tmp$482;
     while (1) {
-      if (i$20 >= 0) {
-        int32_t _tmp$504 = dst_offset$15 + i$20;
-        int32_t _tmp$506 = src_offset$16 + i$20;
-        int32_t _tmp$505;
-        int32_t _tmp$507;
-        if (_tmp$506 < 0 || _tmp$506 >= Moonbit_array_length(src$14)) {
+      if (i$14 >= 0) {
+        int32_t _tmp$478 = dst_offset$9 + i$14;
+        int32_t _tmp$480 = src_offset$10 + i$14;
+        int32_t _tmp$479;
+        int32_t _tmp$481;
+        if (_tmp$480 < 0 || _tmp$480 >= Moonbit_array_length(src$8)) {
           moonbit_panic();
         }
-        _tmp$505 = (int32_t)src$14[_tmp$506];
-        if (_tmp$504 < 0 || _tmp$504 >= Moonbit_array_length(dst$13)) {
+        _tmp$479 = (int32_t)src$8[_tmp$480];
+        if (_tmp$478 < 0 || _tmp$478 >= Moonbit_array_length(dst$7)) {
           moonbit_panic();
         }
-        dst$13[_tmp$504] = _tmp$505;
-        _tmp$507 = i$20 - 1;
-        i$20 = _tmp$507;
+        dst$7[_tmp$478] = _tmp$479;
+        _tmp$481 = i$14 - 1;
+        i$14 = _tmp$481;
         continue;
       } else {
-        moonbit_decref(src$14);
-        moonbit_decref(dst$13);
+        moonbit_decref(src$8);
+        moonbit_decref(dst$7);
       }
       break;
     }
@@ -3818,89 +3640,41 @@ int32_t $FixedArray$$unsafe_blit$0(
   return 0;
 }
 
-int64_t $moonbitlang$core$builtin$abort$3(
-  moonbit_string_t string$11,
-  moonbit_string_t loc$12
-) {
-  moonbit_string_t _tmp$498 =
-    moonbit_add_string(
-      string$11, (moonbit_string_t)moonbit_string_literal_15.data
-    );
-  moonbit_string_t _tmp$499 =
-    $$moonbitlang$core$builtin$Show$$$default_impl$$to_string$1(loc$12);
-  moonbit_string_t _tmp$497 = moonbit_add_string(_tmp$498, _tmp$499);
-  moonbit_string_t _tmp$496 =
-    moonbit_add_string(
-      _tmp$497, (moonbit_string_t)moonbit_string_literal_16.data
-    );
-  return $moonbitlang$core$abort$abort$3(_tmp$496);
-}
-
-struct $StringView $moonbitlang$core$builtin$abort$2(
-  moonbit_string_t string$9,
-  moonbit_string_t loc$10
-) {
-  moonbit_string_t _tmp$494 =
-    moonbit_add_string(
-      string$9, (moonbit_string_t)moonbit_string_literal_15.data
-    );
-  moonbit_string_t _tmp$495 =
-    $$moonbitlang$core$builtin$Show$$$default_impl$$to_string$1(loc$10);
-  moonbit_string_t _tmp$493 = moonbit_add_string(_tmp$494, _tmp$495);
-  moonbit_string_t _tmp$492 =
-    moonbit_add_string(
-      _tmp$493, (moonbit_string_t)moonbit_string_literal_16.data
-    );
-  return $moonbitlang$core$abort$abort$2(_tmp$492);
-}
-
 int32_t $moonbitlang$core$builtin$abort$1(
-  moonbit_string_t string$7,
-  moonbit_string_t loc$8
-) {
-  moonbit_string_t _tmp$490 =
-    moonbit_add_string(
-      string$7, (moonbit_string_t)moonbit_string_literal_15.data
-    );
-  moonbit_string_t _tmp$491 =
-    $$moonbitlang$core$builtin$Show$$$default_impl$$to_string$1(loc$8);
-  moonbit_string_t _tmp$489 = moonbit_add_string(_tmp$490, _tmp$491);
-  moonbit_string_t _tmp$488 =
-    moonbit_add_string(
-      _tmp$489, (moonbit_string_t)moonbit_string_literal_16.data
-    );
-  return $moonbitlang$core$abort$abort$1(_tmp$488);
-}
-
-int32_t $moonbitlang$core$builtin$abort$0(
   moonbit_string_t string$5,
   moonbit_string_t loc$6
 ) {
-  moonbit_string_t _tmp$486 =
+  moonbit_string_t _tmp$472 =
     moonbit_add_string(
-      string$5, (moonbit_string_t)moonbit_string_literal_15.data
+      string$5, (moonbit_string_t)moonbit_string_literal_6.data
     );
-  moonbit_string_t _tmp$487 =
+  moonbit_string_t _tmp$473 =
     $$moonbitlang$core$builtin$Show$$$default_impl$$to_string$1(loc$6);
-  moonbit_string_t _tmp$485 = moonbit_add_string(_tmp$486, _tmp$487);
-  moonbit_string_t _tmp$484 =
+  moonbit_string_t _tmp$471 = moonbit_add_string(_tmp$472, _tmp$473);
+  moonbit_string_t _tmp$470 =
     moonbit_add_string(
-      _tmp$485, (moonbit_string_t)moonbit_string_literal_16.data
+      _tmp$471, (moonbit_string_t)moonbit_string_literal_7.data
     );
-  $moonbitlang$core$abort$abort$0(_tmp$484);
+  return $moonbitlang$core$abort$abort$1(_tmp$470);
+}
+
+int32_t $moonbitlang$core$builtin$abort$0(
+  moonbit_string_t string$3,
+  moonbit_string_t loc$4
+) {
+  moonbit_string_t _tmp$468 =
+    moonbit_add_string(
+      string$3, (moonbit_string_t)moonbit_string_literal_6.data
+    );
+  moonbit_string_t _tmp$469 =
+    $$moonbitlang$core$builtin$Show$$$default_impl$$to_string$1(loc$4);
+  moonbit_string_t _tmp$467 = moonbit_add_string(_tmp$468, _tmp$469);
+  moonbit_string_t _tmp$466 =
+    moonbit_add_string(
+      _tmp$467, (moonbit_string_t)moonbit_string_literal_7.data
+    );
+  $moonbitlang$core$abort$abort$0(_tmp$466);
   return 0;
-}
-
-int64_t $moonbitlang$core$abort$abort$3(moonbit_string_t msg$4) {
-  moonbit_println(msg$4);
-  moonbit_decref(msg$4);
-  moonbit_panic();
-}
-
-struct $StringView $moonbitlang$core$abort$abort$2(moonbit_string_t msg$3) {
-  moonbit_println(msg$3);
-  moonbit_decref(msg$3);
-  moonbit_panic();
 }
 
 int32_t $moonbitlang$core$abort$abort$1(moonbit_string_t msg$2) {
@@ -3917,105 +3691,103 @@ int32_t $moonbitlang$core$abort$abort$0(moonbit_string_t msg$1) {
 }
 
 int32_t $$moonbitlang$core$builtin$Logger$$$moonbitlang$core$builtin$StringBuilder$$write_char$dyncall_as_$moonbitlang$core$builtin$Logger(
-  void* _obj_ptr$478,
-  int32_t _param$477
+  void* _obj_ptr$460,
+  int32_t _param$459
 ) {
-  struct $$moonbitlang$core$builtin$StringBuilder* _self$476 =
-    (struct $$moonbitlang$core$builtin$StringBuilder*)_obj_ptr$478;
+  struct $$moonbitlang$core$builtin$StringBuilder* _self$458 =
+    (struct $$moonbitlang$core$builtin$StringBuilder*)_obj_ptr$460;
   $$moonbitlang$core$builtin$Logger$$$moonbitlang$core$builtin$StringBuilder$$write_char(
-    _self$476, _param$477
+    _self$458, _param$459
   );
   return 0;
 }
 
 int32_t $$moonbitlang$core$builtin$Logger$$$moonbitlang$core$builtin$StringBuilder$$write_view$dyncall_as_$moonbitlang$core$builtin$Logger(
-  void* _obj_ptr$475,
-  struct $StringView _param$474
+  void* _obj_ptr$457,
+  struct $StringView _param$456
 ) {
-  struct $$moonbitlang$core$builtin$StringBuilder* _self$473 =
-    (struct $$moonbitlang$core$builtin$StringBuilder*)_obj_ptr$475;
+  struct $$moonbitlang$core$builtin$StringBuilder* _self$455 =
+    (struct $$moonbitlang$core$builtin$StringBuilder*)_obj_ptr$457;
   $$moonbitlang$core$builtin$Logger$$$moonbitlang$core$builtin$StringBuilder$$write_view(
-    _self$473, _param$474
+    _self$455, _param$456
   );
   return 0;
 }
 
 int32_t $$moonbitlang$core$builtin$Logger$$$default_impl$$write_substring$dyncall_as_$moonbitlang$core$builtin$Logger$0(
-  void* _obj_ptr$472,
-  moonbit_string_t _param$469,
-  int32_t _param$470,
-  int32_t _param$471
+  void* _obj_ptr$454,
+  moonbit_string_t _param$451,
+  int32_t _param$452,
+  int32_t _param$453
 ) {
-  struct $$moonbitlang$core$builtin$StringBuilder* _self$468 =
-    (struct $$moonbitlang$core$builtin$StringBuilder*)_obj_ptr$472;
+  struct $$moonbitlang$core$builtin$StringBuilder* _self$450 =
+    (struct $$moonbitlang$core$builtin$StringBuilder*)_obj_ptr$454;
   $$moonbitlang$core$builtin$Logger$$$default_impl$$write_substring$0(
-    _self$468, _param$469, _param$470, _param$471
+    _self$450, _param$451, _param$452, _param$453
   );
   return 0;
 }
 
 int32_t $$moonbitlang$core$builtin$Logger$$$moonbitlang$core$builtin$StringBuilder$$write_string$dyncall_as_$moonbitlang$core$builtin$Logger(
-  void* _obj_ptr$467,
-  moonbit_string_t _param$466
+  void* _obj_ptr$449,
+  moonbit_string_t _param$448
 ) {
-  struct $$moonbitlang$core$builtin$StringBuilder* _self$465 =
-    (struct $$moonbitlang$core$builtin$StringBuilder*)_obj_ptr$467;
+  struct $$moonbitlang$core$builtin$StringBuilder* _self$447 =
+    (struct $$moonbitlang$core$builtin$StringBuilder*)_obj_ptr$449;
   $$moonbitlang$core$builtin$Logger$$$moonbitlang$core$builtin$StringBuilder$$write_string(
-    _self$465, _param$466
+    _self$447, _param$448
   );
   return 0;
 }
 
 void moonbit_init() {
-  $moonbitlang$core$builtin$boyer_moore_horspool_find$constr$55 = (int64_t)0;
-  $moonbitlang$core$builtin$brute_force_find$constr$69 = (int64_t)0;
+
 }
 
 int main(int argc, char** argv) {
-  struct $Box$3c$Int$3e$* int_box$319;
-  struct $Box$3c$String$3e$* str_box$320;
-  int32_t _field$1000;
-  int32_t value$481;
-  moonbit_string_t _tmp$480;
-  moonbit_string_t _tmp$479;
-  moonbit_string_t _field$999;
-  int32_t _cnt$1018;
-  moonbit_string_t value$483;
-  moonbit_string_t _tmp$482;
+  struct $Box$3c$Int$3e$* int_box$292;
+  struct $Box$3c$String$3e$* str_box$293;
+  int32_t _field$838;
+  int32_t value$463;
+  moonbit_string_t _tmp$462;
+  moonbit_string_t _tmp$461;
+  moonbit_string_t _field$837;
+  int32_t _cnt$852;
+  moonbit_string_t value$465;
+  moonbit_string_t _tmp$464;
   moonbit_runtime_init(argc, argv);
   moonbit_init();
-  int_box$319 = $$username$moonbit_examples$cmd$generics$Box$$new$0(42);
-  str_box$320
+  int_box$292 = $$username$moonbit_examples$cmd$generics$Box$$new$0(42);
+  str_box$293
   = $$username$moonbit_examples$cmd$generics$Box$$new$1(
-    (moonbit_string_t)moonbit_string_literal_17.data
+    (moonbit_string_t)moonbit_string_literal_8.data
   );
-  _field$1000 = int_box$319->$0;
-  moonbit_decref(int_box$319);
-  value$481 = _field$1000;
-  _tmp$480
+  _field$838 = int_box$292->$0;
+  moonbit_decref(int_box$292);
+  value$463 = _field$838;
+  _tmp$462
   = $$moonbitlang$core$builtin$Show$$$default_impl$$to_string$0(
-    value$481
+    value$463
   );
-  _tmp$479
+  _tmp$461
   = moonbit_add_string(
-    (moonbit_string_t)moonbit_string_literal_18.data, _tmp$480
+    (moonbit_string_t)moonbit_string_literal_9.data, _tmp$462
   );
-  $moonbitlang$core$builtin$println$0(_tmp$479);
-  _field$999 = str_box$320->$0;
-  _cnt$1018 = Moonbit_object_header(str_box$320)->rc;
-  if (_cnt$1018 > 1) {
-    int32_t _new_cnt$1019;
-    moonbit_incref(_field$999);
-    _new_cnt$1019 = _cnt$1018 - 1;
-    Moonbit_object_header(str_box$320)->rc = _new_cnt$1019;
-  } else if (_cnt$1018 == 1) {
-    moonbit_free(str_box$320);
+  $moonbitlang$core$builtin$println$0(_tmp$461);
+  _field$837 = str_box$293->$0;
+  _cnt$852 = Moonbit_object_header(str_box$293)->rc;
+  if (_cnt$852 > 1) {
+    int32_t _new_cnt$853 = _cnt$852 - 1;
+    Moonbit_object_header(str_box$293)->rc = _new_cnt$853;
+    moonbit_incref(_field$837);
+  } else if (_cnt$852 == 1) {
+    moonbit_free(str_box$293);
   }
-  value$483 = _field$999;
-  _tmp$482
+  value$465 = _field$837;
+  _tmp$464
   = moonbit_add_string(
-    (moonbit_string_t)moonbit_string_literal_19.data, value$483
+    (moonbit_string_t)moonbit_string_literal_10.data, value$465
   );
-  $moonbitlang$core$builtin$println$0(_tmp$482);
+  $moonbitlang$core$builtin$println$0(_tmp$464);
   return 0;
 }

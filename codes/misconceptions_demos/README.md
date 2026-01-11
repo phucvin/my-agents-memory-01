@@ -25,8 +25,8 @@ Ran with `g++ -O3 -fno-inline -fno-inline-functions -fno-inline-small-functions`
 
 ```
 Benchmarking with 1000000 particles over 100 iterations.
-AoS Time: 1140 ms
-SoA Time: 346 ms
+AoS Time: 1107 ms
+SoA Time: 352 ms
 
 Analysis: If the compiler automatically optimized for data locality,
 it would transform AoS into SoA internally or reorder fields to avoid loading
@@ -139,8 +139,8 @@ cd 04_separate_compilation
 Comparison of compiling 50 files separately vs as a unity build:
 
 ```
-Separate Compilation Time: 10289 ms
-Unity Build Time: 586 ms
+Separate Compilation Time: 9870 ms
+Unity Build Time: 556 ms
 ```
 
 ## 5. Undefined Behavior and Optimizations (`05_undefined_behavior`)
@@ -219,16 +219,20 @@ main_O2: 18072 bytes
 main_O3: 17984 bytes
 ---------------------------------------------------
 Running -O2...
-Traversal Time: 1355.91 ms
+Traversal Time: 1308.66 ms
 Sum (verification): 49999995000000
 Running -O3...
-Traversal Time: 1371.1 ms
+Traversal Time: 1286.97 ms
 Sum (verification): 49999995000000
 ---------------------------------------------------
+Assembly Comparison (MD5):
+ea5939aeed53c2a587ffa8ecbcc8fa51  main_O2.s
+60cc8e97bebfd877a359271ab9a4af6d  main_O3.s
+---------------------------------------------------
+Note: For pointer-chasing code (like Linked Lists), -O3 rarely provides
+benefits over -O2 because the bottleneck is memory latency, not instruction count.
+Often, the generated assembly is identical or very similar.
 ```
-
-**Analysis:**
-The execution times are almost identical (or noisy), and binary sizes are very close. This demonstrates that for code bound by memory latency (like pointer chasing), `-O3`'s aggressive loop optimizations provide no benefit over `-O2`.
 
 ## 7. The Role of the Inline Keyword (`07_inline_keyword`)
 

@@ -611,10 +611,9 @@ int32_t $username$moonbit_examples$cmd$traits$introduce$1(
   moonbit_string_t name$20;
   moonbit_string_t _tmp$19;
   if (_cnt$25 > 1) {
-    int32_t _new_cnt$26;
-    moonbit_incref(_field$21);
-    _new_cnt$26 = _cnt$25 - 1;
+    int32_t _new_cnt$26 = _cnt$25 - 1;
     Moonbit_object_header(animal$6)->rc = _new_cnt$26;
+    moonbit_incref(_field$21);
   } else if (_cnt$25 == 1) {
     moonbit_free(animal$6);
   }
@@ -635,10 +634,9 @@ int32_t $username$moonbit_examples$cmd$traits$introduce$0(
   moonbit_string_t name$18;
   moonbit_string_t _tmp$17;
   if (_cnt$27 > 1) {
-    int32_t _new_cnt$28;
-    moonbit_incref(_field$22);
-    _new_cnt$28 = _cnt$27 - 1;
+    int32_t _new_cnt$28 = _cnt$27 - 1;
     Moonbit_object_header(animal$5)->rc = _new_cnt$28;
+    moonbit_incref(_field$22);
   } else if (_cnt$27 == 1) {
     moonbit_free(animal$5);
   }
@@ -658,10 +656,9 @@ moonbit_string_t $$username$moonbit_examples$cmd$traits$Speak$$$username$moonbit
   int32_t _cnt$29 = Moonbit_object_header(self$4)->rc;
   moonbit_string_t name$16;
   if (_cnt$29 > 1) {
-    int32_t _new_cnt$30;
-    moonbit_incref(_field$23);
-    _new_cnt$30 = _cnt$29 - 1;
+    int32_t _new_cnt$30 = _cnt$29 - 1;
     Moonbit_object_header(self$4)->rc = _new_cnt$30;
+    moonbit_incref(_field$23);
   } else if (_cnt$29 == 1) {
     moonbit_free(self$4);
   }
@@ -678,10 +675,9 @@ moonbit_string_t $$username$moonbit_examples$cmd$traits$Speak$$$username$moonbit
   int32_t _cnt$31 = Moonbit_object_header(self$3)->rc;
   moonbit_string_t name$15;
   if (_cnt$31 > 1) {
-    int32_t _new_cnt$32;
-    moonbit_incref(_field$24);
-    _new_cnt$32 = _cnt$31 - 1;
+    int32_t _new_cnt$32 = _cnt$31 - 1;
     Moonbit_object_header(self$3)->rc = _new_cnt$32;
+    moonbit_incref(_field$24);
   } else if (_cnt$31 == 1) {
     moonbit_free(self$3);
   }
