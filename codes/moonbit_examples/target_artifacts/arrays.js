@@ -102,22 +102,36 @@ function moonbitlang$core$builtin$$Show$to_string$5$(self) {
 function moonbitlang$core$builtin$$Logger$write_iter$46$inner$2$(self, iter, prefix, suffix, sep, trailing) {
   self.method_table.method_0(self.self, prefix);
   if (trailing) {
-    iter((x) => {
-      moonbitlang$core$builtin$$Logger$write_object$2$(self, x);
-      self.method_table.method_0(self.self, sep);
-      return 1;
-    });
-  } else {
-    const first = { val: true };
-    iter((x) => {
-      if (first.val) {
-        first.val = false;
+    while (true) {
+      const _bind = moonbitlang$core$builtin$$Iter$next$2$(iter);
+      if (_bind === undefined) {
+        break;
       } else {
+        const _Some = _bind;
+        const _x = _Some;
+        moonbitlang$core$builtin$$Logger$write_object$2$(self, _x);
         self.method_table.method_0(self.self, sep);
+        continue;
       }
-      moonbitlang$core$builtin$$Logger$write_object$2$(self, x);
-      return 1;
-    });
+    }
+  } else {
+    let first = true;
+    while (true) {
+      const _bind = moonbitlang$core$builtin$$Iter$next$2$(iter);
+      if (_bind === undefined) {
+        break;
+      } else {
+        const _Some = _bind;
+        const _x = _Some;
+        if (first) {
+          first = false;
+        } else {
+          self.method_table.method_0(self.self, sep);
+        }
+        moonbitlang$core$builtin$$Logger$write_object$2$(self, _x);
+        continue;
+      }
+    }
   }
   self.method_table.method_0(self.self, suffix);
 }
@@ -127,29 +141,6 @@ function moonbitlang$core$int$$Int$to_string$46$inner(self, radix) {
 function moonbitlang$core$builtin$$Show$to_string$6$(self) {
   return self.str.substring(self.start, self.end);
 }
-function moonbitlang$core$builtin$$Iterator$next$2$(self) {
-  const _func = self;
-  return _func();
-}
-function moonbitlang$core$builtin$$Iterator$iter$2$(self) {
-  return (yield_) => {
-    while (true) {
-      const _bind = moonbitlang$core$builtin$$Iterator$next$2$(self);
-      if (_bind === undefined) {
-        return 1;
-      } else {
-        const _Some = _bind;
-        const _x = _Some;
-        const _bind$2 = yield_(_x);
-        if (_bind$2 === 1) {
-        } else {
-          return 0;
-        }
-        continue;
-      }
-    }
-  };
-}
 function moonbitlang$core$builtin$$Logger$write_view$0$(self, str) {
   const _bind = self;
   _bind.val = `${_bind.val}${moonbitlang$core$builtin$$Show$to_string$6$(str)}`;
@@ -157,10 +148,14 @@ function moonbitlang$core$builtin$$Logger$write_view$0$(self, str) {
 function moonbitlang$core$array$$Array$push$2$(self, value) {
   moonbitlang$core$builtin$$JSArray$push(self, value);
 }
+function moonbitlang$core$builtin$$Iter$next$2$(self) {
+  const _func = self;
+  return _func();
+}
 function moonbitlang$core$builtin$$Show$output$2$(self, logger) {
   logger.method_table.method_0(logger.self, moonbitlang$core$int$$Int$to_string$46$inner(self, 10));
 }
-function moonbitlang$core$array$$ArrayView$iterator$2$(self) {
+function moonbitlang$core$array$$ArrayView$iter$2$(self) {
   const i = { val: 0 };
   const _p = () => {
     if (i.val < (self.end - self.start | 0)) {
@@ -173,11 +168,8 @@ function moonbitlang$core$array$$ArrayView$iterator$2$(self) {
   };
   return _p;
 }
-function moonbitlang$core$array$$Array$iterator$2$(self) {
-  return moonbitlang$core$array$$ArrayView$iterator$2$({ buf: self, start: 0, end: self.length });
-}
 function moonbitlang$core$array$$Array$iter$2$(self) {
-  return moonbitlang$core$builtin$$Iterator$iter$2$(moonbitlang$core$array$$Array$iterator$2$(self));
+  return moonbitlang$core$array$$ArrayView$iter$2$({ buf: self, start: 0, end: self.length });
 }
 function moonbitlang$core$builtin$$Show$output$4$(self, logger) {
   moonbitlang$core$builtin$$Logger$write_iter$46$inner$2$(logger, moonbitlang$core$array$$Array$iter$2$(self), "[", "]", ", ", false);

@@ -60,14 +60,14 @@ The benchmark calculates the sum of integers from 1 to 200,000,000. The implemen
 ```
 Running with JIT...
 20000000100000000
-Time: 0.7009s
+Time: 0.7018s
 ```
 
 **Interpreter Only:**
 ```
 Running with Interpreter...
 20000000100000000
-Time: 3.1378s
+Time: 3.0914s
 ```
 
-**Performance:** The Tracing JIT is approximately **4.5x faster** than the interpreter for this workload.
+**Performance:** The Tracing JIT is approximately **4.4x faster** than the interpreter for this workload.

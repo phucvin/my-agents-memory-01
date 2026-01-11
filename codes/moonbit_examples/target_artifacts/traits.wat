@@ -1272,15 +1272,15 @@
      (local.get $animal/6)))
    (i32.const 1))
   (then
-   (call $moonbit.incref
-    (local.get $*field/21))
    (local.set $*new_cnt/26
     (i32.sub
      (local.get $*cnt/25)
      (i32.const 1)))
    (i32.store
     (local.get $animal/6)
-    (local.get $*new_cnt/26)))
+    (local.get $*new_cnt/26))
+   (call $moonbit.incref
+    (local.get $*field/21)))
   (else
    (if
     (i32.eq
@@ -1313,15 +1313,15 @@
      (local.get $animal/5)))
    (i32.const 1))
   (then
-   (call $moonbit.incref
-    (local.get $*field/22))
    (local.set $*new_cnt/28
     (i32.sub
      (local.get $*cnt/27)
      (i32.const 1)))
    (i32.store
     (local.get $animal/5)
-    (local.get $*new_cnt/28)))
+    (local.get $*new_cnt/28))
+   (call $moonbit.incref
+    (local.get $*field/22)))
   (else
    (if
     (i32.eq

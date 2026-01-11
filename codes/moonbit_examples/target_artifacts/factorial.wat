@@ -1,6 +1,6 @@
 (import "spectest" "print_char"
  (func $printc (param $i i32)))
-(data  (memory $moonbit.memory) (offset (i32.const 10000)) "\FF\FF\FF\FF\00\00\00\00\00\00\00\00\00\00\00\00\FF\FF\FF\FF1\00\00P@\00m\00o\00o\00n\00b\00i\00t\00l\00a\00n\00g\00/\00c\00o\00r\00e\00/\00b\00u\00i\00l\00t\00i\00n\00:\00s\00t\00r\00i\00n\00g\00.\00m\00b\00t\00:\003\006\006\00:\005\00-\003\006\006\00:\003\003\00\00\00\00\00\00\00\FF\FF\FF\FF\13\00\00PI\00n\00v\00a\00l\00i\00d\00 \00s\00t\00a\00r\00t\00 \00i\00n\00d\00e\00x\00\00\00\FF\FF\FF\FF1\00\00P@\00m\00o\00o\00n\00b\00i\00t\00l\00a\00n\00g\00/\00c\00o\00r\00e\00/\00b\00u\00i\00l\00t\00i\00n\00:\00s\00t\00r\00i\00n\00g\00.\00m\00b\00t\00:\004\009\001\00:\009\00-\004\009\001\00:\004\000\00\00\00\00\00\00\00\FF\FF\FF\FF\16\00\00Pi\00n\00v\00a\00l\00i\00d\00 \00s\00u\00r\00r\00o\00g\00a\00t\00e\00 \00p\00a\00i\00r\00\00\00\00\00\FF\FF\FF\FF\01\00\00P0\00\00\00\00\00\00\00\FF\FF\FF\FF4\00\00P@\00m\00o\00o\00n\00b\00i\00t\00l\00a\00n\00g\00/\00c\00o\00r\00e\00/\00b\00u\00i\00l\00t\00i\00n\00:\00t\00o\00_\00s\00t\00r\00i\00n\00g\00.\00m\00b\00t\00:\002\003\009\00:\005\00-\002\003\009\00:\004\004\00\00\00\00\00\00\00\00\00\FF\FF\FF\FF\1E\00\00Pr\00a\00d\00i\00x\00 \00m\00u\00s\00t\00 \00b\00e\00 \00b\00e\00t\00w\00e\00e\00n\00 \002\00 \00a\00n\00d\00 \003\006\00\00\00\00\00\FF\FF\FF\FF$\00\00P0\001\002\003\004\005\006\007\008\009\00a\00b\00c\00d\00e\00f\00g\00h\00i\00j\00k\00l\00m\00n\00o\00p\00q\00r\00s\00t\00u\00v\00w\00x\00y\00z\00\00\00\00\00\00\00\00\00\FF\FF\FF\FF\01\00\00\00\00\00\00\00\00\00\00\00\FF\FF\FF\FF5\00\00P@\00m\00o\00o\00n\00b\00i\00t\00l\00a\00n\00g\00/\00c\00o\00r\00e\00/\00b\00u\00i\00l\00t\00i\00n\00:\00s\00t\00r\00i\00n\00g\00v\00i\00e\00w\00.\00m\00b\00t\00:\001\001\001\00:\005\00-\001\001\001\00:\003\006\00\00\00\00\00\00\00\FF\FF\FF\FF\16\00\00PI\00n\00v\00a\00l\00i\00d\00 \00i\00n\00d\00e\00x\00 \00f\00o\00r\00 \00V\00i\00e\00w\00\00\00\00\00\FF\FF\FF\FF0\00\00P@\00m\00o\00o\00n\00b\00i\00t\00l\00a\00n\00g\00/\00c\00o\00r\00e\00/\00b\00u\00i\00l\00t\00i\00n\00:\00b\00y\00t\00e\00s\00.\00m\00b\00t\00:\002\009\000\00:\005\00-\002\009\000\00:\003\001\00\00\00\00\00\00\00\00\00\FF\FF\FF\FF\11\00\00PC\00h\00a\00r\00 \00o\00u\00t\00 \00o\00f\00 \00r\00a\00n\00g\00e\00\00\00\00\00\00\00\FF\FF\FF\FF\01\00\00P\0A\00\00\00\00\00\00\00\FF\FF\FF\FF\06\00\00P\0A\00 \00 \00a\00t\00 \00\00\00\00\00\FF\FF\FF\FF\04\00\00P \00i\00s\00 \00\00\00\00\00\00\00\00\00\FF\FF\FF\FF\0D\00\00PF\00a\00c\00t\00o\00r\00i\00a\00l\00 \00o\00f\00 \00\00\00\00\00\00\00\FF\FF\FF\FF\00\04\10\00\00\00\00\00\01\00\00\00\02\00\00\00\03\00\00\00\FF\FF\FF\FF\01\00\00P:\00\00\00\00\00\00\00\FF\FF\FF\FF\01\00\00P-\00\00\00\00\00\00\00\FF\FF\FF\FF\01\00\00P/\00\00\00\00\00\00\00")
+(data  (memory $moonbit.memory) (offset (i32.const 10000)) "\FF\FF\FF\FF\00\00\00\00\00\00\00\00\00\00\00\00\FF\FF\FF\FF\01\00\00P0\00\00\00\00\00\00\00\FF\FF\FF\FF4\00\00P@\00m\00o\00o\00n\00b\00i\00t\00l\00a\00n\00g\00/\00c\00o\00r\00e\00/\00b\00u\00i\00l\00t\00i\00n\00:\00t\00o\00_\00s\00t\00r\00i\00n\00g\00.\00m\00b\00t\00:\002\003\009\00:\005\00-\002\003\009\00:\004\004\00\00\00\00\00\00\00\00\00\FF\FF\FF\FF\1E\00\00Pr\00a\00d\00i\00x\00 \00m\00u\00s\00t\00 \00b\00e\00 \00b\00e\00t\00w\00e\00e\00n\00 \002\00 \00a\00n\00d\00 \003\006\00\00\00\00\00\FF\FF\FF\FF$\00\00P0\001\002\003\004\005\006\007\008\009\00a\00b\00c\00d\00e\00f\00g\00h\00i\00j\00k\00l\00m\00n\00o\00p\00q\00r\00s\00t\00u\00v\00w\00x\00y\00z\00\00\00\00\00\00\00\00\00\FF\FF\FF\FF\01\00\00\00\00\00\00\00\00\00\00\00\FF\FF\FF\FF0\00\00P@\00m\00o\00o\00n\00b\00i\00t\00l\00a\00n\00g\00/\00c\00o\00r\00e\00/\00b\00u\00i\00l\00t\00i\00n\00:\00b\00y\00t\00e\00s\00.\00m\00b\00t\00:\002\009\008\00:\005\00-\002\009\008\00:\003\001\00\00\00\00\00\00\00\00\00\FF\FF\FF\FF\11\00\00PC\00h\00a\00r\00 \00o\00u\00t\00 \00o\00f\00 \00r\00a\00n\00g\00e\00\00\00\00\00\00\00\FF\FF\FF\FF\01\00\00P\0A\00\00\00\00\00\00\00\FF\FF\FF\FF\06\00\00P\0A\00 \00 \00a\00t\00 \00\00\00\00\00\FF\FF\FF\FF\04\00\00P \00i\00s\00 \00\00\00\00\00\00\00\00\00\FF\FF\FF\FF\0D\00\00PF\00a\00c\00t\00o\00r\00i\00a\00l\00 \00o\00f\00 \00\00\00\00\00\00\00\FF\FF\FF\FF\00\04\10\00\00\00\00\00\01\00\00\00\02\00\00\00\03\00\00\00")
 (memory $moonbit.memory 1)
 (global $tlsf/ROOT
  (mut i32)
@@ -479,7 +479,7 @@
  (local.set $0
   (i32.and
    (i32.add
-    (i32.const 11168)
+    (i32.const 10616)
     (i32.const 15))
    (i32.const -16)))
  (if
@@ -754,7 +754,7 @@
  (local $2 i32)
  (if
   (i32.gt_u
-   (i32.const 11168)
+   (i32.const 10616)
    (local.get $0))
   (then
    (return))
@@ -867,52 +867,6 @@
     (local.get $elem_size_shift)
     (i32.const 28)))
   (local.get $len)))
-(func $moonbit.i32_array_make_raw (param $size i32) (result i32)
- (local $arr i32)
- (if
-  (i32.lt_s
-   (local.get $size)
-   (i32.const 0))
-  (then
-   (unreachable))
-  (else))
- (i32.store offset=4
-  (local.tee $arr
-   (call $moonbit.gc.malloc
-    (i32.mul
-     (local.get $size)
-     (i32.const 4))))
-  (call $moonbit.make_array_header
-   (i32.const 1)
-   (i32.const 2)
-   (local.get $size)))
- (local.get $arr))
-(func $moonbit.i32_array_make (param $size i32) (param $val i32) (result i32)
- (local $arr i32)
- (local $counter i32)
- (local.set $arr
-  (call $moonbit.i32_array_make_raw
-   (local.get $size)))
- (loop $loop
-  (if
-   (i32.lt_s
-    (local.get $counter)
-    (local.get $size))
-   (then
-    (i32.store offset=8
-     (i32.add
-      (local.get $arr)
-      (i32.mul
-       (local.get $counter)
-       (i32.const 4)))
-     (local.get $val))
-    (local.set $counter
-     (i32.add
-      (local.get $counter)
-      (i32.const 1)))
-    (br $loop))
-   (else)))
- (local.get $arr))
 (func $moonbit.bytes_make_raw (param $size i32) (result i32)
  (local $ptr i32)
  (i32.store offset=4
@@ -1449,2029 +1403,123 @@
  (ref.func $@moonbitlang/core/builtin.Logger::@moonbitlang/core/builtin.StringBuilder::write_char.dyncall_as_@moonbitlang/core/builtin.Logger))
 (global $@moonbitlang/core/builtin.StringBuilder.as_@moonbitlang/core/builtin.Logger.static_method_table_id
  i32
- (i32.const 11096)
+ (i32.const 10592)
 )
-(global $moonbitlang/core/builtin.parse.*bind|5401
- i32
- (i32.const 11120)
-)
-(global $moonbitlang/core/builtin.parse.*bind|5440
- i32
- (i32.const 11120)
-)
-(global $moonbitlang/core/builtin.parse.*bind|5434
- i32
- (i32.const 11136)
-)
-(global $moonbitlang/core/builtin.parse.*bind|5421
- i32
- (i32.const 11120)
-)
-(global $moonbitlang/core/builtin.parse.*bind|5415
- i32
- (i32.const 11120)
-)
-(global $moonbitlang/core/builtin.output.*bind|8190
- i32
- (i32.const 11152)
-)
-(global $moonbitlang/core/builtin.output.*bind|8184
- i32
- (i32.const 11152)
-)
-(global $moonbitlang/core/builtin.boyer_moore_horspool_find.constr/55
- (mut i64)
- (i64.const 0)
-)
-(global $moonbitlang/core/builtin.brute_force_find.constr/69
- (mut i64)
- (i64.const 0)
-)
-(func $username/moonbit_examples/cmd/factorial.factorial (param $n/317 i32) (result i32)
- (local $i/316 i32)
- (local $*tmp/924 i32)
- (local $*tmp/925 i32)
- (local $result/315 i32)
- (local.set $result/315
+(func $username/moonbit_examples/cmd/factorial.factorial (param $n/290 i32) (result i32)
+ (local $i/289 i32)
+ (local $*tmp/799 i32)
+ (local $*tmp/800 i32)
+ (local $result/288 i32)
+ (local.set $result/288
   (i32.const 1))
  (i32.const 1)
- (loop $loop:318 (param i32)
-  (local.tee $i/316)
-  (local.get $n/317)
+ (loop $loop:291 (param i32)
+  (local.tee $i/289)
+  (local.get $n/290)
   (i32.le_s)
   (if
    (then
-    (local.set $result/315
+    (local.set $result/288
      (i32.mul
-      (local.tee $*tmp/924
-       (local.get $result/315))
-      (local.get $i/316)))
-    (local.tee $*tmp/925
+      (local.tee $*tmp/799
+       (local.get $result/288))
+      (local.get $i/289)))
+    (local.tee $*tmp/800
      (i32.add
-      (local.get $i/316)
+      (local.get $i/289)
       (i32.const 1)))
-    (br $loop:318))
+    (br $loop:291))
    (else)))
- (local.get $result/315))
-(func $@moonbitlang/core/builtin.Show::@moonbitlang/core/builtin.SourceLoc::output (param $self/313 i32) (param $logger/0/314 i32) (param $logger/1/314 i32) (result i32)
- (local $*tmp/922 i32)
- (local $*tmp/923 i32)
- (call $@moonbitlang/core/builtin.Show::@moonbitlang/core/builtin.SourceLocRepr::output
-  (local.tee $*tmp/922
-   (call $@moonbitlang/core/builtin.SourceLocRepr::parse
-    (local.tee $*tmp/923
-     (local.get $self/313))))
-  (local.get $logger/0/314)
-  (local.get $logger/1/314)))
-(func $@moonbitlang/core/builtin.Show::@moonbitlang/core/builtin.SourceLocRepr::output (param $self/299 i32) (param $logger/0/312 i32) (param $logger/1/312 i32) (result i32)
- (local $pkg/0/298 i32)
- (local $pkg/1/298 i32)
- (local $pkg/2/298 i32)
- (local $*bind/300 i64)
- (local $*bind/301 i32)
- (local $*Some/302 i64)
- (local $*first_slash/303 i32)
- (local $*bind/304 i64)
- (local $*Some/305 i64)
- (local $*second_slash/306 i32)
- (local $module_name_end/307 i32)
- (local $*module_name/0/308 i32)
- (local $*module_name/1/308 i32)
- (local $*module_name/2/308 i32)
- (local $*package_name/309 i32)
- (local $*Some/310 i32)
- (local $*pkg_name/0/311 i32)
- (local $*pkg_name/1/311 i32)
- (local $*pkg_name/2/311 i32)
- (local $*bind/0/901 i32)
- (local $*bind/1/901 i32)
- (local $*bind/0/902 i32)
- (local $*bind/1/902 i32)
- (local $filename/0/903 i32)
- (local $filename/1/903 i32)
- (local $filename/2/903 i32)
- (local $start_line/0/904 i32)
- (local $start_line/1/904 i32)
- (local $start_line/2/904 i32)
- (local $start_column/0/905 i32)
- (local $start_column/1/905 i32)
- (local $start_column/2/905 i32)
- (local $end_line/0/906 i32)
- (local $end_line/1/906 i32)
- (local $end_line/2/906 i32)
- (local $end_column/0/907 i32)
- (local $end_column/1/907 i32)
- (local $end_column/2/907 i32)
- (local $None/908 i32)
- (local $None/909 i32)
- (local $*tmp/0/910 i32)
- (local $*tmp/1/910 i32)
- (local $*tmp/2/910 i32)
- (local $Some/911 i32)
- (local $*tmp/0/912 i32)
- (local $*tmp/1/912 i32)
- (local $*tmp/2/912 i32)
- (local $*tmp/913 i32)
- (local $*tmp/914 i64)
- (local $*tmp/915 i32)
- (local $*tmp/0/916 i32)
- (local $*tmp/1/916 i32)
- (local $*tmp/2/916 i32)
- (local $*tmp/0/917 i32)
- (local $*tmp/1/917 i32)
- (local $*tmp/2/917 i32)
- (local $*tmp/918 i32)
- (local $*tmp/919 i32)
- (local $*tmp/0/920 i32)
- (local $*tmp/1/920 i32)
- (local $*tmp/2/920 i32)
- (local $*tmp/921 i32)
- (local $*field/0/926 i32)
- (local $*field/1/926 i32)
- (local $*field/2/926 i32)
- (local $*field/0/927 i32)
- (local $*field/1/927 i32)
- (local $*field/2/927 i32)
- (local $*field/0/928 i32)
- (local $*field/1/928 i32)
- (local $*field/2/928 i32)
- (local $*field/0/929 i32)
- (local $*field/1/929 i32)
- (local $*field/2/929 i32)
- (local $*field/0/930 i32)
- (local $*field/1/930 i32)
- (local $*field/2/930 i32)
- (local $*field/0/931 i32)
- (local $*field/1/931 i32)
- (local $*field/2/931 i32)
- (local $*field/932 i32)
- (local $*field/0/933 i32)
- (local $*field/1/933 i32)
- (local $*field/2/933 i32)
- (local $*field/0/934 i32)
- (local $*field/1/934 i32)
- (local $*field/2/934 i32)
- (local $*cnt/991 i32)
- (local $*new_cnt/992 i32)
- (local $*cnt/993 i32)
- (local $*new_cnt/994 i32)
- (local $*cnt/995 i32)
- (local $*field/0/996 i32)
- (local $*field/1/996 i32)
- (local $*field/2/996 i32)
- (local $*field/0/997 i32)
- (local $*field/1/997 i32)
- (local $*field/2/997 i32)
- (local $*field/0/998 i32)
- (local $*field/1/998 i32)
- (local $*field/2/998 i32)
- (local $*field/0/999 i32)
- (local $*field/1/999 i32)
- (local $*field/2/999 i32)
- (local $*field/0/1000 i32)
- (local $*field/1/1000 i32)
- (local $*field/2/1000 i32)
- (local $*new_cnt/1001 i32)
- (local $*tag/1006 i32)
- (local $ptr/1007 i32)
- (local $ptr/1008 i32)
- (local $ptr/1009 i32)
- (local $ptr/1010 i32)
- (i32.load offset=56
-  (local.get $self/299))
- (i32.load offset=8
-  (local.get $self/299))
- (local.set $*field/2/934
-  (i32.load offset=12
-   (local.get $self/299)))
- (local.set $*field/1/934)
- (local.tee $*field/0/934)
- (local.get $*field/1/934)
- (local.set $pkg/2/298
-  (local.get $*field/2/934))
- (local.set $pkg/1/298)
- (local.set $pkg/0/298)
- (local.set $*tmp/921
-  (call $moonbit.array_length
-   (global.get $moonbitlang/core/builtin.output.*bind|8190)))
- (call $moonbit.incref
-  (global.get $moonbitlang/core/builtin.output.*bind|8190))
- (global.get $moonbitlang/core/builtin.output.*bind|8190)
- (i32.const 0)
- (local.set $*tmp/2/920
-  (local.get $*tmp/921))
- (local.set $*tmp/1/920)
- (local.set $*tmp/0/920)
- (call $moonbit.incref
-  (local.get $pkg/0/298))
- (call $moonbit.incref
-  (local.get $pkg/0/298))
- (i32.load offset=16
-  (local.tee $*bind/301
-   (if (result i32)
-    (i64.eq
-     (local.tee $*bind/300
-      (call $StringView::find
-       (local.get $pkg/0/298)
-       (local.get $pkg/1/298)
-       (local.get $pkg/2/298)
-       (local.get $*tmp/0/920)
-       (local.get $*tmp/1/920)
-       (local.get $*tmp/2/920)))
-     (i64.const 4294967296))
-    (then
-     (local.set $None/908
-      (i32.const 10000))
-     (i32.store offset=4
-      (local.tee $ptr/1007
-       (call $moonbit.gc.malloc
-        (i32.const 16)))
-      (i32.const 2097664))
-     (i32.store offset=20
-      (local.get $ptr/1007)
-      (local.get $None/908))
-     (i32.store offset=16
-      (local.get $ptr/1007)
-      (local.get $pkg/0/298))
-     (i32.store offset=8
-      (local.get $ptr/1007)
-      (local.get $pkg/1/298))
-     (i32.store offset=12
-      (local.get $ptr/1007)
-      (local.get $pkg/2/298))
-     (local.get $ptr/1007))
-    (else
-     (local.set $*tmp/919
-      (i32.add
-       (local.tee $*first_slash/303
-        (i32.wrap_i64
-         (local.tee $*Some/302
-          (local.get $*bind/300))))
-       (i32.const 1)))
-     (call $moonbit.incref
-      (local.get $pkg/0/298))
-     (call $StringView::view.inner
-      (local.get $pkg/0/298)
-      (local.get $pkg/1/298)
-      (local.get $pkg/2/298)
-      (local.get $*tmp/919)
-      (i64.const 4294967296))
-     (local.set $*tmp/2/916)
-     (local.set $*tmp/1/916)
-     (local.set $*tmp/0/916)
-     (local.set $*tmp/918
-      (call $moonbit.array_length
-       (global.get $moonbitlang/core/builtin.output.*bind|8184)))
-     (call $moonbit.incref
-      (global.get $moonbitlang/core/builtin.output.*bind|8184))
-     (global.get $moonbitlang/core/builtin.output.*bind|8184)
-     (i32.const 0)
-     (local.set $*tmp/2/917
-      (local.get $*tmp/918))
-     (local.set $*tmp/1/917)
-     (local.set $*tmp/0/917)
-     (if (result i32)
-      (i64.eq
-       (local.tee $*bind/304
-        (call $StringView::find
-         (local.get $*tmp/0/916)
-         (local.get $*tmp/1/916)
-         (local.get $*tmp/2/916)
-         (local.get $*tmp/0/917)
-         (local.get $*tmp/1/917)
-         (local.get $*tmp/2/917)))
-       (i64.const 4294967296))
-      (then
-       (local.set $None/909
-        (i32.const 10000))
-       (i32.store offset=4
-        (local.tee $ptr/1008
-         (call $moonbit.gc.malloc
-          (i32.const 16)))
-        (i32.const 2097664))
-       (i32.store offset=20
-        (local.get $ptr/1008)
-        (local.get $None/909))
-       (i32.store offset=16
-        (local.get $ptr/1008)
-        (local.get $pkg/0/298))
-       (i32.store offset=8
-        (local.get $ptr/1008)
-        (local.get $pkg/1/298))
-       (i32.store offset=12
-        (local.get $ptr/1008)
-        (local.get $pkg/2/298))
-       (local.get $ptr/1008))
-      (else
-       (local.set $*second_slash/306
-        (i32.wrap_i64
-         (local.tee $*Some/305
-          (local.get $*bind/304))))
-       (local.set $*tmp/914
-        (i64.extend_i32_s
-         (local.tee $module_name_end/307
-          (i32.add
-           (local.tee $*tmp/915
-            (i32.add
-             (local.get $*first_slash/303)
-             (i32.const 1)))
-           (local.get $*second_slash/306)))))
-       (call $moonbit.incref
-        (local.get $pkg/0/298))
-       (call $StringView::view.inner
-        (local.get $pkg/0/298)
-        (local.get $pkg/1/298)
-        (local.get $pkg/2/298)
-        (i32.const 0)
-        (local.get $*tmp/914))
-       (local.set $*tmp/2/910)
-       (local.set $*tmp/1/910)
-       (local.set $*tmp/0/910)
-       (local.set $*tmp/913
-        (i32.add
-         (local.get $module_name_end/307)
-         (i32.const 1)))
-       (call $StringView::view.inner
-        (local.get $pkg/0/298)
-        (local.get $pkg/1/298)
-        (local.get $pkg/2/298)
-        (local.get $*tmp/913)
-        (i64.const 4294967296))
-       (local.set $*tmp/2/912)
-       (local.set $*tmp/1/912)
-       (local.set $*tmp/0/912)
-       (i32.store offset=4
-        (local.tee $ptr/1010
-         (call $moonbit.gc.malloc
-          (i32.const 12)))
-        (i32.const 2097409))
-       (i32.store offset=16
-        (local.get $ptr/1010)
-        (local.get $*tmp/0/912))
-       (i32.store offset=8
-        (local.get $ptr/1010)
-        (local.get $*tmp/1/912))
-       (i32.store offset=12
-        (local.get $ptr/1010)
-        (local.get $*tmp/2/912))
-       (local.set $Some/911
-        (local.get $ptr/1010))
-       (i32.store offset=4
-        (local.tee $ptr/1009
-         (call $moonbit.gc.malloc
-          (i32.const 16)))
-        (i32.const 2097664))
-       (i32.store offset=20
-        (local.get $ptr/1009)
-        (local.get $Some/911))
-       (i32.store offset=16
-        (local.get $ptr/1009)
-        (local.get $*tmp/0/910))
-       (i32.store offset=8
-        (local.get $ptr/1009)
-        (local.get $*tmp/1/910))
-       (i32.store offset=12
-        (local.get $ptr/1009)
-        (local.get $*tmp/2/910))
-       (local.get $ptr/1009)))))))
- (i32.load offset=8
-  (local.get $*bind/301))
- (local.set $*field/2/933
-  (i32.load offset=12
-   (local.get $*bind/301)))
- (local.set $*field/1/933)
- (local.tee $*field/0/933)
- (local.get $*field/1/933)
- (local.set $*module_name/2/308
-  (local.get $*field/2/933))
- (local.set $*module_name/1/308)
- (local.set $*module_name/0/308)
- (local.set $*field/932
-  (i32.load offset=20
-   (local.get $*bind/301)))
- (if
-  (i32.gt_s
-   (local.tee $*cnt/991
-    (i32.load
-     (local.get $*bind/301)))
-   (i32.const 1))
-  (then
-   (call $moonbit.incref
-    (local.get $*field/932))
-   (call $moonbit.incref
-    (local.get $*module_name/0/308))
-   (local.set $*new_cnt/992
-    (i32.sub
-     (local.get $*cnt/991)
-     (i32.const 1)))
-   (i32.store
-    (local.get $*bind/301)
-    (local.get $*new_cnt/992)))
-  (else
-   (if
-    (i32.eq
-     (local.get $*cnt/991)
-     (i32.const 1))
-    (then
-     (call $moonbit.free
-      (local.get $*bind/301)))
-    (else))))
- (if
-  (i32.eq
-   (local.tee $*tag/1006
-    (call $moonbit.get_tag
-     (local.tee $*package_name/309
-      (local.get $*field/932))))
-   (i32.const 1))
-  (then
-   (i32.load offset=16
-    (local.tee $*Some/310
-     (local.get $*package_name/309)))
-   (i32.load offset=8
-    (local.get $*Some/310))
-   (local.set $*field/2/931
-    (i32.load offset=12
-     (local.get $*Some/310)))
-   (local.set $*field/1/931)
-   (local.set $*field/0/931)
-   (if
-    (i32.gt_s
-     (local.tee $*cnt/993
-      (i32.load
-       (local.get $*Some/310)))
-     (i32.const 1))
-    (then
-     (call $moonbit.incref
-      (local.get $*field/0/931))
-     (local.set $*new_cnt/994
-      (i32.sub
-       (local.get $*cnt/993)
-       (i32.const 1)))
-     (i32.store
-      (local.get $*Some/310)
-      (local.get $*new_cnt/994)))
-    (else
-     (if
-      (i32.eq
-       (local.get $*cnt/993)
-       (i32.const 1))
-      (then
-       (call $moonbit.free
-        (local.get $*Some/310)))
-      (else))))
-   (local.get $*field/0/931)
-   (local.get $*field/1/931)
-   (local.set $*pkg_name/2/311
-    (local.get $*field/2/931))
-   (local.set $*pkg_name/1/311)
-   (local.set $*pkg_name/0/311)
-   (if
-    (local.get $logger/1/312)
-    (then
-     (call $moonbit.incref
-      (local.get $logger/1/312)))
-    (else))
-   (drop
-    (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_2)
-     (local.get $logger/1/312)
-     (local.get $*pkg_name/0/311)
-     (local.get $*pkg_name/1/311)
-     (local.get $*pkg_name/2/311)
-     (i32.load offset=16
-      (local.get $logger/0/312))))
-   (local.get $logger/0/312)
-   (local.set $*bind/1/901
-    (local.get $logger/1/312))
-   (local.set $*bind/0/901)
-   (if
-    (local.get $*bind/1/901)
-    (then
-     (call $moonbit.incref
-      (local.get $*bind/1/901)))
-    (else))
-   (drop
-    (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_3)
-     (local.get $*bind/1/901)
-     (i32.const 47)
-     (i32.load offset=20
-      (local.get $*bind/0/901)))))
-  (else
-   (call $moonbit.decref
-    (local.get $*package_name/309))))
- (i32.load offset=60
-  (local.get $self/299))
- (i32.load offset=16
-  (local.get $self/299))
- (local.set $*field/2/930
-  (i32.load offset=20
-   (local.get $self/299)))
- (local.set $*field/1/930)
- (local.tee $*field/0/930)
- (local.get $*field/1/930)
- (local.set $filename/2/903
-  (local.get $*field/2/930))
- (local.set $filename/1/903)
- (local.tee $filename/0/903)
- (call $moonbit.incref)
- (if
-  (local.get $logger/1/312)
-  (then
-   (call $moonbit.incref
-    (local.get $logger/1/312)))
-  (else))
- (drop
-  (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_2)
-   (local.get $logger/1/312)
-   (local.get $filename/0/903)
-   (local.get $filename/1/903)
-   (local.get $filename/2/903)
-   (i32.load offset=16
-    (local.get $logger/0/312))))
- (if
-  (local.get $logger/1/312)
-  (then
-   (call $moonbit.incref
-    (local.get $logger/1/312)))
-  (else))
- (drop
-  (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_3)
-   (local.get $logger/1/312)
-   (i32.const 58)
-   (i32.load offset=20
-    (local.get $logger/0/312))))
- (i32.load offset=64
-  (local.get $self/299))
- (i32.load offset=24
-  (local.get $self/299))
- (local.set $*field/2/929
-  (i32.load offset=28
-   (local.get $self/299)))
- (local.set $*field/1/929)
- (local.tee $*field/0/929)
- (local.get $*field/1/929)
- (local.set $start_line/2/904
-  (local.get $*field/2/929))
- (local.set $start_line/1/904)
- (local.tee $start_line/0/904)
- (call $moonbit.incref)
- (if
-  (local.get $logger/1/312)
-  (then
-   (call $moonbit.incref
-    (local.get $logger/1/312)))
-  (else))
- (drop
-  (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_2)
-   (local.get $logger/1/312)
-   (local.get $start_line/0/904)
-   (local.get $start_line/1/904)
-   (local.get $start_line/2/904)
-   (i32.load offset=16
-    (local.get $logger/0/312))))
- (if
-  (local.get $logger/1/312)
-  (then
-   (call $moonbit.incref
-    (local.get $logger/1/312)))
-  (else))
- (drop
-  (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_3)
-   (local.get $logger/1/312)
-   (i32.const 58)
-   (i32.load offset=20
-    (local.get $logger/0/312))))
- (i32.load offset=68
-  (local.get $self/299))
- (i32.load offset=32
-  (local.get $self/299))
- (local.set $*field/2/928
-  (i32.load offset=36
-   (local.get $self/299)))
- (local.set $*field/1/928)
- (local.tee $*field/0/928)
- (local.get $*field/1/928)
- (local.set $start_column/2/905
-  (local.get $*field/2/928))
- (local.set $start_column/1/905)
- (local.tee $start_column/0/905)
- (call $moonbit.incref)
- (if
-  (local.get $logger/1/312)
-  (then
-   (call $moonbit.incref
-    (local.get $logger/1/312)))
-  (else))
- (drop
-  (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_2)
-   (local.get $logger/1/312)
-   (local.get $start_column/0/905)
-   (local.get $start_column/1/905)
-   (local.get $start_column/2/905)
-   (i32.load offset=16
-    (local.get $logger/0/312))))
- (if
-  (local.get $logger/1/312)
-  (then
-   (call $moonbit.incref
-    (local.get $logger/1/312)))
-  (else))
- (drop
-  (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_3)
-   (local.get $logger/1/312)
-   (i32.const 45)
-   (i32.load offset=20
-    (local.get $logger/0/312))))
- (i32.load offset=72
-  (local.get $self/299))
- (i32.load offset=40
-  (local.get $self/299))
- (local.set $*field/2/927
-  (i32.load offset=44
-   (local.get $self/299)))
- (local.set $*field/1/927)
- (local.tee $*field/0/927)
- (local.get $*field/1/927)
- (local.set $end_line/2/906
-  (local.get $*field/2/927))
- (local.set $end_line/1/906)
- (local.tee $end_line/0/906)
- (call $moonbit.incref)
- (if
-  (local.get $logger/1/312)
-  (then
-   (call $moonbit.incref
-    (local.get $logger/1/312)))
-  (else))
- (drop
-  (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_2)
-   (local.get $logger/1/312)
-   (local.get $end_line/0/906)
-   (local.get $end_line/1/906)
-   (local.get $end_line/2/906)
-   (i32.load offset=16
-    (local.get $logger/0/312))))
- (if
-  (local.get $logger/1/312)
-  (then
-   (call $moonbit.incref
-    (local.get $logger/1/312)))
-  (else))
- (drop
-  (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_3)
-   (local.get $logger/1/312)
-   (i32.const 58)
-   (i32.load offset=20
-    (local.get $logger/0/312))))
- (i32.load offset=76
-  (local.get $self/299))
- (i32.load offset=48
-  (local.get $self/299))
- (local.set $*field/2/926
-  (i32.load offset=52
-   (local.get $self/299)))
- (local.set $*field/1/926)
- (local.set $*field/0/926)
- (if
-  (i32.gt_s
-   (local.tee $*cnt/995
-    (i32.load
-     (local.get $self/299)))
-   (i32.const 1))
-  (then
-   (call $moonbit.incref
-    (local.get $*field/0/926))
-   (local.set $*new_cnt/1001
-    (i32.sub
-     (local.get $*cnt/995)
-     (i32.const 1)))
-   (i32.store
-    (local.get $self/299)
-    (local.get $*new_cnt/1001)))
-  (else
-   (if
-    (i32.eq
-     (local.get $*cnt/995)
-     (i32.const 1))
-    (then
-     (i32.load offset=72
-      (local.get $self/299))
-     (i32.load offset=40
-      (local.get $self/299))
-     (local.set $*field/2/1000
-      (i32.load offset=44
-       (local.get $self/299)))
-     (local.set $*field/1/1000)
-     (local.tee $*field/0/1000)
-     (call $moonbit.decref)
-     (i32.load offset=68
-      (local.get $self/299))
-     (i32.load offset=32
-      (local.get $self/299))
-     (local.set $*field/2/999
-      (i32.load offset=36
-       (local.get $self/299)))
-     (local.set $*field/1/999)
-     (local.tee $*field/0/999)
-     (call $moonbit.decref)
-     (i32.load offset=64
-      (local.get $self/299))
-     (i32.load offset=24
-      (local.get $self/299))
-     (local.set $*field/2/998
-      (i32.load offset=28
-       (local.get $self/299)))
-     (local.set $*field/1/998)
-     (local.tee $*field/0/998)
-     (call $moonbit.decref)
-     (i32.load offset=60
-      (local.get $self/299))
-     (i32.load offset=16
-      (local.get $self/299))
-     (local.set $*field/2/997
-      (i32.load offset=20
-       (local.get $self/299)))
-     (local.set $*field/1/997)
-     (local.tee $*field/0/997)
-     (call $moonbit.decref)
-     (i32.load offset=56
-      (local.get $self/299))
-     (i32.load offset=8
-      (local.get $self/299))
-     (local.set $*field/2/996
-      (i32.load offset=12
-       (local.get $self/299)))
-     (local.set $*field/1/996)
-     (local.tee $*field/0/996)
-     (call $moonbit.decref)
-     (call $moonbit.free
-      (local.get $self/299)))
-    (else))))
- (local.get $*field/0/926)
- (local.get $*field/1/926)
- (local.set $end_column/2/907
-  (local.get $*field/2/926))
- (local.set $end_column/1/907)
- (local.set $end_column/0/907)
- (if
-  (local.get $logger/1/312)
-  (then
-   (call $moonbit.incref
-    (local.get $logger/1/312)))
-  (else))
- (drop
-  (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_2)
-   (local.get $logger/1/312)
-   (local.get $end_column/0/907)
-   (local.get $end_column/1/907)
-   (local.get $end_column/2/907)
-   (i32.load offset=16
-    (local.get $logger/0/312))))
- (if
-  (local.get $logger/1/312)
-  (then
-   (call $moonbit.incref
-    (local.get $logger/1/312)))
-  (else))
- (drop
-  (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_3)
-   (local.get $logger/1/312)
-   (i32.const 64)
-   (i32.load offset=20
-    (local.get $logger/0/312))))
- (local.get $logger/0/312)
- (local.set $*bind/1/902
-  (local.get $logger/1/312))
- (local.set $*bind/0/902)
- (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_2)
-  (local.get $*bind/1/902)
-  (local.get $*module_name/0/308)
-  (local.get $*module_name/1/308)
-  (local.get $*module_name/2/308)
-  (i32.load offset=16
-   (local.get $*bind/0/902))))
-(func $moonbitlang/core/builtin.println|String| (param $input/297 i32) (result i32)
- (call $moonbit.println
-  (local.get $input/297))
- (call $moonbit.decref
-  (local.get $input/297))
- (i32.const 0))
-(func $@moonbitlang/core/builtin.Show::Int::output (param $self/295 i32) (param $logger/0/294 i32) (param $logger/1/294 i32) (result i32)
- (local $*tmp/900 i32)
- (local.set $*tmp/900
-  (call $Int::to_string.inner
-   (local.get $self/295)
-   (i32.const 10)))
- (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_0)
-  (local.get $logger/1/294)
-  (local.get $*tmp/900)
-  (i32.load offset=8
-   (local.get $logger/0/294))))
-(func $@moonbitlang/core/builtin.Logger::@moonbitlang/core/builtin.StringBuilder::write_view (param $self/292 i32) (param $str/0/293 i32) (param $str/1/293 i32) (param $str/2/293 i32) (result i32)
- (local $*tmp/881 i32)
- (local $len/882 i32)
- (local $*tmp/883 i32)
- (local $*tmp/884 i32)
- (local $end/885 i32)
- (local $start/886 i32)
- (local $data/887 i32)
- (local $len/888 i32)
- (local $str/889 i32)
- (local $start/890 i32)
- (local $*tmp/891 i32)
- (local $end/892 i32)
- (local $start/893 i32)
- (local $*tmp/894 i32)
- (local $len/895 i32)
- (local $*tmp/896 i32)
- (local $*tmp/897 i32)
- (local $end/898 i32)
- (local $start/899 i32)
- (local $*field/935 i32)
- (local $*field/936 i32)
- (local $*field/937 i32)
- (local.set $len/882
-  (i32.load offset=8
-   (local.get $self/292)))
- (local.set $end/885
-  (local.get $str/2/293))
- (local.set $start/886
-  (local.get $str/1/293))
- (local.set $*tmp/883
-  (i32.mul
-   (local.tee $*tmp/884
-    (i32.sub
-     (local.get $end/885)
-     (local.get $start/886)))
-   (i32.const 2)))
- (local.set $*tmp/881
-  (i32.add
-   (local.get $len/882)
-   (local.get $*tmp/883)))
- (call $moonbit.incref
-  (local.get $self/292))
- (drop
-  (call $@moonbitlang/core/builtin.StringBuilder::grow_if_necessary
-   (local.get $self/292)
-   (local.get $*tmp/881)))
- (local.set $data/887
-  (local.tee $*field/937
-   (i32.load offset=12
-    (local.get $self/292))))
- (local.set $len/888
-  (i32.load offset=8
-   (local.get $self/292)))
- (local.set $str/889
-  (local.tee $*field/936
-   (local.get $str/0/293)))
- (local.set $start/890
-  (local.get $str/1/293))
- (local.set $end/892
-  (local.get $str/2/293))
- (local.set $start/893
-  (local.get $str/1/293))
- (local.set $*tmp/891
-  (i32.sub
-   (local.get $end/892)
-   (local.get $start/893)))
- (call $moonbit.incref
-  (local.get $str/889))
- (call $moonbit.incref
-  (local.get $data/887))
- (drop
-  (call $FixedArray::blit_from_string
-   (local.get $data/887)
-   (local.get $len/888)
-   (local.get $str/889)
-   (local.get $start/890)
-   (local.get $*tmp/891)))
- (local.set $len/895
-  (i32.load offset=8
-   (local.get $self/292)))
- (local.set $end/898
-  (local.get $str/2/293))
- (local.set $*field/935
-  (local.get $str/1/293))
- (call $moonbit.decref
-  (local.get $str/0/293))
- (local.set $start/899
-  (local.get $*field/935))
- (local.set $*tmp/896
-  (i32.mul
-   (local.tee $*tmp/897
-    (i32.sub
-     (local.get $end/898)
-     (local.get $start/899)))
-   (i32.const 2)))
- (local.set $*tmp/894
-  (i32.add
-   (local.get $len/895)
-   (local.get $*tmp/896)))
- (i32.store offset=8
-  (local.get $self/292)
-  (local.get $*tmp/894))
- (call $moonbit.decref
-  (local.get $self/292))
- (i32.const 0))
-(func $String::offset_of_nth_char.inner (param $self/289 i32) (param $i/290 i32) (param $start_offset/291 i32) (param $end_offset/287 i64) (result i64)
- (local $end_offset/286 i32)
- (local $*Some/288 i64)
- (local $*tmp/880 i32)
- (local.set $end_offset/286
-  (if (result i32)
-   (i64.eq
-    (local.get $end_offset/287)
-    (i64.const 4294967296))
-   (then
-    (call $moonbit.array_length
-     (local.get $self/289)))
-   (else
-    (i32.wrap_i64
-     (local.tee $*Some/288
-      (local.get $end_offset/287))))))
- (if (result i64)
-  (i32.ge_s
-   (local.get $i/290)
-   (i32.const 0))
-  (then
-   (call $String::offset_of_nth_char_forward
-    (local.get $self/289)
-    (local.get $i/290)
-    (local.get $start_offset/291)
-    (local.get $end_offset/286)))
-  (else
-   (local.set $*tmp/880
-    (i32.sub
-     (i32.const 0)
-     (local.get $i/290)))
-   (call $String::offset_of_nth_char_backward
-    (local.get $self/289)
-    (local.get $*tmp/880)
-    (local.get $start_offset/291)
-    (local.get $end_offset/286)))))
-(func $String::offset_of_nth_char_forward (param $self/284 i32) (param $n/282 i32) (param $start_offset/278 i32) (param $end_offset/279 i32) (result i64)
- (local $c/283 i32)
- (local $*tmp/871 i32)
- (local $*tmp/872 i32)
- (local $*tmp/873 i32)
- (local $*tmp/874 i32)
- (local $*tmp/875 i32)
- (local $*tmp/876 i32)
- (local $*tmp/877 i32)
- (local $*tmp/878 i32)
- (local $*tmp/879 i32)
- (local $utf16_offset/280 i32)
- (local $char_count/281 i32)
- (if (result i64)
-  (if (result i32)
-   (i32.ge_s
-    (local.get $start_offset/278)
-    (i32.const 0))
-   (then
-    (i32.le_s
-     (local.get $start_offset/278)
-     (local.get $end_offset/279)))
-   (else
-    (i32.const 0)))
-  (then
-   (local.set $utf16_offset/280
-    (local.get $start_offset/278))
-   (local.set $char_count/281
-    (i32.const 0))
-   (loop $loop:285
-    (if
-     (if (result i32)
-      (i32.lt_s
-       (local.tee $*tmp/872
-        (local.get $utf16_offset/280))
-       (local.get $end_offset/279))
-      (then
-       (i32.lt_s
-        (local.tee $*tmp/871
-         (local.get $char_count/281))
-        (local.get $n/282)))
-      (else
-       (i32.const 0)))
-     (then
-      (local.set $*tmp/876
-       (local.get $utf16_offset/280))
-      (local.set $c/283
-       (i32.load16_u offset=8
-        (i32.add
-         (local.get $self/284)
-         (i32.shl
-          (local.get $*tmp/876)
-          (i32.const 1)))))
-      (if
-       (if (result i32)
-        (i32.le_s
-         (i32.const 55296)
-         (local.get $c/283))
-        (then
-         (i32.le_s
-          (local.get $c/283)
-          (i32.const 56319)))
-        (else
-         (i32.const 0)))
-       (then
-        (local.set $utf16_offset/280
-         (i32.add
-          (local.tee $*tmp/873
-           (local.get $utf16_offset/280))
-          (i32.const 2))))
-       (else
-        (local.set $utf16_offset/280
-         (i32.add
-          (local.tee $*tmp/874
-           (local.get $utf16_offset/280))
-          (i32.const 1)))))
-      (local.set $char_count/281
-       (i32.add
-        (local.tee $*tmp/875
-         (local.get $char_count/281))
-        (i32.const 1)))
-      (br $loop:285))
-     (else
-      (call $moonbit.decref
-       (local.get $self/284)))))
-   (if (result i64)
-    (if (result i32)
-     (i32.lt_s
-      (local.tee $*tmp/878
-       (local.get $char_count/281))
-      (local.get $n/282))
-     (then
-      (i32.const 1))
-     (else
-      (i32.ge_s
-       (local.tee $*tmp/877
-        (local.get $utf16_offset/280))
-       (local.get $end_offset/279))))
-    (then
-     (i64.const 4294967296))
-    (else
-     (i64.extend_i32_s
-      (local.tee $*tmp/879
-       (local.get $utf16_offset/280))))))
-  (else
-   (call $moonbit.decref
-    (local.get $self/284))
-   (call $moonbitlang/core/builtin.abort|Option<Int>|
-    (i32.const 10128)
-    (i32.const 10016)))))
-(func $String::offset_of_nth_char_backward (param $self/276 i32) (param $n/274 i32) (param $start_offset/273 i32) (param $end_offset/272 i32) (result i64)
- (local $c/275 i32)
- (local $*tmp/860 i32)
- (local $*tmp/861 i32)
- (local $*tmp/862 i32)
- (local $*tmp/863 i32)
- (local $*tmp/864 i32)
- (local $*tmp/865 i32)
- (local $*tmp/866 i32)
- (local $*tmp/867 i32)
- (local $*tmp/868 i32)
- (local $*tmp/869 i32)
- (local $*tmp/870 i32)
- (local $char_count/270 i32)
- (local $utf16_offset/271 i32)
- (local.set $char_count/270
-  (i32.const 0))
- (local.set $utf16_offset/271
-  (local.get $end_offset/272))
- (loop $loop:277
-  (if
-   (if (result i32)
-    (i32.ge_s
-     (local.tee $*tmp/861
-      (i32.sub
-       (local.tee $*tmp/862
-        (local.get $utf16_offset/271))
-       (i32.const 1)))
-     (local.get $start_offset/273))
-    (then
-     (i32.lt_s
-      (local.tee $*tmp/860
-       (local.get $char_count/270))
-      (local.get $n/274)))
-    (else
-     (i32.const 0)))
-   (then
-    (local.set $*tmp/866
-     (i32.sub
-      (local.tee $*tmp/867
-       (local.get $utf16_offset/271))
-      (i32.const 1)))
-    (local.set $c/275
-     (i32.load16_u offset=8
-      (i32.add
-       (local.get $self/276)
-       (i32.shl
-        (local.get $*tmp/866)
-        (i32.const 1)))))
-    (if
-     (if (result i32)
-      (i32.le_s
-       (i32.const 56320)
-       (local.get $c/275))
-      (then
-       (i32.le_s
-        (local.get $c/275)
-        (i32.const 57343)))
-      (else
-       (i32.const 0)))
-     (then
-      (local.set $utf16_offset/271
-       (i32.sub
-        (local.tee $*tmp/863
-         (local.get $utf16_offset/271))
-        (i32.const 2))))
-     (else
-      (local.set $utf16_offset/271
-       (i32.sub
-        (local.tee $*tmp/864
-         (local.get $utf16_offset/271))
-        (i32.const 1)))))
-    (local.set $char_count/270
-     (i32.add
-      (local.tee $*tmp/865
-       (local.get $char_count/270))
-      (i32.const 1)))
-    (br $loop:277))
-   (else
-    (call $moonbit.decref
-     (local.get $self/276)))))
- (if (result i64)
-  (if (result i32)
-   (i32.lt_s
-    (local.tee $*tmp/869
-     (local.get $char_count/270))
-    (local.get $n/274))
-   (then
-    (i32.const 1))
-   (else
-    (i32.lt_s
-     (local.tee $*tmp/868
-      (local.get $utf16_offset/271))
-     (local.get $start_offset/273))))
-  (then
-   (i64.const 4294967296))
-  (else
-   (i64.extend_i32_s
-    (local.tee $*tmp/870
-     (local.get $utf16_offset/271))))))
-(func $String::char_length_ge.inner (param $self/262 i32) (param $len/265 i32) (param $start_offset/269 i32) (param $end_offset/260 i64) (result i32)
- (local $end_offset/259 i32)
- (local $*Some/261 i64)
- (local $index/263 i32)
- (local $count/264 i32)
- (local $c1/266 i32)
- (local $c2/267 i32)
- (local $*tmp/854 i32)
- (local $*tmp/855 i32)
- (local $*tmp/856 i32)
- (local $*tmp/857 i32)
- (local $*tmp/858 i32)
- (local $*tmp/859 i32)
- (local.set $end_offset/259
-  (if (result i32)
-   (i64.eq
-    (local.get $end_offset/260)
-    (i64.const 4294967296))
-   (then
-    (call $moonbit.array_length
-     (local.get $self/262)))
-   (else
-    (i32.wrap_i64
-     (local.tee $*Some/261
-      (local.get $end_offset/260))))))
- (local.get $start_offset/269)
- (i32.const 0)
- (loop $loop:268 (param i32) (param i32) (result i32)
-  (local.set $count/264)
-  (local.tee $index/263)
-  (local.get $end_offset/259)
-  (i32.lt_s)
-  (if (result i32)
-   (then
-    (i32.lt_s
-     (local.get $count/264)
-     (local.get $len/265)))
-   (else
-    (i32.const 0)))
-  (if (result i32)
-   (then
-    (local.set $c1/266
-     (i32.load16_u offset=8
-      (i32.add
-       (local.get $self/262)
-       (i32.shl
-        (local.get $index/263)
-        (i32.const 1)))))
-    (if
-     (if (result i32)
-      (if (result i32)
-       (i32.le_s
-        (i32.const 55296)
-        (local.get $c1/266))
-       (then
-        (i32.le_s
-         (local.get $c1/266)
-         (i32.const 56319)))
-       (else
-        (i32.const 0)))
-      (then
-       (i32.lt_s
-        (local.tee $*tmp/854
-         (i32.add
-          (local.get $index/263)
-          (i32.const 1)))
-        (local.get $end_offset/259)))
-      (else
-       (i32.const 0)))
-     (then
-      (local.set $*tmp/857
-       (i32.add
-        (local.get $index/263)
-        (i32.const 1)))
-      (local.set $c2/267
-       (i32.load16_u offset=8
-        (i32.add
-         (local.get $self/262)
-         (i32.shl
-          (local.get $*tmp/857)
-          (i32.const 1)))))
-      (if
-       (if (result i32)
-        (i32.le_s
-         (i32.const 56320)
-         (local.get $c2/267))
-        (then
-         (i32.le_s
-          (local.get $c2/267)
-          (i32.const 57343)))
-        (else
-         (i32.const 0)))
-       (then
-        (local.set $*tmp/855
-         (i32.add
-          (local.get $index/263)
-          (i32.const 2)))
-        (local.set $*tmp/856
-         (i32.add
-          (local.get $count/264)
-          (i32.const 1)))
-        (local.get $*tmp/855)
-        (local.get $*tmp/856)
-        (br $loop:268))
-       (else
-        (drop
-         (call $moonbitlang/core/builtin.abort|Unit|
-          (i32.const 10288)
-          (i32.const 10176))))))
-     (else))
-    (local.set $*tmp/858
-     (i32.add
-      (local.get $index/263)
-      (i32.const 1)))
-    (local.set $*tmp/859
-     (i32.add
-      (local.get $count/264)
-      (i32.const 1)))
-    (local.get $*tmp/858)
-    (local.get $*tmp/859)
-    (br $loop:268))
-   (else
-    (call $moonbit.decref
-     (local.get $self/262))
-    (i32.ge_s
-     (local.get $count/264)
-     (local.get $len/265))))))
-(func $Int::to_string.inner (param $self/243 i32) (param $radix/242 i32) (result i32)
- (local $is_negative/244 i32)
- (local $num/245 i32)
- (local $buffer/246 i32)
- (local $digit_len/247 i32)
- (local $total_len/248 i32)
- (local $buffer/249 i32)
- (local $digit_start/250 i32)
- (local $digit_len/251 i32)
- (local $total_len/252 i32)
- (local $buffer/253 i32)
- (local $digit_start/254 i32)
- (local $digit_len/255 i32)
- (local $total_len/256 i32)
- (local $buffer/257 i32)
- (local $digit_start/258 i32)
- (local $*tmp/850 i32)
- (local $*tmp/851 i32)
- (local $*tmp/852 i32)
- (local $*tmp/853 i32)
- (if
-  (if (result i32)
-   (i32.lt_s
-    (local.get $radix/242)
-    (i32.const 2))
-   (then
-    (i32.const 1))
-   (else
-    (i32.gt_s
-     (local.get $radix/242)
-     (i32.const 36))))
-  (then
-   (drop
-    (call $moonbitlang/core/builtin.abort|Unit|
-     (i32.const 10480)
-     (i32.const 10360))))
-  (else))
- (if
-  (i32.eq
-   (local.get $self/243)
-   (i32.const 0))
-  (then
-   (i32.const 10344)
-   (return))
-  (else))
- (local.set $num/245
-  (if (result i32)
-   (local.tee $is_negative/244
-    (i32.lt_s
-     (local.get $self/243)
-     (i32.const 0)))
-   (then
-    (local.tee $*tmp/853
-     (i32.sub
-      (i32.const 0)
-      (local.get $self/243))))
-   (else
-    (local.get $self/243))))
- (local.set $buffer/246
-  (if (result i32)
-   (i32.eq
-    (local.get $radix/242)
-    (i32.const 10))
-   (then
-    (local.set $digit_len/247
-     (call $moonbitlang/core/builtin.dec_count32
-      (local.get $num/245)))
-    (local.set $*tmp/850
-     (if (result i32)
-      (local.get $is_negative/244)
-      (then
-       (i32.const 1))
-      (else
-       (i32.const 0))))
-    (local.set $buffer/249
-     (call $moonbit.int16_array_make
-      (local.tee $total_len/248
-       (i32.add
-        (local.get $digit_len/247)
-        (local.get $*tmp/850)))
-      (i32.const 0)))
-    (local.set $digit_start/250
-     (if (result i32)
-      (local.get $is_negative/244)
-      (then
-       (i32.const 1))
-      (else
-       (i32.const 0))))
-    (call $moonbit.incref
-     (local.get $buffer/249))
-    (drop
-     (call $moonbitlang/core/builtin.int_to_string_dec
-      (local.get $buffer/249)
-      (local.get $num/245)
-      (local.get $digit_start/250)
-      (local.get $total_len/248)))
-    (local.get $buffer/249))
-   (else
-    (if (result i32)
-     (i32.eq
-      (local.get $radix/242)
-      (i32.const 16))
-     (then
-      (local.set $digit_len/251
-       (call $moonbitlang/core/builtin.hex_count32
-        (local.get $num/245)))
-      (local.set $*tmp/851
-       (if (result i32)
-        (local.get $is_negative/244)
-        (then
-         (i32.const 1))
-        (else
-         (i32.const 0))))
-      (local.set $buffer/253
-       (call $moonbit.int16_array_make
-        (local.tee $total_len/252
-         (i32.add
-          (local.get $digit_len/251)
-          (local.get $*tmp/851)))
-        (i32.const 0)))
-      (local.set $digit_start/254
-       (if (result i32)
-        (local.get $is_negative/244)
-        (then
-         (i32.const 1))
-        (else
-         (i32.const 0))))
-      (call $moonbit.incref
-       (local.get $buffer/253))
-      (drop
-       (call $moonbitlang/core/builtin.int_to_string_hex
-        (local.get $buffer/253)
-        (local.get $num/245)
-        (local.get $digit_start/254)
-        (local.get $total_len/252)))
-      (local.get $buffer/253))
-     (else
-      (local.set $digit_len/255
-       (call $moonbitlang/core/builtin.radix_count32
-        (local.get $num/245)
-        (local.get $radix/242)))
-      (local.set $*tmp/852
-       (if (result i32)
-        (local.get $is_negative/244)
-        (then
-         (i32.const 1))
-        (else
-         (i32.const 0))))
-      (local.set $buffer/257
-       (call $moonbit.int16_array_make
-        (local.tee $total_len/256
-         (i32.add
-          (local.get $digit_len/255)
-          (local.get $*tmp/852)))
-        (i32.const 0)))
-      (local.set $digit_start/258
-       (if (result i32)
-        (local.get $is_negative/244)
-        (then
-         (i32.const 1))
-        (else
-         (i32.const 0))))
-      (call $moonbit.incref
-       (local.get $buffer/257))
-      (drop
-       (call $moonbitlang/core/builtin.int_to_string_generic
-        (local.get $buffer/257)
-        (local.get $num/245)
-        (local.get $digit_start/258)
-        (local.get $total_len/256)
-        (local.get $radix/242)))
-      (local.get $buffer/257))))))
- (if
-  (local.get $is_negative/244)
-  (then
-   (i32.store16 offset=8
-    (i32.add
-     (local.get $buffer/246)
-     (i32.shl
-      (i32.const 0)
-      (i32.const 1)))
-    (i32.const 45)))
-  (else))
- (local.get $buffer/246))
-(func $moonbitlang/core/builtin.radix_count32 (param $value/236 i32) (param $radix/239 i32) (result i32)
- (local $base/238 i32)
- (local $*tmp/847 i32)
- (local $*tmp/848 i32)
- (local $*tmp/849 i32)
- (local $num/237 i32)
- (local $count/240 i32)
- (if
-  (i32.eq
-   (local.get $value/236)
-   (i32.const 0))
-  (then
-   (i32.const 1)
-   (return))
-  (else))
- (local.set $num/237
-  (local.get $value/236))
- (local.set $base/238
-  (local.get $radix/239))
- (local.set $count/240
-  (i32.const 0))
- (loop $loop:241
-  (if
-   (i32.gt_u
-    (local.tee $*tmp/847
-     (local.get $num/237))
-    (i32.const 0))
-   (then
-    (local.set $count/240
-     (i32.add
-      (local.tee $*tmp/848
-       (local.get $count/240))
-      (i32.const 1)))
-    (local.set $num/237
-     (i32.div_u
-      (local.tee $*tmp/849
-       (local.get $num/237))
-      (local.get $base/238)))
-    (br $loop:241))
-   (else)))
- (local.get $count/240))
-(func $moonbitlang/core/builtin.hex_count32 (param $value/234 i32) (result i32)
- (local $leading_zeros/235 i32)
- (local $*tmp/845 i32)
- (local $*tmp/846 i32)
- (if (result i32)
-  (i32.eq
-   (local.get $value/234)
-   (i32.const 0))
-  (then
-   (i32.const 1))
-  (else
-   (local.set $leading_zeros/235
-    (i32.clz
-     (local.get $value/234)))
-   (i32.add
-    (local.tee $*tmp/845
-     (i32.div_s
-      (local.tee $*tmp/846
-       (i32.sub
-        (i32.const 31)
-        (local.get $leading_zeros/235)))
-      (i32.const 4)))
-    (i32.const 1)))))
-(func $moonbitlang/core/builtin.dec_count32 (param $value/233 i32) (result i32)
- (if (result i32)
-  (i32.ge_u
-   (local.get $value/233)
-   (i32.const 100000))
-  (then
-   (if (result i32)
-    (i32.ge_u
-     (local.get $value/233)
-     (i32.const 10000000))
-    (then
-     (if (result i32)
-      (i32.ge_u
-       (local.get $value/233)
-       (i32.const 1000000000))
-      (then
-       (i32.const 10))
-      (else
-       (if (result i32)
-        (i32.ge_u
-         (local.get $value/233)
-         (i32.const 100000000))
-        (then
-         (i32.const 9))
-        (else
-         (i32.const 8))))))
-    (else
-     (if (result i32)
-      (i32.ge_u
-       (local.get $value/233)
-       (i32.const 1000000))
-      (then
-       (i32.const 7))
-      (else
-       (i32.const 6))))))
-  (else
-   (if (result i32)
-    (i32.ge_u
-     (local.get $value/233)
-     (i32.const 1000))
-    (then
-     (if (result i32)
-      (i32.ge_u
-       (local.get $value/233)
-       (i32.const 10000))
-      (then
-       (i32.const 5))
-      (else
-       (i32.const 4))))
-    (else
-     (if (result i32)
-      (i32.ge_u
-       (local.get $value/233)
-       (i32.const 100))
-      (then
-       (i32.const 3))
-      (else
-       (if (result i32)
-        (i32.ge_u
-         (local.get $value/233)
-         (i32.const 10))
-        (then
-         (i32.const 2))
-        (else
-         (i32.const 1))))))))))
-(func $moonbitlang/core/builtin.int_to_string_dec (param $buffer/223 i32) (param $num/211 i32) (param $digit_start/214 i32) (param $total_len/213 i32) (result i32)
- (local $t/215 i32)
- (local $r/216 i32)
- (local $d1/217 i32)
- (local $d2/218 i32)
- (local $d1_hi/219 i32)
- (local $d1_lo/220 i32)
- (local $d2_hi/221 i32)
- (local $d2_lo/222 i32)
- (local $t/226 i32)
- (local $d/227 i32)
- (local $d_hi/228 i32)
- (local $d_lo/229 i32)
- (local $d_hi/231 i32)
- (local $d_lo/232 i32)
- (local $*tmp/788 i32)
- (local $*tmp/789 i32)
- (local $*tmp/790 i32)
- (local $*tmp/791 i32)
- (local $*tmp/792 i32)
- (local $*tmp/793 i32)
- (local $*tmp/794 i32)
- (local $*tmp/795 i32)
- (local $*tmp/796 i32)
+ (local.get $result/288))
+(func $@moonbitlang/core/builtin.Show::@moonbitlang/core/builtin.SourceLoc::output (param $self/286 i32) (param $logger/0/287 i32) (param $logger/1/287 i32) (result i32)
  (local $*tmp/797 i32)
  (local $*tmp/798 i32)
- (local $*tmp/799 i32)
- (local $*tmp/800 i32)
- (local $*tmp/801 i32)
- (local $*tmp/802 i32)
- (local $*tmp/803 i32)
- (local $*tmp/804 i32)
- (local $*tmp/805 i32)
- (local $*tmp/806 i32)
- (local $*tmp/807 i32)
- (local $*tmp/808 i32)
- (local $*tmp/809 i32)
- (local $*tmp/810 i32)
- (local $*tmp/811 i32)
- (local $*tmp/812 i32)
- (local $*tmp/813 i32)
- (local $*tmp/814 i32)
- (local $*tmp/815 i32)
- (local $*tmp/816 i32)
- (local $*tmp/817 i32)
- (local $*tmp/818 i32)
- (local $*tmp/819 i32)
- (local $*tmp/820 i32)
- (local $*tmp/821 i32)
- (local $*tmp/822 i32)
- (local $*tmp/823 i32)
- (local $*tmp/824 i32)
- (local $*tmp/825 i32)
- (local $*tmp/826 i32)
- (local $*tmp/827 i32)
- (local $*tmp/828 i32)
- (local $*tmp/829 i32)
- (local $*tmp/830 i32)
- (local $*tmp/831 i32)
- (local $*tmp/832 i32)
- (local $*tmp/833 i32)
- (local $*tmp/834 i32)
- (local $*tmp/835 i32)
- (local $*tmp/836 i32)
- (local $*tmp/837 i32)
- (local $*tmp/838 i32)
- (local $*tmp/839 i32)
- (local $*tmp/840 i32)
- (local $*tmp/841 i32)
- (local $*tmp/842 i32)
- (local $*tmp/843 i32)
- (local $*tmp/844 i32)
- (local $num/210 i32)
- (local $offset/212 i32)
- (local $remaining/225 i32)
- (local.set $num/210
-  (local.get $num/211))
- (local.set $offset/212
-  (i32.sub
-   (local.get $total_len/213)
-   (local.get $digit_start/214)))
- (loop $loop:224
-  (if
-   (i32.ge_u
-    (local.tee $*tmp/788
-     (local.get $num/210))
-    (i32.const 10000))
-   (then
-    (local.set $t/215
-     (i32.div_u
-      (local.tee $*tmp/811
-       (local.get $num/210))
-      (i32.const 10000)))
-    (local.set $r/216
-     (local.tee $*tmp/809
-      (i32.rem_u
-       (local.tee $*tmp/810
-        (local.get $num/210))
-       (i32.const 10000))))
-    (local.set $num/210
-     (local.get $t/215))
-    (local.set $d1/217
-     (i32.div_s
-      (local.get $r/216)
-      (i32.const 100)))
-    (local.set $d2/218
-     (i32.rem_s
-      (local.get $r/216)
-      (i32.const 100)))
-    (local.set $offset/212
-     (i32.sub
-      (local.tee $*tmp/789
-       (local.get $offset/212))
-      (i32.const 4)))
-    (local.set $*tmp/808
-     (i32.div_s
-      (local.get $d1/217)
-      (i32.const 10)))
-    (local.set $d1_hi/219
-     (i32.and
-      (local.tee $*tmp/807
-       (i32.add
-        (i32.const 48)
-        (local.get $*tmp/808)))
-      (i32.const 65535)))
-    (local.set $*tmp/806
-     (i32.rem_s
-      (local.get $d1/217)
-      (i32.const 10)))
-    (local.set $d1_lo/220
-     (i32.and
-      (local.tee $*tmp/805
-       (i32.add
-        (i32.const 48)
-        (local.get $*tmp/806)))
-      (i32.const 65535)))
-    (local.set $*tmp/804
-     (i32.div_s
-      (local.get $d2/218)
-      (i32.const 10)))
-    (local.set $d2_hi/221
-     (i32.and
-      (local.tee $*tmp/803
-       (i32.add
-        (i32.const 48)
-        (local.get $*tmp/804)))
-      (i32.const 65535)))
-    (local.set $*tmp/802
-     (i32.rem_s
-      (local.get $d2/218)
-      (i32.const 10)))
-    (local.set $d2_lo/222
-     (i32.and
-      (local.tee $*tmp/801
-       (i32.add
-        (i32.const 48)
-        (local.get $*tmp/802)))
-      (i32.const 65535)))
-    (local.set $*tmp/791
-     (local.get $offset/212))
-    (local.set $*tmp/790
-     (i32.add
-      (local.get $digit_start/214)
-      (local.get $*tmp/791)))
-    (i32.store16 offset=8
-     (i32.add
-      (local.get $buffer/223)
-      (i32.shl
-       (local.get $*tmp/790)
-       (i32.const 1)))
-     (local.get $d1_hi/219))
-    (local.set $*tmp/794
-     (local.get $offset/212))
-    (local.set $*tmp/792
-     (i32.add
-      (local.tee $*tmp/793
-       (i32.add
-        (local.get $digit_start/214)
-        (local.get $*tmp/794)))
-      (i32.const 1)))
-    (i32.store16 offset=8
-     (i32.add
-      (local.get $buffer/223)
-      (i32.shl
-       (local.get $*tmp/792)
-       (i32.const 1)))
-     (local.get $d1_lo/220))
-    (local.set $*tmp/797
-     (local.get $offset/212))
-    (local.set $*tmp/795
-     (i32.add
-      (local.tee $*tmp/796
-       (i32.add
-        (local.get $digit_start/214)
-        (local.get $*tmp/797)))
-      (i32.const 2)))
-    (i32.store16 offset=8
-     (i32.add
-      (local.get $buffer/223)
-      (i32.shl
-       (local.get $*tmp/795)
-       (i32.const 1)))
-     (local.get $d2_hi/221))
-    (local.set $*tmp/800
-     (local.get $offset/212))
-    (local.set $*tmp/798
-     (i32.add
-      (local.tee $*tmp/799
-       (i32.add
-        (local.get $digit_start/214)
-        (local.get $*tmp/800)))
-      (i32.const 3)))
-    (i32.store16 offset=8
-     (i32.add
-      (local.get $buffer/223)
-      (i32.shl
-       (local.get $*tmp/798)
-       (i32.const 1)))
-     (local.get $d2_lo/222))
-    (br $loop:224))
-   (else)))
- (local.set $remaining/225
-  (local.tee $*tmp/844
-   (local.get $num/210)))
- (loop $loop:230
-  (if
-   (i32.ge_s
-    (local.tee $*tmp/812
-     (local.get $remaining/225))
-    (i32.const 100))
-   (then
-    (local.set $t/226
-     (i32.div_s
-      (local.tee $*tmp/824
-       (local.get $remaining/225))
-      (i32.const 100)))
-    (local.set $d/227
-     (i32.rem_s
-      (local.tee $*tmp/823
-       (local.get $remaining/225))
-      (i32.const 100)))
-    (local.set $remaining/225
-     (local.get $t/226))
-    (local.set $offset/212
-     (i32.sub
-      (local.tee $*tmp/813
-       (local.get $offset/212))
-      (i32.const 2)))
-    (local.set $*tmp/822
-     (i32.div_s
-      (local.get $d/227)
-      (i32.const 10)))
-    (local.set $d_hi/228
-     (i32.and
-      (local.tee $*tmp/821
-       (i32.add
-        (i32.const 48)
-        (local.get $*tmp/822)))
-      (i32.const 65535)))
-    (local.set $*tmp/820
-     (i32.rem_s
-      (local.get $d/227)
-      (i32.const 10)))
-    (local.set $d_lo/229
-     (i32.and
-      (local.tee $*tmp/819
-       (i32.add
-        (i32.const 48)
-        (local.get $*tmp/820)))
-      (i32.const 65535)))
-    (local.set $*tmp/815
-     (local.get $offset/212))
-    (local.set $*tmp/814
-     (i32.add
-      (local.get $digit_start/214)
-      (local.get $*tmp/815)))
-    (i32.store16 offset=8
-     (i32.add
-      (local.get $buffer/223)
-      (i32.shl
-       (local.get $*tmp/814)
-       (i32.const 1)))
-     (local.get $d_hi/228))
-    (local.set $*tmp/818
-     (local.get $offset/212))
-    (local.set $*tmp/816
-     (i32.add
-      (local.tee $*tmp/817
-       (i32.add
-        (local.get $digit_start/214)
-        (local.get $*tmp/818)))
-      (i32.const 1)))
-    (i32.store16 offset=8
-     (i32.add
-      (local.get $buffer/223)
-      (i32.shl
-       (local.get $*tmp/816)
-       (i32.const 1)))
-     (local.get $d_lo/229))
-    (br $loop:230))
-   (else)))
- (if (result i32)
-  (i32.ge_s
-   (local.tee $*tmp/825
-    (local.get $remaining/225))
-   (i32.const 10))
-  (then
-   (local.set $offset/212
-    (i32.sub
-     (local.tee $*tmp/826
-      (local.get $offset/212))
-     (i32.const 2)))
-   (local.set $*tmp/836
-    (i32.div_s
-     (local.tee $*tmp/837
-      (local.get $remaining/225))
-     (i32.const 10)))
-   (local.set $d_hi/231
-    (i32.and
-     (local.tee $*tmp/835
-      (i32.add
-       (i32.const 48)
-       (local.get $*tmp/836)))
-     (i32.const 65535)))
-   (local.set $*tmp/833
-    (i32.rem_s
-     (local.tee $*tmp/834
-      (local.get $remaining/225))
-     (i32.const 10)))
-   (local.set $d_lo/232
-    (i32.and
-     (local.tee $*tmp/832
-      (i32.add
-       (i32.const 48)
-       (local.get $*tmp/833)))
-     (i32.const 65535)))
-   (local.set $*tmp/828
-    (local.get $offset/212))
-   (local.set $*tmp/827
-    (i32.add
-     (local.get $digit_start/214)
-     (local.get $*tmp/828)))
-   (i32.store16 offset=8
-    (i32.add
-     (local.get $buffer/223)
-     (i32.shl
-      (local.get $*tmp/827)
-      (i32.const 1)))
-    (local.get $d_hi/231))
-   (local.set $*tmp/831
-    (local.get $offset/212))
-   (local.set $*tmp/829
-    (i32.add
-     (local.tee $*tmp/830
-      (i32.add
-       (local.get $digit_start/214)
-       (local.get $*tmp/831)))
-     (i32.const 1)))
-   (i32.store16 offset=8
-    (i32.add
-     (local.get $buffer/223)
-     (i32.shl
-      (local.get $*tmp/829)
-      (i32.const 1)))
-    (local.get $d_lo/232))
-   (call $moonbit.decref
-    (local.get $buffer/223))
-   (i32.const 0))
-  (else
-   (local.set $*tmp/843
-    (local.tee $offset/212
-     (i32.sub
-      (local.tee $*tmp/838
-       (local.get $offset/212))
-      (i32.const 1))))
-   (local.set $*tmp/839
-    (i32.add
-     (local.get $digit_start/214)
-     (local.get $*tmp/843)))
-   (local.set $*tmp/842
-    (local.get $remaining/225))
-   (local.set $*tmp/840
-    (i32.and
-     (local.tee $*tmp/841
-      (i32.add
-       (i32.const 48)
-       (local.get $*tmp/842)))
-     (i32.const 65535)))
-   (i32.store16 offset=8
-    (i32.add
-     (local.get $buffer/223)
-     (i32.shl
-      (local.get $*tmp/839)
-      (i32.const 1)))
-    (local.get $*tmp/840))
-   (call $moonbit.decref
-    (local.get $buffer/223))
-   (i32.const 0))))
-(func $moonbitlang/core/builtin.int_to_string_generic (param $buffer/205 i32) (param $num/199 i32) (param $digit_start/197 i32) (param $total_len/196 i32) (param $radix/201 i32) (result i32)
- (local $base/200 i32)
- (local $shift/202 i32)
- (local $mask/203 i32)
- (local $digit/204 i32)
- (local $q/207 i32)
- (local $digit/208 i32)
- (local $*tmp/767 i32)
- (local $*tmp/768 i32)
- (local $*tmp/769 i32)
+ (call $@moonbitlang/core/builtin.Show::@moonbitlang/core/builtin.SourceLocRepr::output
+  (local.tee $*tmp/797
+   (call $@moonbitlang/core/builtin.SourceLocRepr::parse
+    (local.tee $*tmp/798
+     (local.get $self/286))))
+  (local.get $logger/0/287)
+  (local.get $logger/1/287)))
+(func $@moonbitlang/core/builtin.Show::@moonbitlang/core/builtin.SourceLocRepr::output (param $self/249 i32) (param $logger/0/285 i32) (param $logger/1/285 i32) (result i32)
+ (local $pkg/0/248 i32)
+ (local $pkg/1/248 i32)
+ (local $pkg/2/248 i32)
+ (local $*data/250 i32)
+ (local $*start/251 i32)
+ (local $*end/252 i32)
+ (local $*bind/258 i32)
+ (local $package_name/0/260 i32)
+ (local $package_name/1/260 i32)
+ (local $package_name/2/260 i32)
+ (local $*try_err/262 i32)
+ (local $module_name/0/263 i32)
+ (local $module_name/1/263 i32)
+ (local $module_name/2/263 i32)
+ (local $*try_err/265 i32)
+ (local $next_char/268 i32)
+ (local $next_char/271 i32)
+ (local $next_char/274 i32)
+ (local $next_char/275 i32)
+ (local $next_char/276 i32)
+ (local $next_char/277 i32)
+ (local $next_char/278 i32)
+ (local $next_char/279 i32)
+ (local $next_char/280 i32)
+ (local $*module_name/0/281 i32)
+ (local $*module_name/1/281 i32)
+ (local $*module_name/2/281 i32)
+ (local $*package_name/282 i32)
+ (local $*Some/283 i32)
+ (local $*pkg_name/0/284 i32)
+ (local $*pkg_name/1/284 i32)
+ (local $*pkg_name/2/284 i32)
+ (local $*p/408 i32)
+ (local $*p/411 i32)
+ (local $*p/414 i32)
+ (local $*p/417 i32)
+ (local $*p/420 i32)
+ (local $*p/423 i32)
+ (local $*p/426 i32)
+ (local $*p/429 i32)
+ (local $*p/432 i32)
+ (local $*bind/0/755 i32)
+ (local $*bind/1/755 i32)
+ (local $*bind/0/756 i32)
+ (local $*bind/1/756 i32)
+ (local $filename/0/757 i32)
+ (local $filename/1/757 i32)
+ (local $filename/2/757 i32)
+ (local $start_line/0/758 i32)
+ (local $start_line/1/758 i32)
+ (local $start_line/2/758 i32)
+ (local $start_column/0/759 i32)
+ (local $start_column/1/759 i32)
+ (local $start_column/2/759 i32)
+ (local $end_line/0/760 i32)
+ (local $end_line/1/760 i32)
+ (local $end_line/2/760 i32)
+ (local $end_column/0/761 i32)
+ (local $end_column/1/761 i32)
+ (local $end_column/2/761 i32)
+ (local $Some/762 i32)
+ (local $*tmp/763 i64)
+ (local $*tmp/764 i64)
+ (local $*tmp/765 i32)
+ (local $*ok/0/766 i32)
+ (local $*ok/1/766 i32)
+ (local $*ok/2/766 i32)
+ (local $*err/767 i32)
+ (local $*tmp/768 i64)
+ (local $*tmp/769 i64)
  (local $*tmp/770 i32)
  (local $*tmp/771 i32)
  (local $*tmp/772 i32)
- (local $*tmp/773 i32)
- (local $*tmp/774 i32)
- (local $*tmp/775 i32)
+ (local $*ok/0/773 i32)
+ (local $*ok/1/773 i32)
+ (local $*ok/2/773 i32)
+ (local $*err/774 i32)
+ (local $None/775 i32)
  (local $*tmp/776 i32)
  (local $*tmp/777 i32)
  (local $*tmp/778 i32)
@@ -3484,634 +1532,1602 @@
  (local $*tmp/785 i32)
  (local $*tmp/786 i32)
  (local $*tmp/787 i32)
- (local $offset/195 i32)
- (local $n/198 i32)
- (local.set $offset/195
+ (local $*tmp/788 i32)
+ (local $*tmp/789 i32)
+ (local $*tmp/790 i32)
+ (local $*tmp/791 i32)
+ (local $*tmp/792 i32)
+ (local $*tmp/793 i32)
+ (local $*tmp/794 i32)
+ (local $end/795 i32)
+ (local $start/796 i32)
+ (local $*field/0/801 i32)
+ (local $*field/1/801 i32)
+ (local $*field/2/801 i32)
+ (local $*field/0/802 i32)
+ (local $*field/1/802 i32)
+ (local $*field/2/802 i32)
+ (local $*field/0/803 i32)
+ (local $*field/1/803 i32)
+ (local $*field/2/803 i32)
+ (local $*field/0/804 i32)
+ (local $*field/1/804 i32)
+ (local $*field/2/804 i32)
+ (local $*field/0/805 i32)
+ (local $*field/1/805 i32)
+ (local $*field/2/805 i32)
+ (local $*field/0/806 i32)
+ (local $*field/1/806 i32)
+ (local $*field/2/806 i32)
+ (local $*field/807 i32)
+ (local $*field/0/808 i32)
+ (local $*field/1/808 i32)
+ (local $*field/2/808 i32)
+ (local $*field/809 i32)
+ (local $*field/0/810 i32)
+ (local $*field/1/810 i32)
+ (local $*field/2/810 i32)
+ (local $*cnt/829 i32)
+ (local $*new_cnt/830 i32)
+ (local $*cnt/831 i32)
+ (local $*new_cnt/832 i32)
+ (local $*cnt/833 i32)
+ (local $*field/0/834 i32)
+ (local $*field/1/834 i32)
+ (local $*field/2/834 i32)
+ (local $*field/0/835 i32)
+ (local $*field/1/835 i32)
+ (local $*field/2/835 i32)
+ (local $*field/0/836 i32)
+ (local $*field/1/836 i32)
+ (local $*field/2/836 i32)
+ (local $*field/0/837 i32)
+ (local $*field/1/837 i32)
+ (local $*field/2/837 i32)
+ (local $*field/0/838 i32)
+ (local $*field/1/838 i32)
+ (local $*field/2/838 i32)
+ (local $*new_cnt/839 i32)
+ (local $*tag/840 i32)
+ (local $ptr/845 i32)
+ (local $ptr/846 i32)
+ (local $ptr/847 i32)
+ (local $*obj/0/849 i32)
+ (local $*obj/1/849 i32)
+ (local $*obj/2/849 i32)
+ (local $*obj/0/851 i32)
+ (local $*obj/1/851 i32)
+ (local $*obj/2/851 i32)
+ (local $*cursor/253 i32)
+ (local $accept_state/254 i32)
+ (local $match_end/255 i32)
+ (local $match_tag_saver_0/256 i32)
+ (local $tag_0/257 i32)
+ (i32.load offset=56
+  (local.get $self/249))
+ (i32.load offset=8
+  (local.get $self/249))
+ (local.set $*field/2/810
+  (i32.load offset=12
+   (local.get $self/249)))
+ (local.set $*field/1/810)
+ (local.tee $*field/0/810)
+ (local.get $*field/1/810)
+ (local.set $pkg/2/248
+  (local.get $*field/2/810))
+ (local.set $pkg/1/248)
+ (local.tee $pkg/0/248)
+ (local.tee $*field/809)
+ (local.set $*data/250)
+ (local.set $*start/251
+  (local.get $pkg/1/248))
+ (local.set $end/795
+  (local.get $pkg/2/248))
+ (local.set $start/796
+  (local.get $pkg/1/248))
+ (local.set $*tmp/794
   (i32.sub
-   (local.get $total_len/196)
-   (local.get $digit_start/197)))
- (local.set $n/198
-  (local.get $num/199))
- (local.set $base/200
-  (local.get $radix/201))
- (local.set $*tmp/768
-  (i32.sub
-   (local.get $radix/201)
-   (i32.const 1)))
- (if (result i32)
-  (i32.eq
-   (local.tee $*tmp/767
-    (i32.and
-     (local.get $radix/201)
-     (local.get $*tmp/768)))
-   (i32.const 0))
-  (then
-   (local.set $shift/202
-    (i32.ctz
-     (local.get $radix/201)))
-   (local.set $mask/203
-    (i32.sub
-     (local.get $base/200)
-     (i32.const 1)))
-   (loop $loop:206
-    (if
-     (i32.gt_u
-      (local.tee $*tmp/769
-       (local.get $n/198))
-      (i32.const 0))
-     (then
-      (local.set $offset/195
-       (i32.sub
-        (local.tee $*tmp/770
-         (local.get $offset/195))
-        (i32.const 1)))
-      (local.set $digit/204
-       (local.tee $*tmp/776
-        (i32.and
-         (local.tee $*tmp/777
-          (local.get $n/198))
-         (local.get $mask/203))))
-      (local.set $*tmp/774
-       (local.get $offset/195))
-      (local.set $*tmp/771
-       (i32.add
-        (local.get $digit_start/197)
-        (local.get $*tmp/774)))
-      (local.set $*tmp/772
-       (i32.and
-        (local.tee $*tmp/773
-         (i32.load16_u offset=8
-          (i32.add
-           (i32.const 10552)
-           (i32.shl
-            (local.get $digit/204)
-            (i32.const 1)))))
-        (i32.const 65535)))
-      (i32.store16 offset=8
-       (i32.add
-        (local.get $buffer/205)
-        (i32.shl
-         (local.get $*tmp/771)
-         (i32.const 1)))
-       (local.get $*tmp/772))
-      (local.set $n/198
-       (i32.shr_u
-        (local.tee $*tmp/775
-         (local.get $n/198))
-        (local.get $shift/202)))
-      (br $loop:206))
-     (else
-      (call $moonbit.decref
-       (local.get $buffer/205)))))
-   (i32.const 0))
-  (else
-   (loop $loop:209
-    (if
-     (i32.gt_u
-      (local.tee $*tmp/778
-       (local.get $n/198))
-      (i32.const 0))
-     (then
-      (local.set $offset/195
-       (i32.sub
-        (local.tee $*tmp/779
-         (local.get $offset/195))
-        (i32.const 1)))
-      (local.set $q/207
-       (i32.div_u
-        (local.tee $*tmp/787
-         (local.get $n/198))
-        (local.get $base/200)))
-      (local.set $*tmp/785
-       (local.get $n/198))
-      (local.set $*tmp/786
-       (i32.mul
-        (local.get $q/207)
-        (local.get $base/200)))
-      (local.set $digit/208
-       (local.tee $*tmp/784
-        (i32.sub
-         (local.get $*tmp/785)
-         (local.get $*tmp/786))))
-      (local.set $*tmp/783
-       (local.get $offset/195))
-      (local.set $*tmp/780
-       (i32.add
-        (local.get $digit_start/197)
-        (local.get $*tmp/783)))
-      (local.set $*tmp/781
-       (i32.and
-        (local.tee $*tmp/782
-         (i32.load16_u offset=8
-          (i32.add
-           (i32.const 10552)
-           (i32.shl
-            (local.get $digit/208)
-            (i32.const 1)))))
-        (i32.const 65535)))
-      (i32.store16 offset=8
-       (i32.add
-        (local.get $buffer/205)
-        (i32.shl
-         (local.get $*tmp/780)
-         (i32.const 1)))
-       (local.get $*tmp/781))
-      (local.set $n/198
-       (local.get $q/207))
-      (br $loop:209))
-     (else
-      (call $moonbit.decref
-       (local.get $buffer/205)))))
-   (i32.const 0))))
-(func $moonbitlang/core/builtin.int_to_string_hex (param $buffer/192 i32) (param $num/188 i32) (param $digit_start/186 i32) (param $total_len/185 i32) (result i32)
- (local $byte_val/189 i32)
- (local $hi/190 i32)
- (local $lo/191 i32)
- (local $nibble/194 i32)
- (local $*tmp/748 i32)
- (local $*tmp/749 i32)
- (local $*tmp/750 i32)
- (local $*tmp/751 i32)
- (local $*tmp/752 i32)
- (local $*tmp/753 i32)
- (local $*tmp/754 i32)
- (local $*tmp/755 i32)
- (local $*tmp/756 i32)
- (local $*tmp/757 i32)
- (local $*tmp/758 i32)
- (local $*tmp/759 i32)
- (local $*tmp/760 i32)
- (local $*tmp/761 i32)
- (local $*tmp/762 i32)
- (local $*tmp/763 i32)
- (local $*tmp/764 i32)
- (local $*tmp/765 i32)
- (local $*tmp/766 i32)
- (local $offset/184 i32)
- (local $n/187 i32)
- (local.set $offset/184
-  (i32.sub
-   (local.get $total_len/185)
-   (local.get $digit_start/186)))
- (local.set $n/187
-  (local.get $num/188))
- (loop $loop:193
-  (if
-   (i32.ge_s
-    (local.tee $*tmp/748
-     (local.get $offset/184))
-    (i32.const 2))
-   (then
-    (local.set $offset/184
-     (i32.sub
-      (local.tee $*tmp/749
-       (local.get $offset/184))
-      (i32.const 2)))
-    (local.set $hi/190
-     (i32.div_s
-      (local.tee $byte_val/189
-       (local.tee $*tmp/760
-        (i32.and
-         (local.tee $*tmp/761
-          (local.get $n/187))
-         (i32.const 255))))
-      (i32.const 16)))
-    (local.set $lo/191
-     (i32.rem_s
-      (local.get $byte_val/189)
-      (i32.const 16)))
-    (local.set $*tmp/753
-     (local.get $offset/184))
-    (local.set $*tmp/750
-     (i32.add
-      (local.get $digit_start/186)
-      (local.get $*tmp/753)))
-    (local.set $*tmp/751
-     (i32.and
-      (local.tee $*tmp/752
-       (i32.load16_u offset=8
-        (i32.add
-         (i32.const 10552)
-         (i32.shl
-          (local.get $hi/190)
-          (i32.const 1)))))
-      (i32.const 65535)))
-    (i32.store16 offset=8
-     (i32.add
-      (local.get $buffer/192)
-      (i32.shl
-       (local.get $*tmp/750)
-       (i32.const 1)))
-     (local.get $*tmp/751))
-    (local.set $*tmp/758
-     (local.get $offset/184))
-    (local.set $*tmp/754
-     (i32.add
-      (local.tee $*tmp/757
-       (i32.add
-        (local.get $digit_start/186)
-        (local.get $*tmp/758)))
-      (i32.const 1)))
-    (local.set $*tmp/755
-     (i32.and
-      (local.tee $*tmp/756
-       (i32.load16_u offset=8
-        (i32.add
-         (i32.const 10552)
-         (i32.shl
-          (local.get $lo/191)
-          (i32.const 1)))))
-      (i32.const 65535)))
-    (i32.store16 offset=8
-     (i32.add
-      (local.get $buffer/192)
-      (i32.shl
-       (local.get $*tmp/754)
-       (i32.const 1)))
-     (local.get $*tmp/755))
-    (local.set $n/187
-     (i32.shr_u
-      (local.tee $*tmp/759
-       (local.get $n/187))
-      (i32.const 8)))
-    (br $loop:193))
-   (else)))
- (if (result i32)
-  (i32.eq
-   (local.tee $*tmp/762
-    (local.get $offset/184))
-   (i32.const 1))
-  (then
-   (local.set $nibble/194
-    (local.tee $*tmp/765
-     (i32.and
-      (local.tee $*tmp/766
-       (local.get $n/187))
-      (i32.const 15))))
-   (local.set $*tmp/763
-    (i32.and
-     (local.tee $*tmp/764
-      (i32.load16_u offset=8
-       (i32.add
-        (i32.const 10552)
-        (i32.shl
-         (local.get $nibble/194)
-         (i32.const 1)))))
-     (i32.const 65535)))
-   (i32.store16 offset=8
-    (i32.add
-     (local.get $buffer/192)
-     (i32.shl
-      (local.get $digit_start/186)
-      (i32.const 1)))
-    (local.get $*tmp/763))
-   (call $moonbit.decref
-    (local.get $buffer/192))
-   (i32.const 0))
-  (else
-   (call $moonbit.decref
-    (local.get $buffer/192))
-   (i32.const 0))))
-(func $@moonbitlang/core/builtin.Show::$default_impl::to_string|@moonbitlang/core/builtin.SourceLoc| (param $self/183 i32) (result i32)
- (local $logger/182 i32)
- (local $*tmp/0/747 i32)
- (local $*tmp/1/747 i32)
- (call $moonbit.incref
-  (local.tee $logger/182
-   (call $@moonbitlang/core/builtin.StringBuilder::new.inner
-    (i32.const 0))))
- (global.get $@moonbitlang/core/builtin.StringBuilder.as_@moonbitlang/core/builtin.Logger.static_method_table_id)
- (local.set $*tmp/1/747
-  (local.get $logger/182))
- (local.set $*tmp/0/747)
- (drop
-  (call $@moonbitlang/core/builtin.Show::@moonbitlang/core/builtin.SourceLoc::output
-   (local.get $self/183)
-   (local.get $*tmp/0/747)
-   (local.get $*tmp/1/747)))
- (call $@moonbitlang/core/builtin.StringBuilder::to_string
-  (local.get $logger/182)))
-(func $@moonbitlang/core/builtin.Show::$default_impl::to_string|Int| (param $self/181 i32) (result i32)
- (local $logger/180 i32)
- (local $*tmp/0/746 i32)
- (local $*tmp/1/746 i32)
- (call $moonbit.incref
-  (local.tee $logger/180
-   (call $@moonbitlang/core/builtin.StringBuilder::new.inner
-    (i32.const 0))))
- (global.get $@moonbitlang/core/builtin.StringBuilder.as_@moonbitlang/core/builtin.Logger.static_method_table_id)
- (local.set $*tmp/1/746
-  (local.get $logger/180))
- (local.set $*tmp/0/746)
- (drop
-  (call $@moonbitlang/core/builtin.Show::Int::output
-   (local.get $self/181)
-   (local.get $*tmp/0/746)
-   (local.get $*tmp/1/746)))
- (call $@moonbitlang/core/builtin.StringBuilder::to_string
-  (local.get $logger/180)))
-(func $@moonbitlang/core/builtin.Logger::$default_impl::write_substring|@moonbitlang/core/builtin.StringBuilder| (param $self/172 i32) (param $value/175 i32) (param $start/176 i32) (param $len/177 i32) (result i32)
- (local $*try_err/174 i32)
- (local $*tmp/0/741 i32)
- (local $*tmp/1/741 i32)
- (local $*tmp/2/741 i32)
- (local $*tmp/742 i64)
- (local $*tmp/743 i32)
- (local $*ok/0/744 i32)
- (local $*ok/1/744 i32)
- (local $*ok/2/744 i32)
- (local $*err/745 i32)
- (local $*obj/0/1012 i32)
- (local $*obj/1/1012 i32)
- (local $*obj/2/1012 i32)
- (block $outer/1011 (result i32) (result i32) (result i32)
-  (block $join:173
-   (local.set $*tmp/742
-    (i64.extend_i32_s
-     (local.tee $*tmp/743
-      (i32.add
-       (local.get $start/176)
-       (local.get $len/177)))))
-   (call $String::sub.inner
-    (local.get $value/175)
-    (local.get $start/176)
-    (local.get $*tmp/742))
-   (local.set $*obj/2/1012)
-   (local.set $*obj/1/1012)
-   (local.set $*obj/0/1012)
-   (if (result i32) (result i32) (result i32)
-    (then
-     (local.get $*obj/0/1012)
-     (local.get $*obj/1/1012)
-     (local.set $*ok/2/744
-      (local.get $*obj/2/1012))
-     (local.set $*ok/1/744)
-     (local.tee $*ok/0/744)
-     (local.get $*ok/1/744)
-     (local.get $*ok/2/744))
-    (else
-     (local.set $*try_err/174
-      (local.tee $*err/745
-       (local.get $*obj/0/1012)))
-     (br $join:173)))
-   (br $outer/1011))
-  (call $moonbit.decref
-   (local.get $*try_err/174))
-  (unreachable))
- (local.set $*tmp/2/741)
- (local.set $*tmp/1/741)
- (local.set $*tmp/0/741)
- (call $@moonbitlang/core/builtin.Logger::@moonbitlang/core/builtin.StringBuilder::write_view
-  (local.get $self/172)
-  (local.get $*tmp/0/741)
-  (local.get $*tmp/1/741)
-  (local.get $*tmp/2/741)))
-(func $String::sub.inner (param $self/165 i32) (param $start/171 i32) (param $end/167 i64) (result i32) (result i32) (result i32) (result i32)
- (local $len/164 i32)
- (local $end/166 i32)
- (local $*Some/168 i64)
- (local $*end/169 i32)
- (local $start/170 i32)
- (local $*p/427 i32)
- (local $*p/430 i32)
- (local $moonbitlang/core/builtin.CreatingViewError.InvalidIndex/737 i32)
- (local $moonbitlang/core/builtin.CreatingViewError.InvalidIndex/738 i32)
- (local $*tmp/0/739 i32)
- (local $*tmp/1/739 i32)
- (local $*tmp/2/739 i32)
- (local $moonbitlang/core/builtin.CreatingViewError.IndexOutOfBounds/740 i32)
- (local.set $len/164
-  (call $moonbit.array_length
-   (local.get $self/165)))
- (local.set $end/166
-  (if (result i32)
-   (i64.eq
-    (local.get $end/167)
-    (i64.const 4294967296))
-   (then
-    (local.get $len/164))
-   (else
+   (local.get $end/795)
+   (local.get $start/796)))
+ (local.set $*end/252
+  (i32.add
+   (local.get $*start/251)
+   (local.get $*tmp/794)))
+ (local.set $*cursor/253
+  (local.get $*start/251))
+ (local.set $accept_state/254
+  (i32.const -1))
+ (local.set $match_end/255
+  (i32.const -1))
+ (local.set $match_tag_saver_0/256
+  (i32.const -1))
+ (local.set $tag_0/257
+  (i32.const -1))
+ (block $outer/841 (result i32)
+  (block $join:259
+   (call $moonbit.incref
+    (local.get $*data/250))
+   (call $moonbit.incref
+    (local.get $pkg/0/248))
+   (loop $loop:267 (result i32)
     (if (result i32)
      (i32.lt_s
-      (local.tee $*end/169
-       (i32.wrap_i64
-        (local.tee $*Some/168
-         (local.get $end/167))))
-      (i32.const 0))
+      (local.tee $*tmp/776
+       (local.get $*cursor/253))
+      (local.get $*end/252))
      (then
-      (i32.add
-       (local.get $len/164)
-       (local.get $*end/169)))
+      (block $outer/842 (result i32)
+       (block $join:266
+        (local.set $*p/408
+         (local.get $*cursor/253))
+        (local.set $next_char/268
+         (i32.load16_u offset=8
+          (i32.add
+           (local.get $*data/250)
+           (i32.shl
+            (local.get $*p/408)
+            (i32.const 1)))))
+        (local.set $*cursor/253
+         (i32.add
+          (local.tee $*tmp/777
+           (local.get $*cursor/253))
+          (i32.const 1)))
+        (if (result i32)
+         (i32.lt_s
+          (local.get $next_char/268)
+          (i32.const 55296))
+         (then
+          (if (result i32)
+           (i32.lt_s
+            (local.get $next_char/268)
+            (i32.const 47))
+           (then
+            (br $join:266))
+           (else
+            (if (result i32)
+             (i32.gt_s
+              (local.get $next_char/268)
+              (i32.const 47))
+             (then
+              (br $join:266))
+             (else
+              (loop $loop:270 (result i32)
+               (local.set $tag_0/257
+                (local.get $*cursor/253))
+               (if (result i32)
+                (i32.lt_s
+                 (local.tee $*tmp/778
+                  (local.get $*cursor/253))
+                 (local.get $*end/252))
+                (then
+                 (block $outer/843 (result i32)
+                  (block $join:269
+                   (local.set $*p/411
+                    (local.get $*cursor/253))
+                   (local.set $next_char/271
+                    (i32.load16_u offset=8
+                     (i32.add
+                      (local.get $*data/250)
+                      (i32.shl
+                       (local.get $*p/411)
+                       (i32.const 1)))))
+                   (local.set $*cursor/253
+                    (i32.add
+                     (local.tee $*tmp/779
+                      (local.get $*cursor/253))
+                     (i32.const 1)))
+                   (if (result i32)
+                    (i32.lt_s
+                     (local.get $next_char/271)
+                     (i32.const 55296))
+                    (then
+                     (if (result i32)
+                      (i32.lt_s
+                       (local.get $next_char/271)
+                       (i32.const 47))
+                      (then
+                       (br $join:269))
+                      (else
+                       (if (result i32)
+                        (i32.gt_s
+                         (local.get $next_char/271)
+                         (i32.const 47))
+                        (then
+                         (br $join:269))
+                        (else
+                         (loop $loop:273 (result i32)
+                          (if (result i32)
+                           (i32.lt_s
+                            (local.tee $*tmp/780
+                             (local.get $*cursor/253))
+                            (local.get $*end/252))
+                           (then
+                            (block $outer/844 (result i32)
+                             (block $join:272
+                              (local.set $*p/414
+                               (local.get $*cursor/253))
+                              (local.set $next_char/274
+                               (i32.load16_u offset=8
+                                (i32.add
+                                 (local.get $*data/250)
+                                 (i32.shl
+                                  (local.get $*p/414)
+                                  (i32.const 1)))))
+                              (local.set $*cursor/253
+                               (i32.add
+                                (local.tee $*tmp/781
+                                 (local.get $*cursor/253))
+                                (i32.const 1)))
+                              (if (result i32)
+                               (i32.lt_s
+                                (local.get $next_char/274)
+                                (i32.const 56319))
+                               (then
+                                (if (result i32)
+                                 (i32.lt_s
+                                  (local.get $next_char/274)
+                                  (i32.const 55296))
+                                 (then
+                                  (br $join:272))
+                                 (else
+                                  (if (result i32)
+                                   (i32.lt_s
+                                    (local.tee $*tmp/782
+                                     (local.get $*cursor/253))
+                                    (local.get $*end/252))
+                                   (then
+                                    (local.set $*p/417
+                                     (local.get $*cursor/253))
+                                    (local.set $next_char/275
+                                     (i32.load16_u offset=8
+                                      (i32.add
+                                       (local.get $*data/250)
+                                       (i32.shl
+                                        (local.get $*p/417)
+                                        (i32.const 1)))))
+                                    (local.set $*cursor/253
+                                     (i32.add
+                                      (local.tee $*tmp/783
+                                       (local.get $*cursor/253))
+                                      (i32.const 1)))
+                                    (if (result i32)
+                                     (i32.lt_s
+                                      (local.get $next_char/275)
+                                      (i32.const 56320))
+                                     (then
+                                      (br $join:259))
+                                     (else
+                                      (if (result i32)
+                                       (i32.gt_s
+                                        (local.get $next_char/275)
+                                        (i32.const 65535))
+                                       (then
+                                        (br $join:259))
+                                       (else
+                                        (br $loop:273))))))
+                                   (else
+                                    (br $join:259))))))
+                               (else
+                                (if (result i32)
+                                 (i32.gt_s
+                                  (local.get $next_char/274)
+                                  (i32.const 56319))
+                                 (then
+                                  (if (result i32)
+                                   (i32.lt_s
+                                    (local.get $next_char/274)
+                                    (i32.const 65536))
+                                   (then
+                                    (br $join:272))
+                                   (else
+                                    (br $join:259))))
+                                 (else
+                                  (if (result i32)
+                                   (i32.lt_s
+                                    (local.tee $*tmp/784
+                                     (local.get $*cursor/253))
+                                    (local.get $*end/252))
+                                   (then
+                                    (local.set $*p/420
+                                     (local.get $*cursor/253))
+                                    (local.set $next_char/276
+                                     (i32.load16_u offset=8
+                                      (i32.add
+                                       (local.get $*data/250)
+                                       (i32.shl
+                                        (local.get $*p/420)
+                                        (i32.const 1)))))
+                                    (local.set $*cursor/253
+                                     (i32.add
+                                      (local.tee $*tmp/785
+                                       (local.get $*cursor/253))
+                                      (i32.const 1)))
+                                    (if (result i32)
+                                     (i32.lt_s
+                                      (local.get $next_char/276)
+                                      (i32.const 56320))
+                                     (then
+                                      (br $join:259))
+                                     (else
+                                      (if (result i32)
+                                       (i32.gt_s
+                                        (local.get $next_char/276)
+                                        (i32.const 57343))
+                                       (then
+                                        (br $join:259))
+                                       (else
+                                        (br $loop:273))))))
+                                   (else
+                                    (br $join:259)))))))
+                              (br $outer/844))
+                             (br $loop:273)))
+                           (else
+                            (local.set $match_tag_saver_0/256
+                             (local.get $tag_0/257))
+                            (local.set $accept_state/254
+                             (i32.const 0))
+                            (local.set $match_end/255
+                             (local.get $*cursor/253))
+                            (br $join:259)))))))))
+                    (else
+                     (if (result i32)
+                      (i32.gt_s
+                       (local.get $next_char/271)
+                       (i32.const 56318))
+                      (then
+                       (if (result i32)
+                        (i32.lt_s
+                         (local.get $next_char/271)
+                         (i32.const 57344))
+                        (then
+                         (if (result i32)
+                          (i32.lt_s
+                           (local.tee $*tmp/786
+                            (local.get $*cursor/253))
+                           (local.get $*end/252))
+                          (then
+                           (local.set $*p/423
+                            (local.get $*cursor/253))
+                           (local.set $next_char/277
+                            (i32.load16_u offset=8
+                             (i32.add
+                              (local.get $*data/250)
+                              (i32.shl
+                               (local.get $*p/423)
+                               (i32.const 1)))))
+                           (local.set $*cursor/253
+                            (i32.add
+                             (local.tee $*tmp/787
+                              (local.get $*cursor/253))
+                             (i32.const 1)))
+                           (if (result i32)
+                            (i32.lt_s
+                             (local.get $next_char/277)
+                             (i32.const 56320))
+                            (then
+                             (br $join:259))
+                            (else
+                             (if (result i32)
+                              (i32.gt_s
+                               (local.get $next_char/277)
+                               (i32.const 57343))
+                              (then
+                               (br $join:259))
+                              (else
+                               (br $loop:270))))))
+                          (else
+                           (br $join:259))))
+                        (else
+                         (if (result i32)
+                          (i32.gt_s
+                           (local.get $next_char/271)
+                           (i32.const 65535))
+                          (then
+                           (br $join:259))
+                          (else
+                           (br $join:269))))))
+                      (else
+                       (if (result i32)
+                        (i32.lt_s
+                         (local.tee $*tmp/788
+                          (local.get $*cursor/253))
+                         (local.get $*end/252))
+                        (then
+                         (local.set $*p/426
+                          (local.get $*cursor/253))
+                         (local.set $next_char/278
+                          (i32.load16_u offset=8
+                           (i32.add
+                            (local.get $*data/250)
+                            (i32.shl
+                             (local.get $*p/426)
+                             (i32.const 1)))))
+                         (local.set $*cursor/253
+                          (i32.add
+                           (local.tee $*tmp/789
+                            (local.get $*cursor/253))
+                           (i32.const 1)))
+                         (if (result i32)
+                          (i32.lt_s
+                           (local.get $next_char/278)
+                           (i32.const 56320))
+                          (then
+                           (br $join:259))
+                          (else
+                           (if (result i32)
+                            (i32.gt_s
+                             (local.get $next_char/278)
+                             (i32.const 65535))
+                            (then
+                             (br $join:259))
+                            (else
+                             (br $loop:270))))))
+                        (else
+                         (br $join:259)))))))
+                   (br $outer/843))
+                  (br $loop:270)))
+                (else
+                 (br $join:259)))))))))
+         (else
+          (if (result i32)
+           (i32.gt_s
+            (local.get $next_char/268)
+            (i32.const 56318))
+           (then
+            (if (result i32)
+             (i32.lt_s
+              (local.get $next_char/268)
+              (i32.const 57344))
+             (then
+              (if (result i32)
+               (i32.lt_s
+                (local.tee $*tmp/790
+                 (local.get $*cursor/253))
+                (local.get $*end/252))
+               (then
+                (local.set $*p/429
+                 (local.get $*cursor/253))
+                (local.set $next_char/279
+                 (i32.load16_u offset=8
+                  (i32.add
+                   (local.get $*data/250)
+                   (i32.shl
+                    (local.get $*p/429)
+                    (i32.const 1)))))
+                (local.set $*cursor/253
+                 (i32.add
+                  (local.tee $*tmp/791
+                   (local.get $*cursor/253))
+                  (i32.const 1)))
+                (if (result i32)
+                 (i32.lt_s
+                  (local.get $next_char/279)
+                  (i32.const 56320))
+                 (then
+                  (br $join:259))
+                 (else
+                  (if (result i32)
+                   (i32.gt_s
+                    (local.get $next_char/279)
+                    (i32.const 57343))
+                   (then
+                    (br $join:259))
+                   (else
+                    (br $loop:267))))))
+               (else
+                (br $join:259))))
+             (else
+              (if (result i32)
+               (i32.gt_s
+                (local.get $next_char/268)
+                (i32.const 65535))
+               (then
+                (br $join:259))
+               (else
+                (br $join:266))))))
+           (else
+            (if (result i32)
+             (i32.lt_s
+              (local.tee $*tmp/792
+               (local.get $*cursor/253))
+              (local.get $*end/252))
+             (then
+              (local.set $*p/432
+               (local.get $*cursor/253))
+              (local.set $next_char/280
+               (i32.load16_u offset=8
+                (i32.add
+                 (local.get $*data/250)
+                 (i32.shl
+                  (local.get $*p/432)
+                  (i32.const 1)))))
+              (local.set $*cursor/253
+               (i32.add
+                (local.tee $*tmp/793
+                 (local.get $*cursor/253))
+                (i32.const 1)))
+              (if (result i32)
+               (i32.lt_s
+                (local.get $next_char/280)
+                (i32.const 56320))
+               (then
+                (br $join:259))
+               (else
+                (if (result i32)
+                 (i32.gt_s
+                  (local.get $next_char/280)
+                  (i32.const 65535))
+                 (then
+                  (br $join:259))
+                 (else
+                  (br $loop:267))))))
+             (else
+              (br $join:259)))))))
+        (br $outer/842))
+       (br $loop:267)))
      (else
-      (local.get $*end/169))))))
- (if (result i32) (result i32) (result i32) (result i32)
+      (br $join:259))))
+   (br $outer/841))
   (if (result i32)
-   (i32.ge_s
-    (local.tee $start/170
-     (if (result i32)
-      (i32.lt_s
-       (local.get $start/171)
-       (i32.const 0))
-      (then
-       (i32.add
-        (local.get $len/164)
-        (local.get $start/171)))
-      (else
-       (local.get $start/171))))
+   (i32.eq
+    (local.get $accept_state/254)
     (i32.const 0))
    (then
-    (if (result i32)
-     (i32.le_s
-      (local.get $start/170)
-      (local.get $end/166))
-     (then
-      (i32.le_s
-       (local.get $end/166)
-       (local.get $len/164)))
-     (else
-      (i32.const 0))))
+    (call $moonbit.decref
+     (local.get $pkg/0/248))
+    (block $outer/850 (result i32) (result i32) (result i32)
+     (block $join:261
+      (local.set $*tmp/768
+       (i64.extend_i32_s
+        (local.tee $*tmp/771
+         (i32.add
+          (local.tee $*tmp/772
+           (local.get $match_tag_saver_0/256))
+          (i32.const 1)))))
+      (local.set $*tmp/769
+       (i64.extend_i32_s
+        (local.tee $*tmp/770
+         (local.get $match_end/255))))
+      (call $moonbit.incref
+       (local.get $*data/250))
+      (call $String::sub
+       (local.get $*data/250)
+       (local.get $*tmp/768)
+       (local.get $*tmp/769))
+      (local.set $*obj/2/851)
+      (local.set $*obj/1/851)
+      (local.set $*obj/0/851)
+      (if (result i32) (result i32) (result i32)
+       (then
+        (local.get $*obj/0/851)
+        (local.get $*obj/1/851)
+        (local.set $*ok/2/773
+         (local.get $*obj/2/851))
+        (local.set $*ok/1/773)
+        (local.tee $*ok/0/773)
+        (local.get $*ok/1/773)
+        (local.get $*ok/2/773))
+       (else
+        (local.set $*try_err/262
+         (local.tee $*err/774
+          (local.get $*obj/0/851)))
+        (br $join:261)))
+      (br $outer/850))
+     (call $moonbit.decref
+      (local.get $*try_err/262))
+     (unreachable))
+    (local.set $package_name/2/260)
+    (local.set $package_name/1/260)
+    (local.set $package_name/0/260)
+    (block $outer/848 (result i32) (result i32) (result i32)
+     (block $join:264
+      (local.set $*tmp/763
+       (i64.extend_i32_s
+        (local.get $*start/251)))
+      (local.set $*tmp/764
+       (i64.extend_i32_s
+        (local.tee $*tmp/765
+         (local.get $match_tag_saver_0/256))))
+      (call $String::sub
+       (local.get $*data/250)
+       (local.get $*tmp/763)
+       (local.get $*tmp/764))
+      (local.set $*obj/2/849)
+      (local.set $*obj/1/849)
+      (local.set $*obj/0/849)
+      (if (result i32) (result i32) (result i32)
+       (then
+        (local.get $*obj/0/849)
+        (local.get $*obj/1/849)
+        (local.set $*ok/2/766
+         (local.get $*obj/2/849))
+        (local.set $*ok/1/766)
+        (local.tee $*ok/0/766)
+        (local.get $*ok/1/766)
+        (local.get $*ok/2/766))
+       (else
+        (local.set $*try_err/265
+         (local.tee $*err/767
+          (local.get $*obj/0/849)))
+        (br $join:264)))
+      (br $outer/848))
+     (call $moonbit.decref
+      (local.get $*try_err/265))
+     (unreachable))
+    (local.set $module_name/2/263)
+    (local.set $module_name/1/263)
+    (local.set $module_name/0/263)
+    (i32.store offset=4
+     (local.tee $ptr/847
+      (call $moonbit.gc.malloc
+       (i32.const 12)))
+     (i32.const 2097409))
+    (i32.store offset=16
+     (local.get $ptr/847)
+     (local.get $package_name/0/260))
+    (i32.store offset=8
+     (local.get $ptr/847)
+     (local.get $package_name/1/260))
+    (i32.store offset=12
+     (local.get $ptr/847)
+     (local.get $package_name/2/260))
+    (local.set $Some/762
+     (local.get $ptr/847))
+    (i32.store offset=4
+     (local.tee $ptr/846
+      (call $moonbit.gc.malloc
+       (i32.const 16)))
+     (i32.const 2097664))
+    (i32.store offset=20
+     (local.get $ptr/846)
+     (local.get $Some/762))
+    (i32.store offset=16
+     (local.get $ptr/846)
+     (local.get $module_name/0/263))
+    (i32.store offset=8
+     (local.get $ptr/846)
+     (local.get $module_name/1/263))
+    (i32.store offset=12
+     (local.get $ptr/846)
+     (local.get $module_name/2/263))
+    (local.get $ptr/846))
    (else
-    (i32.const 0)))
+    (call $moonbit.decref
+     (local.get $*data/250))
+    (local.set $None/775
+     (i32.const 10000))
+    (i32.store offset=4
+     (local.tee $ptr/845
+      (call $moonbit.gc.malloc
+       (i32.const 16)))
+     (i32.const 2097664))
+    (i32.store offset=20
+     (local.get $ptr/845)
+     (local.get $None/775))
+    (i32.store offset=16
+     (local.get $ptr/845)
+     (local.get $pkg/0/248))
+    (i32.store offset=8
+     (local.get $ptr/845)
+     (local.get $pkg/1/248))
+    (i32.store offset=12
+     (local.get $ptr/845)
+     (local.get $pkg/2/248))
+    (local.get $ptr/845))))
+ (local.tee $*bind/258)
+ (i32.load offset=16)
+ (i32.load offset=8
+  (local.get $*bind/258))
+ (local.set $*field/2/808
+  (i32.load offset=12
+   (local.get $*bind/258)))
+ (local.set $*field/1/808)
+ (local.tee $*field/0/808)
+ (local.get $*field/1/808)
+ (local.set $*module_name/2/281
+  (local.get $*field/2/808))
+ (local.set $*module_name/1/281)
+ (local.set $*module_name/0/281)
+ (local.set $*field/807
+  (i32.load offset=20
+   (local.get $*bind/258)))
+ (if
+  (i32.gt_s
+   (local.tee $*cnt/829
+    (i32.load
+     (local.get $*bind/258)))
+   (i32.const 1))
   (then
+   (local.set $*new_cnt/830
+    (i32.sub
+     (local.get $*cnt/829)
+     (i32.const 1)))
+   (i32.store
+    (local.get $*bind/258)
+    (local.get $*new_cnt/830))
+   (call $moonbit.incref
+    (local.get $*field/807))
+   (call $moonbit.incref
+    (local.get $*module_name/0/281)))
+  (else
    (if
-    (if (result i32)
-     (i32.lt_s
-      (local.get $start/170)
-      (local.get $len/164))
-     (then
-      (local.set $*p/427
-       (i32.load16_u offset=8
-        (i32.add
-         (local.get $self/165)
-         (i32.shl
-          (local.get $start/170)
-          (i32.const 1)))))
-      (if (result i32)
-       (i32.le_s
-        (i32.const 56320)
-        (local.get $*p/427))
-       (then
-        (i32.le_s
-         (local.get $*p/427)
-         (i32.const 57343)))
-       (else
-        (i32.const 0))))
-     (else
-      (i32.const 0)))
+    (i32.eq
+     (local.get $*cnt/829)
+     (i32.const 1))
     (then
-     (call $moonbit.decref
-      (local.get $self/165))
-     (local.set $moonbitlang/core/builtin.CreatingViewError.InvalidIndex/737
-      (i32.const 10000))
-     (i32.const 0)
-     (local.get $moonbitlang/core/builtin.CreatingViewError.InvalidIndex/737)
-     (i32.const 0)
-     (i32.const 0)
-     (return))
-    (else))
+     (call $moonbit.free
+      (local.get $*bind/258)))
+    (else))))
+ (if
+  (i32.eq
+   (local.tee $*tag/840
+    (call $moonbit.get_tag
+     (local.tee $*package_name/282
+      (local.get $*field/807))))
+   (i32.const 1))
+  (then
+   (i32.load offset=16
+    (local.tee $*Some/283
+     (local.get $*package_name/282)))
+   (i32.load offset=8
+    (local.get $*Some/283))
+   (local.set $*field/2/806
+    (i32.load offset=12
+     (local.get $*Some/283)))
+   (local.set $*field/1/806)
+   (local.set $*field/0/806)
    (if
-    (if (result i32)
-     (i32.lt_s
-      (local.get $end/166)
-      (local.get $len/164))
-     (then
-      (local.set $*p/430
-       (i32.load16_u offset=8
-        (i32.add
-         (local.get $self/165)
-         (i32.shl
-          (local.get $end/166)
-          (i32.const 1)))))
-      (if (result i32)
-       (i32.le_s
-        (i32.const 56320)
-        (local.get $*p/430))
-       (then
-        (i32.le_s
-         (local.get $*p/430)
-         (i32.const 57343)))
-       (else
-        (i32.const 0))))
-     (else
-      (i32.const 0)))
+    (i32.gt_s
+     (local.tee $*cnt/831
+      (i32.load
+       (local.get $*Some/283)))
+     (i32.const 1))
     (then
-     (call $moonbit.decref
-      (local.get $self/165))
-     (local.set $moonbitlang/core/builtin.CreatingViewError.InvalidIndex/738
-      (i32.const 10000))
-     (i32.const 0)
-     (local.get $moonbitlang/core/builtin.CreatingViewError.InvalidIndex/738)
-     (i32.const 0)
-     (i32.const 0)
-     (return))
+     (local.set $*new_cnt/832
+      (i32.sub
+       (local.get $*cnt/831)
+       (i32.const 1)))
+     (i32.store
+      (local.get $*Some/283)
+      (local.get $*new_cnt/832))
+     (call $moonbit.incref
+      (local.get $*field/0/806)))
+    (else
+     (if
+      (i32.eq
+       (local.get $*cnt/831)
+       (i32.const 1))
+      (then
+       (call $moonbit.free
+        (local.get $*Some/283)))
+      (else))))
+   (local.get $*field/0/806)
+   (local.get $*field/1/806)
+   (local.set $*pkg_name/2/284
+    (local.get $*field/2/806))
+   (local.set $*pkg_name/1/284)
+   (local.set $*pkg_name/0/284)
+   (if
+    (local.get $logger/1/285)
+    (then
+     (call $moonbit.incref
+      (local.get $logger/1/285)))
     (else))
-   (local.get $self/165)
-   (local.get $start/170)
-   (local.set $*tmp/2/739
-    (local.get $end/166))
-   (local.set $*tmp/1/739)
-   (local.set $*tmp/0/739)
-   (i32.const 1)
-   (local.get $*tmp/0/739)
-   (local.get $*tmp/1/739)
-   (local.get $*tmp/2/739))
+   (drop
+    (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_2)
+     (local.get $logger/1/285)
+     (local.get $*pkg_name/0/284)
+     (local.get $*pkg_name/1/284)
+     (local.get $*pkg_name/2/284)
+     (i32.load offset=16
+      (local.get $logger/0/285))))
+   (local.get $logger/0/285)
+   (local.set $*bind/1/755
+    (local.get $logger/1/285))
+   (local.set $*bind/0/755)
+   (if
+    (local.get $*bind/1/755)
+    (then
+     (call $moonbit.incref
+      (local.get $*bind/1/755)))
+    (else))
+   (drop
+    (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_3)
+     (local.get $*bind/1/755)
+     (i32.const 47)
+     (i32.load offset=20
+      (local.get $*bind/0/755)))))
   (else
    (call $moonbit.decref
-    (local.get $self/165))
-   (local.set $moonbitlang/core/builtin.CreatingViewError.IndexOutOfBounds/740
-    (i32.const 10640))
-   (i32.const 0)
-   (local.get $moonbitlang/core/builtin.CreatingViewError.IndexOutOfBounds/740)
-   (i32.const 0)
-   (i32.const 0))))
-(func $@moonbitlang/core/builtin.Logger::@moonbitlang/core/builtin.StringBuilder::write_string (param $self/162 i32) (param $str/163 i32) (result i32)
- (local $*tmp/726 i32)
- (local $len/727 i32)
- (local $*tmp/728 i32)
- (local $*tmp/729 i32)
- (local $data/730 i32)
- (local $len/731 i32)
- (local $*tmp/732 i32)
- (local $*tmp/733 i32)
- (local $len/734 i32)
- (local $*tmp/735 i32)
- (local $*tmp/736 i32)
- (local $*tmp/940 i32)
- (local $*field/941 i32)
- (local.set $len/727
+    (local.get $*package_name/282))))
+ (i32.load offset=60
+  (local.get $self/249))
+ (i32.load offset=16
+  (local.get $self/249))
+ (local.set $*field/2/805
+  (i32.load offset=20
+   (local.get $self/249)))
+ (local.set $*field/1/805)
+ (local.tee $*field/0/805)
+ (local.get $*field/1/805)
+ (local.set $filename/2/757
+  (local.get $*field/2/805))
+ (local.set $filename/1/757)
+ (local.tee $filename/0/757)
+ (call $moonbit.incref)
+ (if
+  (local.get $logger/1/285)
+  (then
+   (call $moonbit.incref
+    (local.get $logger/1/285)))
+  (else))
+ (drop
+  (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_2)
+   (local.get $logger/1/285)
+   (local.get $filename/0/757)
+   (local.get $filename/1/757)
+   (local.get $filename/2/757)
+   (i32.load offset=16
+    (local.get $logger/0/285))))
+ (if
+  (local.get $logger/1/285)
+  (then
+   (call $moonbit.incref
+    (local.get $logger/1/285)))
+  (else))
+ (drop
+  (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_3)
+   (local.get $logger/1/285)
+   (i32.const 58)
+   (i32.load offset=20
+    (local.get $logger/0/285))))
+ (i32.load offset=64
+  (local.get $self/249))
+ (i32.load offset=24
+  (local.get $self/249))
+ (local.set $*field/2/804
+  (i32.load offset=28
+   (local.get $self/249)))
+ (local.set $*field/1/804)
+ (local.tee $*field/0/804)
+ (local.get $*field/1/804)
+ (local.set $start_line/2/758
+  (local.get $*field/2/804))
+ (local.set $start_line/1/758)
+ (local.tee $start_line/0/758)
+ (call $moonbit.incref)
+ (if
+  (local.get $logger/1/285)
+  (then
+   (call $moonbit.incref
+    (local.get $logger/1/285)))
+  (else))
+ (drop
+  (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_2)
+   (local.get $logger/1/285)
+   (local.get $start_line/0/758)
+   (local.get $start_line/1/758)
+   (local.get $start_line/2/758)
+   (i32.load offset=16
+    (local.get $logger/0/285))))
+ (if
+  (local.get $logger/1/285)
+  (then
+   (call $moonbit.incref
+    (local.get $logger/1/285)))
+  (else))
+ (drop
+  (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_3)
+   (local.get $logger/1/285)
+   (i32.const 58)
+   (i32.load offset=20
+    (local.get $logger/0/285))))
+ (i32.load offset=68
+  (local.get $self/249))
+ (i32.load offset=32
+  (local.get $self/249))
+ (local.set $*field/2/803
+  (i32.load offset=36
+   (local.get $self/249)))
+ (local.set $*field/1/803)
+ (local.tee $*field/0/803)
+ (local.get $*field/1/803)
+ (local.set $start_column/2/759
+  (local.get $*field/2/803))
+ (local.set $start_column/1/759)
+ (local.tee $start_column/0/759)
+ (call $moonbit.incref)
+ (if
+  (local.get $logger/1/285)
+  (then
+   (call $moonbit.incref
+    (local.get $logger/1/285)))
+  (else))
+ (drop
+  (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_2)
+   (local.get $logger/1/285)
+   (local.get $start_column/0/759)
+   (local.get $start_column/1/759)
+   (local.get $start_column/2/759)
+   (i32.load offset=16
+    (local.get $logger/0/285))))
+ (if
+  (local.get $logger/1/285)
+  (then
+   (call $moonbit.incref
+    (local.get $logger/1/285)))
+  (else))
+ (drop
+  (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_3)
+   (local.get $logger/1/285)
+   (i32.const 45)
+   (i32.load offset=20
+    (local.get $logger/0/285))))
+ (i32.load offset=72
+  (local.get $self/249))
+ (i32.load offset=40
+  (local.get $self/249))
+ (local.set $*field/2/802
+  (i32.load offset=44
+   (local.get $self/249)))
+ (local.set $*field/1/802)
+ (local.tee $*field/0/802)
+ (local.get $*field/1/802)
+ (local.set $end_line/2/760
+  (local.get $*field/2/802))
+ (local.set $end_line/1/760)
+ (local.tee $end_line/0/760)
+ (call $moonbit.incref)
+ (if
+  (local.get $logger/1/285)
+  (then
+   (call $moonbit.incref
+    (local.get $logger/1/285)))
+  (else))
+ (drop
+  (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_2)
+   (local.get $logger/1/285)
+   (local.get $end_line/0/760)
+   (local.get $end_line/1/760)
+   (local.get $end_line/2/760)
+   (i32.load offset=16
+    (local.get $logger/0/285))))
+ (if
+  (local.get $logger/1/285)
+  (then
+   (call $moonbit.incref
+    (local.get $logger/1/285)))
+  (else))
+ (drop
+  (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_3)
+   (local.get $logger/1/285)
+   (i32.const 58)
+   (i32.load offset=20
+    (local.get $logger/0/285))))
+ (i32.load offset=76
+  (local.get $self/249))
+ (i32.load offset=48
+  (local.get $self/249))
+ (local.set $*field/2/801
+  (i32.load offset=52
+   (local.get $self/249)))
+ (local.set $*field/1/801)
+ (local.set $*field/0/801)
+ (if
+  (i32.gt_s
+   (local.tee $*cnt/833
+    (i32.load
+     (local.get $self/249)))
+   (i32.const 1))
+  (then
+   (local.set $*new_cnt/839
+    (i32.sub
+     (local.get $*cnt/833)
+     (i32.const 1)))
+   (i32.store
+    (local.get $self/249)
+    (local.get $*new_cnt/839))
+   (call $moonbit.incref
+    (local.get $*field/0/801)))
+  (else
+   (if
+    (i32.eq
+     (local.get $*cnt/833)
+     (i32.const 1))
+    (then
+     (i32.load offset=72
+      (local.get $self/249))
+     (i32.load offset=40
+      (local.get $self/249))
+     (local.set $*field/2/838
+      (i32.load offset=44
+       (local.get $self/249)))
+     (local.set $*field/1/838)
+     (local.tee $*field/0/838)
+     (call $moonbit.decref)
+     (i32.load offset=68
+      (local.get $self/249))
+     (i32.load offset=32
+      (local.get $self/249))
+     (local.set $*field/2/837
+      (i32.load offset=36
+       (local.get $self/249)))
+     (local.set $*field/1/837)
+     (local.tee $*field/0/837)
+     (call $moonbit.decref)
+     (i32.load offset=64
+      (local.get $self/249))
+     (i32.load offset=24
+      (local.get $self/249))
+     (local.set $*field/2/836
+      (i32.load offset=28
+       (local.get $self/249)))
+     (local.set $*field/1/836)
+     (local.tee $*field/0/836)
+     (call $moonbit.decref)
+     (i32.load offset=60
+      (local.get $self/249))
+     (i32.load offset=16
+      (local.get $self/249))
+     (local.set $*field/2/835
+      (i32.load offset=20
+       (local.get $self/249)))
+     (local.set $*field/1/835)
+     (local.tee $*field/0/835)
+     (call $moonbit.decref)
+     (i32.load offset=56
+      (local.get $self/249))
+     (i32.load offset=8
+      (local.get $self/249))
+     (local.set $*field/2/834
+      (i32.load offset=12
+       (local.get $self/249)))
+     (local.set $*field/1/834)
+     (local.tee $*field/0/834)
+     (call $moonbit.decref)
+     (call $moonbit.free
+      (local.get $self/249)))
+    (else))))
+ (local.get $*field/0/801)
+ (local.get $*field/1/801)
+ (local.set $end_column/2/761
+  (local.get $*field/2/801))
+ (local.set $end_column/1/761)
+ (local.set $end_column/0/761)
+ (if
+  (local.get $logger/1/285)
+  (then
+   (call $moonbit.incref
+    (local.get $logger/1/285)))
+  (else))
+ (drop
+  (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_2)
+   (local.get $logger/1/285)
+   (local.get $end_column/0/761)
+   (local.get $end_column/1/761)
+   (local.get $end_column/2/761)
+   (i32.load offset=16
+    (local.get $logger/0/285))))
+ (if
+  (local.get $logger/1/285)
+  (then
+   (call $moonbit.incref
+    (local.get $logger/1/285)))
+  (else))
+ (drop
+  (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_3)
+   (local.get $logger/1/285)
+   (i32.const 64)
+   (i32.load offset=20
+    (local.get $logger/0/285))))
+ (local.get $logger/0/285)
+ (local.set $*bind/1/756
+  (local.get $logger/1/285))
+ (local.set $*bind/0/756)
+ (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_2)
+  (local.get $*bind/1/756)
+  (local.get $*module_name/0/281)
+  (local.get $*module_name/1/281)
+  (local.get $*module_name/2/281)
+  (i32.load offset=16
+   (local.get $*bind/0/756))))
+(func $moonbitlang/core/builtin.println|String| (param $input/247 i32) (result i32)
+ (call $moonbit.println
+  (local.get $input/247))
+ (call $moonbit.decref
+  (local.get $input/247))
+ (i32.const 0))
+(func $@moonbitlang/core/builtin.Show::Int::output (param $self/245 i32) (param $logger/0/244 i32) (param $logger/1/244 i32) (result i32)
+ (local $*tmp/754 i32)
+ (local.set $*tmp/754
+  (call $Int::to_string.inner
+   (local.get $self/245)
+   (i32.const 10)))
+ (call_indirect $moonbit.global (type $@moonbitlang/core/builtin.Logger.method_0)
+  (local.get $logger/1/244)
+  (local.get $*tmp/754)
   (i32.load offset=8
-   (local.get $self/162)))
- (local.set $*tmp/728
+   (local.get $logger/0/244))))
+(func $@moonbitlang/core/builtin.Logger::@moonbitlang/core/builtin.StringBuilder::write_view (param $self/242 i32) (param $str/0/243 i32) (param $str/1/243 i32) (param $str/2/243 i32) (result i32)
+ (local $*tmp/735 i32)
+ (local $len/736 i32)
+ (local $*tmp/737 i32)
+ (local $*tmp/738 i32)
+ (local $end/739 i32)
+ (local $start/740 i32)
+ (local $data/741 i32)
+ (local $len/742 i32)
+ (local $str/743 i32)
+ (local $start/744 i32)
+ (local $*tmp/745 i32)
+ (local $end/746 i32)
+ (local $start/747 i32)
+ (local $*tmp/748 i32)
+ (local $len/749 i32)
+ (local $*tmp/750 i32)
+ (local $*tmp/751 i32)
+ (local $end/752 i32)
+ (local $start/753 i32)
+ (local $*field/811 i32)
+ (local $*field/812 i32)
+ (local $*field/813 i32)
+ (local.set $len/736
+  (i32.load offset=8
+   (local.get $self/242)))
+ (local.set $end/739
+  (local.get $str/2/243))
+ (local.set $start/740
+  (local.get $str/1/243))
+ (local.set $*tmp/737
   (i32.mul
-   (local.tee $*tmp/729
-    (call $moonbit.array_length
-     (local.get $str/163)))
+   (local.tee $*tmp/738
+    (i32.sub
+     (local.get $end/739)
+     (local.get $start/740)))
    (i32.const 2)))
- (local.set $*tmp/726
+ (local.set $*tmp/735
   (i32.add
-   (local.get $len/727)
-   (local.get $*tmp/728)))
+   (local.get $len/736)
+   (local.get $*tmp/737)))
  (call $moonbit.incref
-  (local.get $self/162))
+  (local.get $self/242))
  (drop
   (call $@moonbitlang/core/builtin.StringBuilder::grow_if_necessary
-   (local.get $self/162)
-   (local.get $*tmp/726)))
- (local.set $data/730
-  (local.tee $*field/941
+   (local.get $self/242)
+   (local.get $*tmp/735)))
+ (local.set $data/741
+  (local.tee $*field/813
    (i32.load offset=12
-    (local.get $self/162))))
- (local.set $len/731
+    (local.get $self/242))))
+ (local.set $len/742
   (i32.load offset=8
-   (local.get $self/162)))
- (local.set $*tmp/732
-  (call $moonbit.array_length
-   (local.get $str/163)))
+   (local.get $self/242)))
+ (local.set $str/743
+  (local.tee $*field/812
+   (local.get $str/0/243)))
+ (local.set $start/744
+  (local.get $str/1/243))
+ (local.set $end/746
+  (local.get $str/2/243))
+ (local.set $start/747
+  (local.get $str/1/243))
+ (local.set $*tmp/745
+  (i32.sub
+   (local.get $end/746)
+   (local.get $start/747)))
  (call $moonbit.incref
-  (local.get $data/730))
+  (local.get $str/743))
  (call $moonbit.incref
-  (local.get $str/163))
+  (local.get $data/741))
  (drop
   (call $FixedArray::blit_from_string
-   (local.get $data/730)
-   (local.get $len/731)
-   (local.get $str/163)
-   (i32.const 0)
-   (local.get $*tmp/732)))
- (local.set $len/734
+   (local.get $data/741)
+   (local.get $len/742)
+   (local.get $str/743)
+   (local.get $start/744)
+   (local.get $*tmp/745)))
+ (local.set $len/749
   (i32.load offset=8
-   (local.get $self/162)))
- (local.set $*tmp/940
-  (call $moonbit.array_length
-   (local.get $str/163)))
+   (local.get $self/242)))
+ (local.set $end/752
+  (local.get $str/2/243))
+ (local.set $*field/811
+  (local.get $str/1/243))
  (call $moonbit.decref
-  (local.get $str/163))
- (local.set $*tmp/735
+  (local.get $str/0/243))
+ (local.set $start/753
+  (local.get $*field/811))
+ (local.set $*tmp/750
   (i32.mul
-   (local.tee $*tmp/736
-    (local.get $*tmp/940))
+   (local.tee $*tmp/751
+    (i32.sub
+     (local.get $end/752)
+     (local.get $start/753)))
    (i32.const 2)))
- (local.set $*tmp/733
+ (local.set $*tmp/748
   (i32.add
-   (local.get $len/734)
-   (local.get $*tmp/735)))
+   (local.get $len/749)
+   (local.get $*tmp/750)))
  (i32.store offset=8
-  (local.get $self/162)
-  (local.get $*tmp/733))
+  (local.get $self/242)
+  (local.get $*tmp/748))
  (call $moonbit.decref
-  (local.get $self/162))
+  (local.get $self/242))
  (i32.const 0))
-(func $FixedArray::blit_from_string (param $self/154 i32) (param $bytes_offset/149 i32) (param $str/156 i32) (param $str_offset/152 i32) (param $length/150 i32) (result i32)
- (local $e1/148 i32)
- (local $e2/151 i32)
- (local $len1/153 i32)
- (local $len2/155 i32)
- (local $end_str_offset/157 i32)
- (local $i/158 i32)
- (local $j/159 i32)
- (local $c/160 i32)
- (local $*p/421 i32)
- (local $*p/424 i32)
+(func $Int::to_string.inner (param $self/226 i32) (param $radix/225 i32) (result i32)
+ (local $is_negative/227 i32)
+ (local $num/228 i32)
+ (local $buffer/229 i32)
+ (local $digit_len/230 i32)
+ (local $total_len/231 i32)
+ (local $buffer/232 i32)
+ (local $digit_start/233 i32)
+ (local $digit_len/234 i32)
+ (local $total_len/235 i32)
+ (local $buffer/236 i32)
+ (local $digit_start/237 i32)
+ (local $digit_len/238 i32)
+ (local $total_len/239 i32)
+ (local $buffer/240 i32)
+ (local $digit_start/241 i32)
+ (local $*tmp/731 i32)
+ (local $*tmp/732 i32)
+ (local $*tmp/733 i32)
+ (local $*tmp/734 i32)
+ (if
+  (if (result i32)
+   (i32.lt_s
+    (local.get $radix/225)
+    (i32.const 2))
+   (then
+    (i32.const 1))
+   (else
+    (i32.gt_s
+     (local.get $radix/225)
+     (i32.const 36))))
+  (then
+   (drop
+    (call $moonbitlang/core/builtin.abort|Unit|
+     (i32.const 10152)
+     (i32.const 10032))))
+  (else))
+ (if
+  (i32.eq
+   (local.get $self/226)
+   (i32.const 0))
+  (then
+   (i32.const 10016)
+   (return))
+  (else))
+ (local.set $num/228
+  (if (result i32)
+   (local.tee $is_negative/227
+    (i32.lt_s
+     (local.get $self/226)
+     (i32.const 0)))
+   (then
+    (local.tee $*tmp/734
+     (i32.sub
+      (i32.const 0)
+      (local.get $self/226))))
+   (else
+    (local.get $self/226))))
+ (local.set $buffer/229
+  (if (result i32)
+   (i32.eq
+    (local.get $radix/225)
+    (i32.const 10))
+   (then
+    (local.set $digit_len/230
+     (call $moonbitlang/core/builtin.dec_count32
+      (local.get $num/228)))
+    (local.set $*tmp/731
+     (if (result i32)
+      (local.get $is_negative/227)
+      (then
+       (i32.const 1))
+      (else
+       (i32.const 0))))
+    (local.set $buffer/232
+     (call $moonbit.int16_array_make
+      (local.tee $total_len/231
+       (i32.add
+        (local.get $digit_len/230)
+        (local.get $*tmp/731)))
+      (i32.const 0)))
+    (local.set $digit_start/233
+     (if (result i32)
+      (local.get $is_negative/227)
+      (then
+       (i32.const 1))
+      (else
+       (i32.const 0))))
+    (call $moonbit.incref
+     (local.get $buffer/232))
+    (drop
+     (call $moonbitlang/core/builtin.int_to_string_dec
+      (local.get $buffer/232)
+      (local.get $num/228)
+      (local.get $digit_start/233)
+      (local.get $total_len/231)))
+    (local.get $buffer/232))
+   (else
+    (if (result i32)
+     (i32.eq
+      (local.get $radix/225)
+      (i32.const 16))
+     (then
+      (local.set $digit_len/234
+       (call $moonbitlang/core/builtin.hex_count32
+        (local.get $num/228)))
+      (local.set $*tmp/732
+       (if (result i32)
+        (local.get $is_negative/227)
+        (then
+         (i32.const 1))
+        (else
+         (i32.const 0))))
+      (local.set $buffer/236
+       (call $moonbit.int16_array_make
+        (local.tee $total_len/235
+         (i32.add
+          (local.get $digit_len/234)
+          (local.get $*tmp/732)))
+        (i32.const 0)))
+      (local.set $digit_start/237
+       (if (result i32)
+        (local.get $is_negative/227)
+        (then
+         (i32.const 1))
+        (else
+         (i32.const 0))))
+      (call $moonbit.incref
+       (local.get $buffer/236))
+      (drop
+       (call $moonbitlang/core/builtin.int_to_string_hex
+        (local.get $buffer/236)
+        (local.get $num/228)
+        (local.get $digit_start/237)
+        (local.get $total_len/235)))
+      (local.get $buffer/236))
+     (else
+      (local.set $digit_len/238
+       (call $moonbitlang/core/builtin.radix_count32
+        (local.get $num/228)
+        (local.get $radix/225)))
+      (local.set $*tmp/733
+       (if (result i32)
+        (local.get $is_negative/227)
+        (then
+         (i32.const 1))
+        (else
+         (i32.const 0))))
+      (local.set $buffer/240
+       (call $moonbit.int16_array_make
+        (local.tee $total_len/239
+         (i32.add
+          (local.get $digit_len/238)
+          (local.get $*tmp/733)))
+        (i32.const 0)))
+      (local.set $digit_start/241
+       (if (result i32)
+        (local.get $is_negative/227)
+        (then
+         (i32.const 1))
+        (else
+         (i32.const 0))))
+      (call $moonbit.incref
+       (local.get $buffer/240))
+      (drop
+       (call $moonbitlang/core/builtin.int_to_string_generic
+        (local.get $buffer/240)
+        (local.get $num/228)
+        (local.get $digit_start/241)
+        (local.get $total_len/239)
+        (local.get $radix/225)))
+      (local.get $buffer/240))))))
+ (if
+  (local.get $is_negative/227)
+  (then
+   (i32.store16 offset=8
+    (i32.add
+     (local.get $buffer/229)
+     (i32.shl
+      (i32.const 0)
+      (i32.const 1)))
+    (i32.const 45)))
+  (else))
+ (local.get $buffer/229))
+(func $moonbitlang/core/builtin.radix_count32 (param $value/219 i32) (param $radix/222 i32) (result i32)
+ (local $base/221 i32)
+ (local $*tmp/728 i32)
+ (local $*tmp/729 i32)
+ (local $*tmp/730 i32)
+ (local $num/220 i32)
+ (local $count/223 i32)
+ (if
+  (i32.eq
+   (local.get $value/219)
+   (i32.const 0))
+  (then
+   (i32.const 1)
+   (return))
+  (else))
+ (local.set $num/220
+  (local.get $value/219))
+ (local.set $base/221
+  (local.get $radix/222))
+ (local.set $count/223
+  (i32.const 0))
+ (loop $loop:224
+  (if
+   (i32.gt_u
+    (local.tee $*tmp/728
+     (local.get $num/220))
+    (i32.const 0))
+   (then
+    (local.set $count/223
+     (i32.add
+      (local.tee $*tmp/729
+       (local.get $count/223))
+      (i32.const 1)))
+    (local.set $num/220
+     (i32.div_u
+      (local.tee $*tmp/730
+       (local.get $num/220))
+      (local.get $base/221)))
+    (br $loop:224))
+   (else)))
+ (local.get $count/223))
+(func $moonbitlang/core/builtin.hex_count32 (param $value/217 i32) (result i32)
+ (local $leading_zeros/218 i32)
+ (local $*tmp/726 i32)
+ (local $*tmp/727 i32)
+ (if (result i32)
+  (i32.eq
+   (local.get $value/217)
+   (i32.const 0))
+  (then
+   (i32.const 1))
+  (else
+   (local.set $leading_zeros/218
+    (i32.clz
+     (local.get $value/217)))
+   (i32.add
+    (local.tee $*tmp/726
+     (i32.div_s
+      (local.tee $*tmp/727
+       (i32.sub
+        (i32.const 31)
+        (local.get $leading_zeros/218)))
+      (i32.const 4)))
+    (i32.const 1)))))
+(func $moonbitlang/core/builtin.dec_count32 (param $value/216 i32) (result i32)
+ (if (result i32)
+  (i32.ge_u
+   (local.get $value/216)
+   (i32.const 100000))
+  (then
+   (if (result i32)
+    (i32.ge_u
+     (local.get $value/216)
+     (i32.const 10000000))
+    (then
+     (if (result i32)
+      (i32.ge_u
+       (local.get $value/216)
+       (i32.const 1000000000))
+      (then
+       (i32.const 10))
+      (else
+       (if (result i32)
+        (i32.ge_u
+         (local.get $value/216)
+         (i32.const 100000000))
+        (then
+         (i32.const 9))
+        (else
+         (i32.const 8))))))
+    (else
+     (if (result i32)
+      (i32.ge_u
+       (local.get $value/216)
+       (i32.const 1000000))
+      (then
+       (i32.const 7))
+      (else
+       (i32.const 6))))))
+  (else
+   (if (result i32)
+    (i32.ge_u
+     (local.get $value/216)
+     (i32.const 1000))
+    (then
+     (if (result i32)
+      (i32.ge_u
+       (local.get $value/216)
+       (i32.const 10000))
+      (then
+       (i32.const 5))
+      (else
+       (i32.const 4))))
+    (else
+     (if (result i32)
+      (i32.ge_u
+       (local.get $value/216)
+       (i32.const 100))
+      (then
+       (i32.const 3))
+      (else
+       (if (result i32)
+        (i32.ge_u
+         (local.get $value/216)
+         (i32.const 10))
+        (then
+         (i32.const 2))
+        (else
+         (i32.const 1))))))))))
+(func $moonbitlang/core/builtin.int_to_string_dec (param $buffer/206 i32) (param $num/194 i32) (param $digit_start/197 i32) (param $total_len/196 i32) (result i32)
+ (local $t/198 i32)
+ (local $r/199 i32)
+ (local $d1/200 i32)
+ (local $d2/201 i32)
+ (local $d1_hi/202 i32)
+ (local $d1_lo/203 i32)
+ (local $d2_hi/204 i32)
+ (local $d2_lo/205 i32)
+ (local $t/209 i32)
+ (local $d/210 i32)
+ (local $d_hi/211 i32)
+ (local $d_lo/212 i32)
+ (local $d_hi/214 i32)
+ (local $d_lo/215 i32)
+ (local $*tmp/669 i32)
+ (local $*tmp/670 i32)
+ (local $*tmp/671 i32)
+ (local $*tmp/672 i32)
+ (local $*tmp/673 i32)
+ (local $*tmp/674 i32)
+ (local $*tmp/675 i32)
+ (local $*tmp/676 i32)
+ (local $*tmp/677 i32)
+ (local $*tmp/678 i32)
+ (local $*tmp/679 i32)
+ (local $*tmp/680 i32)
+ (local $*tmp/681 i32)
+ (local $*tmp/682 i32)
+ (local $*tmp/683 i32)
+ (local $*tmp/684 i32)
+ (local $*tmp/685 i32)
+ (local $*tmp/686 i32)
+ (local $*tmp/687 i32)
+ (local $*tmp/688 i32)
+ (local $*tmp/689 i32)
+ (local $*tmp/690 i32)
+ (local $*tmp/691 i32)
+ (local $*tmp/692 i32)
+ (local $*tmp/693 i32)
+ (local $*tmp/694 i32)
+ (local $*tmp/695 i32)
+ (local $*tmp/696 i32)
+ (local $*tmp/697 i32)
+ (local $*tmp/698 i32)
+ (local $*tmp/699 i32)
+ (local $*tmp/700 i32)
+ (local $*tmp/701 i32)
+ (local $*tmp/702 i32)
+ (local $*tmp/703 i32)
+ (local $*tmp/704 i32)
+ (local $*tmp/705 i32)
+ (local $*tmp/706 i32)
+ (local $*tmp/707 i32)
+ (local $*tmp/708 i32)
+ (local $*tmp/709 i32)
+ (local $*tmp/710 i32)
+ (local $*tmp/711 i32)
+ (local $*tmp/712 i32)
+ (local $*tmp/713 i32)
+ (local $*tmp/714 i32)
  (local $*tmp/715 i32)
  (local $*tmp/716 i32)
  (local $*tmp/717 i32)
@@ -4123,58 +3139,1069 @@
  (local $*tmp/723 i32)
  (local $*tmp/724 i32)
  (local $*tmp/725 i32)
- (local $*arr/1013 i32)
- (local $*idx/1014 i32)
- (local $*arr/1015 i32)
- (local $*idx/1016 i32)
- (local.set $*tmp/725
+ (local $num/193 i32)
+ (local $offset/195 i32)
+ (local $remaining/208 i32)
+ (local.set $num/193
+  (local.get $num/194))
+ (local.set $offset/195
+  (i32.sub
+   (local.get $total_len/196)
+   (local.get $digit_start/197)))
+ (loop $loop:207
+  (if
+   (i32.ge_u
+    (local.tee $*tmp/669
+     (local.get $num/193))
+    (i32.const 10000))
+   (then
+    (local.set $t/198
+     (i32.div_u
+      (local.tee $*tmp/692
+       (local.get $num/193))
+      (i32.const 10000)))
+    (local.set $r/199
+     (local.tee $*tmp/690
+      (i32.rem_u
+       (local.tee $*tmp/691
+        (local.get $num/193))
+       (i32.const 10000))))
+    (local.set $num/193
+     (local.get $t/198))
+    (local.set $d1/200
+     (i32.div_s
+      (local.get $r/199)
+      (i32.const 100)))
+    (local.set $d2/201
+     (i32.rem_s
+      (local.get $r/199)
+      (i32.const 100)))
+    (local.set $offset/195
+     (i32.sub
+      (local.tee $*tmp/670
+       (local.get $offset/195))
+      (i32.const 4)))
+    (local.set $*tmp/689
+     (i32.div_s
+      (local.get $d1/200)
+      (i32.const 10)))
+    (local.set $d1_hi/202
+     (i32.and
+      (local.tee $*tmp/688
+       (i32.add
+        (i32.const 48)
+        (local.get $*tmp/689)))
+      (i32.const 65535)))
+    (local.set $*tmp/687
+     (i32.rem_s
+      (local.get $d1/200)
+      (i32.const 10)))
+    (local.set $d1_lo/203
+     (i32.and
+      (local.tee $*tmp/686
+       (i32.add
+        (i32.const 48)
+        (local.get $*tmp/687)))
+      (i32.const 65535)))
+    (local.set $*tmp/685
+     (i32.div_s
+      (local.get $d2/201)
+      (i32.const 10)))
+    (local.set $d2_hi/204
+     (i32.and
+      (local.tee $*tmp/684
+       (i32.add
+        (i32.const 48)
+        (local.get $*tmp/685)))
+      (i32.const 65535)))
+    (local.set $*tmp/683
+     (i32.rem_s
+      (local.get $d2/201)
+      (i32.const 10)))
+    (local.set $d2_lo/205
+     (i32.and
+      (local.tee $*tmp/682
+       (i32.add
+        (i32.const 48)
+        (local.get $*tmp/683)))
+      (i32.const 65535)))
+    (local.set $*tmp/672
+     (local.get $offset/195))
+    (local.set $*tmp/671
+     (i32.add
+      (local.get $digit_start/197)
+      (local.get $*tmp/672)))
+    (i32.store16 offset=8
+     (i32.add
+      (local.get $buffer/206)
+      (i32.shl
+       (local.get $*tmp/671)
+       (i32.const 1)))
+     (local.get $d1_hi/202))
+    (local.set $*tmp/675
+     (local.get $offset/195))
+    (local.set $*tmp/673
+     (i32.add
+      (local.tee $*tmp/674
+       (i32.add
+        (local.get $digit_start/197)
+        (local.get $*tmp/675)))
+      (i32.const 1)))
+    (i32.store16 offset=8
+     (i32.add
+      (local.get $buffer/206)
+      (i32.shl
+       (local.get $*tmp/673)
+       (i32.const 1)))
+     (local.get $d1_lo/203))
+    (local.set $*tmp/678
+     (local.get $offset/195))
+    (local.set $*tmp/676
+     (i32.add
+      (local.tee $*tmp/677
+       (i32.add
+        (local.get $digit_start/197)
+        (local.get $*tmp/678)))
+      (i32.const 2)))
+    (i32.store16 offset=8
+     (i32.add
+      (local.get $buffer/206)
+      (i32.shl
+       (local.get $*tmp/676)
+       (i32.const 1)))
+     (local.get $d2_hi/204))
+    (local.set $*tmp/681
+     (local.get $offset/195))
+    (local.set $*tmp/679
+     (i32.add
+      (local.tee $*tmp/680
+       (i32.add
+        (local.get $digit_start/197)
+        (local.get $*tmp/681)))
+      (i32.const 3)))
+    (i32.store16 offset=8
+     (i32.add
+      (local.get $buffer/206)
+      (i32.shl
+       (local.get $*tmp/679)
+       (i32.const 1)))
+     (local.get $d2_lo/205))
+    (br $loop:207))
+   (else)))
+ (local.set $remaining/208
+  (local.tee $*tmp/725
+   (local.get $num/193)))
+ (loop $loop:213
+  (if
+   (i32.ge_s
+    (local.tee $*tmp/693
+     (local.get $remaining/208))
+    (i32.const 100))
+   (then
+    (local.set $t/209
+     (i32.div_s
+      (local.tee $*tmp/705
+       (local.get $remaining/208))
+      (i32.const 100)))
+    (local.set $d/210
+     (i32.rem_s
+      (local.tee $*tmp/704
+       (local.get $remaining/208))
+      (i32.const 100)))
+    (local.set $remaining/208
+     (local.get $t/209))
+    (local.set $offset/195
+     (i32.sub
+      (local.tee $*tmp/694
+       (local.get $offset/195))
+      (i32.const 2)))
+    (local.set $*tmp/703
+     (i32.div_s
+      (local.get $d/210)
+      (i32.const 10)))
+    (local.set $d_hi/211
+     (i32.and
+      (local.tee $*tmp/702
+       (i32.add
+        (i32.const 48)
+        (local.get $*tmp/703)))
+      (i32.const 65535)))
+    (local.set $*tmp/701
+     (i32.rem_s
+      (local.get $d/210)
+      (i32.const 10)))
+    (local.set $d_lo/212
+     (i32.and
+      (local.tee $*tmp/700
+       (i32.add
+        (i32.const 48)
+        (local.get $*tmp/701)))
+      (i32.const 65535)))
+    (local.set $*tmp/696
+     (local.get $offset/195))
+    (local.set $*tmp/695
+     (i32.add
+      (local.get $digit_start/197)
+      (local.get $*tmp/696)))
+    (i32.store16 offset=8
+     (i32.add
+      (local.get $buffer/206)
+      (i32.shl
+       (local.get $*tmp/695)
+       (i32.const 1)))
+     (local.get $d_hi/211))
+    (local.set $*tmp/699
+     (local.get $offset/195))
+    (local.set $*tmp/697
+     (i32.add
+      (local.tee $*tmp/698
+       (i32.add
+        (local.get $digit_start/197)
+        (local.get $*tmp/699)))
+      (i32.const 1)))
+    (i32.store16 offset=8
+     (i32.add
+      (local.get $buffer/206)
+      (i32.shl
+       (local.get $*tmp/697)
+       (i32.const 1)))
+     (local.get $d_lo/212))
+    (br $loop:213))
+   (else)))
+ (if (result i32)
+  (i32.ge_s
+   (local.tee $*tmp/706
+    (local.get $remaining/208))
+   (i32.const 10))
+  (then
+   (local.set $offset/195
+    (i32.sub
+     (local.tee $*tmp/707
+      (local.get $offset/195))
+     (i32.const 2)))
+   (local.set $*tmp/717
+    (i32.div_s
+     (local.tee $*tmp/718
+      (local.get $remaining/208))
+     (i32.const 10)))
+   (local.set $d_hi/214
+    (i32.and
+     (local.tee $*tmp/716
+      (i32.add
+       (i32.const 48)
+       (local.get $*tmp/717)))
+     (i32.const 65535)))
+   (local.set $*tmp/714
+    (i32.rem_s
+     (local.tee $*tmp/715
+      (local.get $remaining/208))
+     (i32.const 10)))
+   (local.set $d_lo/215
+    (i32.and
+     (local.tee $*tmp/713
+      (i32.add
+       (i32.const 48)
+       (local.get $*tmp/714)))
+     (i32.const 65535)))
+   (local.set $*tmp/709
+    (local.get $offset/195))
+   (local.set $*tmp/708
+    (i32.add
+     (local.get $digit_start/197)
+     (local.get $*tmp/709)))
+   (i32.store16 offset=8
+    (i32.add
+     (local.get $buffer/206)
+     (i32.shl
+      (local.get $*tmp/708)
+      (i32.const 1)))
+    (local.get $d_hi/214))
+   (local.set $*tmp/712
+    (local.get $offset/195))
+   (local.set $*tmp/710
+    (i32.add
+     (local.tee $*tmp/711
+      (i32.add
+       (local.get $digit_start/197)
+       (local.get $*tmp/712)))
+     (i32.const 1)))
+   (i32.store16 offset=8
+    (i32.add
+     (local.get $buffer/206)
+     (i32.shl
+      (local.get $*tmp/710)
+      (i32.const 1)))
+    (local.get $d_lo/215))
+   (call $moonbit.decref
+    (local.get $buffer/206))
+   (i32.const 0))
+  (else
+   (local.set $*tmp/724
+    (local.tee $offset/195
+     (i32.sub
+      (local.tee $*tmp/719
+       (local.get $offset/195))
+      (i32.const 1))))
+   (local.set $*tmp/720
+    (i32.add
+     (local.get $digit_start/197)
+     (local.get $*tmp/724)))
+   (local.set $*tmp/723
+    (local.get $remaining/208))
+   (local.set $*tmp/721
+    (i32.and
+     (local.tee $*tmp/722
+      (i32.add
+       (i32.const 48)
+       (local.get $*tmp/723)))
+     (i32.const 65535)))
+   (i32.store16 offset=8
+    (i32.add
+     (local.get $buffer/206)
+     (i32.shl
+      (local.get $*tmp/720)
+      (i32.const 1)))
+    (local.get $*tmp/721))
+   (call $moonbit.decref
+    (local.get $buffer/206))
+   (i32.const 0))))
+(func $moonbitlang/core/builtin.int_to_string_generic (param $buffer/188 i32) (param $num/182 i32) (param $digit_start/180 i32) (param $total_len/179 i32) (param $radix/184 i32) (result i32)
+ (local $base/183 i32)
+ (local $shift/185 i32)
+ (local $mask/186 i32)
+ (local $digit/187 i32)
+ (local $q/190 i32)
+ (local $digit/191 i32)
+ (local $*tmp/648 i32)
+ (local $*tmp/649 i32)
+ (local $*tmp/650 i32)
+ (local $*tmp/651 i32)
+ (local $*tmp/652 i32)
+ (local $*tmp/653 i32)
+ (local $*tmp/654 i32)
+ (local $*tmp/655 i32)
+ (local $*tmp/656 i32)
+ (local $*tmp/657 i32)
+ (local $*tmp/658 i32)
+ (local $*tmp/659 i32)
+ (local $*tmp/660 i32)
+ (local $*tmp/661 i32)
+ (local $*tmp/662 i32)
+ (local $*tmp/663 i32)
+ (local $*tmp/664 i32)
+ (local $*tmp/665 i32)
+ (local $*tmp/666 i32)
+ (local $*tmp/667 i32)
+ (local $*tmp/668 i32)
+ (local $offset/178 i32)
+ (local $n/181 i32)
+ (local.set $offset/178
+  (i32.sub
+   (local.get $total_len/179)
+   (local.get $digit_start/180)))
+ (local.set $n/181
+  (local.get $num/182))
+ (local.set $base/183
+  (local.get $radix/184))
+ (local.set $*tmp/649
+  (i32.sub
+   (local.get $radix/184)
+   (i32.const 1)))
+ (if (result i32)
+  (i32.eq
+   (local.tee $*tmp/648
+    (i32.and
+     (local.get $radix/184)
+     (local.get $*tmp/649)))
+   (i32.const 0))
+  (then
+   (local.set $shift/185
+    (i32.ctz
+     (local.get $radix/184)))
+   (local.set $mask/186
+    (i32.sub
+     (local.get $base/183)
+     (i32.const 1)))
+   (loop $loop:189
+    (if
+     (i32.gt_u
+      (local.tee $*tmp/650
+       (local.get $n/181))
+      (i32.const 0))
+     (then
+      (local.set $offset/178
+       (i32.sub
+        (local.tee $*tmp/651
+         (local.get $offset/178))
+        (i32.const 1)))
+      (local.set $digit/187
+       (local.tee $*tmp/657
+        (i32.and
+         (local.tee $*tmp/658
+          (local.get $n/181))
+         (local.get $mask/186))))
+      (local.set $*tmp/655
+       (local.get $offset/178))
+      (local.set $*tmp/652
+       (i32.add
+        (local.get $digit_start/180)
+        (local.get $*tmp/655)))
+      (local.set $*tmp/653
+       (i32.and
+        (local.tee $*tmp/654
+         (i32.load16_u offset=8
+          (i32.add
+           (i32.const 10224)
+           (i32.shl
+            (local.get $digit/187)
+            (i32.const 1)))))
+        (i32.const 65535)))
+      (i32.store16 offset=8
+       (i32.add
+        (local.get $buffer/188)
+        (i32.shl
+         (local.get $*tmp/652)
+         (i32.const 1)))
+       (local.get $*tmp/653))
+      (local.set $n/181
+       (i32.shr_u
+        (local.tee $*tmp/656
+         (local.get $n/181))
+        (local.get $shift/185)))
+      (br $loop:189))
+     (else
+      (call $moonbit.decref
+       (local.get $buffer/188)))))
+   (i32.const 0))
+  (else
+   (loop $loop:192
+    (if
+     (i32.gt_u
+      (local.tee $*tmp/659
+       (local.get $n/181))
+      (i32.const 0))
+     (then
+      (local.set $offset/178
+       (i32.sub
+        (local.tee $*tmp/660
+         (local.get $offset/178))
+        (i32.const 1)))
+      (local.set $q/190
+       (i32.div_u
+        (local.tee $*tmp/668
+         (local.get $n/181))
+        (local.get $base/183)))
+      (local.set $*tmp/666
+       (local.get $n/181))
+      (local.set $*tmp/667
+       (i32.mul
+        (local.get $q/190)
+        (local.get $base/183)))
+      (local.set $digit/191
+       (local.tee $*tmp/665
+        (i32.sub
+         (local.get $*tmp/666)
+         (local.get $*tmp/667))))
+      (local.set $*tmp/664
+       (local.get $offset/178))
+      (local.set $*tmp/661
+       (i32.add
+        (local.get $digit_start/180)
+        (local.get $*tmp/664)))
+      (local.set $*tmp/662
+       (i32.and
+        (local.tee $*tmp/663
+         (i32.load16_u offset=8
+          (i32.add
+           (i32.const 10224)
+           (i32.shl
+            (local.get $digit/191)
+            (i32.const 1)))))
+        (i32.const 65535)))
+      (i32.store16 offset=8
+       (i32.add
+        (local.get $buffer/188)
+        (i32.shl
+         (local.get $*tmp/661)
+         (i32.const 1)))
+       (local.get $*tmp/662))
+      (local.set $n/181
+       (local.get $q/190))
+      (br $loop:192))
+     (else
+      (call $moonbit.decref
+       (local.get $buffer/188)))))
+   (i32.const 0))))
+(func $moonbitlang/core/builtin.int_to_string_hex (param $buffer/175 i32) (param $num/171 i32) (param $digit_start/169 i32) (param $total_len/168 i32) (result i32)
+ (local $byte_val/172 i32)
+ (local $hi/173 i32)
+ (local $lo/174 i32)
+ (local $nibble/177 i32)
+ (local $*tmp/629 i32)
+ (local $*tmp/630 i32)
+ (local $*tmp/631 i32)
+ (local $*tmp/632 i32)
+ (local $*tmp/633 i32)
+ (local $*tmp/634 i32)
+ (local $*tmp/635 i32)
+ (local $*tmp/636 i32)
+ (local $*tmp/637 i32)
+ (local $*tmp/638 i32)
+ (local $*tmp/639 i32)
+ (local $*tmp/640 i32)
+ (local $*tmp/641 i32)
+ (local $*tmp/642 i32)
+ (local $*tmp/643 i32)
+ (local $*tmp/644 i32)
+ (local $*tmp/645 i32)
+ (local $*tmp/646 i32)
+ (local $*tmp/647 i32)
+ (local $offset/167 i32)
+ (local $n/170 i32)
+ (local.set $offset/167
+  (i32.sub
+   (local.get $total_len/168)
+   (local.get $digit_start/169)))
+ (local.set $n/170
+  (local.get $num/171))
+ (loop $loop:176
+  (if
+   (i32.ge_s
+    (local.tee $*tmp/629
+     (local.get $offset/167))
+    (i32.const 2))
+   (then
+    (local.set $offset/167
+     (i32.sub
+      (local.tee $*tmp/630
+       (local.get $offset/167))
+      (i32.const 2)))
+    (local.set $hi/173
+     (i32.div_s
+      (local.tee $byte_val/172
+       (local.tee $*tmp/641
+        (i32.and
+         (local.tee $*tmp/642
+          (local.get $n/170))
+         (i32.const 255))))
+      (i32.const 16)))
+    (local.set $lo/174
+     (i32.rem_s
+      (local.get $byte_val/172)
+      (i32.const 16)))
+    (local.set $*tmp/634
+     (local.get $offset/167))
+    (local.set $*tmp/631
+     (i32.add
+      (local.get $digit_start/169)
+      (local.get $*tmp/634)))
+    (local.set $*tmp/632
+     (i32.and
+      (local.tee $*tmp/633
+       (i32.load16_u offset=8
+        (i32.add
+         (i32.const 10224)
+         (i32.shl
+          (local.get $hi/173)
+          (i32.const 1)))))
+      (i32.const 65535)))
+    (i32.store16 offset=8
+     (i32.add
+      (local.get $buffer/175)
+      (i32.shl
+       (local.get $*tmp/631)
+       (i32.const 1)))
+     (local.get $*tmp/632))
+    (local.set $*tmp/639
+     (local.get $offset/167))
+    (local.set $*tmp/635
+     (i32.add
+      (local.tee $*tmp/638
+       (i32.add
+        (local.get $digit_start/169)
+        (local.get $*tmp/639)))
+      (i32.const 1)))
+    (local.set $*tmp/636
+     (i32.and
+      (local.tee $*tmp/637
+       (i32.load16_u offset=8
+        (i32.add
+         (i32.const 10224)
+         (i32.shl
+          (local.get $lo/174)
+          (i32.const 1)))))
+      (i32.const 65535)))
+    (i32.store16 offset=8
+     (i32.add
+      (local.get $buffer/175)
+      (i32.shl
+       (local.get $*tmp/635)
+       (i32.const 1)))
+     (local.get $*tmp/636))
+    (local.set $n/170
+     (i32.shr_u
+      (local.tee $*tmp/640
+       (local.get $n/170))
+      (i32.const 8)))
+    (br $loop:176))
+   (else)))
+ (if (result i32)
+  (i32.eq
+   (local.tee $*tmp/643
+    (local.get $offset/167))
+   (i32.const 1))
+  (then
+   (local.set $nibble/177
+    (local.tee $*tmp/646
+     (i32.and
+      (local.tee $*tmp/647
+       (local.get $n/170))
+      (i32.const 15))))
+   (local.set $*tmp/644
+    (i32.and
+     (local.tee $*tmp/645
+      (i32.load16_u offset=8
+       (i32.add
+        (i32.const 10224)
+        (i32.shl
+         (local.get $nibble/177)
+         (i32.const 1)))))
+     (i32.const 65535)))
+   (i32.store16 offset=8
+    (i32.add
+     (local.get $buffer/175)
+     (i32.shl
+      (local.get $digit_start/169)
+      (i32.const 1)))
+    (local.get $*tmp/644))
+   (call $moonbit.decref
+    (local.get $buffer/175))
+   (i32.const 0))
+  (else
+   (call $moonbit.decref
+    (local.get $buffer/175))
+   (i32.const 0))))
+(func $@moonbitlang/core/builtin.Show::$default_impl::to_string|@moonbitlang/core/builtin.SourceLoc| (param $self/166 i32) (result i32)
+ (local $logger/165 i32)
+ (local $*tmp/0/628 i32)
+ (local $*tmp/1/628 i32)
+ (call $moonbit.incref
+  (local.tee $logger/165
+   (call $@moonbitlang/core/builtin.StringBuilder::new.inner
+    (i32.const 0))))
+ (global.get $@moonbitlang/core/builtin.StringBuilder.as_@moonbitlang/core/builtin.Logger.static_method_table_id)
+ (local.set $*tmp/1/628
+  (local.get $logger/165))
+ (local.set $*tmp/0/628)
+ (drop
+  (call $@moonbitlang/core/builtin.Show::@moonbitlang/core/builtin.SourceLoc::output
+   (local.get $self/166)
+   (local.get $*tmp/0/628)
+   (local.get $*tmp/1/628)))
+ (call $@moonbitlang/core/builtin.StringBuilder::to_string
+  (local.get $logger/165)))
+(func $@moonbitlang/core/builtin.Show::$default_impl::to_string|Int| (param $self/164 i32) (result i32)
+ (local $logger/163 i32)
+ (local $*tmp/0/627 i32)
+ (local $*tmp/1/627 i32)
+ (call $moonbit.incref
+  (local.tee $logger/163
+   (call $@moonbitlang/core/builtin.StringBuilder::new.inner
+    (i32.const 0))))
+ (global.get $@moonbitlang/core/builtin.StringBuilder.as_@moonbitlang/core/builtin.Logger.static_method_table_id)
+ (local.set $*tmp/1/627
+  (local.get $logger/163))
+ (local.set $*tmp/0/627)
+ (drop
+  (call $@moonbitlang/core/builtin.Show::Int::output
+   (local.get $self/164)
+   (local.get $*tmp/0/627)
+   (local.get $*tmp/1/627)))
+ (call $@moonbitlang/core/builtin.StringBuilder::to_string
+  (local.get $logger/163)))
+(func $@moonbitlang/core/builtin.Logger::$default_impl::write_substring|@moonbitlang/core/builtin.StringBuilder| (param $self/154 i32) (param $value/157 i32) (param $start/158 i32) (param $len/159 i32) (result i32)
+ (local $*try_err/156 i32)
+ (local $*tmp/0/620 i32)
+ (local $*tmp/1/620 i32)
+ (local $*tmp/2/620 i32)
+ (local $*tmp/621 i64)
+ (local $*tmp/622 i32)
+ (local $*ok/0/623 i32)
+ (local $*ok/1/623 i32)
+ (local $*ok/2/623 i32)
+ (local $*err/624 i32)
+ (local $*obj/0/853 i32)
+ (local $*obj/1/853 i32)
+ (local $*obj/2/853 i32)
+ (block $outer/852 (result i32) (result i32) (result i32)
+  (block $join:155
+   (local.set $*tmp/621
+    (i64.extend_i32_s
+     (local.tee $*tmp/622
+      (i32.add
+       (local.get $start/158)
+       (local.get $len/159)))))
+   (call $String::sub.inner
+    (local.get $value/157)
+    (local.get $start/158)
+    (local.get $*tmp/621))
+   (local.set $*obj/2/853)
+   (local.set $*obj/1/853)
+   (local.set $*obj/0/853)
+   (if (result i32) (result i32) (result i32)
+    (then
+     (local.get $*obj/0/853)
+     (local.get $*obj/1/853)
+     (local.set $*ok/2/623
+      (local.get $*obj/2/853))
+     (local.set $*ok/1/623)
+     (local.tee $*ok/0/623)
+     (local.get $*ok/1/623)
+     (local.get $*ok/2/623))
+    (else
+     (local.set $*try_err/156
+      (local.tee $*err/624
+       (local.get $*obj/0/853)))
+     (br $join:155)))
+   (br $outer/852))
+  (call $moonbit.decref
+   (local.get $*try_err/156))
+  (unreachable))
+ (local.set $*tmp/2/620)
+ (local.set $*tmp/1/620)
+ (local.set $*tmp/0/620)
+ (call $@moonbitlang/core/builtin.Logger::@moonbitlang/core/builtin.StringBuilder::write_view
+  (local.get $self/154)
+  (local.get $*tmp/0/620)
+  (local.get $*tmp/1/620)
+  (local.get $*tmp/2/620)))
+(func $String::sub (param $self/152 i32) (param $start.opt/150 i64) (param $end/153 i64) (result i32) (result i32) (result i32) (result i32)
+ (local $start/149 i32)
+ (local $*Some/151 i64)
+ (local.set $start/149
+  (if (result i32)
+   (i64.eq
+    (local.get $start.opt/150)
+    (i64.const 4294967296))
+   (then
+    (i32.const 0))
+   (else
+    (i32.wrap_i64
+     (local.tee $*Some/151
+      (local.get $start.opt/150))))))
+ (call $String::sub.inner
+  (local.get $self/152)
+  (local.get $start/149)
+  (local.get $end/153)))
+(func $String::sub.inner (param $self/142 i32) (param $start/148 i32) (param $end/144 i64) (result i32) (result i32) (result i32) (result i32)
+ (local $len/141 i32)
+ (local $end/143 i32)
+ (local $*Some/145 i64)
+ (local $*end/146 i32)
+ (local $start/147 i32)
+ (local $*p/384 i32)
+ (local $*p/387 i32)
+ (local $moonbitlang/core/builtin.CreatingViewError.InvalidIndex/616 i32)
+ (local $moonbitlang/core/builtin.CreatingViewError.InvalidIndex/617 i32)
+ (local $*tmp/0/618 i32)
+ (local $*tmp/1/618 i32)
+ (local $*tmp/2/618 i32)
+ (local $moonbitlang/core/builtin.CreatingViewError.IndexOutOfBounds/619 i32)
+ (local.set $len/141
+  (call $moonbit.array_length
+   (local.get $self/142)))
+ (local.set $end/143
+  (if (result i32)
+   (i64.eq
+    (local.get $end/144)
+    (i64.const 4294967296))
+   (then
+    (local.get $len/141))
+   (else
+    (if (result i32)
+     (i32.lt_s
+      (local.tee $*end/146
+       (i32.wrap_i64
+        (local.tee $*Some/145
+         (local.get $end/144))))
+      (i32.const 0))
+     (then
+      (i32.add
+       (local.get $len/141)
+       (local.get $*end/146)))
+     (else
+      (local.get $*end/146))))))
+ (if (result i32) (result i32) (result i32) (result i32)
+  (if (result i32)
+   (i32.ge_s
+    (local.tee $start/147
+     (if (result i32)
+      (i32.lt_s
+       (local.get $start/148)
+       (i32.const 0))
+      (then
+       (i32.add
+        (local.get $len/141)
+        (local.get $start/148)))
+      (else
+       (local.get $start/148))))
+    (i32.const 0))
+   (then
+    (if (result i32)
+     (i32.le_s
+      (local.get $start/147)
+      (local.get $end/143))
+     (then
+      (i32.le_s
+       (local.get $end/143)
+       (local.get $len/141)))
+     (else
+      (i32.const 0))))
+   (else
+    (i32.const 0)))
+  (then
+   (if
+    (if (result i32)
+     (i32.lt_s
+      (local.get $start/147)
+      (local.get $len/141))
+     (then
+      (local.set $*p/384
+       (i32.load16_u offset=8
+        (i32.add
+         (local.get $self/142)
+         (i32.shl
+          (local.get $start/147)
+          (i32.const 1)))))
+      (if (result i32)
+       (i32.le_s
+        (i32.const 56320)
+        (local.get $*p/384))
+       (then
+        (i32.le_s
+         (local.get $*p/384)
+         (i32.const 57343)))
+       (else
+        (i32.const 0))))
+     (else
+      (i32.const 0)))
+    (then
+     (call $moonbit.decref
+      (local.get $self/142))
+     (local.set $moonbitlang/core/builtin.CreatingViewError.InvalidIndex/616
+      (i32.const 10000))
+     (i32.const 0)
+     (local.get $moonbitlang/core/builtin.CreatingViewError.InvalidIndex/616)
+     (i32.const 0)
+     (i32.const 0)
+     (return))
+    (else))
+   (if
+    (if (result i32)
+     (i32.lt_s
+      (local.get $end/143)
+      (local.get $len/141))
+     (then
+      (local.set $*p/387
+       (i32.load16_u offset=8
+        (i32.add
+         (local.get $self/142)
+         (i32.shl
+          (local.get $end/143)
+          (i32.const 1)))))
+      (if (result i32)
+       (i32.le_s
+        (i32.const 56320)
+        (local.get $*p/387))
+       (then
+        (i32.le_s
+         (local.get $*p/387)
+         (i32.const 57343)))
+       (else
+        (i32.const 0))))
+     (else
+      (i32.const 0)))
+    (then
+     (call $moonbit.decref
+      (local.get $self/142))
+     (local.set $moonbitlang/core/builtin.CreatingViewError.InvalidIndex/617
+      (i32.const 10000))
+     (i32.const 0)
+     (local.get $moonbitlang/core/builtin.CreatingViewError.InvalidIndex/617)
+     (i32.const 0)
+     (i32.const 0)
+     (return))
+    (else))
+   (local.get $self/142)
+   (local.get $start/147)
+   (local.set $*tmp/2/618
+    (local.get $end/143))
+   (local.set $*tmp/1/618)
+   (local.set $*tmp/0/618)
+   (i32.const 1)
+   (local.get $*tmp/0/618)
+   (local.get $*tmp/1/618)
+   (local.get $*tmp/2/618))
+  (else
+   (call $moonbit.decref
+    (local.get $self/142))
+   (local.set $moonbitlang/core/builtin.CreatingViewError.IndexOutOfBounds/619
+    (i32.const 10312))
+   (i32.const 0)
+   (local.get $moonbitlang/core/builtin.CreatingViewError.IndexOutOfBounds/619)
+   (i32.const 0)
+   (i32.const 0))))
+(func $@moonbitlang/core/builtin.Logger::@moonbitlang/core/builtin.StringBuilder::write_string (param $self/139 i32) (param $str/140 i32) (result i32)
+ (local $*tmp/605 i32)
+ (local $len/606 i32)
+ (local $*tmp/607 i32)
+ (local $*tmp/608 i32)
+ (local $data/609 i32)
+ (local $len/610 i32)
+ (local $*tmp/611 i32)
+ (local $*tmp/612 i32)
+ (local $len/613 i32)
+ (local $*tmp/614 i32)
+ (local $*tmp/615 i32)
+ (local $*tmp/817 i32)
+ (local $*field/818 i32)
+ (local.set $len/606
+  (i32.load offset=8
+   (local.get $self/139)))
+ (local.set $*tmp/607
   (i32.mul
-   (local.get $length/150)
+   (local.tee $*tmp/608
+    (call $moonbit.array_length
+     (local.get $str/140)))
    (i32.const 2)))
- (local.set $e1/148
-  (i32.sub
-   (local.tee $*tmp/724
-    (i32.add
-     (local.get $bytes_offset/149)
-     (local.get $*tmp/725)))
-   (i32.const 1)))
- (local.set $e2/151
-  (i32.sub
-   (local.tee $*tmp/723
-    (i32.add
-     (local.get $str_offset/152)
-     (local.get $length/150)))
-   (i32.const 1)))
- (local.set $len1/153
+ (local.set $*tmp/605
+  (i32.add
+   (local.get $len/606)
+   (local.get $*tmp/607)))
+ (call $moonbit.incref
+  (local.get $self/139))
+ (drop
+  (call $@moonbitlang/core/builtin.StringBuilder::grow_if_necessary
+   (local.get $self/139)
+   (local.get $*tmp/605)))
+ (local.set $data/609
+  (local.tee $*field/818
+   (i32.load offset=12
+    (local.get $self/139))))
+ (local.set $len/610
+  (i32.load offset=8
+   (local.get $self/139)))
+ (local.set $*tmp/611
   (call $moonbit.array_length
-   (local.get $self/154)))
- (local.set $len2/155
+   (local.get $str/140)))
+ (call $moonbit.incref
+  (local.get $data/609))
+ (call $moonbit.incref
+  (local.get $str/140))
+ (drop
+  (call $FixedArray::blit_from_string
+   (local.get $data/609)
+   (local.get $len/610)
+   (local.get $str/140)
+   (i32.const 0)
+   (local.get $*tmp/611)))
+ (local.set $len/613
+  (i32.load offset=8
+   (local.get $self/139)))
+ (local.set $*tmp/817
   (call $moonbit.array_length
-   (local.get $str/156)))
+   (local.get $str/140)))
+ (call $moonbit.decref
+  (local.get $str/140))
+ (local.set $*tmp/614
+  (i32.mul
+   (local.tee $*tmp/615
+    (local.get $*tmp/817))
+   (i32.const 2)))
+ (local.set $*tmp/612
+  (i32.add
+   (local.get $len/613)
+   (local.get $*tmp/614)))
+ (i32.store offset=8
+  (local.get $self/139)
+  (local.get $*tmp/612))
+ (call $moonbit.decref
+  (local.get $self/139))
+ (i32.const 0))
+(func $FixedArray::blit_from_string (param $self/131 i32) (param $bytes_offset/126 i32) (param $str/133 i32) (param $str_offset/129 i32) (param $length/127 i32) (result i32)
+ (local $e1/125 i32)
+ (local $e2/128 i32)
+ (local $len1/130 i32)
+ (local $len2/132 i32)
+ (local $end_str_offset/134 i32)
+ (local $i/135 i32)
+ (local $j/136 i32)
+ (local $c/137 i32)
+ (local $*p/378 i32)
+ (local $*p/381 i32)
+ (local $*tmp/594 i32)
+ (local $*tmp/595 i32)
+ (local $*tmp/596 i32)
+ (local $*tmp/597 i32)
+ (local $*tmp/598 i32)
+ (local $*tmp/599 i32)
+ (local $*tmp/600 i32)
+ (local $*tmp/601 i32)
+ (local $*tmp/602 i32)
+ (local $*tmp/603 i32)
+ (local $*tmp/604 i32)
+ (local $*arr/854 i32)
+ (local $*idx/855 i32)
+ (local $*arr/856 i32)
+ (local $*idx/857 i32)
+ (local.set $*tmp/604
+  (i32.mul
+   (local.get $length/127)
+   (i32.const 2)))
+ (local.set $e1/125
+  (i32.sub
+   (local.tee $*tmp/603
+    (i32.add
+     (local.get $bytes_offset/126)
+     (local.get $*tmp/604)))
+   (i32.const 1)))
+ (local.set $e2/128
+  (i32.sub
+   (local.tee $*tmp/602
+    (i32.add
+     (local.get $str_offset/129)
+     (local.get $length/127)))
+   (i32.const 1)))
+ (local.set $len1/130
+  (call $moonbit.array_length
+   (local.get $self/131)))
+ (local.set $len2/132
+  (call $moonbit.array_length
+   (local.get $str/133)))
  (if (result i32)
   (if (result i32)
    (i32.ge_s
-    (local.get $length/150)
+    (local.get $length/127)
     (i32.const 0))
    (then
     (if (result i32)
      (i32.ge_s
-      (local.get $bytes_offset/149)
+      (local.get $bytes_offset/126)
       (i32.const 0))
      (then
       (if (result i32)
        (i32.lt_s
-        (local.get $e1/148)
-        (local.get $len1/153))
+        (local.get $e1/125)
+        (local.get $len1/130))
        (then
         (if (result i32)
          (i32.ge_s
-          (local.get $str_offset/152)
+          (local.get $str_offset/129)
           (i32.const 0))
          (then
           (i32.lt_s
-           (local.get $e2/151)
-           (local.get $len2/155)))
+           (local.get $e2/128)
+           (local.get $len2/132)))
          (else
           (i32.const 0))))
        (else
@@ -4184,2600 +4211,2179 @@
    (else
     (i32.const 0)))
   (then
-   (local.set $end_str_offset/157
+   (local.set $end_str_offset/134
     (i32.add
-     (local.get $str_offset/152)
-     (local.get $length/150)))
-   (local.get $str_offset/152)
-   (local.get $bytes_offset/149)
-   (loop $loop:161 (param i32) (param i32)
-    (local.set $j/159)
-    (local.tee $i/158)
-    (local.get $end_str_offset/157)
+     (local.get $str_offset/129)
+     (local.get $length/127)))
+   (local.get $str_offset/129)
+   (local.get $bytes_offset/126)
+   (loop $loop:138 (param i32) (param i32)
+    (local.set $j/136)
+    (local.tee $i/135)
+    (local.get $end_str_offset/134)
     (i32.lt_s)
     (if
      (then
-      (local.set $*tmp/715
+      (local.set $*tmp/594
        (i32.and
-        (local.tee $*tmp/716
-         (local.tee $*p/421
+        (local.tee $*tmp/595
+         (local.tee $*p/378
           (i32.and
-           (local.tee $c/160
-            (local.tee $*tmp/720
+           (local.tee $c/137
+            (local.tee $*tmp/599
              (i32.load16_u offset=8
               (i32.add
-               (local.get $str/156)
+               (local.get $str/133)
                (i32.shl
-                (local.get $i/158)
+                (local.get $i/135)
                 (i32.const 1))))))
            (i32.const 255))))
         (i32.const 255)))
-      (local.get $self/154)
-      (local.set $*idx/1016
-       (local.get $j/159))
-      (local.set $*arr/1015)
+      (local.get $self/131)
+      (local.set $*idx/857
+       (local.get $j/136))
+      (local.set $*arr/856)
       (call $moonbit.check_range
-       (local.get $*idx/1016)
+       (local.get $*idx/857)
        (i32.const 0)
        (i32.sub
         (call $moonbit.array_length
-         (local.get $*arr/1015))
+         (local.get $*arr/856))
         (i32.const 1)))
       (i32.store8 offset=8
        (i32.add
-        (local.get $*arr/1015)
-        (local.get $*idx/1016))
-       (local.get $*tmp/715))
-      (local.set $*tmp/717
+        (local.get $*arr/856)
+        (local.get $*idx/857))
+       (local.get $*tmp/594))
+      (local.set $*tmp/596
        (i32.add
-        (local.get $j/159)
+        (local.get $j/136)
         (i32.const 1)))
-      (local.set $*tmp/718
+      (local.set $*tmp/597
        (i32.and
-        (local.tee $*tmp/719
-         (local.tee $*p/424
+        (local.tee $*tmp/598
+         (local.tee $*p/381
           (i32.shr_u
-           (local.get $c/160)
+           (local.get $c/137)
            (i32.const 8))))
         (i32.const 255)))
-      (local.get $self/154)
-      (local.set $*idx/1014
-       (local.get $*tmp/717))
-      (local.set $*arr/1013)
+      (local.get $self/131)
+      (local.set $*idx/855
+       (local.get $*tmp/596))
+      (local.set $*arr/854)
       (call $moonbit.check_range
-       (local.get $*idx/1014)
+       (local.get $*idx/855)
        (i32.const 0)
        (i32.sub
         (call $moonbit.array_length
-         (local.get $*arr/1013))
+         (local.get $*arr/854))
         (i32.const 1)))
       (i32.store8 offset=8
        (i32.add
-        (local.get $*arr/1013)
-        (local.get $*idx/1014))
-       (local.get $*tmp/718))
-      (local.set $*tmp/721
+        (local.get $*arr/854)
+        (local.get $*idx/855))
+       (local.get $*tmp/597))
+      (local.set $*tmp/600
        (i32.add
-        (local.get $i/158)
+        (local.get $i/135)
         (i32.const 1)))
-      (local.set $*tmp/722
+      (local.set $*tmp/601
        (i32.add
-        (local.get $j/159)
+        (local.get $j/136)
         (i32.const 2)))
-      (local.get $*tmp/721)
-      (local.get $*tmp/722)
-      (br $loop:161))
+      (local.get $*tmp/600)
+      (local.get $*tmp/601)
+      (br $loop:138))
      (else
       (call $moonbit.decref
-       (local.get $str/156))
+       (local.get $str/133))
       (call $moonbit.decref
-       (local.get $self/154)))))
+       (local.get $self/131)))))
    (i32.const 0))
   (else
    (call $moonbit.decref
-    (local.get $str/156))
+    (local.get $str/133))
    (call $moonbit.decref
-    (local.get $self/154))
+    (local.get $self/131))
    (unreachable))))
-(func $@moonbitlang/core/builtin.SourceLocRepr::parse (param $repr/116 i32) (result i32)
- (local $*x/117 i32)
- (local $*x/0/118 i32)
- (local $*x/1/118 i32)
- (local $*x/2/118 i32)
- (local $*Some/119 i64)
- (local $*bind/120 i64)
- (local $*Some/121 i64)
- (local $*pkg_end/122 i32)
- (local $pkg/0/123 i32)
- (local $pkg/1/123 i32)
- (local $pkg/2/123 i32)
- (local $*bind/124 i64)
- (local $*Some/125 i64)
- (local $*start_loc_end/126 i32)
- (local $end_loc/0/127 i32)
- (local $end_loc/1/127 i32)
- (local $end_loc/2/127 i32)
- (local $*bind/128 i32)
- (local $*Some/129 i32)
- (local $*x/130 i32)
- (local $*end_line/0/131 i32)
- (local $*end_line/1/131 i32)
- (local $*end_line/2/131 i32)
- (local $*end_column/0/132 i32)
- (local $*end_column/1/132 i32)
- (local $*end_column/2/132 i32)
- (local $rest/0/133 i32)
- (local $rest/1/133 i32)
- (local $rest/2/133 i32)
- (local $*bind/135 i64)
- (local $*Some/136 i64)
- (local $*start_line_end/137 i32)
- (local $*bind/138 i64)
- (local $*Some/139 i64)
- (local $*filename_end/140 i32)
- (local $start_loc/0/141 i32)
- (local $start_loc/1/141 i32)
- (local $start_loc/2/141 i32)
- (local $*bind/142 i32)
- (local $*Some/143 i32)
- (local $*x/144 i32)
- (local $*start_line/0/145 i32)
- (local $*start_line/1/145 i32)
- (local $*start_line/2/145 i32)
- (local $*start_column/0/146 i32)
- (local $*start_column/1/146 i32)
- (local $*start_column/2/146 i32)
- (local $filename/0/147 i32)
- (local $filename/1/147 i32)
- (local $filename/2/147 i32)
- (local $*bind/319 i64)
- (local $*tmp/683 i64)
- (local $*tmp/684 i32)
- (local $*tmp/685 i32)
- (local $*tmp/686 i32)
- (local $end/687 i32)
- (local $start/688 i32)
- (local $*tmp/689 i32)
- (local $*tmp/690 i32)
- (local $end/691 i32)
- (local $start/692 i32)
- (local $*tmp/693 i32)
- (local $*tmp/694 i32)
- (local $*tmp/695 i64)
- (local $*tmp/696 i32)
- (local $*tmp/0/697 i32)
- (local $*tmp/1/697 i32)
- (local $*tmp/2/697 i32)
- (local $*tmp/0/698 i32)
- (local $*tmp/1/698 i32)
- (local $*tmp/2/698 i32)
- (local $*tmp/699 i32)
- (local $*tmp/700 i64)
- (local $*tmp/0/701 i32)
- (local $*tmp/1/701 i32)
- (local $*tmp/2/701 i32)
- (local $*tmp/702 i32)
- (local $*tmp/703 i64)
- (local $*tmp/704 i32)
- (local $*tmp/0/705 i32)
- (local $*tmp/1/705 i32)
- (local $*tmp/2/705 i32)
- (local $*tmp/706 i32)
- (local $*tmp/707 i64)
- (local $*tmp/0/708 i32)
- (local $*tmp/1/708 i32)
- (local $*tmp/2/708 i32)
- (local $*tmp/709 i32)
- (local $*tmp/710 i32)
- (local $*tmp/711 i32)
- (local $*tmp/712 i64)
- (local $*tmp/713 i32)
- (local $*tmp/714 i32)
- (local $*field/0/942 i32)
- (local $*field/1/942 i32)
- (local $*field/2/942 i32)
- (local $*field/0/943 i32)
- (local $*field/1/943 i32)
- (local $*field/2/943 i32)
- (local $*field/0/944 i32)
- (local $*field/1/944 i32)
- (local $*field/2/944 i32)
- (local $*field/0/945 i32)
- (local $*field/1/945 i32)
- (local $*field/2/945 i32)
- (local $*cnt/1002 i32)
- (local $*new_cnt/1003 i32)
- (local $*cnt/1004 i32)
- (local $*new_cnt/1005 i32)
- (local $ptr/1017 i32)
- (block $join:115
-  (local.set $*tmp/683
-   (i64.extend_i32_s
-    (local.tee $*tmp/684
-     (call $moonbit.array_length
-      (local.get $repr/116)))))
-  (call $moonbit.incref
-   (local.get $repr/116))
-  (if (result i32)
-   (call $String::char_length_ge.inner
-    (local.get $repr/116)
-    (i32.const 1)
-    (i32.const 0)
-    (local.get $*tmp/683))
-   (then
-    (if (result i32)
-     (i32.eq
-      (local.tee $*x/117
-       (local.tee $*tmp/714
-        (i32.load16_u offset=8
-         (i32.add
-          (local.get $repr/116)
-          (i32.shl
-           (i32.const 0)
-           (i32.const 1))))))
-      (i32.const 64))
-     (then
-      (local.set $*tmp/712
-       (i64.extend_i32_s
-        (local.tee $*tmp/713
-         (call $moonbit.array_length
-          (local.get $repr/116)))))
-      (call $moonbit.incref
-       (local.get $repr/116))
-      (local.set $*tmp/710
-       (if (result i32)
-        (i64.eq
-         (local.tee $*bind/319
-          (call $String::offset_of_nth_char.inner
-           (local.get $repr/116)
-           (i32.const 1)
-           (i32.const 0)
-           (local.get $*tmp/712)))
-         (i64.const 4294967296))
-        (then
-         (call $moonbit.array_length
-          (local.get $repr/116)))
-        (else
-         (i32.wrap_i64
-          (local.tee $*Some/119
-           (local.get $*bind/319))))))
-      (local.set $*tmp/711
-       (call $moonbit.array_length
-        (local.get $repr/116)))
-      (local.get $repr/116)
-      (local.get $*tmp/710)
-      (local.set $*x/2/118
-       (local.get $*tmp/711))
-      (local.set $*x/1/118)
-      (local.set $*x/0/118)
-      (local.set $*tmp/709
-       (call $moonbit.array_length
-        (global.get $moonbitlang/core/builtin.parse.*bind|5440)))
-      (call $moonbit.incref
-       (global.get $moonbitlang/core/builtin.parse.*bind|5440))
-      (global.get $moonbitlang/core/builtin.parse.*bind|5440)
-      (i32.const 0)
-      (local.set $*tmp/2/708
-       (local.get $*tmp/709))
-      (local.set $*tmp/1/708)
-      (local.set $*tmp/0/708)
-      (call $moonbit.incref
-       (local.get $*x/0/118))
-      (if (result i32)
-       (i64.eq
-        (local.tee $*bind/120
-         (call $StringView::find
-          (local.get $*x/0/118)
-          (local.get $*x/1/118)
-          (local.get $*x/2/118)
-          (local.get $*tmp/0/708)
-          (local.get $*tmp/1/708)
-          (local.get $*tmp/2/708)))
-        (i64.const 4294967296))
-       (then
-        (call $moonbit.decref
-         (local.get $*x/0/118))
-        (unreachable))
-       (else
-        (local.set $*tmp/707
-         (i64.extend_i32_s
-          (local.tee $*pkg_end/122
-           (i32.wrap_i64
-            (local.tee $*Some/121
-             (local.get $*bind/120))))))
-        (call $moonbit.incref
-         (local.get $*x/0/118))
-        (call $StringView::view.inner
-         (local.get $*x/0/118)
-         (local.get $*x/1/118)
-         (local.get $*x/2/118)
-         (i32.const 0)
-         (local.get $*tmp/707))
-        (local.set $pkg/2/123)
-        (local.set $pkg/1/123)
-        (local.set $pkg/0/123)
-        (local.set $*tmp/706
-         (call $moonbit.array_length
-          (global.get $moonbitlang/core/builtin.parse.*bind|5434)))
-        (call $moonbit.incref
-         (global.get $moonbitlang/core/builtin.parse.*bind|5434))
-        (global.get $moonbitlang/core/builtin.parse.*bind|5434)
-        (i32.const 0)
-        (local.set $*tmp/2/705
-         (local.get $*tmp/706))
-        (local.set $*tmp/1/705)
-        (local.set $*tmp/0/705)
-        (call $moonbit.incref
-         (local.get $*x/0/118))
-        (if (result i32)
-         (i64.eq
-          (local.tee $*bind/124
-           (call $StringView::rev_find
-            (local.get $*x/0/118)
-            (local.get $*x/1/118)
-            (local.get $*x/2/118)
-            (local.get $*tmp/0/705)
-            (local.get $*tmp/1/705)
-            (local.get $*tmp/2/705)))
-          (i64.const 4294967296))
-         (then
-          (call $moonbit.decref
-           (local.get $pkg/0/123))
-          (call $moonbit.decref
-           (local.get $*x/0/118))
-          (unreachable))
-         (else
-          (local.set $*tmp/685
-           (i32.add
-            (local.tee $*start_loc_end/126
-             (i32.wrap_i64
-              (local.tee $*Some/125
-               (local.get $*bind/124))))
-            (i32.const 1)))
-          (local.set $end/687
-           (local.get $*x/2/118))
-          (local.set $start/688
-           (local.get $*x/1/118))
-          (local.set $*tmp/686
-           (i32.sub
-            (local.get $end/687)
-            (local.get $start/688)))
-          (if (result i32)
-           (i32.lt_s
-            (local.get $*tmp/685)
-            (local.get $*tmp/686))
-           (then
-            (local.set $*tmp/704
-             (i32.add
-              (local.get $*start_loc_end/126)
-              (i32.const 1)))
-            (call $moonbit.incref
-             (local.get $*x/0/118))
-            (call $StringView::view.inner
-             (local.get $*x/0/118)
-             (local.get $*x/1/118)
-             (local.get $*x/2/118)
-             (local.get $*tmp/704)
-             (i64.const 4294967296))
-            (local.set $end_loc/2/127)
-            (local.set $end_loc/1/127)
-            (local.tee $end_loc/0/127)
-            (local.get $end_loc/1/127)
-            (local.get $end_loc/2/127)
-            (call $moonbitlang/core/builtin.parse.parse_loc|1101)
-            (local.tee $*bind/128)
-            (i32.const 0)
-            (i32.eq)
-            (if (result i32)
-             (then
-              (if
-               (local.get $*bind/128)
-               (then
-                (call $moonbit.decref
-                 (local.get $*bind/128)))
-               (else))
-              (call $moonbit.decref
-               (local.get $pkg/0/123))
-              (call $moonbit.decref
-               (local.get $*x/0/118))
-              (unreachable))
-             (else
-              (i32.load offset=24
-               (local.tee $*x/130
-                (local.tee $*Some/129
-                 (local.get $*bind/128))))
-              (i32.load offset=8
-               (local.get $*x/130))
-              (local.set $*field/2/945
-               (i32.load offset=12
-                (local.get $*x/130)))
-              (local.set $*field/1/945)
-              (local.tee $*field/0/945)
-              (local.get $*field/1/945)
-              (local.set $*end_line/2/131
-               (local.get $*field/2/945))
-              (local.set $*end_line/1/131)
-              (local.set $*end_line/0/131)
-              (i32.load offset=28
-               (local.get $*x/130))
-              (i32.load offset=16
-               (local.get $*x/130))
-              (local.set $*field/2/944
-               (i32.load offset=20
-                (local.get $*x/130)))
-              (local.set $*field/1/944)
-              (local.set $*field/0/944)
-              (if
-               (i32.gt_s
-                (local.tee $*cnt/1002
-                 (i32.load
-                  (local.get $*x/130)))
-                (i32.const 1))
-               (then
-                (call $moonbit.incref
-                 (local.get $*field/0/944))
-                (call $moonbit.incref
-                 (local.get $*end_line/0/131))
-                (local.set $*new_cnt/1003
-                 (i32.sub
-                  (local.get $*cnt/1002)
-                  (i32.const 1)))
-                (i32.store
-                 (local.get $*x/130)
-                 (local.get $*new_cnt/1003)))
-               (else
-                (if
-                 (i32.eq
-                  (local.get $*cnt/1002)
-                  (i32.const 1))
-                 (then
-                  (call $moonbit.free
-                   (local.get $*x/130)))
-                 (else))))
-              (local.get $*field/0/944)
-              (local.get $*field/1/944)
-              (local.set $*end_column/2/132
-               (local.get $*field/2/944))
-              (local.set $*end_column/1/132)
-              (local.set $*end_column/0/132)
-              (local.set $*tmp/703
-               (i64.extend_i32_s
-                (local.get $*start_loc_end/126)))
-              (call $StringView::view.inner
-               (local.get $*x/0/118)
-               (local.get $*x/1/118)
-               (local.get $*x/2/118)
-               (i32.const 0)
-               (local.get $*tmp/703))
-              (local.set $rest/2/133)
-              (local.set $rest/1/133)
-              (local.set $rest/0/133)
-              (block $join:134
-               (local.set $*tmp/702
-                (call $moonbit.array_length
-                 (global.get $moonbitlang/core/builtin.parse.*bind|5421)))
-               (call $moonbit.incref
-                (global.get $moonbitlang/core/builtin.parse.*bind|5421))
-               (global.get $moonbitlang/core/builtin.parse.*bind|5421)
-               (i32.const 0)
-               (local.set $*tmp/2/701
-                (local.get $*tmp/702))
-               (local.set $*tmp/1/701)
-               (local.set $*tmp/0/701)
-               (call $moonbit.incref
-                (local.get $rest/0/133))
-               (if (result i32)
-                (i64.eq
-                 (local.tee $*bind/135
-                  (call $StringView::rev_find
-                   (local.get $rest/0/133)
-                   (local.get $rest/1/133)
-                   (local.get $rest/2/133)
-                   (local.get $*tmp/0/701)
-                   (local.get $*tmp/1/701)
-                   (local.get $*tmp/2/701)))
-                 (i64.const 4294967296))
-                (then
-                 (call $moonbit.decref
-                  (local.get $rest/0/133))
-                 (call $moonbit.decref
-                  (local.get $*end_column/0/132))
-                 (call $moonbit.decref
-                  (local.get $*end_line/0/131))
-                 (call $moonbit.decref
-                  (local.get $pkg/0/123))
-                 (br $join:134))
-                (else
-                 (local.set $*tmp/700
-                  (i64.extend_i32_s
-                   (local.tee $*start_line_end/137
-                    (i32.wrap_i64
-                     (local.tee $*Some/136
-                      (local.get $*bind/135))))))
-                 (call $moonbit.incref
-                  (local.get $rest/0/133))
-                 (call $StringView::view.inner
-                  (local.get $rest/0/133)
-                  (local.get $rest/1/133)
-                  (local.get $rest/2/133)
-                  (i32.const 0)
-                  (local.get $*tmp/700))
-                 (local.set $*tmp/2/697)
-                 (local.set $*tmp/1/697)
-                 (local.set $*tmp/0/697)
-                 (local.set $*tmp/699
-                  (call $moonbit.array_length
-                   (global.get $moonbitlang/core/builtin.parse.*bind|5415)))
-                 (call $moonbit.incref
-                  (global.get $moonbitlang/core/builtin.parse.*bind|5415))
-                 (global.get $moonbitlang/core/builtin.parse.*bind|5415)
-                 (i32.const 0)
-                 (local.set $*tmp/2/698
-                  (local.get $*tmp/699))
-                 (local.set $*tmp/1/698)
-                 (local.set $*tmp/0/698)
-                 (if (result i32)
-                  (i64.eq
-                   (local.tee $*bind/138
-                    (call $StringView::rev_find
-                     (local.get $*tmp/0/697)
-                     (local.get $*tmp/1/697)
-                     (local.get $*tmp/2/697)
-                     (local.get $*tmp/0/698)
-                     (local.get $*tmp/1/698)
-                     (local.get $*tmp/2/698)))
-                   (i64.const 4294967296))
-                  (then
-                   (call $moonbit.decref
-                    (local.get $rest/0/133))
-                   (call $moonbit.decref
-                    (local.get $*end_column/0/132))
-                   (call $moonbit.decref
-                    (local.get $*end_line/0/131))
-                   (call $moonbit.decref
-                    (local.get $pkg/0/123))
-                   (br $join:134))
-                  (else
-                   (local.set $*tmp/689
-                    (i32.add
-                     (local.tee $*filename_end/140
-                      (i32.wrap_i64
-                       (local.tee $*Some/139
-                        (local.get $*bind/138))))
-                     (i32.const 1)))
-                   (local.set $end/691
-                    (local.get $rest/2/133))
-                   (local.set $start/692
-                    (local.get $rest/1/133))
-                   (local.set $*tmp/690
-                    (i32.sub
-                     (local.get $end/691)
-                     (local.get $start/692)))
-                   (if (result i32)
-                    (i32.lt_s
-                     (local.get $*tmp/689)
-                     (local.get $*tmp/690))
-                    (then
-                     (local.set $*tmp/696
-                      (i32.add
-                       (local.get $*filename_end/140)
-                       (i32.const 1)))
-                     (call $moonbit.incref
-                      (local.get $rest/0/133))
-                     (call $StringView::view.inner
-                      (local.get $rest/0/133)
-                      (local.get $rest/1/133)
-                      (local.get $rest/2/133)
-                      (local.get $*tmp/696)
-                      (i64.const 4294967296))
-                     (local.set $start_loc/2/141)
-                     (local.set $start_loc/1/141)
-                     (local.tee $start_loc/0/141)
-                     (local.get $start_loc/1/141)
-                     (local.get $start_loc/2/141)
-                     (call $moonbitlang/core/builtin.parse.parse_loc|1101)
-                     (local.tee $*bind/142)
-                     (i32.const 0)
-                     (i32.eq)
-                     (if (result i32)
-                      (then
-                       (if
-                        (local.get $*bind/142)
-                        (then
-                         (call $moonbit.decref
-                          (local.get $*bind/142)))
-                        (else))
-                       (call $moonbit.decref
-                        (local.get $rest/0/133))
-                       (call $moonbit.decref
-                        (local.get $*end_column/0/132))
-                       (call $moonbit.decref
-                        (local.get $*end_line/0/131))
-                       (call $moonbit.decref
-                        (local.get $pkg/0/123))
-                       (unreachable))
-                      (else
-                       (i32.load offset=24
-                        (local.tee $*x/144
-                         (local.tee $*Some/143
-                          (local.get $*bind/142))))
-                       (i32.load offset=8
-                        (local.get $*x/144))
-                       (local.set $*field/2/943
-                        (i32.load offset=12
-                         (local.get $*x/144)))
-                       (local.set $*field/1/943)
-                       (local.tee $*field/0/943)
-                       (local.get $*field/1/943)
-                       (local.set $*start_line/2/145
-                        (local.get $*field/2/943))
-                       (local.set $*start_line/1/145)
-                       (local.set $*start_line/0/145)
-                       (i32.load offset=28
-                        (local.get $*x/144))
-                       (i32.load offset=16
-                        (local.get $*x/144))
-                       (local.set $*field/2/942
-                        (i32.load offset=20
-                         (local.get $*x/144)))
-                       (local.set $*field/1/942)
-                       (local.set $*field/0/942)
-                       (if
-                        (i32.gt_s
-                         (local.tee $*cnt/1004
-                          (i32.load
-                           (local.get $*x/144)))
-                         (i32.const 1))
-                        (then
-                         (call $moonbit.incref
-                          (local.get $*field/0/942))
-                         (call $moonbit.incref
-                          (local.get $*start_line/0/145))
-                         (local.set $*new_cnt/1005
-                          (i32.sub
-                           (local.get $*cnt/1004)
-                           (i32.const 1)))
-                         (i32.store
-                          (local.get $*x/144)
-                          (local.get $*new_cnt/1005)))
-                        (else
-                         (if
-                          (i32.eq
-                           (local.get $*cnt/1004)
-                           (i32.const 1))
-                          (then
-                           (call $moonbit.free
-                            (local.get $*x/144)))
-                          (else))))
-                       (local.get $*field/0/942)
-                       (local.get $*field/1/942)
-                       (local.set $*start_column/2/146
-                        (local.get $*field/2/942))
-                       (local.set $*start_column/1/146)
-                       (local.set $*start_column/0/146)
-                       (local.set $*tmp/693
-                        (i32.add
-                         (local.get $*pkg_end/122)
-                         (i32.const 1)))
-                       (if (result i32)
-                        (i32.gt_s
-                         (local.get $*filename_end/140)
-                         (local.get $*tmp/693))
-                        (then
-                         (local.set $*tmp/694
-                          (i32.add
-                           (local.get $*pkg_end/122)
-                           (i32.const 1)))
-                         (local.set $*tmp/695
-                          (i64.extend_i32_s
-                           (local.get $*filename_end/140)))
-                         (call $StringView::view.inner
-                          (local.get $rest/0/133)
-                          (local.get $rest/1/133)
-                          (local.get $rest/2/133)
-                          (local.get $*tmp/694)
-                          (local.get $*tmp/695))
-                         (local.set $filename/2/147)
-                         (local.set $filename/1/147)
-                         (local.set $filename/0/147)
-                         (i32.store offset=4
-                          (local.tee $ptr/1017
-                           (call $moonbit.gc.malloc
-                            (i32.const 72)))
-                          (i32.const 7341568))
-                         (i32.store offset=76
-                          (local.get $ptr/1017)
-                          (local.get $*end_column/0/132))
-                         (i32.store offset=48
-                          (local.get $ptr/1017)
-                          (local.get $*end_column/1/132))
-                         (i32.store offset=52
-                          (local.get $ptr/1017)
-                          (local.get $*end_column/2/132))
-                         (i32.store offset=72
-                          (local.get $ptr/1017)
-                          (local.get $*end_line/0/131))
-                         (i32.store offset=40
-                          (local.get $ptr/1017)
-                          (local.get $*end_line/1/131))
-                         (i32.store offset=44
-                          (local.get $ptr/1017)
-                          (local.get $*end_line/2/131))
-                         (i32.store offset=68
-                          (local.get $ptr/1017)
-                          (local.get $*start_column/0/146))
-                         (i32.store offset=32
-                          (local.get $ptr/1017)
-                          (local.get $*start_column/1/146))
-                         (i32.store offset=36
-                          (local.get $ptr/1017)
-                          (local.get $*start_column/2/146))
-                         (i32.store offset=64
-                          (local.get $ptr/1017)
-                          (local.get $*start_line/0/145))
-                         (i32.store offset=24
-                          (local.get $ptr/1017)
-                          (local.get $*start_line/1/145))
-                         (i32.store offset=28
-                          (local.get $ptr/1017)
-                          (local.get $*start_line/2/145))
-                         (i32.store offset=60
-                          (local.get $ptr/1017)
-                          (local.get $filename/0/147))
-                         (i32.store offset=16
-                          (local.get $ptr/1017)
-                          (local.get $filename/1/147))
-                         (i32.store offset=20
-                          (local.get $ptr/1017)
-                          (local.get $filename/2/147))
-                         (i32.store offset=56
-                          (local.get $ptr/1017)
-                          (local.get $pkg/0/123))
-                         (i32.store offset=8
-                          (local.get $ptr/1017)
-                          (local.get $pkg/1/123))
-                         (i32.store offset=12
-                          (local.get $ptr/1017)
-                          (local.get $pkg/2/123))
-                         (local.get $ptr/1017))
-                        (else
-                         (call $moonbit.decref
-                          (local.get $*start_column/0/146))
-                         (call $moonbit.decref
-                          (local.get $*start_line/0/145))
-                         (call $moonbit.decref
-                          (local.get $rest/0/133))
-                         (call $moonbit.decref
-                          (local.get $*end_column/0/132))
-                         (call $moonbit.decref
-                          (local.get $*end_line/0/131))
-                         (call $moonbit.decref
-                          (local.get $pkg/0/123))
-                         (unreachable))))))
-                    (else
-                     (call $moonbit.decref
-                      (local.get $rest/0/133))
-                     (call $moonbit.decref
-                      (local.get $*end_column/0/132))
-                     (call $moonbit.decref
-                      (local.get $*end_line/0/131))
-                     (call $moonbit.decref
-                      (local.get $pkg/0/123))
-                     (unreachable)))))))
-               (return))
-              (unreachable))))
-           (else
-            (call $moonbit.decref
-             (local.get $pkg/0/123))
-            (call $moonbit.decref
-             (local.get $*x/0/118))
-            (unreachable))))))))
-     (else
-      (call $moonbit.decref
-       (local.get $repr/116))
-      (br $join:115))))
-   (else
-    (call $moonbit.decref
-     (local.get $repr/116))
-    (br $join:115)))
-  (return))
- (unreachable))
-(func $moonbitlang/core/builtin.parse.parse_loc|1101 (param $view/0/112 i32) (param $view/1/112 i32) (param $view/2/112 i32) (result i32)
- (local $*bind/111 i64)
- (local $*Some/113 i64)
- (local $*i/114 i32)
- (local $*tmp/672 i32)
- (local $*tmp/673 i32)
- (local $end/674 i32)
- (local $start/675 i32)
- (local $*tuple/676 i32)
- (local $*tmp/0/677 i32)
- (local $*tmp/1/677 i32)
- (local $*tmp/2/677 i32)
- (local $*tmp/0/678 i32)
- (local $*tmp/1/678 i32)
- (local $*tmp/2/678 i32)
- (local $*tmp/679 i32)
- (local $*tmp/680 i64)
- (local $*tmp/0/681 i32)
- (local $*tmp/1/681 i32)
- (local $*tmp/2/681 i32)
- (local $*tmp/682 i32)
- (local $ptr/1018 i32)
- (local.set $*tmp/682
-  (call $moonbit.array_length
-   (global.get $moonbitlang/core/builtin.parse.*bind|5401)))
- (call $moonbit.incref
-  (global.get $moonbitlang/core/builtin.parse.*bind|5401))
- (global.get $moonbitlang/core/builtin.parse.*bind|5401)
- (i32.const 0)
- (local.set $*tmp/2/681
-  (local.get $*tmp/682))
- (local.set $*tmp/1/681)
- (local.set $*tmp/0/681)
- (call $moonbit.incref
-  (local.get $view/0/112))
- (if (result i32)
-  (i64.eq
-   (local.tee $*bind/111
-    (call $StringView::find
-     (local.get $view/0/112)
-     (local.get $view/1/112)
-     (local.get $view/2/112)
-     (local.get $*tmp/0/681)
-     (local.get $*tmp/1/681)
-     (local.get $*tmp/2/681)))
-   (i64.const 4294967296))
-  (then
-   (call $moonbit.decref
-    (local.get $view/0/112))
-   (i32.const 0))
-  (else
-   (if (result i32)
-    (if (result i32)
-     (i32.gt_s
-      (local.tee $*i/114
-       (i32.wrap_i64
-        (local.tee $*Some/113
-         (local.get $*bind/111))))
-      (i32.const 0))
-     (then
-      (local.set $*tmp/672
-       (i32.add
-        (local.get $*i/114)
-        (i32.const 1)))
-      (local.set $end/674
-       (local.get $view/2/112))
-      (local.set $start/675
-       (local.get $view/1/112))
-      (local.set $*tmp/673
-       (i32.sub
-        (local.get $end/674)
-        (local.get $start/675)))
-      (i32.lt_s
-       (local.get $*tmp/672)
-       (local.get $*tmp/673)))
-     (else
-      (i32.const 0)))
-    (then
-     (local.set $*tmp/680
-      (i64.extend_i32_s
-       (local.get $*i/114)))
-     (call $moonbit.incref
-      (local.get $view/0/112))
-     (call $StringView::view.inner
-      (local.get $view/0/112)
-      (local.get $view/1/112)
-      (local.get $view/2/112)
-      (i32.const 0)
-      (local.get $*tmp/680))
-     (local.set $*tmp/2/677)
-     (local.set $*tmp/1/677)
-     (local.set $*tmp/0/677)
-     (local.set $*tmp/679
-      (i32.add
-       (local.get $*i/114)
-       (i32.const 1)))
-     (call $StringView::view.inner
-      (local.get $view/0/112)
-      (local.get $view/1/112)
-      (local.get $view/2/112)
-      (local.get $*tmp/679)
-      (i64.const 4294967296))
-     (local.set $*tmp/2/678)
-     (local.set $*tmp/1/678)
-     (local.set $*tmp/0/678)
-     (i32.store offset=4
-      (local.tee $ptr/1018
-       (call $moonbit.gc.malloc
-        (i32.const 24)))
-      (i32.const 3146240))
-     (i32.store offset=28
-      (local.get $ptr/1018)
-      (local.get $*tmp/0/678))
-     (i32.store offset=16
-      (local.get $ptr/1018)
-      (local.get $*tmp/1/678))
-     (i32.store offset=20
-      (local.get $ptr/1018)
-      (local.get $*tmp/2/678))
-     (i32.store offset=24
-      (local.get $ptr/1018)
-      (local.get $*tmp/0/677))
-     (i32.store offset=8
-      (local.get $ptr/1018)
-      (local.get $*tmp/1/677))
-     (i32.store offset=12
-      (local.get $ptr/1018)
-      (local.get $*tmp/2/677))
-     (local.tee $*tuple/676
-      (local.get $ptr/1018)))
-    (else
-     (call $moonbit.decref
-      (local.get $view/0/112))
-     (i32.const 0))))))
-(func $StringView::view.inner (param $self/0/109 i32) (param $self/1/109 i32) (param $self/2/109 i32) (param $start_offset/110 i32) (param $end_offset/107 i64) (result i32) (result i32) (result i32)
- (local $end_offset/106 i32)
- (local $*Some/108 i64)
- (local $*tmp/662 i32)
- (local $end/663 i32)
- (local $start/664 i32)
- (local $str/665 i32)
- (local $*tmp/666 i32)
- (local $*tmp/667 i32)
- (local $start/668 i32)
- (local $start/669 i32)
- (local $end/670 i32)
- (local $start/671 i32)
- (local $*field/946 i32)
- (local $*field/947 i32)
- (local.set $end_offset/106
-  (if (result i32)
-   (i64.eq
-    (local.get $end_offset/107)
-    (i64.const 4294967296))
-   (then
-    (local.set $end/670
-     (local.get $self/2/109))
-    (local.set $start/671
-     (local.get $self/1/109))
-    (i32.sub
-     (local.get $end/670)
-     (local.get $start/671)))
-   (else
-    (i32.wrap_i64
-     (local.tee $*Some/108
-      (local.get $end_offset/107))))))
- (if (result i32) (result i32) (result i32)
-  (if (result i32)
-   (i32.ge_s
-    (local.get $start_offset/110)
-    (i32.const 0))
-   (then
-    (if (result i32)
-     (i32.le_s
-      (local.get $start_offset/110)
-      (local.get $end_offset/106))
-     (then
-      (local.set $end/663
-       (local.get $self/2/109))
-      (local.set $start/664
-       (local.get $self/1/109))
-      (local.set $*tmp/662
-       (i32.sub
-        (local.get $end/663)
-        (local.get $start/664)))
-      (i32.le_s
-       (local.get $end_offset/106)
-       (local.get $*tmp/662)))
-     (else
-      (i32.const 0))))
-   (else
-    (i32.const 0)))
-  (then
-   (local.set $str/665
-    (local.tee $*field/947
-     (local.get $self/0/109)))
-   (local.set $*tmp/666
-    (i32.add
-     (local.tee $start/669
-      (local.get $self/1/109))
-     (local.get $start_offset/110)))
-   (local.set $*tmp/667
-    (i32.add
-     (local.tee $start/668
-      (local.tee $*field/946
-       (local.get $self/1/109)))
-     (local.get $end_offset/106)))
-   (local.get $str/665)
-   (local.get $*tmp/666)
-   (local.get $*tmp/667))
-  (else
-   (call $moonbit.decref
-    (local.get $self/0/109))
-   (call $moonbitlang/core/builtin.abort|StringView|
-    (i32.const 10776)
-    (i32.const 10656)))))
-(func $StringView::rev_find (param $self/0/105 i32) (param $self/1/105 i32) (param $self/2/105 i32) (param $str/0/104 i32) (param $str/1/104 i32) (param $str/2/104 i32) (result i64)
- (local $*tmp/659 i32)
- (local $end/660 i32)
- (local $start/661 i32)
- (local.set $end/660
-  (local.get $str/2/104))
- (local.set $start/661
-  (local.get $str/1/104))
- (if (result i64)
-  (i32.le_s
-   (local.tee $*tmp/659
-    (i32.sub
-     (local.get $end/660)
-     (local.get $start/661)))
-   (i32.const 4))
-  (then
-   (call $moonbitlang/core/builtin.brute_force_rev_find
-    (local.get $self/0/105)
-    (local.get $self/1/105)
-    (local.get $self/2/105)
-    (local.get $str/0/104)
-    (local.get $str/1/104)
-    (local.get $str/2/104)))
-  (else
-   (call $moonbitlang/core/builtin.boyer_moore_horspool_rev_find
-    (local.get $self/0/105)
-    (local.get $self/1/105)
-    (local.get $self/2/105)
-    (local.get $str/0/104)
-    (local.get $str/1/104)
-    (local.get $str/2/104)))))
-(func $moonbitlang/core/builtin.brute_force_rev_find (param $haystack/0/95 i32) (param $haystack/1/95 i32) (param $haystack/2/95 i32) (param $needle/0/97 i32) (param $needle/1/97 i32) (param $needle/2/97 i32) (result i64)
- (local $haystack_len/94 i32)
- (local $needle_len/96 i32)
- (local $needle_first/98 i32)
- (local $j/101 i32)
- (local $*p/398 i32)
- (local $*p/401 i32)
- (local $*p/404 i32)
- (local $*tmp/632 i32)
- (local $*tmp/633 i32)
- (local $str/634 i32)
- (local $*tmp/635 i32)
- (local $start/636 i32)
- (local $*tmp/637 i32)
- (local $*tmp/638 i32)
- (local $*tmp/639 i32)
- (local $*tmp/640 i32)
- (local $*tmp/641 i32)
- (local $str/642 i32)
- (local $*tmp/643 i32)
- (local $start/644 i32)
- (local $str/645 i32)
- (local $*tmp/646 i32)
- (local $start/647 i32)
- (local $*tmp/648 i32)
- (local $*tmp/649 i32)
- (local $*tmp/650 i32)
- (local $*tmp/651 i32)
- (local $str/652 i32)
- (local $*tmp/653 i32)
- (local $start/654 i32)
- (local $end/655 i32)
- (local $start/656 i32)
- (local $end/657 i32)
- (local $start/658 i32)
- (local $*tmp/948 i32)
- (local $*field/949 i32)
- (local $*tmp/950 i32)
- (local $*field/951 i32)
- (local $*tmp/952 i32)
- (local $*field/953 i32)
- (local $*tmp/954 i32)
- (local $*field/955 i32)
- (local $i/99 i32)
- (local.set $end/657
-  (local.get $haystack/2/95))
- (local.set $start/658
-  (local.get $haystack/1/95))
- (local.set $haystack_len/94
-  (i32.sub
-   (local.get $end/657)
-   (local.get $start/658)))
- (local.set $end/655
-  (local.get $needle/2/97))
- (local.set $start/656
-  (local.get $needle/1/97))
- (if (result i64)
-  (i32.gt_s
-   (local.tee $needle_len/96
-    (i32.sub
-     (local.get $end/655)
-     (local.get $start/656)))
-   (i32.const 0))
-  (then
-   (if (result i64)
-    (i32.ge_s
-     (local.get $haystack_len/94)
-     (local.get $needle_len/96))
-    (then
-     (local.set $*p/398
-      (i32.const 0))
-     (local.set $str/652
-      (local.tee $*field/955
-       (local.get $needle/0/97)))
-     (local.set $*tmp/653
-      (i32.add
-       (local.tee $start/654
-        (local.get $needle/1/97))
-       (local.get $*p/398)))
-     (local.set $needle_first/98
-      (local.tee $*tmp/954
-       (i32.load16_u offset=8
-        (i32.add
-         (local.get $str/652)
-         (i32.shl
-          (local.get $*tmp/653)
-          (i32.const 1))))))
-     (local.set $i/99
-      (i32.sub
-       (local.get $haystack_len/94)
-       (local.get $needle_len/96)))
-     (loop $loop:103
-      (if
-       (i32.ge_s
-        (local.tee $*tmp/632
-         (local.get $i/99))
-        (i32.const 0))
-       (then
-        (loop $loop:100
-         (if
-          (if (result i32)
-           (i32.ge_s
-            (local.tee $*tmp/637
-             (local.get $i/99))
-            (i32.const 0))
-           (then
-            (local.set $*p/401
-             (local.get $i/99))
-            (local.set $str/634
-             (local.tee $*field/953
-              (local.get $haystack/0/95)))
-            (local.set $*tmp/635
-             (i32.add
-              (local.tee $start/636
-               (local.get $haystack/1/95))
-              (local.get $*p/401)))
-            (local.tee $*tmp/633
-             (local.tee $*tmp/952
-              (i32.load16_u offset=8
-               (i32.add
-                (local.get $str/634)
-                (i32.shl
-                 (local.get $*tmp/635)
-                 (i32.const 1))))))
-            (i32.ne
-             (local.get $needle_first/98)))
-           (else
-            (i32.const 0)))
-          (then
-           (local.set $i/99
-            (i32.sub
-             (local.tee $*tmp/638
-              (local.get $i/99))
-             (i32.const 1)))
-           (br $loop:100))
-          (else)))
-        (if
-         (i32.ge_s
-          (local.tee $*tmp/639
-           (local.get $i/99))
-          (i32.const 0))
-         (then
-          (block $break:102
-           (i32.const 1)
-           (loop $loop:102 (param i32)
-            (local.tee $j/101)
-            (local.get $needle_len/96)
-            (i32.lt_s)
-            (if
-             (then
-              (local.set $*p/404
-               (i32.add
-                (local.tee $*tmp/648
-                 (local.get $i/99))
-                (local.get $j/101)))
-              (local.set $str/645
-               (local.tee $*field/951
-                (local.get $haystack/0/95)))
-              (local.set $*tmp/646
-               (i32.add
-                (local.tee $start/647
-                 (local.get $haystack/1/95))
-                (local.get $*p/404)))
-              (local.set $*tmp/640
-               (local.tee $*tmp/950
-                (i32.load16_u offset=8
-                 (i32.add
-                  (local.get $str/645)
-                  (i32.shl
-                   (local.get $*tmp/646)
-                   (i32.const 1))))))
-              (local.set $str/642
-               (local.tee $*field/949
-                (local.get $needle/0/97)))
-              (local.set $*tmp/643
-               (i32.add
-                (local.tee $start/644
-                 (local.get $needle/1/97))
-                (local.get $j/101)))
-              (local.set $*tmp/641
-               (local.tee $*tmp/948
-                (i32.load16_u offset=8
-                 (i32.add
-                  (local.get $str/642)
-                  (i32.shl
-                   (local.get $*tmp/643)
-                   (i32.const 1))))))
-              (local.get $*tmp/640)
-              (if
-               (i32.ne
-                (local.get $*tmp/641))
-               (then
-                (br $break:102))
-               (else))
-              (local.tee $*tmp/649
-               (i32.add
-                (local.get $j/101)
-                (i32.const 1)))
-              (br $loop:102))
-             (else
-              (call $moonbit.decref
-               (local.get $needle/0/97))
-              (call $moonbit.decref
-               (local.get $haystack/0/95))
-              (i64.extend_i32_s
-               (local.tee $*tmp/650
-                (local.get $i/99)))
-              (return)))))
-          (local.set $i/99
-           (i32.sub
-            (local.tee $*tmp/651
-             (local.get $i/99))
-            (i32.const 1))))
-         (else))
-        (br $loop:103))
-       (else
-        (call $moonbit.decref
-         (local.get $needle/0/97))
-        (call $moonbit.decref
-         (local.get $haystack/0/95)))))
-     (i64.const 4294967296))
-    (else
-     (call $moonbit.decref
-      (local.get $needle/0/97))
-     (call $moonbit.decref
-      (local.get $haystack/0/95))
-     (i64.const 4294967296))))
-  (else
-   (call $moonbit.decref
-    (local.get $needle/0/97))
-   (call $moonbit.decref
-    (local.get $haystack/0/95))
-   (i64.extend_i32_s
-    (local.get $haystack_len/94)))))
-(func $moonbitlang/core/builtin.boyer_moore_horspool_rev_find (param $haystack/0/84 i32) (param $haystack/1/84 i32) (param $haystack/2/84 i32) (param $needle/0/86 i32) (param $needle/1/86 i32) (param $needle/2/86 i32) (result i64)
- (local $haystack_len/83 i32)
- (local $needle_len/85 i32)
- (local $skip_table/87 i32)
- (local $i/88 i32)
- (local $i/90 i32)
- (local $j/91 i32)
- (local $*p/387 i32)
- (local $*tmp/604 i32)
- (local $*tmp/605 i32)
- (local $str/606 i32)
- (local $*tmp/607 i32)
- (local $start/608 i32)
- (local $*tmp/609 i32)
- (local $*tmp/610 i32)
- (local $*tmp/611 i32)
- (local $*tmp/612 i32)
- (local $str/613 i32)
- (local $*tmp/614 i32)
- (local $start/615 i32)
- (local $str/616 i32)
- (local $*tmp/617 i32)
- (local $start/618 i32)
- (local $*tmp/619 i32)
- (local $*tmp/620 i32)
- (local $*tmp/621 i32)
- (local $*tmp/622 i32)
- (local $*tmp/623 i32)
- (local $str/624 i32)
- (local $*tmp/625 i32)
- (local $start/626 i32)
- (local $*tmp/627 i32)
- (local $end/628 i32)
- (local $start/629 i32)
- (local $end/630 i32)
- (local $start/631 i32)
- (local $*tmp/956 i32)
- (local $*field/957 i32)
- (local $*tmp/958 i32)
- (local $*field/959 i32)
- (local $*tmp/960 i32)
- (local $*field/961 i32)
- (local $*tmp/962 i32)
- (local $*field/963 i32)
- (local $*arr/1019 i32)
- (local $*idx/1020 i32)
- (local $*arr/1021 i32)
- (local $*idx/1022 i32)
- (local.set $end/630
-  (local.get $haystack/2/84))
- (local.set $start/631
-  (local.get $haystack/1/84))
- (local.set $haystack_len/83
-  (i32.sub
-   (local.get $end/630)
-   (local.get $start/631)))
- (local.set $end/628
-  (local.get $needle/2/86))
- (local.set $start/629
-  (local.get $needle/1/86))
- (if (result i64)
-  (i32.gt_s
-   (local.tee $needle_len/85
-    (i32.sub
-     (local.get $end/628)
-     (local.get $start/629)))
-   (i32.const 0))
-  (then
-   (if (result i64)
-    (i32.ge_s
-     (local.get $haystack_len/83)
-     (local.get $needle_len/85))
-    (then
-     (local.set $skip_table/87
-      (call $moonbit.i32_array_make
-       (i32.const 256)
-       (local.get $needle_len/85)))
-     (local.tee $*tmp/610
-      (i32.sub
-       (local.get $needle_len/85)
-       (i32.const 1)))
-     (loop $loop:89 (param i32)
-      (local.tee $i/88)
-      (i32.const 0)
-      (i32.gt_s)
-      (if
-       (then
-        (local.set $str/606
-         (local.tee $*field/963
-          (local.get $needle/0/86)))
-        (local.set $*tmp/607
-         (i32.add
-          (local.tee $start/608
-           (local.get $needle/1/86))
-          (local.get $i/88)))
-        (local.set $*tmp/604
-         (i32.and
-          (local.tee $*tmp/605
-           (local.tee $*tmp/962
-            (i32.load16_u offset=8
-             (i32.add
-              (local.get $str/606)
-              (i32.shl
-               (local.get $*tmp/607)
-               (i32.const 1))))))
-          (i32.const 255)))
-        (local.get $skip_table/87)
-        (local.set $*idx/1022
-         (local.get $*tmp/604))
-        (local.set $*arr/1021)
-        (call $moonbit.check_range
-         (local.get $*idx/1022)
-         (i32.const 0)
-         (i32.sub
-          (call $moonbit.array_length
-           (local.get $*arr/1021))
-          (i32.const 1)))
-        (i32.store offset=8
-         (i32.add
-          (local.get $*arr/1021)
-          (i32.shl
-           (local.get $*idx/1022)
-           (i32.const 2)))
-         (local.get $i/88))
-        (local.tee $*tmp/609
-         (i32.sub
-          (local.get $i/88)
-          (i32.const 1)))
-        (br $loop:89))
-       (else)))
-     (local.tee $*tmp/627
-      (i32.sub
-       (local.get $haystack_len/83)
-       (local.get $needle_len/85)))
-     (loop $loop:93 (param i32)
-      (local.tee $i/90)
-      (i32.const 0)
-      (i32.ge_s)
-      (if
-       (then
-        (block $break:92
-         (i32.const 0)
-         (loop $loop:92 (param i32)
-          (local.tee $j/91)
-          (local.get $needle_len/85)
-          (i32.lt_s)
-          (if
-           (then
-            (local.set $*p/387
-             (i32.add
-              (local.get $i/90)
-              (local.get $j/91)))
-            (local.set $str/616
-             (local.tee $*field/961
-              (local.get $haystack/0/84)))
-            (local.set $*tmp/617
-             (i32.add
-              (local.tee $start/618
-               (local.get $haystack/1/84))
-              (local.get $*p/387)))
-            (local.set $*tmp/611
-             (local.tee $*tmp/960
-              (i32.load16_u offset=8
-               (i32.add
-                (local.get $str/616)
-                (i32.shl
-                 (local.get $*tmp/617)
-                 (i32.const 1))))))
-            (local.set $str/613
-             (local.tee $*field/959
-              (local.get $needle/0/86)))
-            (local.set $*tmp/614
-             (i32.add
-              (local.tee $start/615
-               (local.get $needle/1/86))
-              (local.get $j/91)))
-            (local.set $*tmp/612
-             (local.tee $*tmp/958
-              (i32.load16_u offset=8
-               (i32.add
-                (local.get $str/613)
-                (i32.shl
-                 (local.get $*tmp/614)
-                 (i32.const 1))))))
-            (local.get $*tmp/611)
-            (if
-             (i32.ne
-              (local.get $*tmp/612))
-             (then
-              (br $break:92))
-             (else))
-            (local.tee $*tmp/619
-             (i32.add
-              (local.get $j/91)
-              (i32.const 1)))
-            (br $loop:92))
-           (else
-            (call $moonbit.decref
-             (local.get $skip_table/87))
-            (call $moonbit.decref
-             (local.get $needle/0/86))
-            (call $moonbit.decref
-             (local.get $haystack/0/84))
-            (i64.extend_i32_s
-             (local.get $i/90))
-            (return)))))
-        (local.set $str/624
-         (local.tee $*field/957
-          (local.get $haystack/0/84)))
-        (local.set $*tmp/625
-         (i32.add
-          (local.tee $start/626
-           (local.get $haystack/1/84))
-          (local.get $i/90)))
-        (local.set $*tmp/622
-         (i32.and
-          (local.tee $*tmp/623
-           (local.tee $*tmp/956
-            (i32.load16_u offset=8
-             (i32.add
-              (local.get $str/624)
-              (i32.shl
-               (local.get $*tmp/625)
-               (i32.const 1))))))
-          (i32.const 255)))
-        (local.get $skip_table/87)
-        (local.set $*idx/1020
-         (local.get $*tmp/622))
-        (local.set $*arr/1019)
-        (call $moonbit.check_range
-         (local.get $*idx/1020)
-         (i32.const 0)
-         (i32.sub
-          (call $moonbit.array_length
-           (local.get $*arr/1019))
-          (i32.const 1)))
-        (local.set $*tmp/621
-         (i32.load offset=8
-          (i32.add
-           (local.get $*arr/1019)
-           (i32.shl
-            (local.get $*idx/1020)
-            (i32.const 2)))))
-        (local.tee $*tmp/620
-         (i32.sub
-          (local.get $i/90)
-          (local.get $*tmp/621)))
-        (br $loop:93))
-       (else
-        (call $moonbit.decref
-         (local.get $skip_table/87))
-        (call $moonbit.decref
-         (local.get $needle/0/86))
-        (call $moonbit.decref
-         (local.get $haystack/0/84)))))
-     (i64.const 4294967296))
-    (else
-     (call $moonbit.decref
-      (local.get $needle/0/86))
-     (call $moonbit.decref
-      (local.get $haystack/0/84))
-     (i64.const 4294967296))))
-  (else
-   (call $moonbit.decref
-    (local.get $needle/0/86))
-   (call $moonbit.decref
-    (local.get $haystack/0/84))
-   (i64.extend_i32_s
-    (local.get $haystack_len/83)))))
-(func $StringView::find (param $self/0/82 i32) (param $self/1/82 i32) (param $self/2/82 i32) (param $str/0/81 i32) (param $str/1/81 i32) (param $str/2/81 i32) (result i64)
- (local $*tmp/601 i32)
- (local $end/602 i32)
- (local $start/603 i32)
- (local.set $end/602
-  (local.get $str/2/81))
- (local.set $start/603
-  (local.get $str/1/81))
- (if (result i64)
-  (i32.le_s
-   (local.tee $*tmp/601
-    (i32.sub
-     (local.get $end/602)
-     (local.get $start/603)))
-   (i32.const 4))
-  (then
-   (call $moonbitlang/core/builtin.brute_force_find
-    (local.get $self/0/82)
-    (local.get $self/1/82)
-    (local.get $self/2/82)
-    (local.get $str/0/81)
-    (local.get $str/1/81)
-    (local.get $str/2/81)))
-  (else
-   (call $moonbitlang/core/builtin.boyer_moore_horspool_find
-    (local.get $self/0/82)
-    (local.get $self/1/82)
-    (local.get $self/2/82)
-    (local.get $str/0/81)
-    (local.get $str/1/81)
-    (local.get $str/2/81)))))
-(func $moonbitlang/core/builtin.brute_force_find (param $haystack/0/71 i32) (param $haystack/1/71 i32) (param $haystack/2/71 i32) (param $needle/0/73 i32) (param $needle/1/73 i32) (param $needle/2/73 i32) (result i64)
- (local $haystack_len/70 i32)
- (local $needle_len/72 i32)
- (local $needle_first/74 i32)
- (local $forward_len/75 i32)
- (local $j/78 i32)
- (local $*p/368 i32)
- (local $*p/371 i32)
- (local $*p/374 i32)
- (local $*tmp/574 i32)
- (local $*tmp/575 i32)
- (local $str/576 i32)
- (local $*tmp/577 i32)
- (local $start/578 i32)
- (local $*tmp/579 i32)
- (local $*tmp/580 i32)
- (local $*tmp/581 i32)
- (local $*tmp/582 i32)
- (local $*tmp/583 i32)
- (local $str/584 i32)
- (local $*tmp/585 i32)
- (local $start/586 i32)
- (local $str/587 i32)
- (local $*tmp/588 i32)
- (local $start/589 i32)
- (local $*tmp/590 i32)
- (local $*tmp/591 i32)
- (local $*tmp/592 i32)
- (local $*tmp/593 i32)
- (local $str/594 i32)
- (local $*tmp/595 i32)
- (local $start/596 i32)
- (local $end/597 i32)
- (local $start/598 i32)
- (local $end/599 i32)
- (local $start/600 i32)
- (local $*tmp/964 i32)
- (local $*field/965 i32)
- (local $*tmp/966 i32)
- (local $*field/967 i32)
- (local $*tmp/968 i32)
- (local $*field/969 i32)
- (local $*tmp/970 i32)
- (local $*field/971 i32)
- (local $i/76 i32)
- (local.set $end/599
-  (local.get $haystack/2/71))
- (local.set $start/600
-  (local.get $haystack/1/71))
- (local.set $haystack_len/70
-  (i32.sub
-   (local.get $end/599)
-   (local.get $start/600)))
- (local.set $end/597
-  (local.get $needle/2/73))
- (local.set $start/598
-  (local.get $needle/1/73))
- (if (result i64)
-  (i32.gt_s
-   (local.tee $needle_len/72
-    (i32.sub
-     (local.get $end/597)
-     (local.get $start/598)))
-   (i32.const 0))
-  (then
-   (if (result i64)
-    (i32.ge_s
-     (local.get $haystack_len/70)
-     (local.get $needle_len/72))
-    (then
-     (local.set $*p/368
-      (i32.const 0))
-     (local.set $str/594
-      (local.tee $*field/971
-       (local.get $needle/0/73)))
-     (local.set $*tmp/595
-      (i32.add
-       (local.tee $start/596
-        (local.get $needle/1/73))
-       (local.get $*p/368)))
-     (local.set $needle_first/74
-      (local.tee $*tmp/970
-       (i32.load16_u offset=8
-        (i32.add
-         (local.get $str/594)
-         (i32.shl
-          (local.get $*tmp/595)
-          (i32.const 1))))))
-     (local.set $forward_len/75
-      (i32.sub
-       (local.get $haystack_len/70)
-       (local.get $needle_len/72)))
-     (local.set $i/76
-      (i32.const 0))
-     (loop $loop:80
-      (if
-       (i32.le_s
-        (local.tee $*tmp/574
-         (local.get $i/76))
-        (local.get $forward_len/75))
-       (then
-        (loop $loop:77
-         (if
-          (if (result i32)
-           (i32.le_s
-            (local.tee $*tmp/579
-             (local.get $i/76))
-            (local.get $forward_len/75))
-           (then
-            (local.set $*p/371
-             (local.get $i/76))
-            (local.set $str/576
-             (local.tee $*field/969
-              (local.get $haystack/0/71)))
-            (local.set $*tmp/577
-             (i32.add
-              (local.tee $start/578
-               (local.get $haystack/1/71))
-              (local.get $*p/371)))
-            (local.tee $*tmp/575
-             (local.tee $*tmp/968
-              (i32.load16_u offset=8
-               (i32.add
-                (local.get $str/576)
-                (i32.shl
-                 (local.get $*tmp/577)
-                 (i32.const 1))))))
-            (i32.ne
-             (local.get $needle_first/74)))
-           (else
-            (i32.const 0)))
-          (then
-           (local.set $i/76
-            (i32.add
-             (local.tee $*tmp/580
-              (local.get $i/76))
-             (i32.const 1)))
-           (br $loop:77))
-          (else)))
-        (if
-         (i32.le_s
-          (local.tee $*tmp/581
-           (local.get $i/76))
-          (local.get $forward_len/75))
-         (then
-          (block $break:79
-           (i32.const 1)
-           (loop $loop:79 (param i32)
-            (local.tee $j/78)
-            (local.get $needle_len/72)
-            (i32.lt_s)
-            (if
-             (then
-              (local.set $*p/374
-               (i32.add
-                (local.tee $*tmp/590
-                 (local.get $i/76))
-                (local.get $j/78)))
-              (local.set $str/587
-               (local.tee $*field/967
-                (local.get $haystack/0/71)))
-              (local.set $*tmp/588
-               (i32.add
-                (local.tee $start/589
-                 (local.get $haystack/1/71))
-                (local.get $*p/374)))
-              (local.set $*tmp/582
-               (local.tee $*tmp/966
-                (i32.load16_u offset=8
-                 (i32.add
-                  (local.get $str/587)
-                  (i32.shl
-                   (local.get $*tmp/588)
-                   (i32.const 1))))))
-              (local.set $str/584
-               (local.tee $*field/965
-                (local.get $needle/0/73)))
-              (local.set $*tmp/585
-               (i32.add
-                (local.tee $start/586
-                 (local.get $needle/1/73))
-                (local.get $j/78)))
-              (local.set $*tmp/583
-               (local.tee $*tmp/964
-                (i32.load16_u offset=8
-                 (i32.add
-                  (local.get $str/584)
-                  (i32.shl
-                   (local.get $*tmp/585)
-                   (i32.const 1))))))
-              (local.get $*tmp/582)
-              (if
-               (i32.ne
-                (local.get $*tmp/583))
-               (then
-                (br $break:79))
-               (else))
-              (local.tee $*tmp/591
-               (i32.add
-                (local.get $j/78)
-                (i32.const 1)))
-              (br $loop:79))
-             (else
-              (call $moonbit.decref
-               (local.get $needle/0/73))
-              (call $moonbit.decref
-               (local.get $haystack/0/71))
-              (i64.extend_i32_s
-               (local.tee $*tmp/592
-                (local.get $i/76)))
-              (return)))))
-          (local.set $i/76
-           (i32.add
-            (local.tee $*tmp/593
-             (local.get $i/76))
-            (i32.const 1))))
-         (else))
-        (br $loop:80))
-       (else
-        (call $moonbit.decref
-         (local.get $needle/0/73))
-        (call $moonbit.decref
-         (local.get $haystack/0/71)))))
-     (i64.const 4294967296))
-    (else
-     (call $moonbit.decref
-      (local.get $needle/0/73))
-     (call $moonbit.decref
-      (local.get $haystack/0/71))
-     (i64.const 4294967296))))
-  (else
-   (call $moonbit.decref
-    (local.get $needle/0/73))
-   (call $moonbit.decref
-    (local.get $haystack/0/71))
-   (global.get $moonbitlang/core/builtin.brute_force_find.constr/69))))
-(func $moonbitlang/core/builtin.boyer_moore_horspool_find (param $haystack/0/57 i32) (param $haystack/1/57 i32) (param $haystack/2/57 i32) (param $needle/0/59 i32) (param $needle/1/59 i32) (param $needle/2/59 i32) (result i64)
- (local $haystack_len/56 i32)
- (local $needle_len/58 i32)
- (local $skip_table/60 i32)
- (local $*end4298/61 i32)
- (local $i/62 i32)
- (local $i/64 i32)
- (local $*end4304/65 i32)
- (local $j/66 i32)
- (local $*p/356 i32)
- (local $*p/361 i32)
- (local $*tmp/544 i32)
- (local $*tmp/545 i32)
- (local $*tmp/546 i32)
- (local $*tmp/547 i32)
- (local $str/548 i32)
- (local $*tmp/549 i32)
- (local $start/550 i32)
- (local $*tmp/551 i32)
- (local $*tmp/552 i32)
- (local $*tmp/553 i32)
- (local $*tmp/554 i32)
- (local $str/555 i32)
- (local $*tmp/556 i32)
- (local $start/557 i32)
- (local $str/558 i32)
- (local $*tmp/559 i32)
- (local $start/560 i32)
- (local $*tmp/561 i32)
- (local $*tmp/562 i32)
- (local $*tmp/563 i32)
- (local $*tmp/564 i32)
- (local $*tmp/565 i32)
- (local $str/566 i32)
- (local $*tmp/567 i32)
- (local $start/568 i32)
- (local $*tmp/569 i32)
- (local $end/570 i32)
- (local $start/571 i32)
- (local $end/572 i32)
- (local $start/573 i32)
- (local $*tmp/972 i32)
- (local $*field/973 i32)
- (local $*tmp/974 i32)
- (local $*field/975 i32)
- (local $*tmp/976 i32)
- (local $*field/977 i32)
- (local $*tmp/978 i32)
- (local $*field/979 i32)
- (local $*arr/1023 i32)
- (local $*idx/1024 i32)
- (local $*arr/1025 i32)
- (local $*idx/1026 i32)
- (local.set $end/572
-  (local.get $haystack/2/57))
- (local.set $start/573
-  (local.get $haystack/1/57))
- (local.set $haystack_len/56
-  (i32.sub
-   (local.get $end/572)
-   (local.get $start/573)))
- (local.set $end/570
-  (local.get $needle/2/59))
- (local.set $start/571
-  (local.get $needle/1/59))
- (if (result i64)
-  (i32.gt_s
-   (local.tee $needle_len/58
-    (i32.sub
-     (local.get $end/570)
-     (local.get $start/571)))
-   (i32.const 0))
-  (then
-   (if (result i64)
-    (i32.ge_s
-     (local.get $haystack_len/56)
-     (local.get $needle_len/58))
-    (then
-     (local.set $skip_table/60
-      (call $moonbit.i32_array_make
-       (i32.const 256)
-       (local.get $needle_len/58)))
-     (local.set $*end4298/61
-      (i32.sub
-       (local.get $needle_len/58)
-       (i32.const 1)))
-     (i32.const 0)
-     (loop $loop:63 (param i32)
-      (local.tee $i/62)
-      (local.get $*end4298/61)
-      (i32.lt_s)
-      (if
-       (then
-        (local.set $str/548
-         (local.tee $*field/979
-          (local.get $needle/0/59)))
-        (local.set $*tmp/549
-         (i32.add
-          (local.tee $start/550
-           (local.get $needle/1/59))
-          (local.get $i/62)))
-        (local.set $*tmp/544
-         (i32.and
-          (local.tee $*tmp/547
-           (local.tee $*tmp/978
-            (i32.load16_u offset=8
-             (i32.add
-              (local.get $str/548)
-              (i32.shl
-               (local.get $*tmp/549)
-               (i32.const 1))))))
-          (i32.const 255)))
-        (local.set $*tmp/545
-         (i32.sub
-          (local.tee $*tmp/546
-           (i32.sub
-            (local.get $needle_len/58)
-            (i32.const 1)))
-          (local.get $i/62)))
-        (local.get $skip_table/60)
-        (local.set $*idx/1026
-         (local.get $*tmp/544))
-        (local.set $*arr/1025)
-        (call $moonbit.check_range
-         (local.get $*idx/1026)
-         (i32.const 0)
-         (i32.sub
-          (call $moonbit.array_length
-           (local.get $*arr/1025))
-          (i32.const 1)))
-        (i32.store offset=8
-         (i32.add
-          (local.get $*arr/1025)
-          (i32.shl
-           (local.get $*idx/1026)
-           (i32.const 2)))
-         (local.get $*tmp/545))
-        (local.tee $*tmp/551
-         (i32.add
-          (local.get $i/62)
-          (i32.const 1)))
-        (br $loop:63))
-       (else)))
-     (i32.const 0)
-     (loop $loop:68 (param i32)
-      (local.set $i/64)
-      (local.set $*tmp/552
-       (i32.sub
-        (local.get $haystack_len/56)
-        (local.get $needle_len/58)))
-      (if
-       (i32.le_s
-        (local.get $i/64)
-        (local.get $*tmp/552))
-       (then
-        (local.set $*end4304/65
-         (i32.sub
-          (local.get $needle_len/58)
-          (i32.const 1)))
-        (block $break:67
-         (i32.const 0)
-         (loop $loop:67 (param i32)
-          (local.tee $j/66)
-          (local.get $*end4304/65)
-          (i32.le_s)
-          (if
-           (then
-            (local.set $*p/356
-             (i32.add
-              (local.get $i/64)
-              (local.get $j/66)))
-            (local.set $str/558
-             (local.tee $*field/977
-              (local.get $haystack/0/57)))
-            (local.set $*tmp/559
-             (i32.add
-              (local.tee $start/560
-               (local.get $haystack/1/57))
-              (local.get $*p/356)))
-            (local.set $*tmp/553
-             (local.tee $*tmp/976
-              (i32.load16_u offset=8
-               (i32.add
-                (local.get $str/558)
-                (i32.shl
-                 (local.get $*tmp/559)
-                 (i32.const 1))))))
-            (local.set $str/555
-             (local.tee $*field/975
-              (local.get $needle/0/59)))
-            (local.set $*tmp/556
-             (i32.add
-              (local.tee $start/557
-               (local.get $needle/1/59))
-              (local.get $j/66)))
-            (local.set $*tmp/554
-             (local.tee $*tmp/974
-              (i32.load16_u offset=8
-               (i32.add
-                (local.get $str/555)
-                (i32.shl
-                 (local.get $*tmp/556)
-                 (i32.const 1))))))
-            (local.get $*tmp/553)
-            (if
-             (i32.ne
-              (local.get $*tmp/554))
-             (then
-              (br $break:67))
-             (else))
-            (local.tee $*tmp/561
-             (i32.add
-              (local.get $j/66)
-              (i32.const 1)))
-            (br $loop:67))
-           (else
-            (call $moonbit.decref
-             (local.get $skip_table/60))
-            (call $moonbit.decref
-             (local.get $needle/0/59))
-            (call $moonbit.decref
-             (local.get $haystack/0/57))
-            (i64.extend_i32_s
-             (local.get $i/64))
-            (return)))))
-        (local.set $*p/361
-         (i32.sub
-          (local.tee $*tmp/569
-           (i32.add
-            (local.get $i/64)
-            (local.get $needle_len/58)))
-          (i32.const 1)))
-        (local.set $str/566
-         (local.tee $*field/973
-          (local.get $haystack/0/57)))
-        (local.set $*tmp/567
-         (i32.add
-          (local.tee $start/568
-           (local.get $haystack/1/57))
-          (local.get $*p/361)))
-        (local.set $*tmp/564
-         (i32.and
-          (local.tee $*tmp/565
-           (local.tee $*tmp/972
-            (i32.load16_u offset=8
-             (i32.add
-              (local.get $str/566)
-              (i32.shl
-               (local.get $*tmp/567)
-               (i32.const 1))))))
-          (i32.const 255)))
-        (local.get $skip_table/60)
-        (local.set $*idx/1024
-         (local.get $*tmp/564))
-        (local.set $*arr/1023)
-        (call $moonbit.check_range
-         (local.get $*idx/1024)
-         (i32.const 0)
-         (i32.sub
-          (call $moonbit.array_length
-           (local.get $*arr/1023))
-          (i32.const 1)))
-        (local.set $*tmp/563
-         (i32.load offset=8
-          (i32.add
-           (local.get $*arr/1023)
-           (i32.shl
-            (local.get $*idx/1024)
-            (i32.const 2)))))
-        (local.tee $*tmp/562
-         (i32.add
-          (local.get $i/64)
-          (local.get $*tmp/563)))
-        (br $loop:68))
-       (else
-        (call $moonbit.decref
-         (local.get $skip_table/60))
-        (call $moonbit.decref
-         (local.get $needle/0/59))
-        (call $moonbit.decref
-         (local.get $haystack/0/57)))))
-     (i64.const 4294967296))
-    (else
-     (call $moonbit.decref
-      (local.get $needle/0/59))
-     (call $moonbit.decref
-      (local.get $haystack/0/57))
-     (i64.const 4294967296))))
-  (else
-   (call $moonbit.decref
-    (local.get $needle/0/59))
-   (call $moonbit.decref
-    (local.get $haystack/0/57))
-   (global.get $moonbitlang/core/builtin.boyer_moore_horspool_find.constr/55))))
-(func $@moonbitlang/core/builtin.Logger::@moonbitlang/core/builtin.StringBuilder::write_char (param $self/47 i32) (param $ch/49 i32) (result i32)
- (local $inc/48 i32)
- (local $*tmp/533 i32)
- (local $len/534 i32)
- (local $*tmp/535 i32)
- (local $len/536 i32)
- (local $data/537 i32)
- (local $len/538 i32)
- (local $*field/984 i32)
- (local.set $*tmp/533
-  (i32.add
-   (local.tee $len/534
-    (i32.load offset=8
-     (local.get $self/47)))
-   (i32.const 4)))
- (call $moonbit.incref
-  (local.get $self/47))
- (drop
-  (call $@moonbitlang/core/builtin.StringBuilder::grow_if_necessary
-   (local.get $self/47)
-   (local.get $*tmp/533)))
- (local.set $data/537
-  (local.tee $*field/984
-   (i32.load offset=12
-    (local.get $self/47))))
- (local.set $len/538
-  (i32.load offset=8
-   (local.get $self/47)))
- (call $moonbit.incref
-  (local.get $data/537))
- (local.set $inc/48
-  (call $FixedArray::set_utf16le_char
-   (local.get $data/537)
-   (local.get $len/538)
-   (local.get $ch/49)))
- (local.set $*tmp/535
-  (i32.add
-   (local.tee $len/536
-    (i32.load offset=8
-     (local.get $self/47)))
-   (local.get $inc/48)))
- (i32.store offset=8
-  (local.get $self/47)
-  (local.get $*tmp/535))
- (call $moonbit.decref
-  (local.get $self/47))
- (i32.const 0))
-(func $@moonbitlang/core/builtin.StringBuilder::grow_if_necessary (param $self/42 i32) (param $required/43 i32) (result i32)
- (local $current_len/41 i32)
- (local $new_data/46 i32)
- (local $*tmp/527 i32)
- (local $*tmp/528 i32)
- (local $data/529 i32)
- (local $len/530 i32)
- (local $*tmp/531 i32)
- (local $data/532 i32)
- (local $*old/985 i32)
- (local $*field/986 i32)
- (local $*tmp/987 i32)
- (local $*field/988 i32)
- (local $enough_space/44 i32)
- (local.set $current_len/41
-  (local.tee $*tmp/987
-   (call $moonbit.array_length
-    (local.tee $data/532
-     (local.tee $*field/988
-      (i32.load offset=12
-       (local.get $self/42)))))))
- (if
-  (i32.le_s
-   (local.get $required/43)
-   (local.get $current_len/41))
-  (then
-   (call $moonbit.decref
-    (local.get $self/42))
-   (i32.const 0)
-   (return))
-  (else))
- (local.set $enough_space/44
-  (local.get $current_len/41))
- (loop $loop:45
-  (if
-   (i32.lt_s
-    (local.tee $*tmp/527
-     (local.get $enough_space/44))
-    (local.get $required/43))
-   (then
-    (local.set $enough_space/44
-     (i32.mul
-      (local.tee $*tmp/528
-       (local.get $enough_space/44))
-      (i32.const 2)))
-    (br $loop:45))
-   (else)))
- (local.set $new_data/46
-  (call $moonbit.bytes_make
-   (local.tee $*tmp/531
-    (local.get $enough_space/44))
-   (i32.const 0)))
- (local.set $data/529
-  (local.tee $*field/986
-   (i32.load offset=12
-    (local.get $self/42))))
- (local.set $len/530
-  (i32.load offset=8
-   (local.get $self/42)))
- (call $moonbit.incref
-  (local.get $data/529))
- (call $moonbit.incref
-  (local.get $new_data/46))
- (drop
-  (call $FixedArray::unsafe_blit|Byte|
-   (local.get $new_data/46)
-   (i32.const 0)
-   (local.get $data/529)
-   (i32.const 0)
-   (local.get $len/530)))
- (call $moonbit.decref
-  (local.tee $*old/985
-   (i32.load offset=12
-    (local.get $self/42))))
- (i32.store offset=12
-  (local.get $self/42)
-  (local.get $new_data/46))
- (call $moonbit.decref
-  (local.get $self/42))
- (i32.const 0))
-(func $FixedArray::set_utf16le_char (param $self/36 i32) (param $offset/37 i32) (param $value/35 i32) (result i32)
- (local $code/34 i32)
- (local $hi/38 i32)
- (local $lo/39 i32)
- (local $hi/40 i32)
+(func $@moonbitlang/core/builtin.SourceLocRepr::parse (param $repr/48 i32) (result i32)
+ (local $*bind/0/47 i32)
+ (local $*bind/1/47 i32)
+ (local $*bind/2/47 i32)
+ (local $*data/49 i32)
+ (local $*start/50 i32)
+ (local $*end/51 i32)
+ (local $start_line/0/69 i32)
+ (local $start_line/1/69 i32)
+ (local $start_line/2/69 i32)
+ (local $*try_err/71 i32)
+ (local $start_column/0/72 i32)
+ (local $start_column/1/72 i32)
+ (local $start_column/2/72 i32)
+ (local $*try_err/74 i32)
+ (local $pkg/0/75 i32)
+ (local $pkg/1/75 i32)
+ (local $pkg/2/75 i32)
+ (local $*try_err/77 i32)
+ (local $filename/0/78 i32)
+ (local $filename/1/78 i32)
+ (local $filename/2/78 i32)
+ (local $*try_err/80 i32)
+ (local $end_line/0/81 i32)
+ (local $end_line/1/81 i32)
+ (local $end_line/2/81 i32)
+ (local $*try_err/83 i32)
+ (local $end_column/0/84 i32)
+ (local $end_column/1/84 i32)
+ (local $end_column/2/84 i32)
+ (local $*try_err/86 i32)
+ (local $join_dispatch_19/88 i32)
+ (local $dispatch_19/89 i32)
+ (local $next_char/93 i32)
+ (local $next_char/96 i32)
+ (local $next_char/98 i32)
+ (local $next_char/100 i32)
+ (local $next_char/102 i32)
+ (local $next_char/103 i32)
+ (local $next_char/105 i32)
+ (local $next_char/107 i32)
+ (local $next_char/109 i32)
+ (local $next_char/111 i32)
+ (local $next_char/113 i32)
+ (local $next_char/114 i32)
+ (local $next_char/116 i32)
+ (local $next_char/117 i32)
+ (local $next_char/120 i32)
+ (local $next_char/122 i32)
+ (local $next_char/123 i32)
+ (local $next_char/124 i32)
+ (local $*p/324 i32)
+ (local $*p/327 i32)
  (local $*p/330 i32)
  (local $*p/333 i32)
  (local $*p/336 i32)
  (local $*p/339 i32)
  (local $*p/342 i32)
  (local $*p/345 i32)
- (local $*tmp/508 i32)
- (local $*tmp/509 i32)
- (local $*tmp/510 i32)
- (local $*tmp/511 i32)
- (local $*tmp/512 i32)
- (local $*tmp/513 i32)
- (local $*tmp/514 i32)
+ (local $*p/348 i32)
+ (local $*p/351 i32)
+ (local $*p/354 i32)
+ (local $*p/357 i32)
+ (local $*p/360 i32)
+ (local $*p/363 i32)
+ (local $*p/366 i32)
+ (local $*p/369 i32)
+ (local $*p/372 i32)
+ (local $*p/375 i32)
+ (local $*tmp/513 i64)
+ (local $*tmp/514 i64)
  (local $*tmp/515 i32)
  (local $*tmp/516 i32)
  (local $*tmp/517 i32)
- (local $*tmp/518 i32)
- (local $*tmp/519 i32)
- (local $*tmp/520 i32)
- (local $*tmp/521 i32)
+ (local $*ok/0/518 i32)
+ (local $*ok/1/518 i32)
+ (local $*ok/2/518 i32)
+ (local $*err/519 i32)
+ (local $*tmp/520 i64)
+ (local $*tmp/521 i64)
  (local $*tmp/522 i32)
  (local $*tmp/523 i32)
  (local $*tmp/524 i32)
- (local $*tmp/525 i32)
- (local $*tmp/526 i32)
- (local $*arr/1027 i32)
- (local $*idx/1028 i32)
- (local $*arr/1029 i32)
- (local $*idx/1030 i32)
- (local $*arr/1031 i32)
- (local $*idx/1032 i32)
- (local $*arr/1033 i32)
- (local $*idx/1034 i32)
- (local $*arr/1035 i32)
- (local $*idx/1036 i32)
- (local $*arr/1037 i32)
- (local $*idx/1038 i32)
- (if (result i32)
-  (i32.lt_u
-   (local.tee $code/34
-    (local.tee $*tmp/526
-     (local.get $value/35)))
-   (i32.const 65536))
-  (then
-   (local.set $*tmp/508
-    (i32.and
-     (local.tee $*tmp/509
-      (local.tee $*p/330
-       (i32.and
-        (local.get $code/34)
-        (i32.const 255))))
-     (i32.const 255)))
-   (local.get $self/36)
-   (local.set $*idx/1030
-    (local.get $offset/37))
-   (local.set $*arr/1029)
-   (call $moonbit.check_range
-    (local.get $*idx/1030)
-    (i32.const 0)
-    (i32.sub
-     (call $moonbit.array_length
-      (local.get $*arr/1029))
-     (i32.const 1)))
-   (i32.store8 offset=8
-    (i32.add
-     (local.get $*arr/1029)
-     (local.get $*idx/1030))
-    (local.get $*tmp/508))
-   (local.set $*tmp/510
-    (i32.add
-     (local.get $offset/37)
-     (i32.const 1)))
-   (local.set $*tmp/511
-    (i32.and
-     (local.tee $*tmp/512
-      (local.tee $*p/333
-       (i32.shr_u
-        (local.get $code/34)
-        (i32.const 8))))
-     (i32.const 255)))
-   (local.get $self/36)
-   (local.set $*idx/1028
-    (local.get $*tmp/510))
-   (local.set $*arr/1027)
-   (call $moonbit.check_range
-    (local.get $*idx/1028)
-    (i32.const 0)
-    (i32.sub
-     (call $moonbit.array_length
-      (local.get $*arr/1027))
-     (i32.const 1)))
-   (i32.store8 offset=8
-    (i32.add
-     (local.get $*arr/1027)
-     (local.get $*idx/1028))
-    (local.get $*tmp/511))
-   (call $moonbit.decref
-    (local.get $self/36))
-   (i32.const 2))
-  (else
-   (if (result i32)
-    (i32.lt_u
-     (local.get $code/34)
-     (i32.const 1114112))
-    (then
-     (local.set $lo/39
-      (i32.or
-       (local.tee $*tmp/525
-        (i32.shr_u
-         (local.tee $hi/38
-          (i32.sub
-           (local.get $code/34)
-           (i32.const 65536)))
-         (i32.const 10)))
-       (i32.const 55296)))
-     (local.set $hi/40
-      (i32.or
-       (local.tee $*tmp/524
-        (i32.and
-         (local.get $hi/38)
-         (i32.const 1023)))
-       (i32.const 56320)))
-     (local.set $*tmp/513
-      (i32.and
-       (local.tee $*tmp/514
-        (local.tee $*p/336
-         (i32.and
-          (local.get $lo/39)
-          (i32.const 255))))
-       (i32.const 255)))
-     (local.get $self/36)
-     (local.set $*idx/1038
-      (local.get $offset/37))
-     (local.set $*arr/1037)
-     (call $moonbit.check_range
-      (local.get $*idx/1038)
-      (i32.const 0)
-      (i32.sub
-       (call $moonbit.array_length
-        (local.get $*arr/1037))
-       (i32.const 1)))
-     (i32.store8 offset=8
-      (i32.add
-       (local.get $*arr/1037)
-       (local.get $*idx/1038))
-      (local.get $*tmp/513))
-     (local.set $*tmp/515
-      (i32.add
-       (local.get $offset/37)
-       (i32.const 1)))
-     (local.set $*tmp/516
-      (i32.and
-       (local.tee $*tmp/517
-        (local.tee $*p/339
-         (i32.shr_u
-          (local.get $lo/39)
-          (i32.const 8))))
-       (i32.const 255)))
-     (local.get $self/36)
-     (local.set $*idx/1036
-      (local.get $*tmp/515))
-     (local.set $*arr/1035)
-     (call $moonbit.check_range
-      (local.get $*idx/1036)
-      (i32.const 0)
-      (i32.sub
-       (call $moonbit.array_length
-        (local.get $*arr/1035))
-       (i32.const 1)))
-     (i32.store8 offset=8
-      (i32.add
-       (local.get $*arr/1035)
-       (local.get $*idx/1036))
-      (local.get $*tmp/516))
-     (local.set $*tmp/518
-      (i32.add
-       (local.get $offset/37)
-       (i32.const 2)))
-     (local.set $*tmp/519
-      (i32.and
-       (local.tee $*tmp/520
-        (local.tee $*p/342
-         (i32.and
-          (local.get $hi/40)
-          (i32.const 255))))
-       (i32.const 255)))
-     (local.get $self/36)
-     (local.set $*idx/1034
-      (local.get $*tmp/518))
-     (local.set $*arr/1033)
-     (call $moonbit.check_range
-      (local.get $*idx/1034)
-      (i32.const 0)
-      (i32.sub
-       (call $moonbit.array_length
-        (local.get $*arr/1033))
-       (i32.const 1)))
-     (i32.store8 offset=8
-      (i32.add
-       (local.get $*arr/1033)
-       (local.get $*idx/1034))
-      (local.get $*tmp/519))
-     (local.set $*tmp/521
-      (i32.add
-       (local.get $offset/37)
-       (i32.const 3)))
-     (local.set $*tmp/522
-      (i32.and
-       (local.tee $*tmp/523
-        (local.tee $*p/345
-         (i32.shr_u
-          (local.get $hi/40)
-          (i32.const 8))))
-       (i32.const 255)))
-     (local.get $self/36)
-     (local.set $*idx/1032
-      (local.get $*tmp/521))
-     (local.set $*arr/1031)
-     (call $moonbit.check_range
-      (local.get $*idx/1032)
-      (i32.const 0)
-      (i32.sub
-       (call $moonbit.array_length
-        (local.get $*arr/1031))
-       (i32.const 1)))
-     (i32.store8 offset=8
-      (i32.add
-       (local.get $*arr/1031)
-       (local.get $*idx/1032))
-      (local.get $*tmp/522))
-     (call $moonbit.decref
-      (local.get $self/36))
-     (i32.const 4))
-    (else
-     (call $moonbit.decref
-      (local.get $self/36))
-     (call $moonbitlang/core/builtin.abort|Int|
-      (i32.const 10944)
-      (i32.const 10832)))))))
-(func $@moonbitlang/core/builtin.StringBuilder::to_string (param $self/31 i32) (result i32)
- (local $*tmp/502 i32)
- (local $*tmp/503 i64)
- (local $len/504 i32)
- (local $data/505 i32)
- (local $*field/989 i32)
- (local $*field/990 i32)
- (call $moonbit.incref
-  (local.tee $data/505
-   (local.tee $*field/990
-    (i32.load offset=12
-     (local.get $self/31)))))
- (local.set $*tmp/502
-  (local.get $data/505))
- (local.set $*field/989
-  (i32.load offset=8
-   (local.get $self/31)))
- (call $moonbit.decref
-  (local.get $self/31))
- (local.set $*tmp/503
-  (i64.extend_i32_s
-   (local.tee $len/504
-    (local.get $*field/989))))
- (call $Bytes::to_unchecked_string.inner
-  (local.get $*tmp/502)
-  (i32.const 0)
-  (local.get $*tmp/503)))
-(func $Bytes::to_unchecked_string.inner (param $self/26 i32) (param $offset/30 i32) (param $length/28 i64) (result i32)
- (local $len/25 i32)
- (local $length/27 i32)
- (local $*Some/29 i64)
- (local $*tmp/501 i32)
- (local.set $len/25
+ (local $*ok/0/525 i32)
+ (local $*ok/1/525 i32)
+ (local $*ok/2/525 i32)
+ (local $*err/526 i32)
+ (local $*tmp/527 i64)
+ (local $*tmp/528 i64)
+ (local $*tmp/529 i32)
+ (local $*tmp/530 i32)
+ (local $*tmp/531 i32)
+ (local $*ok/0/532 i32)
+ (local $*ok/1/532 i32)
+ (local $*ok/2/532 i32)
+ (local $*err/533 i32)
+ (local $*tmp/534 i64)
+ (local $*tmp/535 i64)
+ (local $*tmp/536 i32)
+ (local $*tmp/537 i32)
+ (local $*ok/0/538 i32)
+ (local $*ok/1/538 i32)
+ (local $*ok/2/538 i32)
+ (local $*err/539 i32)
+ (local $*tmp/540 i64)
+ (local $*tmp/541 i64)
+ (local $*tmp/542 i32)
+ (local $*tmp/543 i32)
+ (local $*tmp/544 i32)
+ (local $*ok/0/545 i32)
+ (local $*ok/1/545 i32)
+ (local $*ok/2/545 i32)
+ (local $*err/546 i32)
+ (local $*tmp/547 i64)
+ (local $*tmp/548 i64)
+ (local $*tmp/549 i32)
+ (local $*tmp/550 i32)
+ (local $*tmp/551 i32)
+ (local $*ok/0/552 i32)
+ (local $*ok/1/552 i32)
+ (local $*ok/2/552 i32)
+ (local $*err/553 i32)
+ (local $*tmp/554 i32)
+ (local $*tmp/555 i32)
+ (local $*tmp/556 i32)
+ (local $*tmp/557 i32)
+ (local $*tmp/558 i32)
+ (local $*tmp/559 i32)
+ (local $*tmp/560 i32)
+ (local $*tmp/561 i32)
+ (local $*tmp/562 i32)
+ (local $*tmp/563 i32)
+ (local $*tmp/564 i32)
+ (local $*tmp/565 i32)
+ (local $*tmp/566 i32)
+ (local $*tmp/567 i32)
+ (local $*tmp/568 i32)
+ (local $*tmp/569 i32)
+ (local $*tmp/570 i32)
+ (local $*tmp/571 i32)
+ (local $*tmp/572 i32)
+ (local $*tmp/573 i32)
+ (local $*tmp/574 i32)
+ (local $*tmp/575 i32)
+ (local $*tmp/576 i32)
+ (local $*tmp/577 i32)
+ (local $*tmp/578 i32)
+ (local $*tmp/579 i32)
+ (local $*tmp/580 i32)
+ (local $*tmp/581 i32)
+ (local $*tmp/582 i32)
+ (local $*tmp/583 i32)
+ (local $*tmp/584 i32)
+ (local $*tmp/585 i32)
+ (local $*tmp/586 i32)
+ (local $*tmp/587 i32)
+ (local $*tmp/588 i32)
+ (local $*tmp/589 i32)
+ (local $*tmp/590 i32)
+ (local $end/591 i32)
+ (local $start/592 i32)
+ (local $*tmp/593 i32)
+ (local $*field/819 i32)
+ (local $*field/820 i32)
+ (local $ptr/884 i32)
+ (local $*obj/0/886 i32)
+ (local $*obj/1/886 i32)
+ (local $*obj/2/886 i32)
+ (local $*obj/0/888 i32)
+ (local $*obj/1/888 i32)
+ (local $*obj/2/888 i32)
+ (local $*obj/0/890 i32)
+ (local $*obj/1/890 i32)
+ (local $*obj/2/890 i32)
+ (local $*obj/0/892 i32)
+ (local $*obj/1/892 i32)
+ (local $*obj/2/892 i32)
+ (local $*obj/0/894 i32)
+ (local $*obj/1/894 i32)
+ (local $*obj/2/894 i32)
+ (local $*obj/0/896 i32)
+ (local $*obj/1/896 i32)
+ (local $*obj/2/896 i32)
+ (local $*cursor/52 i32)
+ (local $accept_state/53 i32)
+ (local $match_end/54 i32)
+ (local $match_tag_saver_0/55 i32)
+ (local $match_tag_saver_1/56 i32)
+ (local $match_tag_saver_2/57 i32)
+ (local $match_tag_saver_3/58 i32)
+ (local $match_tag_saver_4/59 i32)
+ (local $tag_0/60 i32)
+ (local $tag_1/61 i32)
+ (local $tag_1_1/62 i32)
+ (local $tag_1_2/63 i32)
+ (local $tag_3/64 i32)
+ (local $tag_2/65 i32)
+ (local $tag_2_1/66 i32)
+ (local $tag_4/67 i32)
+ (local.set $*tmp/593
   (call $moonbit.array_length
-   (local.get $self/26)))
- (local.set $length/27
-  (if (result i32)
-   (i64.eq
-    (local.get $length/28)
-    (i64.const 4294967296))
-   (then
-    (i32.sub
-     (local.get $len/25)
-     (local.get $offset/30)))
-   (else
-    (i32.wrap_i64
-     (local.tee $*Some/29
-      (local.get $length/28))))))
- (if (result i32)
-  (if (result i32)
-   (i32.ge_s
-    (local.get $offset/30)
-    (i32.const 0))
-   (then
-    (if (result i32)
-     (i32.ge_s
-      (local.get $length/27)
-      (i32.const 0))
-     (then
-      (i32.le_s
-       (local.tee $*tmp/501
-        (i32.add
-         (local.get $offset/30)
-         (local.get $length/27)))
-       (local.get $len/25)))
-     (else
-      (i32.const 0))))
-   (else
-    (i32.const 0)))
-  (then
-   (call $moonbitlang/core/builtin.unsafe_sub_string
-    (local.get $self/26)
-    (local.get $offset/30)
-    (local.get $length/27)))
-  (else
-   (call $moonbit.decref
-    (local.get $self/26))
-   (unreachable))))
-(func $moonbitlang/core/builtin.unsafe_sub_string (param $*param/453 i32) (param $*param/454 i32) (param $*param/455 i32) (result i32)
- (call $moonbit.unsafe_bytes_sub_string
-  (local.get $*param/453)
-  (local.get $*param/454)
-  (local.get $*param/455)))
-(func $@moonbitlang/core/builtin.StringBuilder::new.inner (param $size_hint/23 i32) (result i32)
- (local $initial/22 i32)
- (local $data/24 i32)
- (local $ptr/1039 i32)
- (local.set $data/24
-  (call $moonbit.bytes_make
-   (local.tee $initial/22
+   (local.get $repr/48)))
+ (local.get $repr/48)
+ (i32.const 0)
+ (local.set $*bind/2/47
+  (local.get $*tmp/593))
+ (local.set $*bind/1/47)
+ (local.tee $*bind/0/47)
+ (local.tee $*field/820)
+ (local.set $*data/49)
+ (local.set $*start/50
+  (local.get $*bind/1/47))
+ (local.set $end/591
+  (local.get $*bind/2/47))
+ (local.set $start/592
+  (local.tee $*field/819
+   (local.get $*bind/1/47)))
+ (local.set $*tmp/590
+  (i32.sub
+   (local.get $end/591)
+   (local.get $start/592)))
+ (local.set $*end/51
+  (i32.add
+   (local.get $*start/50)
+   (local.get $*tmp/590)))
+ (local.set $*cursor/52
+  (local.get $*start/50))
+ (local.set $accept_state/53
+  (i32.const -1))
+ (local.set $match_end/54
+  (i32.const -1))
+ (local.set $match_tag_saver_0/55
+  (i32.const -1))
+ (local.set $match_tag_saver_1/56
+  (i32.const -1))
+ (local.set $match_tag_saver_2/57
+  (i32.const -1))
+ (local.set $match_tag_saver_3/58
+  (i32.const -1))
+ (local.set $match_tag_saver_4/59
+  (i32.const -1))
+ (local.set $tag_0/60
+  (i32.const -1))
+ (local.set $tag_1/61
+  (i32.const -1))
+ (local.set $tag_1_1/62
+  (i32.const -1))
+ (local.set $tag_1_2/63
+  (i32.const -1))
+ (local.set $tag_3/64
+  (i32.const -1))
+ (local.set $tag_2/65
+  (i32.const -1))
+ (local.set $tag_2_1/66
+  (i32.const -1))
+ (local.set $tag_4/67
+  (i32.const -1))
+ (block $join:68
+  (block $join:87
+   (if (result i32)
+    (i32.lt_s
+     (local.tee $*tmp/580
+      (local.get $*cursor/52))
+     (local.get $*end/51))
+    (then
+     (local.set $*p/324
+      (local.get $*cursor/52))
+     (local.set $next_char/117
+      (i32.load16_u offset=8
+       (i32.add
+        (local.get $*data/49)
+        (i32.shl
+         (local.get $*p/324)
+         (i32.const 1)))))
+     (local.set $*cursor/52
+      (i32.add
+       (local.tee $*tmp/581
+        (local.get $*cursor/52))
+       (i32.const 1)))
+     (if (result i32)
+      (i32.lt_s
+       (local.get $next_char/117)
+       (i32.const 65))
+      (then
+       (if (result i32)
+        (i32.lt_s
+         (local.get $next_char/117)
+         (i32.const 64))
+        (then
+         (br $join:68))
+        (else
+         (loop $loop:119 (result i32)
+          (local.set $tag_0/60
+           (local.get $*cursor/52))
+          (if (result i32)
+           (i32.lt_s
+            (local.tee $*tmp/582
+             (local.get $*cursor/52))
+            (local.get $*end/51))
+           (then
+            (block $outer/858 (result i32)
+             (block $join:118
+              (local.set $*p/327
+               (local.get $*cursor/52))
+              (local.set $next_char/120
+               (i32.load16_u offset=8
+                (i32.add
+                 (local.get $*data/49)
+                 (i32.shl
+                  (local.get $*p/327)
+                  (i32.const 1)))))
+              (local.set $*cursor/52
+               (i32.add
+                (local.tee $*tmp/583
+                 (local.get $*cursor/52))
+                (i32.const 1)))
+              (if (result i32)
+               (i32.lt_s
+                (local.get $next_char/120)
+                (i32.const 55296))
+               (then
+                (if (result i32)
+                 (i32.lt_s
+                  (local.get $next_char/120)
+                  (i32.const 58))
+                 (then
+                  (br $join:118))
+                 (else
+                  (if (result i32)
+                   (i32.gt_s
+                    (local.get $next_char/120)
+                    (i32.const 58))
+                   (then
+                    (br $join:118))
+                   (else
+                    (if (result i32)
+                     (i32.lt_s
+                      (local.tee $*tmp/584
+                       (local.get $*cursor/52))
+                      (local.get $*end/51))
+                     (then
+                      (block $outer/859 (result i32)
+                       (block $join:121
+                        (local.set $*p/330
+                         (local.get $*cursor/52))
+                        (local.set $next_char/122
+                         (i32.load16_u offset=8
+                          (i32.add
+                           (local.get $*data/49)
+                           (i32.shl
+                            (local.get $*p/330)
+                            (i32.const 1)))))
+                        (local.set $*cursor/52
+                         (i32.add
+                          (local.tee $*tmp/585
+                           (local.get $*cursor/52))
+                          (i32.const 1)))
+                        (if (result i32)
+                         (i32.lt_s
+                          (local.get $next_char/122)
+                          (i32.const 56319))
+                         (then
+                          (if (result i32)
+                           (i32.lt_s
+                            (local.get $next_char/122)
+                            (i32.const 55296))
+                           (then
+                            (br $join:121))
+                           (else
+                            (local.set $join_dispatch_19/88
+                             (i32.const 7))
+                            (br $join:87))))
+                         (else
+                          (if (result i32)
+                           (i32.gt_s
+                            (local.get $next_char/122)
+                            (i32.const 56319))
+                           (then
+                            (if (result i32)
+                             (i32.lt_s
+                              (local.get $next_char/122)
+                              (i32.const 65536))
+                             (then
+                              (br $join:121))
+                             (else
+                              (br $join:68))))
+                           (else
+                            (local.set $join_dispatch_19/88
+                             (i32.const 8))
+                            (br $join:87)))))
+                        (br $outer/859))
+                       (local.set $join_dispatch_19/88
+                        (i32.const 0))
+                       (br $join:87)))
+                     (else
+                      (br $join:68))))))))
+               (else
+                (if (result i32)
+                 (i32.gt_s
+                  (local.get $next_char/120)
+                  (i32.const 56318))
+                 (then
+                  (if (result i32)
+                   (i32.lt_s
+                    (local.get $next_char/120)
+                    (i32.const 57344))
+                   (then
+                    (if (result i32)
+                     (i32.lt_s
+                      (local.tee $*tmp/586
+                       (local.get $*cursor/52))
+                      (local.get $*end/51))
+                     (then
+                      (local.set $*p/333
+                       (local.get $*cursor/52))
+                      (local.set $next_char/123
+                       (i32.load16_u offset=8
+                        (i32.add
+                         (local.get $*data/49)
+                         (i32.shl
+                          (local.get $*p/333)
+                          (i32.const 1)))))
+                      (local.set $*cursor/52
+                       (i32.add
+                        (local.tee $*tmp/587
+                         (local.get $*cursor/52))
+                        (i32.const 1)))
+                      (if (result i32)
+                       (i32.lt_s
+                        (local.get $next_char/123)
+                        (i32.const 56320))
+                       (then
+                        (br $join:68))
+                       (else
+                        (if (result i32)
+                         (i32.gt_s
+                          (local.get $next_char/123)
+                          (i32.const 57343))
+                         (then
+                          (br $join:68))
+                         (else
+                          (br $loop:119))))))
+                     (else
+                      (br $join:68))))
+                   (else
+                    (if (result i32)
+                     (i32.gt_s
+                      (local.get $next_char/120)
+                      (i32.const 65535))
+                     (then
+                      (br $join:68))
+                     (else
+                      (br $join:118))))))
+                 (else
+                  (if (result i32)
+                   (i32.lt_s
+                    (local.tee $*tmp/588
+                     (local.get $*cursor/52))
+                    (local.get $*end/51))
+                   (then
+                    (local.set $*p/336
+                     (local.get $*cursor/52))
+                    (local.set $next_char/124
+                     (i32.load16_u offset=8
+                      (i32.add
+                       (local.get $*data/49)
+                       (i32.shl
+                        (local.get $*p/336)
+                        (i32.const 1)))))
+                    (local.set $*cursor/52
+                     (i32.add
+                      (local.tee $*tmp/589
+                       (local.get $*cursor/52))
+                      (i32.const 1)))
+                    (if (result i32)
+                     (i32.lt_s
+                      (local.get $next_char/124)
+                      (i32.const 56320))
+                     (then
+                      (br $join:68))
+                     (else
+                      (if (result i32)
+                       (i32.gt_s
+                        (local.get $next_char/124)
+                        (i32.const 65535))
+                       (then
+                        (br $join:68))
+                       (else
+                        (br $loop:119))))))
+                   (else
+                    (br $join:68)))))))
+              (br $outer/858))
+             (br $loop:119)))
+           (else
+            (br $join:68)))))))
+      (else
+       (br $join:68))))
+    (else
+     (br $join:68)))
+   (return))
+  (local.get $join_dispatch_19/88)
+  (loop $loop:92 (param i32) (result i32)
+   (local.set $dispatch_19/89)
+   (block $outer/860 (result i32)
+    (block $join:90
+     (block $outer/861 (result i32)
+      (block $join:94
+       (block $switch_int/872 (result i32)
+        (block $switch_default/873
+         (block $switch_int_1/875
+          (block $switch_int_7/881
+           (block $switch_int_6/880
+            (block $switch_int_5/879
+             (block $switch_int_4/878
+              (block $switch_int_8/882
+               (block $switch_int_0/874
+                (block $switch_int_2/876
+                 (block $switch_int_3/877
+                  (local.get $dispatch_19/89)
+                  (br_table
+                   $switch_int_0/874
+                   $switch_int_1/875
+                   $switch_int_2/876
+                   $switch_int_3/877
+                   $switch_int_4/878
+                   $switch_int_5/879
+                   $switch_int_6/880
+                   $switch_int_7/881
+                   $switch_int_8/882
+                   $switch_default/873
+                   ))
+                 (local.set $tag_1_2/63
+                  (local.get $tag_1_1/62))
+                 (local.set $tag_1_1/62
+                  (local.get $tag_1/61))
+                 (local.set $tag_1/61
+                  (local.get $*cursor/52))
+                 (if (result i32)
+                  (i32.lt_s
+                   (local.tee $*tmp/556
+                    (local.get $*cursor/52))
+                   (local.get $*end/51))
+                  (then
+                   (block $outer/862 (result i32)
+                    (block $join:95
+                     (local.set $*p/339
+                      (local.get $*cursor/52))
+                     (local.set $next_char/96
+                      (i32.load16_u offset=8
+                       (i32.add
+                        (local.get $*data/49)
+                        (i32.shl
+                         (local.get $*p/339)
+                         (i32.const 1)))))
+                     (local.set $*cursor/52
+                      (i32.add
+                       (local.tee $*tmp/557
+                        (local.get $*cursor/52))
+                       (i32.const 1)))
+                     (if (result i32)
+                      (i32.lt_s
+                       (local.get $next_char/96)
+                       (i32.const 55296))
+                      (then
+                       (if (result i32)
+                        (i32.lt_s
+                         (local.get $next_char/96)
+                         (i32.const 58))
+                        (then
+                         (if (result i32)
+                          (i32.lt_s
+                           (local.get $next_char/96)
+                           (i32.const 48))
+                          (then
+                           (br $join:95))
+                          (else
+                           (local.set $tag_1/61
+                            (local.get $*cursor/52))
+                           (local.set $tag_2_1/66
+                            (local.get $tag_2/65))
+                           (local.set $tag_2/65
+                            (local.get $*cursor/52))
+                           (local.set $tag_3/64
+                            (local.get $*cursor/52))
+                           (if (result i32)
+                            (i32.lt_s
+                             (local.tee $*tmp/558
+                              (local.get $*cursor/52))
+                             (local.get $*end/51))
+                            (then
+                             (block $outer/863 (result i32)
+                              (block $join:97
+                               (local.set $*p/342
+                                (local.get $*cursor/52))
+                               (local.set $next_char/98
+                                (i32.load16_u offset=8
+                                 (i32.add
+                                  (local.get $*data/49)
+                                  (i32.shl
+                                   (local.get $*p/342)
+                                   (i32.const 1)))))
+                               (local.set $*cursor/52
+                                (i32.add
+                                 (local.tee $*tmp/559
+                                  (local.get $*cursor/52))
+                                 (i32.const 1)))
+                               (if (result i32)
+                                (i32.lt_s
+                                 (local.get $next_char/98)
+                                 (i32.const 59))
+                                (then
+                                 (if (result i32)
+                                  (i32.lt_s
+                                   (local.get $next_char/98)
+                                   (i32.const 46))
+                                  (then
+                                   (if (result i32)
+                                    (i32.lt_s
+                                     (local.get $next_char/98)
+                                     (i32.const 45))
+                                    (then
+                                     (br $join:97))
+                                    (else
+                                     (br $join:90))))
+                                  (else
+                                   (if (result i32)
+                                    (i32.gt_s
+                                     (local.get $next_char/98)
+                                     (i32.const 47))
+                                    (then
+                                     (if (result i32)
+                                      (i32.lt_s
+                                       (local.get $next_char/98)
+                                       (i32.const 58))
+                                      (then
+                                       (i32.const 6)
+                                       (br $loop:92))
+                                      (else
+                                       (i32.const 3)
+                                       (br $loop:92))))
+                                    (else
+                                     (br $join:97))))))
+                                (else
+                                 (if (result i32)
+                                  (i32.gt_s
+                                   (local.get $next_char/98)
+                                   (i32.const 55295))
+                                  (then
+                                   (if (result i32)
+                                    (i32.lt_s
+                                     (local.get $next_char/98)
+                                     (i32.const 57344))
+                                    (then
+                                     (if (result i32)
+                                      (i32.lt_s
+                                       (local.get $next_char/98)
+                                       (i32.const 56319))
+                                      (then
+                                       (i32.const 7)
+                                       (br $loop:92))
+                                      (else
+                                       (i32.const 8)
+                                       (br $loop:92))))
+                                    (else
+                                     (if (result i32)
+                                      (i32.gt_s
+                                       (local.get $next_char/98)
+                                       (i32.const 65535))
+                                      (then
+                                       (br $join:68))
+                                      (else
+                                       (br $join:97))))))
+                                  (else
+                                   (br $join:97)))))
+                               (br $outer/863))
+                              (i32.const 0)
+                              (br $loop:92)))
+                            (else
+                             (br $join:68))))))
+                        (else
+                         (if (result i32)
+                          (i32.gt_s
+                           (local.get $next_char/96)
+                           (i32.const 58))
+                          (then
+                           (br $join:95))
+                          (else
+                           (i32.const 1)
+                           (br $loop:92))))))
+                      (else
+                       (if (result i32)
+                        (i32.gt_s
+                         (local.get $next_char/96)
+                         (i32.const 56318))
+                        (then
+                         (if (result i32)
+                          (i32.lt_s
+                           (local.get $next_char/96)
+                           (i32.const 57344))
+                          (then
+                           (i32.const 8)
+                           (br $loop:92))
+                          (else
+                           (if (result i32)
+                            (i32.gt_s
+                             (local.get $next_char/96)
+                             (i32.const 65535))
+                            (then
+                             (br $join:68))
+                            (else
+                             (br $join:95))))))
+                        (else
+                         (i32.const 7)
+                         (br $loop:92)))))
+                     (br $outer/862))
+                    (i32.const 0)
+                    (br $loop:92)))
+                  (else
+                   (br $join:68)))
+                 (br $switch_int/872))
+                (local.set $tag_1/61
+                 (local.get $*cursor/52))
+                (local.set $tag_2/65
+                 (local.get $*cursor/52))
+                (if (result i32)
+                 (i32.lt_s
+                  (local.tee $*tmp/560
+                   (local.get $*cursor/52))
+                  (local.get $*end/51))
+                 (then
+                  (block $outer/864 (result i32)
+                   (block $join:99
+                    (local.set $*p/345
+                     (local.get $*cursor/52))
+                    (local.set $next_char/100
+                     (i32.load16_u offset=8
+                      (i32.add
+                       (local.get $*data/49)
+                       (i32.shl
+                        (local.get $*p/345)
+                        (i32.const 1)))))
+                    (local.set $*cursor/52
+                     (i32.add
+                      (local.tee $*tmp/561
+                       (local.get $*cursor/52))
+                      (i32.const 1)))
+                    (if (result i32)
+                     (i32.lt_s
+                      (local.get $next_char/100)
+                      (i32.const 55296))
+                     (then
+                      (if (result i32)
+                       (i32.lt_s
+                        (local.get $next_char/100)
+                        (i32.const 58))
+                       (then
+                        (if (result i32)
+                         (i32.lt_s
+                          (local.get $next_char/100)
+                          (i32.const 48))
+                         (then
+                          (br $join:99))
+                         (else
+                          (i32.const 2)
+                          (br $loop:92))))
+                       (else
+                        (if (result i32)
+                         (i32.gt_s
+                          (local.get $next_char/100)
+                          (i32.const 58))
+                         (then
+                          (br $join:99))
+                         (else
+                          (i32.const 3)
+                          (br $loop:92))))))
+                     (else
+                      (if (result i32)
+                       (i32.gt_s
+                        (local.get $next_char/100)
+                        (i32.const 56318))
+                       (then
+                        (if (result i32)
+                         (i32.lt_s
+                          (local.get $next_char/100)
+                          (i32.const 57344))
+                         (then
+                          (i32.const 8)
+                          (br $loop:92))
+                         (else
+                          (if (result i32)
+                           (i32.gt_s
+                            (local.get $next_char/100)
+                            (i32.const 65535))
+                           (then
+                            (br $join:68))
+                           (else
+                            (br $join:99))))))
+                       (else
+                        (i32.const 7)
+                        (br $loop:92)))))
+                    (br $outer/864))
+                   (i32.const 0)
+                   (br $loop:92)))
+                 (else
+                  (br $join:68)))
+                (br $switch_int/872))
+               (local.set $tag_1/61
+                (local.get $*cursor/52))
+               (if (result i32)
+                (i32.lt_s
+                 (local.tee $*tmp/562
+                  (local.get $*cursor/52))
+                 (local.get $*end/51))
+                (then
+                 (block $outer/865 (result i32)
+                  (block $join:101
+                   (local.set $*p/348
+                    (local.get $*cursor/52))
+                   (local.set $next_char/102
+                    (i32.load16_u offset=8
+                     (i32.add
+                      (local.get $*data/49)
+                      (i32.shl
+                       (local.get $*p/348)
+                       (i32.const 1)))))
+                   (local.set $*cursor/52
+                    (i32.add
+                     (local.tee $*tmp/563
+                      (local.get $*cursor/52))
+                     (i32.const 1)))
+                   (if (result i32)
+                    (i32.lt_s
+                     (local.get $next_char/102)
+                     (i32.const 55296))
+                    (then
+                     (if (result i32)
+                      (i32.lt_s
+                       (local.get $next_char/102)
+                       (i32.const 58))
+                      (then
+                       (br $join:101))
+                      (else
+                       (if (result i32)
+                        (i32.gt_s
+                         (local.get $next_char/102)
+                         (i32.const 58))
+                        (then
+                         (br $join:101))
+                        (else
+                         (i32.const 1)
+                         (br $loop:92))))))
+                    (else
+                     (if (result i32)
+                      (i32.gt_s
+                       (local.get $next_char/102)
+                       (i32.const 56318))
+                      (then
+                       (if (result i32)
+                        (i32.lt_s
+                         (local.get $next_char/102)
+                         (i32.const 57344))
+                        (then
+                         (i32.const 8)
+                         (br $loop:92))
+                        (else
+                         (if (result i32)
+                          (i32.gt_s
+                           (local.get $next_char/102)
+                           (i32.const 65535))
+                          (then
+                           (br $join:68))
+                          (else
+                           (br $join:101))))))
+                      (else
+                       (i32.const 7)
+                       (br $loop:92)))))
+                   (br $outer/865))
+                  (i32.const 0)
+                  (br $loop:92)))
+                (else
+                 (br $join:68)))
+               (br $switch_int/872))
+              (if (result i32)
+               (i32.lt_s
+                (local.tee $*tmp/564
+                 (local.get $*cursor/52))
+                (local.get $*end/51))
+               (then
+                (local.set $*p/351
+                 (local.get $*cursor/52))
+                (local.set $next_char/103
+                 (i32.load16_u offset=8
+                  (i32.add
+                   (local.get $*data/49)
+                   (i32.shl
+                    (local.get $*p/351)
+                    (i32.const 1)))))
+                (local.set $*cursor/52
+                 (i32.add
+                  (local.tee $*tmp/565
+                   (local.get $*cursor/52))
+                  (i32.const 1)))
+                (if (result i32)
+                 (i32.lt_s
+                  (local.get $next_char/103)
+                  (i32.const 56320))
+                 (then
+                  (br $join:68))
+                 (else
+                  (if (result i32)
+                   (i32.gt_s
+                    (local.get $next_char/103)
+                    (i32.const 57343))
+                   (then
+                    (br $join:68))
+                   (else
+                    (i32.const 0)
+                    (br $loop:92))))))
+               (else
+                (br $join:68)))
+              (br $switch_int/872))
+             (local.set $tag_1/61
+              (local.get $*cursor/52))
+             (local.set $tag_4/67
+              (local.get $*cursor/52))
+             (if (result i32)
+              (i32.lt_s
+               (local.tee $*tmp/566
+                (local.get $*cursor/52))
+               (local.get $*end/51))
+              (then
+               (block $outer/866 (result i32)
+                (block $join:104
+                 (local.set $*p/354
+                  (local.get $*cursor/52))
+                 (local.set $next_char/105
+                  (i32.load16_u offset=8
+                   (i32.add
+                    (local.get $*data/49)
+                    (i32.shl
+                     (local.get $*p/354)
+                     (i32.const 1)))))
+                 (local.set $*cursor/52
+                  (i32.add
+                   (local.tee $*tmp/567
+                    (local.get $*cursor/52))
+                   (i32.const 1)))
+                 (if (result i32)
+                  (i32.lt_s
+                   (local.get $next_char/105)
+                   (i32.const 55296))
+                  (then
+                   (if (result i32)
+                    (i32.lt_s
+                     (local.get $next_char/105)
+                     (i32.const 58))
+                    (then
+                     (if (result i32)
+                      (i32.lt_s
+                       (local.get $next_char/105)
+                       (i32.const 48))
+                      (then
+                       (br $join:104))
+                      (else
+                       (i32.const 4)
+                       (br $loop:92))))
+                    (else
+                     (if (result i32)
+                      (i32.gt_s
+                       (local.get $next_char/105)
+                       (i32.const 58))
+                      (then
+                       (br $join:104))
+                      (else
+                       (local.set $tag_1_2/63
+                        (local.get $tag_1_1/62))
+                       (local.set $tag_1_1/62
+                        (local.get $tag_1/61))
+                       (local.set $tag_1/61
+                        (local.get $*cursor/52))
+                       (if (result i32)
+                        (i32.lt_s
+                         (local.tee $*tmp/568
+                          (local.get $*cursor/52))
+                         (local.get $*end/51))
+                        (then
+                         (block $outer/867 (result i32)
+                          (block $join:106
+                           (local.set $*p/357
+                            (local.get $*cursor/52))
+                           (local.set $next_char/107
+                            (i32.load16_u offset=8
+                             (i32.add
+                              (local.get $*data/49)
+                              (i32.shl
+                               (local.get $*p/357)
+                               (i32.const 1)))))
+                           (local.set $*cursor/52
+                            (i32.add
+                             (local.tee $*tmp/569
+                              (local.get $*cursor/52))
+                             (i32.const 1)))
+                           (if (result i32)
+                            (i32.lt_s
+                             (local.get $next_char/107)
+                             (i32.const 55296))
+                            (then
+                             (if (result i32)
+                              (i32.lt_s
+                               (local.get $next_char/107)
+                               (i32.const 58))
+                              (then
+                               (if (result i32)
+                                (i32.lt_s
+                                 (local.get $next_char/107)
+                                 (i32.const 48))
+                                (then
+                                 (br $join:106))
+                                (else
+                                 (local.set $tag_1/61
+                                  (local.get $*cursor/52))
+                                 (local.set $tag_2_1/66
+                                  (local.get $tag_2/65))
+                                 (local.set $tag_2/65
+                                  (local.get $*cursor/52))
+                                 (if (result i32)
+                                  (i32.lt_s
+                                   (local.tee $*tmp/570
+                                    (local.get $*cursor/52))
+                                   (local.get $*end/51))
+                                  (then
+                                   (block $outer/868 (result i32)
+                                    (block $join:108
+                                     (local.set $*p/360
+                                      (local.get $*cursor/52))
+                                     (local.set $next_char/109
+                                      (i32.load16_u offset=8
+                                       (i32.add
+                                        (local.get $*data/49)
+                                        (i32.shl
+                                         (local.get $*p/360)
+                                         (i32.const 1)))))
+                                     (local.set $*cursor/52
+                                      (i32.add
+                                       (local.tee $*tmp/571
+                                        (local.get $*cursor/52))
+                                       (i32.const 1)))
+                                     (if (result i32)
+                                      (i32.lt_s
+                                       (local.get $next_char/109)
+                                       (i32.const 55296))
+                                      (then
+                                       (if (result i32)
+                                        (i32.lt_s
+                                         (local.get $next_char/109)
+                                         (i32.const 58))
+                                        (then
+                                         (if (result i32)
+                                          (i32.lt_s
+                                           (local.get $next_char/109)
+                                           (i32.const 48))
+                                          (then
+                                           (br $join:108))
+                                          (else
+                                           (i32.const 5)
+                                           (br $loop:92))))
+                                        (else
+                                         (if (result i32)
+                                          (i32.gt_s
+                                           (local.get $next_char/109)
+                                           (i32.const 58))
+                                          (then
+                                           (br $join:108))
+                                          (else
+                                           (i32.const 3)
+                                           (br $loop:92))))))
+                                      (else
+                                       (if (result i32)
+                                        (i32.gt_s
+                                         (local.get $next_char/109)
+                                         (i32.const 56318))
+                                        (then
+                                         (if (result i32)
+                                          (i32.lt_s
+                                           (local.get $next_char/109)
+                                           (i32.const 57344))
+                                          (then
+                                           (i32.const 8)
+                                           (br $loop:92))
+                                          (else
+                                           (if (result i32)
+                                            (i32.gt_s
+                                             (local.get $next_char/109)
+                                             (i32.const 65535))
+                                            (then
+                                             (br $join:68))
+                                            (else
+                                             (br $join:108))))))
+                                        (else
+                                         (i32.const 7)
+                                         (br $loop:92)))))
+                                     (br $outer/868))
+                                    (i32.const 0)
+                                    (br $loop:92)))
+                                  (else
+                                   (br $join:94))))))
+                              (else
+                               (if (result i32)
+                                (i32.gt_s
+                                 (local.get $next_char/107)
+                                 (i32.const 58))
+                                (then
+                                 (br $join:106))
+                                (else
+                                 (i32.const 1)
+                                 (br $loop:92))))))
+                            (else
+                             (if (result i32)
+                              (i32.gt_s
+                               (local.get $next_char/107)
+                               (i32.const 56318))
+                              (then
+                               (if (result i32)
+                                (i32.lt_s
+                                 (local.get $next_char/107)
+                                 (i32.const 57344))
+                                (then
+                                 (i32.const 8)
+                                 (br $loop:92))
+                                (else
+                                 (if (result i32)
+                                  (i32.gt_s
+                                   (local.get $next_char/107)
+                                   (i32.const 65535))
+                                  (then
+                                   (br $join:68))
+                                  (else
+                                   (br $join:106))))))
+                              (else
+                               (i32.const 7)
+                               (br $loop:92)))))
+                           (br $outer/867))
+                          (i32.const 0)
+                          (br $loop:92)))
+                        (else
+                         (br $join:68))))))))
+                  (else
+                   (if (result i32)
+                    (i32.gt_s
+                     (local.get $next_char/105)
+                     (i32.const 56318))
+                    (then
+                     (if (result i32)
+                      (i32.lt_s
+                       (local.get $next_char/105)
+                       (i32.const 57344))
+                      (then
+                       (i32.const 8)
+                       (br $loop:92))
+                      (else
+                       (if (result i32)
+                        (i32.gt_s
+                         (local.get $next_char/105)
+                         (i32.const 65535))
+                        (then
+                         (br $join:68))
+                        (else
+                         (br $join:104))))))
+                    (else
+                     (i32.const 7)
+                     (br $loop:92)))))
+                 (br $outer/866))
+                (i32.const 0)
+                (br $loop:92)))
+              (else
+               (br $join:68)))
+             (br $switch_int/872))
+            (local.set $tag_1/61
+             (local.get $*cursor/52))
+            (local.set $tag_2/65
+             (local.get $*cursor/52))
+            (if (result i32)
+             (i32.lt_s
+              (local.tee $*tmp/572
+               (local.get $*cursor/52))
+              (local.get $*end/51))
+             (then
+              (block $outer/869 (result i32)
+               (block $join:110
+                (local.set $*p/363
+                 (local.get $*cursor/52))
+                (local.set $next_char/111
+                 (i32.load16_u offset=8
+                  (i32.add
+                   (local.get $*data/49)
+                   (i32.shl
+                    (local.get $*p/363)
+                    (i32.const 1)))))
+                (local.set $*cursor/52
+                 (i32.add
+                  (local.tee $*tmp/573
+                   (local.get $*cursor/52))
+                  (i32.const 1)))
+                (if (result i32)
+                 (i32.lt_s
+                  (local.get $next_char/111)
+                  (i32.const 55296))
+                 (then
+                  (if (result i32)
+                   (i32.lt_s
+                    (local.get $next_char/111)
+                    (i32.const 58))
+                   (then
+                    (if (result i32)
+                     (i32.lt_s
+                      (local.get $next_char/111)
+                      (i32.const 48))
+                     (then
+                      (br $join:110))
+                     (else
+                      (i32.const 5)
+                      (br $loop:92))))
+                   (else
+                    (if (result i32)
+                     (i32.gt_s
+                      (local.get $next_char/111)
+                      (i32.const 58))
+                     (then
+                      (br $join:110))
+                     (else
+                      (i32.const 3)
+                      (br $loop:92))))))
+                 (else
+                  (if (result i32)
+                   (i32.gt_s
+                    (local.get $next_char/111)
+                    (i32.const 56318))
+                   (then
+                    (if (result i32)
+                     (i32.lt_s
+                      (local.get $next_char/111)
+                      (i32.const 57344))
+                     (then
+                      (i32.const 8)
+                      (br $loop:92))
+                     (else
+                      (if (result i32)
+                       (i32.gt_s
+                        (local.get $next_char/111)
+                        (i32.const 65535))
+                       (then
+                        (br $join:68))
+                       (else
+                        (br $join:110))))))
+                   (else
+                    (i32.const 7)
+                    (br $loop:92)))))
+                (br $outer/869))
+               (i32.const 0)
+               (br $loop:92)))
+             (else
+              (br $join:94)))
+            (br $switch_int/872))
+           (local.set $tag_1/61
+            (local.get $*cursor/52))
+           (local.set $tag_2/65
+            (local.get $*cursor/52))
+           (local.set $tag_3/64
+            (local.get $*cursor/52))
+           (if (result i32)
+            (i32.lt_s
+             (local.tee $*tmp/574
+              (local.get $*cursor/52))
+             (local.get $*end/51))
+            (then
+             (block $outer/870 (result i32)
+              (block $join:112
+               (local.set $*p/366
+                (local.get $*cursor/52))
+               (local.set $next_char/113
+                (i32.load16_u offset=8
+                 (i32.add
+                  (local.get $*data/49)
+                  (i32.shl
+                   (local.get $*p/366)
+                   (i32.const 1)))))
+               (local.set $*cursor/52
+                (i32.add
+                 (local.tee $*tmp/575
+                  (local.get $*cursor/52))
+                 (i32.const 1)))
+               (if (result i32)
+                (i32.lt_s
+                 (local.get $next_char/113)
+                 (i32.const 59))
+                (then
+                 (if (result i32)
+                  (i32.lt_s
+                   (local.get $next_char/113)
+                   (i32.const 46))
+                  (then
+                   (if (result i32)
+                    (i32.lt_s
+                     (local.get $next_char/113)
+                     (i32.const 45))
+                    (then
+                     (br $join:112))
+                    (else
+                     (br $join:90))))
+                  (else
+                   (if (result i32)
+                    (i32.gt_s
+                     (local.get $next_char/113)
+                     (i32.const 47))
+                    (then
+                     (if (result i32)
+                      (i32.lt_s
+                       (local.get $next_char/113)
+                       (i32.const 58))
+                      (then
+                       (i32.const 6)
+                       (br $loop:92))
+                      (else
+                       (i32.const 3)
+                       (br $loop:92))))
+                    (else
+                     (br $join:112))))))
+                (else
+                 (if (result i32)
+                  (i32.gt_s
+                   (local.get $next_char/113)
+                   (i32.const 55295))
+                  (then
+                   (if (result i32)
+                    (i32.lt_s
+                     (local.get $next_char/113)
+                     (i32.const 57344))
+                    (then
+                     (if (result i32)
+                      (i32.lt_s
+                       (local.get $next_char/113)
+                       (i32.const 56319))
+                      (then
+                       (i32.const 7)
+                       (br $loop:92))
+                      (else
+                       (i32.const 8)
+                       (br $loop:92))))
+                    (else
+                     (if (result i32)
+                      (i32.gt_s
+                       (local.get $next_char/113)
+                       (i32.const 65535))
+                      (then
+                       (br $join:68))
+                      (else
+                       (br $join:112))))))
+                  (else
+                   (br $join:112)))))
+               (br $outer/870))
+              (i32.const 0)
+              (br $loop:92)))
+            (else
+             (br $join:68)))
+           (br $switch_int/872))
+          (if (result i32)
+           (i32.lt_s
+            (local.tee $*tmp/576
+             (local.get $*cursor/52))
+            (local.get $*end/51))
+           (then
+            (local.set $*p/369
+             (local.get $*cursor/52))
+            (local.set $next_char/114
+             (i32.load16_u offset=8
+              (i32.add
+               (local.get $*data/49)
+               (i32.shl
+                (local.get $*p/369)
+                (i32.const 1)))))
+            (local.set $*cursor/52
+             (i32.add
+              (local.tee $*tmp/577
+               (local.get $*cursor/52))
+              (i32.const 1)))
+            (if (result i32)
+             (i32.lt_s
+              (local.get $next_char/114)
+              (i32.const 56320))
+             (then
+              (br $join:68))
+             (else
+              (if (result i32)
+               (i32.gt_s
+                (local.get $next_char/114)
+                (i32.const 65535))
+               (then
+                (br $join:68))
+               (else
+                (i32.const 0)
+                (br $loop:92))))))
+           (else
+            (br $join:68)))
+          (br $switch_int/872))
+         (local.set $tag_1_1/62
+          (local.get $tag_1/61))
+         (local.set $tag_1/61
+          (local.get $*cursor/52))
+         (if (result i32)
+          (i32.lt_s
+           (local.tee $*tmp/578
+            (local.get $*cursor/52))
+           (local.get $*end/51))
+          (then
+           (block $outer/871 (result i32)
+            (block $join:115
+             (local.set $*p/372
+              (local.get $*cursor/52))
+             (local.set $next_char/116
+              (i32.load16_u offset=8
+               (i32.add
+                (local.get $*data/49)
+                (i32.shl
+                 (local.get $*p/372)
+                 (i32.const 1)))))
+             (local.set $*cursor/52
+              (i32.add
+               (local.tee $*tmp/579
+                (local.get $*cursor/52))
+               (i32.const 1)))
+             (if (result i32)
+              (i32.lt_s
+               (local.get $next_char/116)
+               (i32.const 55296))
+              (then
+               (if (result i32)
+                (i32.lt_s
+                 (local.get $next_char/116)
+                 (i32.const 58))
+                (then
+                 (if (result i32)
+                  (i32.lt_s
+                   (local.get $next_char/116)
+                   (i32.const 48))
+                  (then
+                   (br $join:115))
+                  (else
+                   (i32.const 2)
+                   (br $loop:92))))
+                (else
+                 (if (result i32)
+                  (i32.gt_s
+                   (local.get $next_char/116)
+                   (i32.const 58))
+                  (then
+                   (br $join:115))
+                  (else
+                   (i32.const 1)
+                   (br $loop:92))))))
+              (else
+               (if (result i32)
+                (i32.gt_s
+                 (local.get $next_char/116)
+                 (i32.const 56318))
+                (then
+                 (if (result i32)
+                  (i32.lt_s
+                   (local.get $next_char/116)
+                   (i32.const 57344))
+                  (then
+                   (i32.const 8)
+                   (br $loop:92))
+                  (else
+                   (if (result i32)
+                    (i32.gt_s
+                     (local.get $next_char/116)
+                     (i32.const 65535))
+                    (then
+                     (br $join:68))
+                    (else
+                     (br $join:115))))))
+                (else
+                 (i32.const 7)
+                 (br $loop:92)))))
+             (br $outer/871))
+            (i32.const 0)
+            (br $loop:92)))
+          (else
+           (br $join:68)))
+         (br $switch_int/872))
+        (br $join:68))
+       (br $outer/861))
+      (local.set $tag_1/61
+       (local.get $tag_1_2/63))
+      (local.set $tag_2/65
+       (local.get $tag_2_1/66))
+      (local.set $match_tag_saver_0/55
+       (local.get $tag_0/60))
+      (local.set $match_tag_saver_1/56
+       (local.get $tag_1/61))
+      (local.set $match_tag_saver_2/57
+       (local.get $tag_2/65))
+      (local.set $match_tag_saver_3/58
+       (local.get $tag_3/64))
+      (local.set $match_tag_saver_4/59
+       (local.get $tag_4/67))
+      (local.set $accept_state/53
+       (i32.const 0))
+      (local.set $match_end/54
+       (local.get $*cursor/52))
+      (br $join:68))
+     (br $outer/860))
+    (local.set $tag_1_1/62
+     (local.get $tag_1_2/63))
+    (local.set $tag_1/61
+     (local.get $*cursor/52))
+    (local.set $tag_2/65
+     (local.get $tag_2_1/66))
     (if (result i32)
      (i32.lt_s
-      (local.get $size_hint/23)
-      (i32.const 1))
+      (local.tee $*tmp/554
+       (local.get $*cursor/52))
+      (local.get $*end/51))
      (then
-      (i32.const 1))
+      (block $outer/883 (result i32)
+       (block $join:91
+        (local.set $*p/375
+         (local.get $*cursor/52))
+        (local.set $next_char/93
+         (i32.load16_u offset=8
+          (i32.add
+           (local.get $*data/49)
+           (i32.shl
+            (local.get $*p/375)
+            (i32.const 1)))))
+        (local.set $*cursor/52
+         (i32.add
+          (local.tee $*tmp/555
+           (local.get $*cursor/52))
+          (i32.const 1)))
+        (if (result i32)
+         (i32.lt_s
+          (local.get $next_char/93)
+          (i32.const 55296))
+         (then
+          (if (result i32)
+           (i32.lt_s
+            (local.get $next_char/93)
+            (i32.const 58))
+           (then
+            (if (result i32)
+             (i32.lt_s
+              (local.get $next_char/93)
+              (i32.const 48))
+             (then
+              (br $join:91))
+             (else
+              (i32.const 4)
+              (br $loop:92))))
+           (else
+            (if (result i32)
+             (i32.gt_s
+              (local.get $next_char/93)
+              (i32.const 58))
+             (then
+              (br $join:91))
+             (else
+              (i32.const 1)
+              (br $loop:92))))))
+         (else
+          (if (result i32)
+           (i32.gt_s
+            (local.get $next_char/93)
+            (i32.const 56318))
+           (then
+            (if (result i32)
+             (i32.lt_s
+              (local.get $next_char/93)
+              (i32.const 57344))
+             (then
+              (i32.const 8)
+              (br $loop:92))
+             (else
+              (if (result i32)
+               (i32.gt_s
+                (local.get $next_char/93)
+                (i32.const 65535))
+               (then
+                (br $join:68))
+               (else
+                (br $join:91))))))
+           (else
+            (i32.const 7)
+            (br $loop:92)))))
+        (br $outer/883))
+       (i32.const 0)
+       (br $loop:92)))
      (else
-      (local.get $size_hint/23))))
-   (i32.const 0)))
- (i32.store offset=4
-  (local.tee $ptr/1039
-   (call $moonbit.gc.malloc
-    (i32.const 8)))
-  (i32.const 1573120))
+      (br $join:68)))))
+  (return))
+ (if (result i32)
+  (i32.eq
+   (local.get $accept_state/53)
+   (i32.const 0))
+  (then
+   (block $outer/895 (result i32) (result i32) (result i32)
+    (block $join:70
+     (local.set $*tmp/547
+      (i64.extend_i32_s
+       (local.tee $*tmp/550
+        (i32.add
+         (local.tee $*tmp/551
+          (local.get $match_tag_saver_1/56))
+         (i32.const 1)))))
+     (local.set $*tmp/548
+      (i64.extend_i32_s
+       (local.tee $*tmp/549
+        (local.get $match_tag_saver_2/57))))
+     (call $moonbit.incref
+      (local.get $*data/49))
+     (call $String::sub
+      (local.get $*data/49)
+      (local.get $*tmp/547)
+      (local.get $*tmp/548))
+     (local.set $*obj/2/896)
+     (local.set $*obj/1/896)
+     (local.set $*obj/0/896)
+     (if (result i32) (result i32) (result i32)
+      (then
+       (local.get $*obj/0/896)
+       (local.get $*obj/1/896)
+       (local.set $*ok/2/552
+        (local.get $*obj/2/896))
+       (local.set $*ok/1/552)
+       (local.tee $*ok/0/552)
+       (local.get $*ok/1/552)
+       (local.get $*ok/2/552))
+      (else
+       (local.set $*try_err/71
+        (local.tee $*err/553
+         (local.get $*obj/0/896)))
+       (br $join:70)))
+     (br $outer/895))
+    (call $moonbit.decref
+     (local.get $*try_err/71))
+    (unreachable))
+   (local.set $start_line/2/69)
+   (local.set $start_line/1/69)
+   (local.set $start_line/0/69)
+   (block $outer/893 (result i32) (result i32) (result i32)
+    (block $join:73
+     (local.set $*tmp/540
+      (i64.extend_i32_s
+       (local.tee $*tmp/543
+        (i32.add
+         (local.tee $*tmp/544
+          (local.get $match_tag_saver_2/57))
+         (i32.const 1)))))
+     (local.set $*tmp/541
+      (i64.extend_i32_s
+       (local.tee $*tmp/542
+        (local.get $match_tag_saver_3/58))))
+     (call $moonbit.incref
+      (local.get $*data/49))
+     (call $String::sub
+      (local.get $*data/49)
+      (local.get $*tmp/540)
+      (local.get $*tmp/541))
+     (local.set $*obj/2/894)
+     (local.set $*obj/1/894)
+     (local.set $*obj/0/894)
+     (if (result i32) (result i32) (result i32)
+      (then
+       (local.get $*obj/0/894)
+       (local.get $*obj/1/894)
+       (local.set $*ok/2/545
+        (local.get $*obj/2/894))
+       (local.set $*ok/1/545)
+       (local.tee $*ok/0/545)
+       (local.get $*ok/1/545)
+       (local.get $*ok/2/545))
+      (else
+       (local.set $*try_err/74
+        (local.tee $*err/546
+         (local.get $*obj/0/894)))
+       (br $join:73)))
+     (br $outer/893))
+    (call $moonbit.decref
+     (local.get $*try_err/74))
+    (unreachable))
+   (local.set $start_column/2/72)
+   (local.set $start_column/1/72)
+   (local.set $start_column/0/72)
+   (block $outer/891 (result i32) (result i32) (result i32)
+    (block $join:76
+     (local.set $*tmp/534
+      (i64.extend_i32_s
+       (local.tee $*tmp/537
+        (i32.add
+         (local.get $*start/50)
+         (i32.const 1)))))
+     (local.set $*tmp/535
+      (i64.extend_i32_s
+       (local.tee $*tmp/536
+        (local.get $match_tag_saver_0/55))))
+     (call $moonbit.incref
+      (local.get $*data/49))
+     (call $String::sub
+      (local.get $*data/49)
+      (local.get $*tmp/534)
+      (local.get $*tmp/535))
+     (local.set $*obj/2/892)
+     (local.set $*obj/1/892)
+     (local.set $*obj/0/892)
+     (if (result i32) (result i32) (result i32)
+      (then
+       (local.get $*obj/0/892)
+       (local.get $*obj/1/892)
+       (local.set $*ok/2/538
+        (local.get $*obj/2/892))
+       (local.set $*ok/1/538)
+       (local.tee $*ok/0/538)
+       (local.get $*ok/1/538)
+       (local.get $*ok/2/538))
+      (else
+       (local.set $*try_err/77
+        (local.tee $*err/539
+         (local.get $*obj/0/892)))
+       (br $join:76)))
+     (br $outer/891))
+    (call $moonbit.decref
+     (local.get $*try_err/77))
+    (unreachable))
+   (local.set $pkg/2/75)
+   (local.set $pkg/1/75)
+   (local.set $pkg/0/75)
+   (block $outer/889 (result i32) (result i32) (result i32)
+    (block $join:79
+     (local.set $*tmp/527
+      (i64.extend_i32_s
+       (local.tee $*tmp/530
+        (i32.add
+         (local.tee $*tmp/531
+          (local.get $match_tag_saver_0/55))
+         (i32.const 1)))))
+     (local.set $*tmp/528
+      (i64.extend_i32_s
+       (local.tee $*tmp/529
+        (local.get $match_tag_saver_1/56))))
+     (call $moonbit.incref
+      (local.get $*data/49))
+     (call $String::sub
+      (local.get $*data/49)
+      (local.get $*tmp/527)
+      (local.get $*tmp/528))
+     (local.set $*obj/2/890)
+     (local.set $*obj/1/890)
+     (local.set $*obj/0/890)
+     (if (result i32) (result i32) (result i32)
+      (then
+       (local.get $*obj/0/890)
+       (local.get $*obj/1/890)
+       (local.set $*ok/2/532
+        (local.get $*obj/2/890))
+       (local.set $*ok/1/532)
+       (local.tee $*ok/0/532)
+       (local.get $*ok/1/532)
+       (local.get $*ok/2/532))
+      (else
+       (local.set $*try_err/80
+        (local.tee $*err/533
+         (local.get $*obj/0/890)))
+       (br $join:79)))
+     (br $outer/889))
+    (call $moonbit.decref
+     (local.get $*try_err/80))
+    (unreachable))
+   (local.set $filename/2/78)
+   (local.set $filename/1/78)
+   (local.set $filename/0/78)
+   (block $outer/887 (result i32) (result i32) (result i32)
+    (block $join:82
+     (local.set $*tmp/520
+      (i64.extend_i32_s
+       (local.tee $*tmp/523
+        (i32.add
+         (local.tee $*tmp/524
+          (local.get $match_tag_saver_3/58))
+         (i32.const 1)))))
+     (local.set $*tmp/521
+      (i64.extend_i32_s
+       (local.tee $*tmp/522
+        (local.get $match_tag_saver_4/59))))
+     (call $moonbit.incref
+      (local.get $*data/49))
+     (call $String::sub
+      (local.get $*data/49)
+      (local.get $*tmp/520)
+      (local.get $*tmp/521))
+     (local.set $*obj/2/888)
+     (local.set $*obj/1/888)
+     (local.set $*obj/0/888)
+     (if (result i32) (result i32) (result i32)
+      (then
+       (local.get $*obj/0/888)
+       (local.get $*obj/1/888)
+       (local.set $*ok/2/525
+        (local.get $*obj/2/888))
+       (local.set $*ok/1/525)
+       (local.tee $*ok/0/525)
+       (local.get $*ok/1/525)
+       (local.get $*ok/2/525))
+      (else
+       (local.set $*try_err/83
+        (local.tee $*err/526
+         (local.get $*obj/0/888)))
+       (br $join:82)))
+     (br $outer/887))
+    (call $moonbit.decref
+     (local.get $*try_err/83))
+    (unreachable))
+   (local.set $end_line/2/81)
+   (local.set $end_line/1/81)
+   (local.set $end_line/0/81)
+   (block $outer/885 (result i32) (result i32) (result i32)
+    (block $join:85
+     (local.set $*tmp/513
+      (i64.extend_i32_s
+       (local.tee $*tmp/516
+        (i32.add
+         (local.tee $*tmp/517
+          (local.get $match_tag_saver_4/59))
+         (i32.const 1)))))
+     (local.set $*tmp/514
+      (i64.extend_i32_s
+       (local.tee $*tmp/515
+        (local.get $match_end/54))))
+     (call $String::sub
+      (local.get $*data/49)
+      (local.get $*tmp/513)
+      (local.get $*tmp/514))
+     (local.set $*obj/2/886)
+     (local.set $*obj/1/886)
+     (local.set $*obj/0/886)
+     (if (result i32) (result i32) (result i32)
+      (then
+       (local.get $*obj/0/886)
+       (local.get $*obj/1/886)
+       (local.set $*ok/2/518
+        (local.get $*obj/2/886))
+       (local.set $*ok/1/518)
+       (local.tee $*ok/0/518)
+       (local.get $*ok/1/518)
+       (local.get $*ok/2/518))
+      (else
+       (local.set $*try_err/86
+        (local.tee $*err/519
+         (local.get $*obj/0/886)))
+       (br $join:85)))
+     (br $outer/885))
+    (call $moonbit.decref
+     (local.get $*try_err/86))
+    (unreachable))
+   (local.set $end_column/2/84)
+   (local.set $end_column/1/84)
+   (local.set $end_column/0/84)
+   (i32.store offset=4
+    (local.tee $ptr/884
+     (call $moonbit.gc.malloc
+      (i32.const 72)))
+    (i32.const 7341568))
+   (i32.store offset=76
+    (local.get $ptr/884)
+    (local.get $end_column/0/84))
+   (i32.store offset=48
+    (local.get $ptr/884)
+    (local.get $end_column/1/84))
+   (i32.store offset=52
+    (local.get $ptr/884)
+    (local.get $end_column/2/84))
+   (i32.store offset=72
+    (local.get $ptr/884)
+    (local.get $end_line/0/81))
+   (i32.store offset=40
+    (local.get $ptr/884)
+    (local.get $end_line/1/81))
+   (i32.store offset=44
+    (local.get $ptr/884)
+    (local.get $end_line/2/81))
+   (i32.store offset=68
+    (local.get $ptr/884)
+    (local.get $start_column/0/72))
+   (i32.store offset=32
+    (local.get $ptr/884)
+    (local.get $start_column/1/72))
+   (i32.store offset=36
+    (local.get $ptr/884)
+    (local.get $start_column/2/72))
+   (i32.store offset=64
+    (local.get $ptr/884)
+    (local.get $start_line/0/69))
+   (i32.store offset=24
+    (local.get $ptr/884)
+    (local.get $start_line/1/69))
+   (i32.store offset=28
+    (local.get $ptr/884)
+    (local.get $start_line/2/69))
+   (i32.store offset=60
+    (local.get $ptr/884)
+    (local.get $filename/0/78))
+   (i32.store offset=16
+    (local.get $ptr/884)
+    (local.get $filename/1/78))
+   (i32.store offset=20
+    (local.get $ptr/884)
+    (local.get $filename/2/78))
+   (i32.store offset=56
+    (local.get $ptr/884)
+    (local.get $pkg/0/75))
+   (i32.store offset=8
+    (local.get $ptr/884)
+    (local.get $pkg/1/75))
+   (i32.store offset=12
+    (local.get $ptr/884)
+    (local.get $pkg/2/75))
+   (local.get $ptr/884))
+  (else
+   (call $moonbit.decref
+    (local.get $*data/49))
+   (unreachable))))
+(func $@moonbitlang/core/builtin.Logger::@moonbitlang/core/builtin.StringBuilder::write_char (param $self/41 i32) (param $ch/43 i32) (result i32)
+ (local $inc/42 i32)
+ (local $*tmp/507 i32)
+ (local $len/508 i32)
+ (local $*tmp/509 i32)
+ (local $len/510 i32)
+ (local $data/511 i32)
+ (local $len/512 i32)
+ (local $*field/822 i32)
+ (local.set $*tmp/507
+  (i32.add
+   (local.tee $len/508
+    (i32.load offset=8
+     (local.get $self/41)))
+   (i32.const 4)))
+ (call $moonbit.incref
+  (local.get $self/41))
+ (drop
+  (call $@moonbitlang/core/builtin.StringBuilder::grow_if_necessary
+   (local.get $self/41)
+   (local.get $*tmp/507)))
+ (local.set $data/511
+  (local.tee $*field/822
+   (i32.load offset=12
+    (local.get $self/41))))
+ (local.set $len/512
+  (i32.load offset=8
+   (local.get $self/41)))
+ (call $moonbit.incref
+  (local.get $data/511))
+ (local.set $inc/42
+  (call $FixedArray::set_utf16le_char
+   (local.get $data/511)
+   (local.get $len/512)
+   (local.get $ch/43)))
+ (local.set $*tmp/509
+  (i32.add
+   (local.tee $len/510
+    (i32.load offset=8
+     (local.get $self/41)))
+   (local.get $inc/42)))
  (i32.store offset=8
-  (local.get $ptr/1039)
-  (i32.const 0))
+  (local.get $self/41)
+  (local.get $*tmp/509))
+ (call $moonbit.decref
+  (local.get $self/41))
+ (i32.const 0))
+(func $@moonbitlang/core/builtin.StringBuilder::grow_if_necessary (param $self/36 i32) (param $required/37 i32) (result i32)
+ (local $current_len/35 i32)
+ (local $new_data/40 i32)
+ (local $*tmp/501 i32)
+ (local $*tmp/502 i32)
+ (local $data/503 i32)
+ (local $len/504 i32)
+ (local $*tmp/505 i32)
+ (local $data/506 i32)
+ (local $*old/823 i32)
+ (local $*field/824 i32)
+ (local $*tmp/825 i32)
+ (local $*field/826 i32)
+ (local $enough_space/38 i32)
+ (local.set $current_len/35
+  (local.tee $*tmp/825
+   (call $moonbit.array_length
+    (local.tee $data/506
+     (local.tee $*field/826
+      (i32.load offset=12
+       (local.get $self/36)))))))
+ (if
+  (i32.le_s
+   (local.get $required/37)
+   (local.get $current_len/35))
+  (then
+   (call $moonbit.decref
+    (local.get $self/36))
+   (i32.const 0)
+   (return))
+  (else))
+ (local.set $enough_space/38
+  (local.get $current_len/35))
+ (loop $loop:39
+  (if
+   (i32.lt_s
+    (local.tee $*tmp/501
+     (local.get $enough_space/38))
+    (local.get $required/37))
+   (then
+    (local.set $enough_space/38
+     (i32.mul
+      (local.tee $*tmp/502
+       (local.get $enough_space/38))
+      (i32.const 2)))
+    (br $loop:39))
+   (else)))
+ (local.set $new_data/40
+  (call $moonbit.bytes_make
+   (local.tee $*tmp/505
+    (local.get $enough_space/38))
+   (i32.const 0)))
+ (local.set $data/503
+  (local.tee $*field/824
+   (i32.load offset=12
+    (local.get $self/36))))
+ (local.set $len/504
+  (i32.load offset=8
+   (local.get $self/36)))
+ (call $moonbit.incref
+  (local.get $data/503))
+ (call $moonbit.incref
+  (local.get $new_data/40))
+ (drop
+  (call $FixedArray::unsafe_blit|Byte|
+   (local.get $new_data/40)
+   (i32.const 0)
+   (local.get $data/503)
+   (i32.const 0)
+   (local.get $len/504)))
+ (call $moonbit.decref
+  (local.tee $*old/823
+   (i32.load offset=12
+    (local.get $self/36))))
  (i32.store offset=12
-  (local.get $ptr/1039)
-  (local.get $data/24))
- (local.get $ptr/1039))
-(func $FixedArray::unsafe_blit|Byte| (param $dst/13 i32) (param $dst_offset/15 i32) (param $src/14 i32) (param $src_offset/16 i32) (param $len/18 i32) (result i32)
- (local $i/17 i32)
- (local $i/20 i32)
+  (local.get $self/36)
+  (local.get $new_data/40))
+ (call $moonbit.decref
+  (local.get $self/36))
+ (i32.const 0))
+(func $FixedArray::set_utf16le_char (param $self/30 i32) (param $offset/31 i32) (param $value/29 i32) (result i32)
+ (local $code/28 i32)
+ (local $hi/32 i32)
+ (local $lo/33 i32)
+ (local $hi/34 i32)
+ (local $*p/298 i32)
+ (local $*p/301 i32)
+ (local $*p/304 i32)
+ (local $*p/307 i32)
+ (local $*p/310 i32)
+ (local $*p/313 i32)
+ (local $*tmp/482 i32)
+ (local $*tmp/483 i32)
+ (local $*tmp/484 i32)
+ (local $*tmp/485 i32)
+ (local $*tmp/486 i32)
+ (local $*tmp/487 i32)
+ (local $*tmp/488 i32)
+ (local $*tmp/489 i32)
+ (local $*tmp/490 i32)
+ (local $*tmp/491 i32)
  (local $*tmp/492 i32)
  (local $*tmp/493 i32)
  (local $*tmp/494 i32)
@@ -6787,234 +6393,523 @@
  (local $*tmp/498 i32)
  (local $*tmp/499 i32)
  (local $*tmp/500 i32)
- (local $*arr/1040 i32)
- (local $*idx/1041 i32)
- (local $*arr/1042 i32)
- (local $*idx/1043 i32)
- (local $*arr/1044 i32)
- (local $*idx/1045 i32)
- (local $*arr/1046 i32)
- (local $*idx/1047 i32)
+ (local $*arr/897 i32)
+ (local $*idx/898 i32)
+ (local $*arr/899 i32)
+ (local $*idx/900 i32)
+ (local $*arr/901 i32)
+ (local $*idx/902 i32)
+ (local $*arr/903 i32)
+ (local $*idx/904 i32)
+ (local $*arr/905 i32)
+ (local $*idx/906 i32)
+ (local $*arr/907 i32)
+ (local $*idx/908 i32)
+ (if (result i32)
+  (i32.lt_u
+   (local.tee $code/28
+    (local.tee $*tmp/500
+     (local.get $value/29)))
+   (i32.const 65536))
+  (then
+   (local.set $*tmp/482
+    (i32.and
+     (local.tee $*tmp/483
+      (local.tee $*p/298
+       (i32.and
+        (local.get $code/28)
+        (i32.const 255))))
+     (i32.const 255)))
+   (local.get $self/30)
+   (local.set $*idx/900
+    (local.get $offset/31))
+   (local.set $*arr/899)
+   (call $moonbit.check_range
+    (local.get $*idx/900)
+    (i32.const 0)
+    (i32.sub
+     (call $moonbit.array_length
+      (local.get $*arr/899))
+     (i32.const 1)))
+   (i32.store8 offset=8
+    (i32.add
+     (local.get $*arr/899)
+     (local.get $*idx/900))
+    (local.get $*tmp/482))
+   (local.set $*tmp/484
+    (i32.add
+     (local.get $offset/31)
+     (i32.const 1)))
+   (local.set $*tmp/485
+    (i32.and
+     (local.tee $*tmp/486
+      (local.tee $*p/301
+       (i32.shr_u
+        (local.get $code/28)
+        (i32.const 8))))
+     (i32.const 255)))
+   (local.get $self/30)
+   (local.set $*idx/898
+    (local.get $*tmp/484))
+   (local.set $*arr/897)
+   (call $moonbit.check_range
+    (local.get $*idx/898)
+    (i32.const 0)
+    (i32.sub
+     (call $moonbit.array_length
+      (local.get $*arr/897))
+     (i32.const 1)))
+   (i32.store8 offset=8
+    (i32.add
+     (local.get $*arr/897)
+     (local.get $*idx/898))
+    (local.get $*tmp/485))
+   (call $moonbit.decref
+    (local.get $self/30))
+   (i32.const 2))
+  (else
+   (if (result i32)
+    (i32.lt_u
+     (local.get $code/28)
+     (i32.const 1114112))
+    (then
+     (local.set $lo/33
+      (i32.or
+       (local.tee $*tmp/499
+        (i32.shr_u
+         (local.tee $hi/32
+          (i32.sub
+           (local.get $code/28)
+           (i32.const 65536)))
+         (i32.const 10)))
+       (i32.const 55296)))
+     (local.set $hi/34
+      (i32.or
+       (local.tee $*tmp/498
+        (i32.and
+         (local.get $hi/32)
+         (i32.const 1023)))
+       (i32.const 56320)))
+     (local.set $*tmp/487
+      (i32.and
+       (local.tee $*tmp/488
+        (local.tee $*p/304
+         (i32.and
+          (local.get $lo/33)
+          (i32.const 255))))
+       (i32.const 255)))
+     (local.get $self/30)
+     (local.set $*idx/908
+      (local.get $offset/31))
+     (local.set $*arr/907)
+     (call $moonbit.check_range
+      (local.get $*idx/908)
+      (i32.const 0)
+      (i32.sub
+       (call $moonbit.array_length
+        (local.get $*arr/907))
+       (i32.const 1)))
+     (i32.store8 offset=8
+      (i32.add
+       (local.get $*arr/907)
+       (local.get $*idx/908))
+      (local.get $*tmp/487))
+     (local.set $*tmp/489
+      (i32.add
+       (local.get $offset/31)
+       (i32.const 1)))
+     (local.set $*tmp/490
+      (i32.and
+       (local.tee $*tmp/491
+        (local.tee $*p/307
+         (i32.shr_u
+          (local.get $lo/33)
+          (i32.const 8))))
+       (i32.const 255)))
+     (local.get $self/30)
+     (local.set $*idx/906
+      (local.get $*tmp/489))
+     (local.set $*arr/905)
+     (call $moonbit.check_range
+      (local.get $*idx/906)
+      (i32.const 0)
+      (i32.sub
+       (call $moonbit.array_length
+        (local.get $*arr/905))
+       (i32.const 1)))
+     (i32.store8 offset=8
+      (i32.add
+       (local.get $*arr/905)
+       (local.get $*idx/906))
+      (local.get $*tmp/490))
+     (local.set $*tmp/492
+      (i32.add
+       (local.get $offset/31)
+       (i32.const 2)))
+     (local.set $*tmp/493
+      (i32.and
+       (local.tee $*tmp/494
+        (local.tee $*p/310
+         (i32.and
+          (local.get $hi/34)
+          (i32.const 255))))
+       (i32.const 255)))
+     (local.get $self/30)
+     (local.set $*idx/904
+      (local.get $*tmp/492))
+     (local.set $*arr/903)
+     (call $moonbit.check_range
+      (local.get $*idx/904)
+      (i32.const 0)
+      (i32.sub
+       (call $moonbit.array_length
+        (local.get $*arr/903))
+       (i32.const 1)))
+     (i32.store8 offset=8
+      (i32.add
+       (local.get $*arr/903)
+       (local.get $*idx/904))
+      (local.get $*tmp/493))
+     (local.set $*tmp/495
+      (i32.add
+       (local.get $offset/31)
+       (i32.const 3)))
+     (local.set $*tmp/496
+      (i32.and
+       (local.tee $*tmp/497
+        (local.tee $*p/313
+         (i32.shr_u
+          (local.get $hi/34)
+          (i32.const 8))))
+       (i32.const 255)))
+     (local.get $self/30)
+     (local.set $*idx/902
+      (local.get $*tmp/495))
+     (local.set $*arr/901)
+     (call $moonbit.check_range
+      (local.get $*idx/902)
+      (i32.const 0)
+      (i32.sub
+       (call $moonbit.array_length
+        (local.get $*arr/901))
+       (i32.const 1)))
+     (i32.store8 offset=8
+      (i32.add
+       (local.get $*arr/901)
+       (local.get $*idx/902))
+      (local.get $*tmp/496))
+     (call $moonbit.decref
+      (local.get $self/30))
+     (i32.const 4))
+    (else
+     (call $moonbit.decref
+      (local.get $self/30))
+     (call $moonbitlang/core/builtin.abort|Int|
+      (i32.const 10440)
+      (i32.const 10328)))))))
+(func $@moonbitlang/core/builtin.StringBuilder::to_string (param $self/25 i32) (result i32)
+ (local $*tmp/476 i32)
+ (local $*tmp/477 i64)
+ (local $len/478 i32)
+ (local $data/479 i32)
+ (local $*field/827 i32)
+ (local $*field/828 i32)
+ (call $moonbit.incref
+  (local.tee $data/479
+   (local.tee $*field/828
+    (i32.load offset=12
+     (local.get $self/25)))))
+ (local.set $*tmp/476
+  (local.get $data/479))
+ (local.set $*field/827
+  (i32.load offset=8
+   (local.get $self/25)))
+ (call $moonbit.decref
+  (local.get $self/25))
+ (local.set $*tmp/477
+  (i64.extend_i32_s
+   (local.tee $len/478
+    (local.get $*field/827))))
+ (call $Bytes::to_unchecked_string.inner
+  (local.get $*tmp/476)
+  (i32.const 0)
+  (local.get $*tmp/477)))
+(func $Bytes::to_unchecked_string.inner (param $self/20 i32) (param $offset/24 i32) (param $length/22 i64) (result i32)
+ (local $len/19 i32)
+ (local $length/21 i32)
+ (local $*Some/23 i64)
+ (local $*tmp/475 i32)
+ (local.set $len/19
+  (call $moonbit.array_length
+   (local.get $self/20)))
+ (local.set $length/21
+  (if (result i32)
+   (i64.eq
+    (local.get $length/22)
+    (i64.const 4294967296))
+   (then
+    (i32.sub
+     (local.get $len/19)
+     (local.get $offset/24)))
+   (else
+    (i32.wrap_i64
+     (local.tee $*Some/23
+      (local.get $length/22))))))
+ (if (result i32)
+  (if (result i32)
+   (i32.ge_s
+    (local.get $offset/24)
+    (i32.const 0))
+   (then
+    (if (result i32)
+     (i32.ge_s
+      (local.get $length/21)
+      (i32.const 0))
+     (then
+      (i32.le_s
+       (local.tee $*tmp/475
+        (i32.add
+         (local.get $offset/24)
+         (local.get $length/21)))
+       (local.get $len/19)))
+     (else
+      (i32.const 0))))
+   (else
+    (i32.const 0)))
+  (then
+   (call $moonbitlang/core/builtin.unsafe_sub_string
+    (local.get $self/20)
+    (local.get $offset/24)
+    (local.get $length/21)))
+  (else
+   (call $moonbit.decref
+    (local.get $self/20))
+   (unreachable))))
+(func $moonbitlang/core/builtin.unsafe_sub_string (param $*param/435 i32) (param $*param/436 i32) (param $*param/437 i32) (result i32)
+ (call $moonbit.unsafe_bytes_sub_string
+  (local.get $*param/435)
+  (local.get $*param/436)
+  (local.get $*param/437)))
+(func $@moonbitlang/core/builtin.StringBuilder::new.inner (param $size_hint/17 i32) (result i32)
+ (local $initial/16 i32)
+ (local $data/18 i32)
+ (local $ptr/909 i32)
+ (local.set $data/18
+  (call $moonbit.bytes_make
+   (local.tee $initial/16
+    (if (result i32)
+     (i32.lt_s
+      (local.get $size_hint/17)
+      (i32.const 1))
+     (then
+      (i32.const 1))
+     (else
+      (local.get $size_hint/17))))
+   (i32.const 0)))
+ (i32.store offset=4
+  (local.tee $ptr/909
+   (call $moonbit.gc.malloc
+    (i32.const 8)))
+  (i32.const 1573120))
+ (i32.store offset=8
+  (local.get $ptr/909)
+  (i32.const 0))
+ (i32.store offset=12
+  (local.get $ptr/909)
+  (local.get $data/18))
+ (local.get $ptr/909))
+(func $FixedArray::unsafe_blit|Byte| (param $dst/7 i32) (param $dst_offset/9 i32) (param $src/8 i32) (param $src_offset/10 i32) (param $len/12 i32) (result i32)
+ (local $i/11 i32)
+ (local $i/14 i32)
+ (local $*tmp/466 i32)
+ (local $*tmp/467 i32)
+ (local $*tmp/468 i32)
+ (local $*tmp/469 i32)
+ (local $*tmp/470 i32)
+ (local $*tmp/471 i32)
+ (local $*tmp/472 i32)
+ (local $*tmp/473 i32)
+ (local $*tmp/474 i32)
+ (local $*arr/910 i32)
+ (local $*idx/911 i32)
+ (local $*arr/912 i32)
+ (local $*idx/913 i32)
+ (local $*arr/914 i32)
+ (local $*idx/915 i32)
+ (local $*arr/916 i32)
+ (local $*idx/917 i32)
  (if (result i32)
   (if (result i32)
    (i32.eq
-    (local.get $dst/13)
-    (local.get $src/14))
+    (local.get $dst/7)
+    (local.get $src/8))
    (then
     (i32.lt_s
-     (local.get $dst_offset/15)
-     (local.get $src_offset/16)))
+     (local.get $dst_offset/9)
+     (local.get $src_offset/10)))
    (else
     (i32.const 0)))
   (then
    (i32.const 0)
-   (loop $loop:19 (param i32)
-    (local.tee $i/17)
-    (local.get $len/18)
+   (loop $loop:13 (param i32)
+    (local.tee $i/11)
+    (local.get $len/12)
     (i32.lt_s)
     (if
      (then
-      (local.set $*tmp/492
+      (local.set $*tmp/466
        (i32.add
-        (local.get $dst_offset/15)
-        (local.get $i/17)))
-      (local.set $*tmp/494
+        (local.get $dst_offset/9)
+        (local.get $i/11)))
+      (local.set $*tmp/468
        (i32.add
-        (local.get $src_offset/16)
-        (local.get $i/17)))
-      (local.get $src/14)
-      (local.set $*idx/1043
-       (local.get $*tmp/494))
-      (local.set $*arr/1042)
+        (local.get $src_offset/10)
+        (local.get $i/11)))
+      (local.get $src/8)
+      (local.set $*idx/913
+       (local.get $*tmp/468))
+      (local.set $*arr/912)
       (call $moonbit.check_range
-       (local.get $*idx/1043)
+       (local.get $*idx/913)
        (i32.const 0)
        (i32.sub
         (call $moonbit.array_length
-         (local.get $*arr/1042))
+         (local.get $*arr/912))
         (i32.const 1)))
-      (local.set $*tmp/493
+      (local.set $*tmp/467
        (i32.load8_u offset=8
         (i32.add
-         (local.get $*arr/1042)
-         (local.get $*idx/1043))))
-      (local.get $dst/13)
-      (local.set $*idx/1041
-       (local.get $*tmp/492))
-      (local.set $*arr/1040)
+         (local.get $*arr/912)
+         (local.get $*idx/913))))
+      (local.get $dst/7)
+      (local.set $*idx/911
+       (local.get $*tmp/466))
+      (local.set $*arr/910)
       (call $moonbit.check_range
-       (local.get $*idx/1041)
+       (local.get $*idx/911)
        (i32.const 0)
        (i32.sub
         (call $moonbit.array_length
-         (local.get $*arr/1040))
+         (local.get $*arr/910))
         (i32.const 1)))
       (i32.store8 offset=8
        (i32.add
-        (local.get $*arr/1040)
-        (local.get $*idx/1041))
-       (local.get $*tmp/493))
-      (local.tee $*tmp/495
+        (local.get $*arr/910)
+        (local.get $*idx/911))
+       (local.get $*tmp/467))
+      (local.tee $*tmp/469
        (i32.add
-        (local.get $i/17)
+        (local.get $i/11)
         (i32.const 1)))
-      (br $loop:19))
+      (br $loop:13))
      (else
       (call $moonbit.decref
-       (local.get $src/14))
+       (local.get $src/8))
       (call $moonbit.decref
-       (local.get $dst/13)))))
+       (local.get $dst/7)))))
    (i32.const 0))
   (else
-   (local.tee $*tmp/500
+   (local.tee $*tmp/474
     (i32.sub
-     (local.get $len/18)
+     (local.get $len/12)
      (i32.const 1)))
-   (loop $loop:21 (param i32)
-    (local.tee $i/20)
+   (loop $loop:15 (param i32)
+    (local.tee $i/14)
     (i32.const 0)
     (i32.ge_s)
     (if
      (then
-      (local.set $*tmp/496
+      (local.set $*tmp/470
        (i32.add
-        (local.get $dst_offset/15)
-        (local.get $i/20)))
-      (local.set $*tmp/498
+        (local.get $dst_offset/9)
+        (local.get $i/14)))
+      (local.set $*tmp/472
        (i32.add
-        (local.get $src_offset/16)
-        (local.get $i/20)))
-      (local.get $src/14)
-      (local.set $*idx/1047
-       (local.get $*tmp/498))
-      (local.set $*arr/1046)
+        (local.get $src_offset/10)
+        (local.get $i/14)))
+      (local.get $src/8)
+      (local.set $*idx/917
+       (local.get $*tmp/472))
+      (local.set $*arr/916)
       (call $moonbit.check_range
-       (local.get $*idx/1047)
+       (local.get $*idx/917)
        (i32.const 0)
        (i32.sub
         (call $moonbit.array_length
-         (local.get $*arr/1046))
+         (local.get $*arr/916))
         (i32.const 1)))
-      (local.set $*tmp/497
+      (local.set $*tmp/471
        (i32.load8_u offset=8
         (i32.add
-         (local.get $*arr/1046)
-         (local.get $*idx/1047))))
-      (local.get $dst/13)
-      (local.set $*idx/1045
-       (local.get $*tmp/496))
-      (local.set $*arr/1044)
+         (local.get $*arr/916)
+         (local.get $*idx/917))))
+      (local.get $dst/7)
+      (local.set $*idx/915
+       (local.get $*tmp/470))
+      (local.set $*arr/914)
       (call $moonbit.check_range
-       (local.get $*idx/1045)
+       (local.get $*idx/915)
        (i32.const 0)
        (i32.sub
         (call $moonbit.array_length
-         (local.get $*arr/1044))
+         (local.get $*arr/914))
         (i32.const 1)))
       (i32.store8 offset=8
        (i32.add
-        (local.get $*arr/1044)
-        (local.get $*idx/1045))
-       (local.get $*tmp/497))
-      (local.tee $*tmp/499
+        (local.get $*arr/914)
+        (local.get $*idx/915))
+       (local.get $*tmp/471))
+      (local.tee $*tmp/473
        (i32.sub
-        (local.get $i/20)
+        (local.get $i/14)
         (i32.const 1)))
-      (br $loop:21))
+      (br $loop:15))
      (else
       (call $moonbit.decref
-       (local.get $src/14))
+       (local.get $src/8))
       (call $moonbit.decref
-       (local.get $dst/13)))))
+       (local.get $dst/7)))))
    (i32.const 0))))
-(func $moonbitlang/core/builtin.abort|Option<Int>| (param $string/11 i32) (param $loc/12 i32) (result i64)
- (local $*tmp/488 i32)
- (local $*tmp/489 i32)
- (local $*tmp/490 i32)
- (local $*tmp/491 i32)
- (local.set $*tmp/490
-  (call $moonbit.add_string
-   (local.get $string/11)
-   (i32.const 11008)))
- (local.set $*tmp/491
-  (call $@moonbitlang/core/builtin.Show::$default_impl::to_string|@moonbitlang/core/builtin.SourceLoc|
-   (local.get $loc/12)))
- (call $moonbitlang/core/abort.abort|Option<Int>|
-  (local.tee $*tmp/488
-   (call $moonbit.add_string
-    (local.tee $*tmp/489
-     (call $moonbit.add_string
-      (local.get $*tmp/490)
-      (local.get $*tmp/491)))
-    (i32.const 10992)))))
-(func $moonbitlang/core/builtin.abort|StringView| (param $string/9 i32) (param $loc/10 i32) (result i32) (result i32) (result i32)
- (local $*tmp/484 i32)
- (local $*tmp/485 i32)
- (local $*tmp/486 i32)
- (local $*tmp/487 i32)
- (local.set $*tmp/486
-  (call $moonbit.add_string
-   (local.get $string/9)
-   (i32.const 11008)))
- (local.set $*tmp/487
-  (call $@moonbitlang/core/builtin.Show::$default_impl::to_string|@moonbitlang/core/builtin.SourceLoc|
-   (local.get $loc/10)))
- (call $moonbitlang/core/abort.abort|StringView|
-  (local.tee $*tmp/484
-   (call $moonbit.add_string
-    (local.tee $*tmp/485
-     (call $moonbit.add_string
-      (local.get $*tmp/486)
-      (local.get $*tmp/487)))
-    (i32.const 10992)))))
-(func $moonbitlang/core/builtin.abort|Int| (param $string/7 i32) (param $loc/8 i32) (result i32)
- (local $*tmp/480 i32)
- (local $*tmp/481 i32)
- (local $*tmp/482 i32)
- (local $*tmp/483 i32)
- (local.set $*tmp/482
-  (call $moonbit.add_string
-   (local.get $string/7)
-   (i32.const 11008)))
- (local.set $*tmp/483
-  (call $@moonbitlang/core/builtin.Show::$default_impl::to_string|@moonbitlang/core/builtin.SourceLoc|
-   (local.get $loc/8)))
- (call $moonbitlang/core/abort.abort|Int|
-  (local.tee $*tmp/480
-   (call $moonbit.add_string
-    (local.tee $*tmp/481
-     (call $moonbit.add_string
-      (local.get $*tmp/482)
-      (local.get $*tmp/483)))
-    (i32.const 10992)))))
-(func $moonbitlang/core/builtin.abort|Unit| (param $string/5 i32) (param $loc/6 i32) (result i32)
- (local $*tmp/476 i32)
- (local $*tmp/477 i32)
- (local $*tmp/478 i32)
- (local $*tmp/479 i32)
- (local.set $*tmp/478
+(func $moonbitlang/core/builtin.abort|Int| (param $string/5 i32) (param $loc/6 i32) (result i32)
+ (local $*tmp/462 i32)
+ (local $*tmp/463 i32)
+ (local $*tmp/464 i32)
+ (local $*tmp/465 i32)
+ (local.set $*tmp/464
   (call $moonbit.add_string
    (local.get $string/5)
-   (i32.const 11008)))
- (local.set $*tmp/479
+   (i32.const 10504)))
+ (local.set $*tmp/465
   (call $@moonbitlang/core/builtin.Show::$default_impl::to_string|@moonbitlang/core/builtin.SourceLoc|
    (local.get $loc/6)))
- (call $moonbitlang/core/abort.abort|Unit|
-  (local.tee $*tmp/476
+ (call $moonbitlang/core/abort.abort|Int|
+  (local.tee $*tmp/462
    (call $moonbit.add_string
-    (local.tee $*tmp/477
+    (local.tee $*tmp/463
      (call $moonbit.add_string
-      (local.get $*tmp/478)
-      (local.get $*tmp/479)))
-    (i32.const 10992)))))
-(func $moonbitlang/core/abort.abort|Option<Int>| (param $msg/4 i32) (result i64)
- (call $moonbit.decref
-  (local.get $msg/4))
- (unreachable))
-(func $moonbitlang/core/abort.abort|StringView| (param $msg/3 i32) (result i32) (result i32) (result i32)
- (call $moonbit.decref
-  (local.get $msg/3))
- (unreachable))
+      (local.get $*tmp/464)
+      (local.get $*tmp/465)))
+    (i32.const 10488)))))
+(func $moonbitlang/core/builtin.abort|Unit| (param $string/3 i32) (param $loc/4 i32) (result i32)
+ (local $*tmp/458 i32)
+ (local $*tmp/459 i32)
+ (local $*tmp/460 i32)
+ (local $*tmp/461 i32)
+ (local.set $*tmp/460
+  (call $moonbit.add_string
+   (local.get $string/3)
+   (i32.const 10504)))
+ (local.set $*tmp/461
+  (call $@moonbitlang/core/builtin.Show::$default_impl::to_string|@moonbitlang/core/builtin.SourceLoc|
+   (local.get $loc/4)))
+ (call $moonbitlang/core/abort.abort|Unit|
+  (local.tee $*tmp/458
+   (call $moonbit.add_string
+    (local.tee $*tmp/459
+     (call $moonbit.add_string
+      (local.get $*tmp/460)
+      (local.get $*tmp/461)))
+    (i32.const 10488)))))
 (func $moonbitlang/core/abort.abort|Int| (param $msg/2 i32) (result i32)
  (call $moonbit.decref
   (local.get $msg/2))
@@ -7023,68 +6918,60 @@
  (call $moonbit.decref
   (local.get $msg/1))
  (unreachable))
-(func $@moonbitlang/core/builtin.Logger::@moonbitlang/core/builtin.StringBuilder::write_char.dyncall_as_@moonbitlang/core/builtin.Logger (param $*obj_ptr/469 i32) (param $*param/468 i32) (result i32)
- (local $*self/467 i32)
+(func $@moonbitlang/core/builtin.Logger::@moonbitlang/core/builtin.StringBuilder::write_char.dyncall_as_@moonbitlang/core/builtin.Logger (param $*obj_ptr/451 i32) (param $*param/450 i32) (result i32)
+ (local $*self/449 i32)
  (call $@moonbitlang/core/builtin.Logger::@moonbitlang/core/builtin.StringBuilder::write_char
-  (local.tee $*self/467
-   (local.get $*obj_ptr/469))
-  (local.get $*param/468)))
-(func $@moonbitlang/core/builtin.Logger::@moonbitlang/core/builtin.StringBuilder::write_view.dyncall_as_@moonbitlang/core/builtin.Logger (param $*obj_ptr/466 i32) (param $*param/0/465 i32) (param $*param/1/465 i32) (param $*param/2/465 i32) (result i32)
- (local $*self/464 i32)
+  (local.tee $*self/449
+   (local.get $*obj_ptr/451))
+  (local.get $*param/450)))
+(func $@moonbitlang/core/builtin.Logger::@moonbitlang/core/builtin.StringBuilder::write_view.dyncall_as_@moonbitlang/core/builtin.Logger (param $*obj_ptr/448 i32) (param $*param/0/447 i32) (param $*param/1/447 i32) (param $*param/2/447 i32) (result i32)
+ (local $*self/446 i32)
  (call $@moonbitlang/core/builtin.Logger::@moonbitlang/core/builtin.StringBuilder::write_view
-  (local.tee $*self/464
-   (local.get $*obj_ptr/466))
-  (local.get $*param/0/465)
-  (local.get $*param/1/465)
-  (local.get $*param/2/465)))
-(func $@moonbitlang/core/builtin.Logger::$default_impl::write_substring.dyncall_as_@moonbitlang/core/builtin.Logger|@moonbitlang/core/builtin.StringBuilder| (param $*obj_ptr/463 i32) (param $*param/460 i32) (param $*param/461 i32) (param $*param/462 i32) (result i32)
- (local $*self/459 i32)
+  (local.tee $*self/446
+   (local.get $*obj_ptr/448))
+  (local.get $*param/0/447)
+  (local.get $*param/1/447)
+  (local.get $*param/2/447)))
+(func $@moonbitlang/core/builtin.Logger::$default_impl::write_substring.dyncall_as_@moonbitlang/core/builtin.Logger|@moonbitlang/core/builtin.StringBuilder| (param $*obj_ptr/445 i32) (param $*param/442 i32) (param $*param/443 i32) (param $*param/444 i32) (result i32)
+ (local $*self/441 i32)
  (call $@moonbitlang/core/builtin.Logger::$default_impl::write_substring|@moonbitlang/core/builtin.StringBuilder|
-  (local.tee $*self/459
-   (local.get $*obj_ptr/463))
-  (local.get $*param/460)
-  (local.get $*param/461)
-  (local.get $*param/462)))
-(func $@moonbitlang/core/builtin.Logger::@moonbitlang/core/builtin.StringBuilder::write_string.dyncall_as_@moonbitlang/core/builtin.Logger (param $*obj_ptr/458 i32) (param $*param/457 i32) (result i32)
- (local $*self/456 i32)
+  (local.tee $*self/441
+   (local.get $*obj_ptr/445))
+  (local.get $*param/442)
+  (local.get $*param/443)
+  (local.get $*param/444)))
+(func $@moonbitlang/core/builtin.Logger::@moonbitlang/core/builtin.StringBuilder::write_string.dyncall_as_@moonbitlang/core/builtin.Logger (param $*obj_ptr/440 i32) (param $*param/439 i32) (result i32)
+ (local $*self/438 i32)
  (call $@moonbitlang/core/builtin.Logger::@moonbitlang/core/builtin.StringBuilder::write_string
-  (local.tee $*self/456
-   (local.get $*obj_ptr/458))
-  (local.get $*param/457)))
-(start $*init*/2)
-(func $*init*/2
- (global.set $moonbitlang/core/builtin.boyer_moore_horspool_find.constr/55
-  (i64.extend_i32_s
-   (i32.const 0)))
- (global.set $moonbitlang/core/builtin.brute_force_find.constr/69
-  (i64.extend_i32_s
-   (i32.const 0))))
+  (local.tee $*self/438
+   (local.get $*obj_ptr/440))
+  (local.get $*param/439)))
 (func $*main*/1
- (local $*tmp/470 i32)
- (local $*tmp/471 i32)
- (local $*tmp/472 i32)
- (local $*tmp/473 i32)
- (local $*tmp/474 i32)
- (local $*tmp/475 i32)
- (local.set $*tmp/475
+ (local $*tmp/452 i32)
+ (local $*tmp/453 i32)
+ (local $*tmp/454 i32)
+ (local $*tmp/455 i32)
+ (local $*tmp/456 i32)
+ (local $*tmp/457 i32)
+ (local.set $*tmp/457
   (call $@moonbitlang/core/builtin.Show::$default_impl::to_string|Int|
    (i32.const 5)))
- (local.set $*tmp/471
+ (local.set $*tmp/453
   (call $moonbit.add_string
-   (local.tee $*tmp/474
+   (local.tee $*tmp/456
     (call $moonbit.add_string
-     (i32.const 11056)
-     (local.get $*tmp/475)))
-   (i32.const 11032)))
- (local.set $*tmp/472
+     (i32.const 10552)
+     (local.get $*tmp/457)))
+   (i32.const 10528)))
+ (local.set $*tmp/454
   (call $@moonbitlang/core/builtin.Show::$default_impl::to_string|Int|
-   (local.tee $*tmp/473
+   (local.tee $*tmp/455
     (call $username/moonbit_examples/cmd/factorial.factorial
      (i32.const 5)))))
  (drop
   (call $moonbitlang/core/builtin.println|String|
-   (local.tee $*tmp/470
+   (local.tee $*tmp/452
     (call $moonbit.add_string
-     (local.get $*tmp/471)
-     (local.get $*tmp/472))))))
+     (local.get $*tmp/453)
+     (local.get $*tmp/454))))))
 (export "_start" (func $*main*/1))

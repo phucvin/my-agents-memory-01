@@ -1,49 +1,42 @@
 Register Allocation Results:
 %1: R0 	(Interval: [0, 2])
 %2: R1 	(Interval: [0, 2])
-%3: Stack[0] 	(Interval: [3, 16])
+%3: R0 	(Interval: [3, 16])
 %4: R1 	(Interval: [3, 14])
-%5: R0 	(Interval: [3, 6])
-%6: R0 	(Interval: [7, 8])
-%7: R0 	(Interval: [9, 10])
-%8: R0 	(Interval: [11, 12])
-%9: Stack[1] 	(Interval: [13, 15])
-%10: R0 	(Interval: [13, 15])
+%5: R2 	(Interval: [3, 6])
+%6: R2 	(Interval: [7, 8])
+%7: R2 	(Interval: [9, 10])
+%8: R2 	(Interval: [11, 12])
+%9: R2 	(Interval: [13, 15])
+%10: R3 	(Interval: [13, 15])
 
 Generated Pseudo-Assembly:
 L0:
   CONST R0, 0
   CONST R1, 0
   ; On edge to L1: %3 = %1
-  STORE [stack0], R0 ; Spill Phi dest %3
   ; On edge to L1: %4 = %2
   JUMP L1
 L1:
-  LT R0, R1, 10
-  BRANCH R0, L2, L6
+  LT R2, R1, 10
+  BRANCH R2, L2, L6
 L2:
-  LT R0, R1, 5
-  BRANCH R0, L3, L4
+  LT R2, R1, 5
+  BRANCH R2, L3, L4
 L3:
-  LOAD R_TMP1, [stack0]  ; Reload %3
-  ADD R0, R_TMP1, R1
+  ADD R2, R0, R1
   ; On edge to L5: %9 = %7
-  STORE [stack1], R0 ; Spill Phi dest %9
   JUMP L5
 L4:
-  LOAD R_TMP1, [stack0]  ; Reload %3
-  SUB R0, R_TMP1, 1
+  SUB R2, R0, 1
   ; On edge to L5: %9 = %8
-  STORE [stack1], R0 ; Spill Phi dest %9
   JUMP L5
 L5:
-  ADD R0, R1, 1
+  ADD R3, R1, 1
   ; On edge to L1: %3 = %9
-  LOAD R_TMP1, [stack1] ; Reload for Phi
-  STORE [stack0], R_TMP1 ; Spill Phi dest %3
+  MOV R0, R2
   ; On edge to L1: %4 = %10
-  MOV R1, R0
+  MOV R1, R3
   JUMP L1
 L6:
-  LOAD R_TMP1, [stack0]  ; Reload %3
-  RETURN R_TMP1
+  RETURN R0
