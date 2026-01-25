@@ -1,0 +1,3 @@
+[submodule "codes/webcc_canvas_example/vendor/webcc"]
+	path = codes/webcc_canvas_example/vendor/webcc
+	url = https://github.com/io-eric/webcc
