@@ -1,0 +1,8 @@
+vendor/webcc/build/
+vendor/webcc/webcc
+vendor/webcc/.webcc_cache/
+vendor/webcc/src/cli/webcc_schema.h
+.webcc_cache/
+*.o
+*.d
+dist/*.wasm
