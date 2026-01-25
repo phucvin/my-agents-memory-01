@@ -5,4 +5,4 @@ vendor/webcc/src/cli/webcc_schema.h
 .webcc_cache/
 *.o
 *.d
-dist/*.wasm
+local_bin/

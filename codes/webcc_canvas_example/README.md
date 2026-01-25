@@ -6,12 +6,13 @@ This project demonstrates a simple Canvas2D application (a bouncing ball) using 
 
 - `main.cpp`: The source code for the bouncing ball animation.
 - `vendor/webcc`: A local clone of the WebCC library, built from source.
-- `dist/`: The output directory containing the generated HTML and JavaScript glue code.
+- `dist/`: The output directory containing the generated `app.wasm`, `app.js`, and `index.html`.
 
 ## Prerequisites
 
+To rebuild the project, you need:
 - C++20 capable compiler (GCC or Clang).
-- `wasm-ld` (WebAssembly Linker) is required to generate the final `.wasm` file.
+- `wasm-ld` (WebAssembly Linker).
 
 ## Build Instructions
 
@@ -25,22 +26,18 @@ The project includes the source for the `webcc` tool in `vendor/webcc`. You need
     rm -f build/bootstrap/*.o
     ninja
     ```
+    *Note: You may need to edit `vendor/webcc/build.ninja` if your environment has specific compiler requirements (e.g., using `g++` instead of `clang++`).*
 
 2.  **Build the Example**:
     ```bash
     # From vendor/webcc directory
     ./webcc ../../main.cpp --out ../../dist
     ```
-
-## Known Issues
-
-In the current environment, `wasm-ld` (specifically `wasm-ld-18` expected by Clang) is missing. As a result, the `app.wasm` file cannot be linked. However, `app.js` and `index.html` are successfully generated in the `dist/` folder.
-
-If you have `wasm-ld` installed, the build command above should produce `dist/app.wasm`, allowing the demo to run in a browser.
+    *Note: Ensure `wasm-ld` is in your PATH. If your Clang version expects a specific linker name (e.g., `wasm-ld-18`), you may need to symlink it.*
 
 ## Running the Demo
 
-Once `app.wasm` is generated (requires `wasm-ld`), you can serve the `dist` directory:
+Serve the `dist` directory:
 
 ```bash
 cd dist
