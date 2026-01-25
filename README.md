@@ -1,5 +1,9 @@
 # Coding Experiments and Demos
 
+## Live Demos
+- [**GitHub Page**](https://phucvin.github.io/my-agents-memory-01/)
+- [**WebCC Canvas Example**](https://phucvin.github.io/my-agents-memory-01/codes/webcc_canvas_example/dist/)
+
 This repository serves as a playground for various coding experiments, language prototypes, system emulations, and compiler projects. It contains a diverse collection of examples exploring low-level systems, programming language design, and AI integration.
 
 ## Overview
