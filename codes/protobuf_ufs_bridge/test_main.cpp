@@ -137,6 +137,147 @@ TEST_F(GenericProtoManagerTest, NestedMessage) {
     EXPECT_EQ(GenericProtoManager::GetSInt64(read_nested, 1), 42);
 }
 
+TEST_F(GenericProtoManagerTest, Basic_Accessors) {
+    int tag = 400;
+    EXPECT_FALSE(GenericProtoManager::HasField(msg, tag));
+
+    GenericProtoManager::SetBool(&msg, tag, true);
+    EXPECT_TRUE(GenericProtoManager::HasField(msg, tag));
+    EXPECT_TRUE(GenericProtoManager::GetBool(msg, tag));
+
+    GenericProtoManager::ClearField(&msg, tag);
+    EXPECT_FALSE(GenericProtoManager::HasField(msg, tag));
+}
+
+TEST_F(GenericProtoManagerTest, Varint_Types) {
+    // Bool
+    GenericProtoManager::SetBool(&msg, 500, true);
+    EXPECT_EQ(GenericProtoManager::GetBool(msg, 500), true);
+
+    // Int32
+    int32_t i32 = -123;
+    GenericProtoManager::SetInt32(&msg, 501, i32);
+    EXPECT_EQ(GenericProtoManager::GetInt32(msg, 501), i32);
+
+    // UInt32
+    uint32_t u32 = 123456;
+    GenericProtoManager::SetUInt32(&msg, 502, u32);
+    EXPECT_EQ(GenericProtoManager::GetUInt32(msg, 502), u32);
+
+    // Int64
+    int64_t i64 = -1234567890123L;
+    GenericProtoManager::SetInt64(&msg, 503, i64);
+    EXPECT_EQ(GenericProtoManager::GetInt64(msg, 503), i64);
+
+    // UInt64
+    uint64_t u64 = 1234567890123456789UL;
+    GenericProtoManager::SetUInt64(&msg, 504, u64);
+    EXPECT_EQ(GenericProtoManager::GetUInt64(msg, 504), u64);
+
+    // Enum
+    int enum_val = 42;
+    GenericProtoManager::SetEnum(&msg, 505, enum_val);
+    EXPECT_EQ(GenericProtoManager::GetEnum(msg, 505), enum_val);
+}
+
+TEST_F(GenericProtoManagerTest, Fixed_Types) {
+    // Float
+    float f = 3.14159f;
+    GenericProtoManager::SetFloat(&msg, 600, f);
+    EXPECT_FLOAT_EQ(GenericProtoManager::GetFloat(msg, 600), f);
+
+    // Double
+    double d = 2.718281828;
+    GenericProtoManager::SetDouble(&msg, 601, d);
+    EXPECT_DOUBLE_EQ(GenericProtoManager::GetDouble(msg, 601), d);
+
+    // Fixed32
+    uint32_t f32 = 0xDEADBEEF;
+    GenericProtoManager::SetFixed32(&msg, 602, f32);
+    EXPECT_EQ(GenericProtoManager::GetFixed32(msg, 602), f32);
+
+    // Fixed64
+    uint64_t f64 = 0xDEADBEEFCAFEBABE;
+    GenericProtoManager::SetFixed64(&msg, 603, f64);
+    EXPECT_EQ(GenericProtoManager::GetFixed64(msg, 603), f64);
+
+    // SFixed32
+    int32_t sf32 = -123456;
+    GenericProtoManager::SetSFixed32(&msg, 604, sf32);
+    EXPECT_EQ(GenericProtoManager::GetSFixed32(msg, 604), sf32);
+
+    // SFixed64
+    int64_t sf64 = -1234567890123456;
+    GenericProtoManager::SetSFixed64(&msg, 605, sf64);
+    EXPECT_EQ(GenericProtoManager::GetSFixed64(msg, 605), sf64);
+}
+
+TEST_F(GenericProtoManagerTest, String_Bytes) {
+    // String
+    std::string s = "Hello World";
+    GenericProtoManager::SetString(&msg, 700, s);
+    EXPECT_EQ(GenericProtoManager::GetString(msg, 700), s);
+
+    // Bytes
+    std::string b = "\x00\x01\x02\xFF";
+    GenericProtoManager::SetBytes(&msg, 701, b);
+    EXPECT_EQ(GenericProtoManager::GetBytes(msg, 701), b);
+
+    // Empty String
+    GenericProtoManager::SetString(&msg, 702, "");
+    EXPECT_EQ(GenericProtoManager::GetString(msg, 702), "");
+    EXPECT_TRUE(GenericProtoManager::HasField(msg, 702));
+}
+
+TEST_F(GenericProtoManagerTest, Repeated_Varints) {
+    int tag = 800;
+
+    // Add multiple values
+    GenericProtoManager::AddRepeatedInt32(&msg, tag, 10);
+    GenericProtoManager::AddRepeatedInt32(&msg, tag, 20);
+    GenericProtoManager::AddRepeatedInt32(&msg, tag, 30);
+
+    EXPECT_EQ(GenericProtoManager::GetRepeatedCount(msg, tag), 3);
+
+    std::vector<int32_t> values = GenericProtoManager::GetRepeatedInt32(msg, tag);
+    ASSERT_EQ(values.size(), 3);
+    EXPECT_EQ(values[0], 10);
+    EXPECT_EQ(values[1], 20);
+    EXPECT_EQ(values[2], 30);
+}
+
+TEST_F(GenericProtoManagerTest, Repeated_Fixed) {
+    int tag = 801;
+
+    GenericProtoManager::AddRepeatedFloat(&msg, tag, 1.1f);
+    GenericProtoManager::AddRepeatedFloat(&msg, tag, 2.2f);
+
+    std::vector<float> values = GenericProtoManager::GetRepeatedFloat(msg, tag);
+    ASSERT_EQ(values.size(), 2);
+    EXPECT_FLOAT_EQ(values[0], 1.1f);
+    EXPECT_FLOAT_EQ(values[1], 2.2f);
+}
+
+TEST_F(GenericProtoManagerTest, Repeated_String) {
+    int tag = 802;
+
+    GenericProtoManager::AddRepeatedString(&msg, tag, "foo");
+    GenericProtoManager::AddRepeatedString(&msg, tag, "bar");
+
+    std::vector<std::string> values = GenericProtoManager::GetRepeatedString(msg, tag);
+    ASSERT_EQ(values.size(), 2);
+    EXPECT_EQ(values[0], "foo");
+    EXPECT_EQ(values[1], "bar");
+}
+
+TEST_F(GenericProtoManagerTest, SInt32_Access) {
+    int tag = 900;
+    int32_t value = -12345;
+
+    GenericProtoManager::SetSInt32(&msg, tag, value);
+    EXPECT_EQ(GenericProtoManager::GetSInt32(msg, tag), value);
+}
+
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();

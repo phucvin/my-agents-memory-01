@@ -24,6 +24,360 @@ public:
         return msg->GetReflection()->MutableUnknownFields(msg);
     }
 
+    // --- Basic Accessors ---
+
+    static bool HasField(const pb::Message& msg, int tag) {
+        const auto& ufs = GetUFS(msg);
+        for (int i = 0; i < ufs.field_count(); ++i) {
+            if (ufs.field(i).number() == tag) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    static void ClearField(pb::Message* msg, int tag) {
+        MutableUFS(msg)->DeleteByNumber(tag);
+    }
+
+    // --- Varint Accessors ---
+
+    static uint64_t GetVarint(const pb::Message& msg, int tag, uint64_t default_value = 0) {
+        const auto& ufs = GetUFS(msg);
+        for (int i = 0; i < ufs.field_count(); ++i) {
+            const auto& field = ufs.field(i);
+            if (field.number() == tag && field.type() == pb::UnknownField::TYPE_VARINT) {
+                return field.varint();
+            }
+        }
+        return default_value;
+    }
+
+    static void SetVarint(pb::Message* msg, int tag, uint64_t value) {
+        auto* ufs = MutableUFS(msg);
+        ufs->DeleteByNumber(tag);
+        ufs->AddVarint(tag, value);
+    }
+
+    static bool GetBool(const pb::Message& msg, int tag) { return GetVarint(msg, tag) != 0; }
+    static void SetBool(pb::Message* msg, int tag, bool value) { SetVarint(msg, tag, value ? 1 : 0); }
+
+    static int32_t GetInt32(const pb::Message& msg, int tag) { return static_cast<int32_t>(GetVarint(msg, tag)); }
+    static void SetInt32(pb::Message* msg, int tag, int32_t value) { SetVarint(msg, tag, static_cast<uint64_t>(value)); }
+
+    static uint32_t GetUInt32(const pb::Message& msg, int tag) { return static_cast<uint32_t>(GetVarint(msg, tag)); }
+    static void SetUInt32(pb::Message* msg, int tag, uint32_t value) { SetVarint(msg, tag, static_cast<uint64_t>(value)); }
+
+    static int64_t GetInt64(const pb::Message& msg, int tag) { return static_cast<int64_t>(GetVarint(msg, tag)); }
+    static void SetInt64(pb::Message* msg, int tag, int64_t value) { SetVarint(msg, tag, static_cast<uint64_t>(value)); }
+
+    static uint64_t GetUInt64(const pb::Message& msg, int tag) { return GetVarint(msg, tag); }
+    static void SetUInt64(pb::Message* msg, int tag, uint64_t value) { SetVarint(msg, tag, value); }
+
+    static int GetEnum(const pb::Message& msg, int tag) { return static_cast<int>(GetVarint(msg, tag)); }
+    static void SetEnum(pb::Message* msg, int tag, int value) { SetVarint(msg, tag, static_cast<uint64_t>(value)); }
+
+    // --- Fixed32 Accessors ---
+
+    static uint32_t GetFixed32(const pb::Message& msg, int tag, uint32_t default_value = 0) {
+        const auto& ufs = GetUFS(msg);
+        for (int i = 0; i < ufs.field_count(); ++i) {
+            const auto& field = ufs.field(i);
+            if (field.number() == tag && field.type() == pb::UnknownField::TYPE_FIXED32) {
+                return field.fixed32();
+            }
+        }
+        return default_value;
+    }
+
+    static void SetFixed32(pb::Message* msg, int tag, uint32_t value) {
+        auto* ufs = MutableUFS(msg);
+        ufs->DeleteByNumber(tag);
+        ufs->AddFixed32(tag, value);
+    }
+
+    static float GetFloat(const pb::Message& msg, int tag) {
+        uint32_t val = GetFixed32(msg, tag);
+        float result;
+        static_assert(sizeof(float) == sizeof(uint32_t), "Float must be 32 bits");
+        memcpy(&result, &val, sizeof(float));
+        return result;
+    }
+
+    static void SetFloat(pb::Message* msg, int tag, float value) {
+        uint32_t val;
+        memcpy(&val, &value, sizeof(float));
+        SetFixed32(msg, tag, val);
+    }
+
+    static int32_t GetSFixed32(const pb::Message& msg, int tag) { return static_cast<int32_t>(GetFixed32(msg, tag)); }
+    static void SetSFixed32(pb::Message* msg, int tag, int32_t value) { SetFixed32(msg, tag, static_cast<uint32_t>(value)); }
+
+    // --- Fixed64 Accessors ---
+
+    static uint64_t GetFixed64(const pb::Message& msg, int tag, uint64_t default_value = 0) {
+        const auto& ufs = GetUFS(msg);
+        for (int i = 0; i < ufs.field_count(); ++i) {
+            const auto& field = ufs.field(i);
+            if (field.number() == tag && field.type() == pb::UnknownField::TYPE_FIXED64) {
+                return field.fixed64();
+            }
+        }
+        return default_value;
+    }
+
+    static void SetFixed64(pb::Message* msg, int tag, uint64_t value) {
+        auto* ufs = MutableUFS(msg);
+        ufs->DeleteByNumber(tag);
+        ufs->AddFixed64(tag, value);
+    }
+
+    static double GetDouble(const pb::Message& msg, int tag) {
+        uint64_t val = GetFixed64(msg, tag);
+        double result;
+        static_assert(sizeof(double) == sizeof(uint64_t), "Double must be 64 bits");
+        memcpy(&result, &val, sizeof(double));
+        return result;
+    }
+
+    static void SetDouble(pb::Message* msg, int tag, double value) {
+        uint64_t val;
+        memcpy(&val, &value, sizeof(double));
+        SetFixed64(msg, tag, val);
+    }
+
+    static int64_t GetSFixed64(const pb::Message& msg, int tag) { return static_cast<int64_t>(GetFixed64(msg, tag)); }
+    static void SetSFixed64(pb::Message* msg, int tag, int64_t value) { SetFixed64(msg, tag, static_cast<uint64_t>(value)); }
+
+    // --- String/Bytes Accessors ---
+
+    static std::string GetString(const pb::Message& msg, int tag, const std::string& default_value = "") {
+        const auto& ufs = GetUFS(msg);
+        for (int i = 0; i < ufs.field_count(); ++i) {
+            const auto& field = ufs.field(i);
+            if (field.number() == tag && field.type() == pb::UnknownField::TYPE_LENGTH_DELIMITED) {
+                return field.length_delimited();
+            }
+        }
+        return default_value;
+    }
+
+    static void SetString(pb::Message* msg, int tag, const std::string& value) {
+        auto* ufs = MutableUFS(msg);
+        ufs->DeleteByNumber(tag);
+        ufs->AddLengthDelimited(tag, value);
+    }
+
+    static std::string GetBytes(const pb::Message& msg, int tag) { return GetString(msg, tag); }
+    static void SetBytes(pb::Message* msg, int tag, const std::string& value) { SetString(msg, tag, value); }
+
+    // --- Repeated Field Support ---
+
+    static int GetRepeatedCount(const pb::Message& msg, int tag) {
+        const auto& ufs = GetUFS(msg);
+        int count = 0;
+        for (int i = 0; i < ufs.field_count(); ++i) {
+            if (ufs.field(i).number() == tag) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    // Varint
+    static void AddRepeatedVarint(pb::Message* msg, int tag, uint64_t value) {
+        MutableUFS(msg)->AddVarint(tag, value);
+    }
+
+    static std::vector<uint64_t> GetRepeatedVarint(const pb::Message& msg, int tag) {
+        std::vector<uint64_t> result;
+        const auto& ufs = GetUFS(msg);
+        for (int i = 0; i < ufs.field_count(); ++i) {
+            const auto& field = ufs.field(i);
+            if (field.number() == tag) {
+                if (field.type() == pb::UnknownField::TYPE_VARINT) {
+                    result.push_back(field.varint());
+                } else if (field.type() == pb::UnknownField::TYPE_LENGTH_DELIMITED) {
+                    // Try to parse as packed
+                    const std::string& bytes = field.length_delimited();
+                    pb::io::ArrayInputStream input(bytes.data(), bytes.size());
+                    pb::io::CodedInputStream coded_input(&input);
+                    uint64_t val;
+                    while (!coded_input.ExpectAtEnd()) {
+                        if (coded_input.ReadVarint64(&val)) {
+                            result.push_back(val);
+                        } else {
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        return result;
+    }
+
+    static void AddRepeatedBool(pb::Message* msg, int tag, bool value) { AddRepeatedVarint(msg, tag, value ? 1 : 0); }
+    static std::vector<bool> GetRepeatedBool(const pb::Message& msg, int tag) {
+        std::vector<uint64_t> raw = GetRepeatedVarint(msg, tag);
+        std::vector<bool> result;
+        result.reserve(raw.size());
+        for (auto v : raw) result.push_back(v != 0);
+        return result;
+    }
+
+    static void AddRepeatedInt32(pb::Message* msg, int tag, int32_t value) { AddRepeatedVarint(msg, tag, static_cast<uint64_t>(value)); }
+    static std::vector<int32_t> GetRepeatedInt32(const pb::Message& msg, int tag) {
+        std::vector<uint64_t> raw = GetRepeatedVarint(msg, tag);
+        std::vector<int32_t> result;
+        result.reserve(raw.size());
+        for (auto v : raw) result.push_back(static_cast<int32_t>(v));
+        return result;
+    }
+
+    static void AddRepeatedInt64(pb::Message* msg, int tag, int64_t value) { AddRepeatedVarint(msg, tag, static_cast<uint64_t>(value)); }
+    static std::vector<int64_t> GetRepeatedInt64(const pb::Message& msg, int tag) {
+        std::vector<uint64_t> raw = GetRepeatedVarint(msg, tag);
+        std::vector<int64_t> result;
+        result.reserve(raw.size());
+        for (auto v : raw) result.push_back(static_cast<int64_t>(v));
+        return result;
+    }
+
+    // Fixed32
+    static void AddRepeatedFixed32(pb::Message* msg, int tag, uint32_t value) {
+        MutableUFS(msg)->AddFixed32(tag, value);
+    }
+
+    static std::vector<uint32_t> GetRepeatedFixed32(const pb::Message& msg, int tag) {
+        std::vector<uint32_t> result;
+        const auto& ufs = GetUFS(msg);
+        for (int i = 0; i < ufs.field_count(); ++i) {
+            const auto& field = ufs.field(i);
+            if (field.number() == tag) {
+                if (field.type() == pb::UnknownField::TYPE_FIXED32) {
+                    result.push_back(field.fixed32());
+                } else if (field.type() == pb::UnknownField::TYPE_LENGTH_DELIMITED) {
+                    const std::string& bytes = field.length_delimited();
+                    pb::io::ArrayInputStream input(bytes.data(), bytes.size());
+                    pb::io::CodedInputStream coded_input(&input);
+                    uint32_t val;
+                    while (!coded_input.ExpectAtEnd()) {
+                        if (coded_input.ReadLittleEndian32(&val)) {
+                            result.push_back(val);
+                        } else {
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+        return result;
+    }
+
+    static void AddRepeatedFloat(pb::Message* msg, int tag, float value) {
+        uint32_t val;
+        memcpy(&val, &value, sizeof(float));
+        AddRepeatedFixed32(msg, tag, val);
+    }
+
+    static std::vector<float> GetRepeatedFloat(const pb::Message& msg, int tag) {
+        std::vector<uint32_t> raw = GetRepeatedFixed32(msg, tag);
+        std::vector<float> result;
+        result.reserve(raw.size());
+        for (auto v : raw) {
+            float f;
+            memcpy(&f, &v, sizeof(float));
+            result.push_back(f);
+        }
+        return result;
+    }
+
+    // Fixed64
+    static void AddRepeatedFixed64(pb::Message* msg, int tag, uint64_t value) {
+        MutableUFS(msg)->AddFixed64(tag, value);
+    }
+
+    static std::vector<uint64_t> GetRepeatedFixed64(const pb::Message& msg, int tag) {
+        std::vector<uint64_t> result;
+        const auto& ufs = GetUFS(msg);
+        for (int i = 0; i < ufs.field_count(); ++i) {
+            const auto& field = ufs.field(i);
+            if (field.number() == tag) {
+                if (field.type() == pb::UnknownField::TYPE_FIXED64) {
+                    result.push_back(field.fixed64());
+                } else if (field.type() == pb::UnknownField::TYPE_LENGTH_DELIMITED) {
+                     const std::string& bytes = field.length_delimited();
+                     pb::io::ArrayInputStream input(bytes.data(), bytes.size());
+                     pb::io::CodedInputStream coded_input(&input);
+                     uint64_t val;
+                     while (!coded_input.ExpectAtEnd()) {
+                         if (coded_input.ReadLittleEndian64(&val)) {
+                             result.push_back(val);
+                         } else {
+                             break;
+                         }
+                     }
+                }
+            }
+        }
+        return result;
+    }
+
+    static void AddRepeatedDouble(pb::Message* msg, int tag, double value) {
+        uint64_t val;
+        memcpy(&val, &value, sizeof(double));
+        AddRepeatedFixed64(msg, tag, val);
+    }
+
+    static std::vector<double> GetRepeatedDouble(const pb::Message& msg, int tag) {
+        std::vector<uint64_t> raw = GetRepeatedFixed64(msg, tag);
+        std::vector<double> result;
+        result.reserve(raw.size());
+        for (auto v : raw) {
+            double d;
+            memcpy(&d, &v, sizeof(double));
+            result.push_back(d);
+        }
+        return result;
+    }
+
+    // String
+    static void AddRepeatedString(pb::Message* msg, int tag, const std::string& value) {
+        MutableUFS(msg)->AddLengthDelimited(tag, value);
+    }
+
+    static std::vector<std::string> GetRepeatedString(const pb::Message& msg, int tag) {
+        std::vector<std::string> result;
+        const auto& ufs = GetUFS(msg);
+        for (int i = 0; i < ufs.field_count(); ++i) {
+            const auto& field = ufs.field(i);
+            if (field.number() == tag && field.type() == pb::UnknownField::TYPE_LENGTH_DELIMITED) {
+                result.push_back(field.length_delimited());
+            }
+        }
+        return result;
+    }
+
+    // --- SInt32 Accessors ---
+
+    static int32_t GetSInt32(const pb::Message& msg, int tag) {
+        const auto& ufs = GetUFS(msg);
+        for (int i = 0; i < ufs.field_count(); ++i) {
+            const auto& field = ufs.field(i);
+            if (field.number() == tag && field.type() == pb::UnknownField::TYPE_VARINT) {
+                return pb::internal::WireFormatLite::ZigZagDecode32(static_cast<uint32_t>(field.varint()));
+            }
+        }
+        return 0;
+    }
+
+    static void SetSInt32(pb::Message* msg, int tag, int32_t value) {
+        auto* ufs = MutableUFS(msg);
+        ufs->DeleteByNumber(tag);
+        uint32_t encoded = pb::internal::WireFormatLite::ZigZagEncode32(value);
+        ufs->AddVarint(tag, encoded);
+    }
+
     // --- SInt64 Accessors ---
 
     static int64_t GetSInt64(const pb::Message& msg, int tag) {
