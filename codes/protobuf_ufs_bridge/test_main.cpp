@@ -57,11 +57,11 @@ TEST_F(GenericProtoManagerTest, Oneof_Safety) {
 TEST_F(GenericProtoManagerTest, Map_Update) {
     int map_tag = 50;
 
-    // Add entry: Key=1, Value=100
-    GenericProtoManager::SetMapEntry(&msg, map_tag, 1, 100);
+    // Add entry: Key=1, Value=100. Explicitly use int64_t to match previous behavior/expectations
+    GenericProtoManager::SetMapEntry(&msg, map_tag, (int64_t)1, (int64_t)100);
 
     // Add entry: Key=2, Value=200
-    GenericProtoManager::SetMapEntry(&msg, map_tag, 2, 200);
+    GenericProtoManager::SetMapEntry(&msg, map_tag, (int64_t)2, (int64_t)200);
 
     // Verify we have 2 entries
     const UnknownFieldSet& ufs = GenericProtoManager::GetUFS(msg);
@@ -69,7 +69,7 @@ TEST_F(GenericProtoManagerTest, Map_Update) {
 
     // Update Key=1 -> Value=150
     // This should detect Key=1 and replace it
-    GenericProtoManager::SetMapEntry(&msg, map_tag, 1, 150);
+    GenericProtoManager::SetMapEntry(&msg, map_tag, (int64_t)1, (int64_t)150);
 
     // Verify we still have 2 entries (old Key=1 deleted, new Key=1 added)
     EXPECT_EQ(ufs.field_count(), 2);
@@ -276,6 +276,54 @@ TEST_F(GenericProtoManagerTest, SInt32_Access) {
 
     GenericProtoManager::SetSInt32(&msg, tag, value);
     EXPECT_EQ(GenericProtoManager::GetSInt32(msg, tag), value);
+}
+
+TEST_F(GenericProtoManagerTest, GenericMap_Int_Float) {
+    int map_tag = 60;
+    // Key: int32, Value: float
+    GenericProtoManager::SetMapEntry(&msg, map_tag, 10, 1.5f);
+    GenericProtoManager::SetMapEntry(&msg, map_tag, 20, 2.5f);
+
+    EXPECT_FLOAT_EQ((GenericProtoManager::GetMapEntry<int32_t, float>(msg, map_tag, 10)), 1.5f);
+    EXPECT_FLOAT_EQ((GenericProtoManager::GetMapEntry<int32_t, float>(msg, map_tag, 20)), 2.5f);
+    EXPECT_FLOAT_EQ((GenericProtoManager::GetMapEntry<int32_t, float>(msg, map_tag, 30, -1.0f)), -1.0f); // Default
+
+    // Test GetMap
+    std::map<int32_t, float> m = GenericProtoManager::GetMap<int32_t, float>(msg, map_tag);
+    EXPECT_EQ(m.size(), 2);
+    EXPECT_FLOAT_EQ(m[10], 1.5f);
+    EXPECT_FLOAT_EQ(m[20], 2.5f);
+}
+
+TEST_F(GenericProtoManagerTest, GenericMap_String_String) {
+    int map_tag = 61;
+    GenericProtoManager::SetMapEntry(&msg, map_tag, std::string("key1"), std::string("val1"));
+    GenericProtoManager::SetMapEntry(&msg, map_tag, std::string("key2"), std::string("val2"));
+
+    // Overwrite
+    GenericProtoManager::SetMapEntry(&msg, map_tag, std::string("key1"), std::string("val1_updated"));
+
+    EXPECT_EQ((GenericProtoManager::GetMapEntry<std::string, std::string>(msg, map_tag, "key1")), "val1_updated");
+    EXPECT_EQ((GenericProtoManager::GetMapEntry<std::string, std::string>(msg, map_tag, "key2")), "val2");
+
+    std::map<std::string, std::string> m = GenericProtoManager::GetMap<std::string, std::string>(msg, map_tag);
+    EXPECT_EQ(m.size(), 2);
+    EXPECT_EQ(m["key1"], "val1_updated");
+    EXPECT_EQ(m["key2"], "val2");
+}
+
+TEST_F(GenericProtoManagerTest, GenericMap_Bool_UInt64) {
+    int map_tag = 62;
+    GenericProtoManager::SetMapEntry(&msg, map_tag, true, (uint64_t)999);
+    GenericProtoManager::SetMapEntry(&msg, map_tag, false, (uint64_t)888);
+
+    EXPECT_EQ((GenericProtoManager::GetMapEntry<bool, uint64_t>(msg, map_tag, true)), 999);
+    EXPECT_EQ((GenericProtoManager::GetMapEntry<bool, uint64_t>(msg, map_tag, false)), 888);
+
+    std::map<bool, uint64_t> m = GenericProtoManager::GetMap<bool, uint64_t>(msg, map_tag);
+    EXPECT_EQ(m.size(), 2);
+    EXPECT_EQ(m[true], 999);
+    EXPECT_EQ(m[false], 888);
 }
 
 int main(int argc, char **argv) {

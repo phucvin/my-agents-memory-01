@@ -9,8 +9,103 @@
 #include <string>
 #include <functional>
 #include <type_traits>
+#include <map>
 
 namespace pb = google::protobuf;
+
+namespace gpm_internal {
+    template <typename T> struct MapTypeHandler;
+
+    template <> struct MapTypeHandler<int32_t> {
+        static const pb::internal::WireFormatLite::FieldType kFieldType = pb::internal::WireFormatLite::TYPE_INT32;
+        static void Write(int field_num, int32_t val, pb::io::CodedOutputStream* os) {
+            pb::internal::WireFormatLite::WriteInt32(field_num, val, os);
+        }
+        static bool Read(pb::io::CodedInputStream* is, int32_t* val) {
+            uint32_t tmp;
+            if(is->ReadVarint32(&tmp)) { *val = static_cast<int32_t>(tmp); return true; }
+            return false;
+        }
+    };
+
+    template <> struct MapTypeHandler<int64_t> {
+        static const pb::internal::WireFormatLite::FieldType kFieldType = pb::internal::WireFormatLite::TYPE_INT64;
+        static void Write(int field_num, int64_t val, pb::io::CodedOutputStream* os) {
+            pb::internal::WireFormatLite::WriteInt64(field_num, val, os);
+        }
+        static bool Read(pb::io::CodedInputStream* is, int64_t* val) {
+            uint64_t tmp;
+            if(is->ReadVarint64(&tmp)) { *val = static_cast<int64_t>(tmp); return true; }
+            return false;
+        }
+    };
+
+    template <> struct MapTypeHandler<uint32_t> {
+        static const pb::internal::WireFormatLite::FieldType kFieldType = pb::internal::WireFormatLite::TYPE_UINT32;
+        static void Write(int field_num, uint32_t val, pb::io::CodedOutputStream* os) {
+            pb::internal::WireFormatLite::WriteUInt32(field_num, val, os);
+        }
+        static bool Read(pb::io::CodedInputStream* is, uint32_t* val) {
+            return is->ReadVarint32(val);
+        }
+    };
+
+    template <> struct MapTypeHandler<uint64_t> {
+        static const pb::internal::WireFormatLite::FieldType kFieldType = pb::internal::WireFormatLite::TYPE_UINT64;
+        static void Write(int field_num, uint64_t val, pb::io::CodedOutputStream* os) {
+            pb::internal::WireFormatLite::WriteUInt64(field_num, val, os);
+        }
+        static bool Read(pb::io::CodedInputStream* is, uint64_t* val) {
+            return is->ReadVarint64(val);
+        }
+    };
+
+    template <> struct MapTypeHandler<bool> {
+        static const pb::internal::WireFormatLite::FieldType kFieldType = pb::internal::WireFormatLite::TYPE_BOOL;
+        static void Write(int field_num, bool val, pb::io::CodedOutputStream* os) {
+            pb::internal::WireFormatLite::WriteBool(field_num, val, os);
+        }
+        static bool Read(pb::io::CodedInputStream* is, bool* val) {
+            uint64_t tmp;
+            if(is->ReadVarint64(&tmp)) { *val = (tmp != 0); return true; }
+            return false;
+        }
+    };
+
+    template <> struct MapTypeHandler<std::string> {
+        static const pb::internal::WireFormatLite::FieldType kFieldType = pb::internal::WireFormatLite::TYPE_STRING;
+        static void Write(int field_num, const std::string& val, pb::io::CodedOutputStream* os) {
+            pb::internal::WireFormatLite::WriteString(field_num, val, os);
+        }
+        static bool Read(pb::io::CodedInputStream* is, std::string* val) {
+            return pb::internal::WireFormatLite::ReadString(is, val);
+        }
+    };
+
+    template <> struct MapTypeHandler<float> {
+        static const pb::internal::WireFormatLite::FieldType kFieldType = pb::internal::WireFormatLite::TYPE_FLOAT;
+        static void Write(int field_num, float val, pb::io::CodedOutputStream* os) {
+            pb::internal::WireFormatLite::WriteFloat(field_num, val, os);
+        }
+        static bool Read(pb::io::CodedInputStream* is, float* val) {
+            uint32_t tmp;
+            if(is->ReadLittleEndian32(&tmp)) { memcpy(val, &tmp, 4); return true; }
+            return false;
+        }
+    };
+
+    template <> struct MapTypeHandler<double> {
+        static const pb::internal::WireFormatLite::FieldType kFieldType = pb::internal::WireFormatLite::TYPE_DOUBLE;
+        static void Write(int field_num, double val, pb::io::CodedOutputStream* os) {
+            pb::internal::WireFormatLite::WriteDouble(field_num, val, os);
+        }
+        static bool Read(pb::io::CodedInputStream* is, double* val) {
+            uint64_t tmp;
+            if(is->ReadLittleEndian64(&tmp)) { memcpy(val, &tmp, 8); return true; }
+            return false;
+        }
+    };
+}
 
 class GenericProtoManager {
 public:
@@ -460,48 +555,35 @@ public:
 
     // --- Map Management ---
 
-    // We assume KeyType is compatible with standard basic types (int32, int64, string, bool).
-    // And ValueType can be anything, but we need to serialize it.
-    // For simplicity, let's implement for (int64_t key, int64_t value) and allow specialization or different overloads.
-    // Or we provide a generic template that takes encoder functions.
-
-    // Let's implement specifically for <int64, int64> as a prototype, and maybe <string, string>.
-    // The prompt asks for "Demonstration of a Map update where a key is overwritten correctly".
-
-    static void SetMapEntry(pb::Message* msg, int map_tag, int64_t key, int64_t value) {
+    template <typename KeyT, typename ValT>
+    static void SetMapEntry(pb::Message* msg, int map_tag, KeyT key, ValT value) {
         auto* ufs = MutableUFS(msg);
 
         // 1. Scan and delete existing entry with same key
         for (int i = ufs->field_count() - 1; i >= 0; --i) {
             const auto& field = ufs->field(i);
             if (field.number() == map_tag && field.type() == pb::UnknownField::TYPE_LENGTH_DELIMITED) {
-                // Parse Key (Tag 1)
                 const std::string& bytes = field.length_delimited();
                 pb::io::ArrayInputStream input(bytes.data(), bytes.size());
                 pb::io::CodedInputStream coded_input(&input);
 
-                // We need to parse fields. Map entry: key=1, value=2.
-                // Scan for tag 1.
                 uint32_t tag;
                 while ((tag = coded_input.ReadTag()) != 0) {
                     if (pb::internal::WireFormatLite::GetTagFieldNumber(tag) == 1) {
-                        // Found key
-                        uint64_t read_key;
-                        // Assume key is int64/sint64/uint64. Let's assume standard int64 (varint).
-                        // If the map is defined as map<int64, ...>, it's varint.
-                        if (pb::internal::WireFormatLite::GetTagWireType(tag) == pb::internal::WireFormatLite::WIRETYPE_VARINT) {
-                            coded_input.ReadVarint64(&read_key);
-                            if (static_cast<int64_t>(read_key) == key) {
-                                // Match! Delete this entry.
-                                ufs->DeleteSubrange(i, 1);
-                                // Don't break because there might be duplicates? Standard map shouldn't have them, but safe to continue?
-                                // If we delete, indices change? No, we iterate backwards.
-                                // But if we delete, we are done with THIS entry.
-                                goto entry_deleted;
+                        if (pb::internal::WireFormatLite::GetTagWireType(tag) ==
+                            pb::internal::WireFormatLite::WireTypeForFieldType(gpm_internal::MapTypeHandler<KeyT>::kFieldType)) {
+
+                            KeyT read_key = KeyT();
+                            if (gpm_internal::MapTypeHandler<KeyT>::Read(&coded_input, &read_key)) {
+                                 if (read_key == key) {
+                                     ufs->DeleteSubrange(i, 1);
+                                     goto entry_deleted;
+                                 }
                             }
+                        } else {
+                            pb::internal::WireFormatLite::SkipField(&coded_input, tag);
                         }
                     } else {
-                        // Skip field
                         pb::internal::WireFormatLite::SkipField(&coded_input, tag);
                     }
                 }
@@ -514,13 +596,97 @@ public:
         pb::io::StringOutputStream output(&buffer);
         pb::io::CodedOutputStream coded_output(&output);
 
-        // Write Key (Tag 1)
-        pb::internal::WireFormatLite::WriteInt64(1, key, &coded_output);
-        // Write Value (Tag 2)
-        pb::internal::WireFormatLite::WriteInt64(2, value, &coded_output);
+        gpm_internal::MapTypeHandler<KeyT>::Write(1, key, &coded_output);
+        gpm_internal::MapTypeHandler<ValT>::Write(2, value, &coded_output);
 
         coded_output.Trim();
         ufs->AddLengthDelimited(map_tag, buffer);
+    }
+
+    template <typename KeyT, typename ValT>
+    static ValT GetMapEntry(const pb::Message& msg, int map_tag, KeyT key, ValT default_value = ValT()) {
+        const auto& ufs = GetUFS(msg);
+        for (int i = ufs.field_count() - 1; i >= 0; --i) {
+            const auto& field = ufs.field(i);
+            if (field.number() == map_tag && field.type() == pb::UnknownField::TYPE_LENGTH_DELIMITED) {
+                const std::string& bytes = field.length_delimited();
+                pb::io::ArrayInputStream input(bytes.data(), bytes.size());
+                pb::io::CodedInputStream coded_input(&input);
+
+                uint32_t tag;
+                KeyT read_key = KeyT();
+                ValT read_value = ValT();
+                bool key_found = false;
+
+                while ((tag = coded_input.ReadTag()) != 0) {
+                    int field_num = pb::internal::WireFormatLite::GetTagFieldNumber(tag);
+                    if (field_num == 1) {
+                        if (pb::internal::WireFormatLite::GetTagWireType(tag) ==
+                            pb::internal::WireFormatLite::WireTypeForFieldType(gpm_internal::MapTypeHandler<KeyT>::kFieldType)) {
+                             if (gpm_internal::MapTypeHandler<KeyT>::Read(&coded_input, &read_key)) {
+                                 key_found = true;
+                             }
+                        } else { pb::internal::WireFormatLite::SkipField(&coded_input, tag); }
+                    } else if (field_num == 2) {
+                        if (pb::internal::WireFormatLite::GetTagWireType(tag) ==
+                            pb::internal::WireFormatLite::WireTypeForFieldType(gpm_internal::MapTypeHandler<ValT>::kFieldType)) {
+                             gpm_internal::MapTypeHandler<ValT>::Read(&coded_input, &read_value);
+                        } else { pb::internal::WireFormatLite::SkipField(&coded_input, tag); }
+                    } else {
+                        pb::internal::WireFormatLite::SkipField(&coded_input, tag);
+                    }
+                }
+
+                if (key_found && read_key == key) {
+                    return read_value;
+                }
+            }
+        }
+        return default_value;
+    }
+
+    template <typename KeyT, typename ValT>
+    static std::map<KeyT, ValT> GetMap(const pb::Message& msg, int map_tag) {
+        std::map<KeyT, ValT> result;
+        const auto& ufs = GetUFS(msg);
+        for (int i = 0; i < ufs.field_count(); ++i) {
+            const auto& field = ufs.field(i);
+            if (field.number() == map_tag && field.type() == pb::UnknownField::TYPE_LENGTH_DELIMITED) {
+                const std::string& bytes = field.length_delimited();
+                pb::io::ArrayInputStream input(bytes.data(), bytes.size());
+                pb::io::CodedInputStream coded_input(&input);
+
+                uint32_t tag;
+                KeyT read_key = KeyT();
+                ValT read_value = ValT();
+                bool key_found = false;
+
+                while ((tag = coded_input.ReadTag()) != 0) {
+                    int field_num = pb::internal::WireFormatLite::GetTagFieldNumber(tag);
+                    if (field_num == 1) {
+                         if (pb::internal::WireFormatLite::GetTagWireType(tag) ==
+                            pb::internal::WireFormatLite::WireTypeForFieldType(gpm_internal::MapTypeHandler<KeyT>::kFieldType)) {
+                             if (gpm_internal::MapTypeHandler<KeyT>::Read(&coded_input, &read_key)) {
+                                 key_found = true;
+                             }
+                         } else { pb::internal::WireFormatLite::SkipField(&coded_input, tag); }
+                    } else if (field_num == 2) {
+                         if (pb::internal::WireFormatLite::GetTagWireType(tag) ==
+                            pb::internal::WireFormatLite::WireTypeForFieldType(gpm_internal::MapTypeHandler<ValT>::kFieldType)) {
+                             // Just read the value, we use default if not present
+                             gpm_internal::MapTypeHandler<ValT>::Read(&coded_input, &read_value);
+                         } else { pb::internal::WireFormatLite::SkipField(&coded_input, tag); }
+                    } else {
+                        pb::internal::WireFormatLite::SkipField(&coded_input, tag);
+                    }
+                }
+
+                if (key_found) {
+                    result[read_key] = read_value;
+                }
+            }
+        }
+        return result;
     }
 
     // --- Nested Structures ---
